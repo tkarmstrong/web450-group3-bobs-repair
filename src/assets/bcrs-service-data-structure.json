@@ -1,0 +1,41 @@
+[
+	{
+		"Service": [
+			{
+				"serviceId": "r8t7y0k2",
+				"description": "Hard drive defragmentation",
+				"cost": 50.00
+			},
+			{
+				"serviceId": "p1w7c6e0",
+				"description": "RAM upgrade",
+				"cost": 100.00
+			},
+			{
+				"serviceId": "a8s6d9f3",
+				"description": "Motherboard replacement",
+				"cost": 200.00
+			},
+			{
+				"serviceId": "i0u3n7m5",
+				"description": "Virus cleaning",
+				"cost": 40.00
+			},
+			{
+				"serviceId": "y2w8d5v7",
+				"description": "Laptop screen replacement",
+				"cost": 100.00
+			},
+			{
+				"serviceId": "h7g6j9k1",
+				"description": "Hard drive erasing",
+				"cost": 70.00
+			},
+			{
+				"serviceId": "u2r3f8d6",
+				"description": "Hard drive replacement",
+				"cost": 125.00
+			}
+		]
+	}
+]
