@@ -6,11 +6,7 @@
 			"firstName": "Donnie",
 			"lastName": "Wahlberg",
 			"phone": "402-990-2568",
-			"address1": "5454 Hickory St",
-			"address2": "Apt 68",
-			"city": "Omaha",
-			"state": "NE",
-			"zip": "68134",
+			"address": "5454 Hickory St",
 			"password": "(hashed)",
 			"email": "donnie@wahlburgers.com",
 			"roleId": [
@@ -29,9 +25,6 @@
 					"questionId": "q4w8f6r7",
 					"answer": "Peacock"
 				}
-			],
-			"invoiceId": [
-				"r6t2y9u3"
 			]
 		}
 	}
