@@ -22,6 +22,7 @@ const Invoice = require('./models/invoice');
 const Role = require('./models/role');
 const SecurityQuestion = require('./models/securityQuestion');
 const User = require('./models/user');
+const bcrypt = require('bcrypt');
 
 const router = express.Router();
 
