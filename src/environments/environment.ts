@@ -1,9 +1,19 @@
+/*
+; =======================================================
+; Title: environment.ts (Week 6)
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+;========================================================
+*/
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
 };
 
 /*

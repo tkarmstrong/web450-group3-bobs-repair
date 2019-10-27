@@ -1,19 +1,20 @@
 /*
-; ============================================
-; Title:  securityQuestion.js
-; Author: David Tarvin
+; =======================================================
+; Title:  securityQuestion.js (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
 ; Date:   23 Oct 2019
 ; Description: Bob's Computer Repair Shop
-;=============================================
+; Legend: [] -> Team member responsible for page.
+;========================================================
 */
 
 const mongoose = require('mongoose');
 
-let securityQuestionSchema = mongoose.Schema({
-  questionText: { type: String }
+const securityQuestionSchema = mongoose.Schema({
+  questionText: { type: String },
 },
 {
-  collection: 'securityquestions'
+  collection: 'securityquestions',
 });
 
 module.exports = mongoose.model('SecurityQuestion', securityQuestionSchema);

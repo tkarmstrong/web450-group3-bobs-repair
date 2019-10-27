@@ -1,3 +1,13 @@
+/*
+; =======================================================
+; Title: test.ts (Week 6)
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+;========================================================
+*/
+
 // This file is required by karma.conf.js and loads recursively all the .spec and framework files
 
 import 'zone.js/dist/zone-testing';

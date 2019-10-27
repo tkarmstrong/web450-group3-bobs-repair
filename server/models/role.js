@@ -1,19 +1,21 @@
 /*
-; ============================================
-; Title:  role.js
-; Author: David Tarvin
+; =======================================================
+; Title:  role.js (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
 ; Date:   23 Oct 2019
 ; Description: Bob's Computer Repair Shop
-;=============================================
+; Legend: [] -> Team member responsible for page.
+;========================================================
 */
 
 const mongoose = require('mongoose');
 
-let roleSchema = mongoose.Schema({
-  roleTitle: { type: String }
+const roleSchema = mongoose.Schema({
+  // Do we want an actual ( roleId ) field here?
+  roleTitle: { type: String },
 },
 {
-  collection: 'roles'
+  collection: 'roles',
 });
 
 module.exports = mongoose.model('Role', roleSchema);

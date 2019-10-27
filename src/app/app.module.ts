@@ -1,3 +1,14 @@
+
+/*
+; =======================================================
+; Title: app.module.ts (Week 6)
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+;========================================================
+*/
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +27,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SessionLayoutComponent } from './shared';
 import { LoginComponent } from './pages/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
+import { UserManagementComponent } from './pages/user-management/user-management.component';
 
 // Material
 import { MatCardModule } from '@angular/material/card';

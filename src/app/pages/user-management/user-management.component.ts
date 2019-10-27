@@ -1,6 +1,6 @@
 /*
 ; =======================================================
-; Title: home.component.ts (Week 6)
+; Title: user-management.component.ts (Week 6)
 ; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
 ; Date: 23 Oct 2019
 ; Description: Bob's Computer Repair Shop
@@ -11,11 +11,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-user-management',
+  templateUrl: './user-management.component.html',
+  styleUrls: ['./user-management.component.css']
 })
-export class HomeComponent implements OnInit {
+export class UserManagementComponent implements OnInit {
 
   constructor() { }
 

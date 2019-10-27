@@ -1,23 +1,26 @@
 /*
-; ============================================
-; Title:  user.js
+; =======================================================
+; Title: user.js (Week 6)
 ; Author: Richard Krasso
-; Modified By: David Tarvin
-; Date:   23 Oct 2019
+; Modified: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date: 23 Oct 2019
 ; Description: Bob's Computer Repair Shop
-;=============================================
+; Legend: [] -> Team member responsible for page.
+;========================================================
 */
 
 const mongoose = require('mongoose');
 
-let selectedSecurityQuestions = mongoose.Schema({
+const selectedSecurityQuestions = mongoose.Schema({
   questionId: { type: String },
-  answerText: { type: String }
+  answerText: { type: String },
 });
 
-let userSchema = mongoose.Schema({
-  username: { type: String, required: true, unique: true, dropDups: true },
-  password: { type: String, required: true },
+const userSchema = mongoose.Schema({
+  username: {
+    type: String, required: true, unique: true, dropDups: true,
+  },
+  password: { type: String, required: true }, // Should this be ( unique: true ) as well?
   firstName: { type: String },
   lastName: { type: String },
   phoneNumber: { type: String },
@@ -26,10 +29,10 @@ let userSchema = mongoose.Schema({
   role: { type: String, default: 'standard' },
   selectedSecurityQuestions: [selectedSecurityQuestions],
   date_created: { type: Date, default: new Date() },
-  date_modified: { type: Date }
+  date_modified: { type: Date },
 },
 {
-  collection: 'users'
+  collection: 'users',
 });
 
 module.exports = mongoose.model('User', userSchema);

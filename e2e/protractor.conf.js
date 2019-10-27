@@ -1,3 +1,13 @@
+/*
+; =======================================================
+; Title: protractor.conf.js (Week 6)
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+;========================================================
+*/
+
 // @ts-check
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts

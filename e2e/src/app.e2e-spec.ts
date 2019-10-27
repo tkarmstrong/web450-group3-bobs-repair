@@ -1,3 +1,13 @@
+/*
+; =======================================================
+; Title: app.e2e-spec.ts (Week 6)
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+;========================================================
+*/
+
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
