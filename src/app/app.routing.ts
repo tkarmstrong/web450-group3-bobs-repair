@@ -1,12 +1,13 @@
-import {Routes} from '@angular/router';
-import {BaseLayoutComponent, SessionLayoutComponent} from './shared';
-import {LoginComponent} from './pages/login/login.component';
-import {HomeComponent} from './pages/home/home.component';
-import {NotFoundComponent} from './pages/not-found/not-found.component';
+import { Routes } from '@angular/router';
+import { BaseLayoutComponent, SessionLayoutComponent } from './shared';
+import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const AppRoutes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
-    path: '',
+    path: 'home',
     component: BaseLayoutComponent,
     children: [
       {

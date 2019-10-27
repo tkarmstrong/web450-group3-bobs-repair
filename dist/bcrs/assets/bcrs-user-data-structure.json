@@ -1,0 +1,31 @@
+[
+	{
+		"User": {
+			"userId": "q1i1i2i6",
+			"username": "dberg",
+			"firstName": "Donnie",
+			"lastName": "Wahlberg",
+			"phone": "402-990-2568",
+			"address": "5454 Hickory St",
+			"password": "(hashed)",
+			"email": "donnie@wahlburgers.com",
+			"roleId": [
+				"l8l5j6f9"
+			],
+			"selectedSecurityQuestions": [
+				{
+					"questionId": "n5m7m5l2",
+					"answer": "Bellevue"
+				},
+				{
+					"questionId": "l3j4j7d9",
+					"answer": "Aniston"
+				},
+				{
+					"questionId": "q4w8f6r7",
+					"answer": "Peacock"
+				}
+			]
+		}
+	}
+]

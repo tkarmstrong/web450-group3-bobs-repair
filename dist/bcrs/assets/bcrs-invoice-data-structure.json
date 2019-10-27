@@ -1,0 +1,23 @@
+[
+	{
+		"Invoice": {
+			"invoiceId": "r6t2y9u3",
+			"dateCreated": "Thu Oct 24 2019 08:21:39 GMT-0500 (Central Daylight Time)",
+			"serviceRequested": [
+				{
+					"serviceId": "r8t7y0k2",
+					"cost": 50.00
+				},
+				{
+					"serviceId": "p1w7c6e0",
+					"cost": 150.00
+				}
+			],
+			"partsCost": 200.00,
+			"laborHrs": 2,
+			"total": 500.00,
+      "paid": false,
+      "userId": "q1i1i2i6"
+		}
+	}
+]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-not-found',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private cookie: CookieService) { }
 
   ngOnInit() {
+  }
+
+  goHome() {
+    const cookieValue: string = this.cookie.get('isAuthenticated');
+    if (cookieValue) {
+      this.router.navigate(['/home']);
+    } else {
+      this.router.navigate(['/session/login']);
+    }
   }
 
 }

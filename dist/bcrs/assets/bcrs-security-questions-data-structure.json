@@ -1,0 +1,18 @@
+[
+	{
+		"SecurityQuestion": [
+			{
+				"questionId": "n5m7m5l2",
+				"questionText": "In what city were you born?"
+			},
+			{
+				"questionId": "l3j4j7d9",
+				"questionText": "What is your mother's maiden name?"
+			},
+			{
+				"questionId": "q4w8f6r7",
+				"questionText": "What street did you live on at 13 years old?"
+			}
+		]
+	}
+]
