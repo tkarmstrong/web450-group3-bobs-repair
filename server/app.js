@@ -71,11 +71,7 @@ db.once("open", function() {
 // User CRUD Operations
 
 // Create new user.
-<<<<<<< HEAD
 app.post('/api/registration', (req, res, next) => {
-=======
-router.post('/api/user', (req, res, next) => {
->>>>>>> e0996af604b9028d61fa8b9b21e83fb8c699c082
   const user = new User({
     userId: req.body._id,
     username: req.body.username,
@@ -101,8 +97,39 @@ router.post('/api/user', (req, res, next) => {
   });
 });
 
+// User login
+app.post("/login", (req, res, next) => {
+  let thisUser;
+  User.findOne({ username: req.body.username })
+    .then(user => {
+      if (!user) {
+        return res.status(401).json({
+          message: "Authentication failed"
+        });
+      }
+      thisUser = user;
+      return bcrypt.compare(req.body.password, user.password);
+    })
+    .then(result => {
+      if (!result) {
+        return res.status(401).json({
+          message: "Authentication failed"
+        });
+      }
+      res.status(200).json({
+        userId: fetchedUser._id,
+        name_first: thisUser.firstName
+      });
+    })
+    .catch(err => {
+      return res.status(401).json({
+        message: "Authentication failed"
+      });
+    });
+});
+
 // Read one user by id.
-router.get('api/user/:id', (req, res, next) => {
+app.get('api/user/:id', (req, res, next) => {
   User.findOne({ userId: req.params.id }, (err, user) => {
     if (err) {
       console.log(err);
@@ -114,7 +141,7 @@ router.get('api/user/:id', (req, res, next) => {
 });
 
 // Read for all users.
-router.get('/api/users', (req, res, next) => {
+app.get('/api/users', (req, res, next) => {
   User.find({}, (err, users) => {
     if (err) {
       console.log(err);
@@ -128,7 +155,7 @@ router.get('/api/users', (req, res, next) => {
 // Role CRUD Operations
 
 // Create new role.
-router.post('/api/role', (req, res, next) => {
+app.post('/api/role', (req, res, next) => {
   const role = {
     roleId: req.body.userId,
     roleTitle: req.body.roleTitle,
@@ -145,7 +172,7 @@ router.post('/api/role', (req, res, next) => {
 });
 
 // Read one role by id.
-router.get('api/role/:id', (req, res, next) => {
+app.get('api/role/:id', (req, res, next) => {
   Role.findOne({ roleId: req.params.id }, (err, role) => {
     if (err) {
       console.log(err);
@@ -157,7 +184,7 @@ router.get('api/role/:id', (req, res, next) => {
 });
 
 // Read for all roles.
-router.get('/api/roles', (req, res, next) => {
+app.get('/api/roles', (req, res, next) => {
   Role.find({}, (err, roles) => {
     if (err) {
       console.log(err);
@@ -171,7 +198,7 @@ router.get('/api/roles', (req, res, next) => {
 // SecurityQuestions CRUD Operations
 
 // Create new security question.
-router.post('/api/security-question', (req, res, next) => {
+app.post('/api/security-question', (req, res, next) => {
   const securityQuestion = {
     securityQuestionId: req.body.securityQuestionId,
     question: req.body.question,
@@ -188,7 +215,7 @@ router.post('/api/security-question', (req, res, next) => {
 });
 
 // Read one security question by id.
-router.get('api/security-question/:id', (req, res, next) => {
+app.get('api/security-question/:id', (req, res, next) => {
   SecurityQuestion.findOne({ securityQuestion: req.params.id }, (err, securityQuestion) => {
     if (err) {
       console.log(err);
@@ -200,7 +227,7 @@ router.get('api/security-question/:id', (req, res, next) => {
 });
 
 // Read for all security questions.
-router.get('/api/security-questions', (req, res, next) => {
+app.get('/api/security-questions', (req, res, next) => {
   SecurityQuestion.find({}, (err, securityQuestions) => {
     if (err) {
       console.log(err);
@@ -214,7 +241,7 @@ router.get('/api/security-questions', (req, res, next) => {
 // Invoice CRUD Operations
 
 // Create new invoice.
-router.post('/api/invoice', (req, res, next) => {
+app.post('/api/invoice', (req, res, next) => {
   const invoice = {
     userId: req.body.userId,
     dateCreated: req.body.date_created,
@@ -235,7 +262,7 @@ router.post('/api/invoice', (req, res, next) => {
 });
 
 // Read one invoice by id.
-router.get('api/invoice/:id', (req, res, next) => {
+app.get('api/invoice/:id', (req, res, next) => {
   Role.findOne({ invoiceId: req.params.id }, (err, invoice) => {
     if (err) {
       console.log(err);
@@ -247,7 +274,7 @@ router.get('api/invoice/:id', (req, res, next) => {
 });
 
 // Read for all invoices.
-router.get('/api/invoices', (req, res, next) => {
+app.get('/api/invoices', (req, res, next) => {
   Role.find({}, (err, invoices) => {
     if (err) {
       console.log(err);
