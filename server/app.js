@@ -117,7 +117,7 @@ app.post("/login", (req, res, next) => {
         });
       }
       res.status(200).json({
-        userId: fetchedUser._id,
+        userId: thisUser._id,
         name_first: thisUser.firstName
       });
     })
