@@ -14,12 +14,12 @@
       <h2>Please sign in</h2>
       <small *ngIf="errorMessage">{{ errorMessage }}</small>
       <small class="warn"
-          *ngIf="form.controls['userId'].hasError('required') && form.controls['userId'].touched">
-          User Id is required
+          *ngIf="form.controls['userId'].hasError('required') && form.controls['username'].touched">
+          Username is required
         </small>
         <small class="warn"
-          *ngIf="form.controls['userId'].hasError('pattern') && form.controls['userId'].touched">
-          Invalid User Id
+          *ngIf="form.controls['userId'].hasError('pattern') && form.controls['username'].touched">
+          Invalid User
         </small>
       <form [formGroup]="form" #loginForm="ngForm" (ngSubmit)="onSubmit(form.value); form.reset()">
         <mat-form-field class="inputStyle">
@@ -43,7 +43,7 @@
           <button
             mat-raised-button
             color="accent"
-            [routerLink]="['/']"
+            [routerLink]="['/register']"
           >
             Register
           </button>

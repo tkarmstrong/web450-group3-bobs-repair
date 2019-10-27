@@ -71,7 +71,7 @@ db.once("open", function() {
 // User CRUD Operations
 
 // Create new user.
-app.post('/api/user', (req, res, next) => {
+app.post('/api/registration', (req, res, next) => {
   const user = new User({
     userId: req.body._id,
     username: req.body.username,

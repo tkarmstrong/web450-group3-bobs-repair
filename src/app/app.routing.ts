@@ -15,7 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 export const AppRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -31,6 +31,10 @@ export const AppRoutes: Routes = [
         path: 'user-management',
         component: UserManagementComponent
       },
+      {
+        path: 'register',
+        component: RegisterComponent
+      }
     ]
   },
   {

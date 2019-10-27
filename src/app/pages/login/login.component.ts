@@ -34,11 +34,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      userId: [
+      username: [
         null,
         Validators.compose([
-          Validators.required,
-          Validators.pattern('^[0-9]*$')
+          Validators.required
         ])
       ],
       password: [
@@ -54,13 +53,15 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     const apiBaseURL = '/api/user/';
     // tslint:disable-next-line: no-string-literal
-    const userId = this.form.controls['userId'].value;
+    const username = this.form.controls['username'].value;
+    // tslint:disable-next-line: no-string-literal
+    const password = this.form.controls['password'].value;
 
-    this.http.get(apiBaseURL + userId).subscribe(res => {
+    this.http.get(apiBaseURL + username).subscribe(res => {
       if (res) {
         this.cookie.set('isAuthenticated', 'true', 1);
-        this.cookie.set(userId, 'true', 1);
-        this.router.navigate(['/dashboard']);
+        this.cookie.set(username, 'true', 1);
+        this.router.navigate(['/home']);
       } else {
         this.errorMessage = 'Invalid User ID';
       }

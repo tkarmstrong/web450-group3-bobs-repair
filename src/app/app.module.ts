@@ -29,6 +29,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 // Material
 import { MatCardModule } from '@angular/material/card';
@@ -57,7 +58,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HomeComponent,
     SessionLayoutComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    RegisterComponent,
+    SecurityQuestionsComponent,
+    UserManagementComponent
   ],
   imports: [
     BrowserModule,
