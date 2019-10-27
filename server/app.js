@@ -54,6 +54,7 @@ db.once("open", function() {
 
 /************************* API routes go below this line ********************/
 
+// Test - Aaron
 
 /**
  * Creates an express server and listens on port 3000
