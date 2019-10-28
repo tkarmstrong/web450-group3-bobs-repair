@@ -14,13 +14,13 @@
       <h2>Please sign in</h2>
       <small *ngIf="errorMessage">{{ errorMessage }}</small>
       <small class="warn"
-          *ngIf="form.controls['userId'].hasError('required') && form.controls['username'].touched">
-          Username is required
-        </small>
-        <small class="warn"
-          *ngIf="form.controls['userId'].hasError('pattern') && form.controls['username'].touched">
-          Invalid User
-        </small>
+        *ngIf="form.controls['username'].hasError('required') && form.controls['username'].touched">
+        Username is required
+      </small>
+      <small class="warn"
+        *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched">
+        Password is required
+      </small>
       <form [formGroup]="form" #loginForm="ngForm" (ngSubmit)="onSubmit(form.value); form.reset()">
         <mat-form-field class="inputStyle">
           <input type="text" matInput [formControl]="form.controls['userId']" placeholder="Username " />
