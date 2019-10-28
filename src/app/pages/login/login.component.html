@@ -23,7 +23,7 @@
       </small>
       <form [formGroup]="form" #loginForm="ngForm" (ngSubmit)="onSubmit(form.value); form.reset()">
         <mat-form-field class="inputStyle">
-          <input type="text" matInput [formControl]="form.controls['userId']" placeholder="Username " />
+          <input type="text" matInput [formControl]="form.controls['username']" placeholder="Username " />
         </mat-form-field>
         <mat-form-field class="inputStyle">
           <input type="password" matInput [formControl]="form.controls['password']" placeholder="Password" />
