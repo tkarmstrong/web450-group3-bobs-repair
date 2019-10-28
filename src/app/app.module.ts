@@ -22,9 +22,9 @@ import { CookieService } from 'ngx-cookie-service';
 
 // Components
 import { AppComponent } from './app.component';
-import { BaseLayoutComponent } from './shared';
+import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { HomeComponent } from './pages/home/home.component';
-import { SessionLayoutComponent } from './shared';
+import { SessionLayoutComponent } from './shared/session-layout/session-layout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
