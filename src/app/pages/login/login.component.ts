@@ -44,7 +44,6 @@ export class LoginComponent implements OnInit {
         null,
         Validators.compose([
           Validators.required,
-          // Validators.pattern('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm')
         ])
       ]
     });
