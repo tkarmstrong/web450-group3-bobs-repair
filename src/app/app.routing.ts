@@ -20,16 +20,12 @@ import { RegisterComponent } from './pages/register/register.component';
 export const AppRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
-    path: 'home',
+    path: '',
     component: BaseLayoutComponent,
     children: [
       {
-        path: '',
+        path: 'home',
         component: HomeComponent
-      },
-      {
-        path: 'user-management',
-        component: UserManagementComponent
       },
       {
         path: 'register',
@@ -54,6 +50,10 @@ export const AppRoutes: Routes = [
         component: NotFoundComponent
       }
     ]
+  },
+  {
+    path: 'user-management',
+    component: UserManagementComponent
   },
   {
     path: '**',
