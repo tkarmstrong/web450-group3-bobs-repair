@@ -121,7 +121,7 @@ app.post("/api/login", (req, res, next) => {
     .then(user => {
       if (!user) {
         return res.status(401).json({
-          message: "Authentication failed"
+          message: "Authentication failed. No user."
         });
       }
       thisUser = user;
@@ -130,7 +130,7 @@ app.post("/api/login", (req, res, next) => {
     .then(result => {
       if (!result) {
         return res.status(401).json({
-          message: "Authentication failed"
+          message: "Authentication failed. Password mismatch."
         });
       }
       res.status(200).json({
@@ -140,7 +140,7 @@ app.post("/api/login", (req, res, next) => {
     })
     .catch(err => {
       return res.status(401).json({
-        message: "Authentication failed"
+        message: "Authentication failed. Unknown error."
       });
     });
 });
