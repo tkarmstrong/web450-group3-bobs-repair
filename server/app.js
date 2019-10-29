@@ -173,6 +173,7 @@ app.get('/api/users', (req, res, next) => {
 // Update user
 app.put('/api/users/:id', (req, res, next) => {
   User.findOne({'_id': req.params.id}, (err, user) => {
+    console.log(user);
     if (err) {
       console.log(err);
       return next(err);
@@ -261,7 +262,7 @@ app.get('/api/roles', (req, res, next) => {
 // Create new security question.
 app.post('/api/security-questions', (req, res, next) => {
   const securityQuestion = {
-    question: req.body.question,
+    questionText: req.body.questionText
   };
 
   SecurityQuestion.create(securityQuestion, (err) => {
