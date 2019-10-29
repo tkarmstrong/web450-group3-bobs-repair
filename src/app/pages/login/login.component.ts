@@ -46,7 +46,10 @@ export class LoginComponent implements OnInit {
     // tslint:disable-next-line: no-string-literal
     const password = this.form.controls['password'].value;
 
-    this.http.post(apiBaseURL, username, password).subscribe(res => {
+    this.http.post(apiBaseURL, {
+      username,
+      password
+    }).subscribe(res => {
       if (res) {
         this.cookie.set('isAuthenticated', 'true', 1);
         this.cookie.set(username, 'true', 1);

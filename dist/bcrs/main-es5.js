@@ -481,7 +481,10 @@ var LoginComponent = /** @class */ (function () {
         var username = this.form.controls['username'].value;
         // tslint:disable-next-line: no-string-literal
         var password = this.form.controls['password'].value;
-        this.http.post(apiBaseURL, username, password).subscribe(function (res) {
+        this.http.post(apiBaseURL, {
+            username: username,
+            password: password
+        }).subscribe(function (res) {
             if (res) {
                 _this.cookie.set('isAuthenticated', 'true', 1);
                 _this.cookie.set(username, 'true', 1);
