@@ -135,7 +135,7 @@ app.post("/api/login", (req, res, next) => {
       }
       res.status(200).json({
         userId: thisUser._id,
-        name_first: thisUser.firstName
+        firstName: thisUser.firstName
       });
     })
     .catch(err => {

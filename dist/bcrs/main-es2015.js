@@ -63,7 +63,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card>\n  <mat-card-header>\n    <mat-card-title>Please fill out the form to register</mat-card-title>\n    <mat-card-subtitle>Bob's Computer Repair Shop</mat-card-subtitle>\n  </mat-card-header>\n  <mat-card-content>\n\n      <form [formGroup]=\"form\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(form.value); form.reset()\">\n\n          <div class=\"errors\">\n            <small *ngIf=\"errorMessage\">{{ errorMessage }}</small>\n\n            <small class=\"warn\"\n              *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\">\n              Password is required\n            </small>\n\n            <small class=\"warn\"\n              *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\">\n              Password is required\n            </small>\n          </div>\n\n          <div class=\"form-group\">\n            <mat-form-field>\n              <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"Username \" />\n            </mat-form-field>\n            <div *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\">Username required.</div>\n          </div>\n\n          <mat-form-field class=\"form-group\">\n            <input type=\"password\" matInput [formControl]=\"form.controls['password']\" placeholder=\"Password\" />\n          </mat-form-field>\n\n          <mat-form-field *ngIf=\"expression\" >\n            <input type=\"password\" matInput placeholder=\"Password\" />\n          </mat-form-field>\n\n          <br>\n\n          <mat-card-actions>\n            <button\n              mat-raised-button\n              color=\"primary\"\n              [disabled]=\"!form.valid\"\n              type=\"submit\"\n            >\n              Log in\n            </button>\n\n            <button\n              mat-raised-button\n              color=\"accent\"\n              [routerLink]=\"['/register']\"\n            >\n              Register\n            </button>\n          </mat-card-actions>\n        </form>\n\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-button>Ok</button>\n  </mat-card-actions>\n</mat-card>\n"
+module.exports = "<mat-card>\n  <mat-card-header>\n    <mat-card-title>Please fill out the form to register</mat-card-title>\n    <mat-card-subtitle>Bob's Computer Repair Shop</mat-card-subtitle>\n  </mat-card-header>\n  <mat-card-content>\n\n      <form [formGroup]=\"form\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(form.value); form.reset()\">\n\n          <small *ngIf=\"errorMessage\">{{ errorMessage }}</small>\n\n          <div class=\"form-group\">\n            <mat-form-field>\n              <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"Username \" />\n            </mat-form-field>\n            <small class=\"warn\" *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\">Username required.</small>\n          </div>\n\n          <div class=\"form-group\">\n            <mat-form-field class=\"form-group\">\n              <input type=\"password\" matInput [formControl]=\"form.controls['password']\" placeholder=\"Password\" />\n            </mat-form-field>\n            <small class=\"warn\" *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\">Password Required</small>\n          </div>\n\n          <div class=\"form-group\">\n            <mat-form-field class=\"form-group\">\n              <input type=\"text\" matInput [formControl]=\"form.controls['firstName']\" placeholder=\"First Name\" />\n            </mat-form-field>\n            <small *ngIf=\"form.controls['firstName'].hasError('required') && form.controls['firstName'].touched\">First Name Required</small>\n          </div>\n\n          <div class=\"form-group\">\n            <mat-form-field class=\"form-group\">\n              <input type=\"text\" matInput [formControl]=\"form.controls['lastName']\" placeholder=\"Last Name\" />\n            </mat-form-field>\n            <small *ngIf=\"form.controls['lastName'].hasError('required') && form.controls['lastName'].touched\">Last Name Required</small>\n          </div>\n\n          <div class=\"form-group\">\n            <mat-form-field class=\"form-group\">\n              <input type=\"text\" matInput [formControl]=\"form.controls['phoneNumber']\" placeholder=\"Phone Number\" />\n            </mat-form-field>\n            <small *ngIf=\"form.controls['phoneNumber'].hasError('required') && form.controls['phoneNumber'].touched\">Phone Number Required</small>\n          </div>\n\n          <div class=\"form-group\">\n            <mat-form-field class=\"form-group\">\n              <input type=\"text\" matInput [formControl]=\"form.controls['address']\" placeholder=\"Address\" />\n            </mat-form-field>\n            <small *ngIf=\"form.controls['address'].hasError('required') && form.controls['address'].touched\">Address Required</small>\n          </div>\n\n          <div class=\"form-group\">\n            <mat-form-field class=\"form-group\">\n              <input type=\"text\" matInput [formControl]=\"form.controls['email']\" placeholder=\"Email\" />\n            </mat-form-field>\n            <small *ngIf=\"form.controls['email'].hasError('email') && form.controls['address'].touched\">Email Required</small>\n          </div>\n\n\n\n          <br>\n\n          <mat-card-actions>\n            <button\n              mat-raised-button\n              color=\"primary\"\n              [disabled]=\"!form.valid\"\n              type=\"submit\"\n            >\n              Log in\n            </button>\n\n            <button\n              mat-raised-button\n              color=\"accent\"\n              [routerLink]=\"['/register']\"\n            >\n              Register\n            </button>\n          </mat-card-actions>\n        </form>\n\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-button>Ok</button>\n  </mat-card-actions>\n</mat-card>\n"
 
 /***/ }),
 
@@ -464,27 +464,17 @@ let LoginComponent = class LoginComponent {
     }
     ngOnInit() {
         this.form = this.fb.group({
-            username: [
-                null,
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
-                ])
-            ],
-            password: [
-                null,
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
-                ])
-            ]
+            username: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
+            password: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])]
         });
     }
     onSubmit() {
-        const apiBaseURL = '/api/user/';
+        const apiBaseURL = '/api/login/';
         // tslint:disable-next-line: no-string-literal
         const username = this.form.controls['username'].value;
         // tslint:disable-next-line: no-string-literal
         const password = this.form.controls['password'].value;
-        this.http.get(apiBaseURL + username).subscribe(res => {
+        this.http.post(apiBaseURL, username, password).subscribe(res => {
             if (res) {
                 this.cookie.set('isAuthenticated', 'true', 1);
                 this.cookie.set(username, 'true', 1);
@@ -592,7 +582,7 @@ NotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".warn {\n  color: red;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFVBQVU7QUFDWiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud2FybiB7XG4gIGNvbG9yOiByZWQ7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -612,7 +602,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _shared_must_match__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/must-match */ "./src/app/shared/must-match.ts");
 /*
 ; =======================================================
 ; Title: register.component.ts (Week 6)
@@ -622,7 +611,6 @@ __webpack_require__.r(__webpack_exports__);
 ; Legend: [] -> Team member responsible for page.
 ;========================================================
 */
-
 
 
 
@@ -639,18 +627,17 @@ let RegisterComponent = class RegisterComponent {
     ngOnInit() {
         this.form = this.fb.group({
             username: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
-            password: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm')])],
-            confirmPassword: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
+            password: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm')
+                ])],
             firstName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
             lastName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
             phoneNumber: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
             address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
-            email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern('/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]'
-                        + '{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/')])],
+            email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].email])],
             role: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
             selectedSecurityQuestions: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])]
-        }, {
-            validator: Object(_shared_must_match__WEBPACK_IMPORTED_MODULE_6__["MustMatch"])('password', 'confirmPassword')
         });
     }
     onSubmit() {
@@ -899,46 +886,6 @@ __webpack_require__.r(__webpack_exports__);
 */
 
 
-
-
-/***/ }),
-
-/***/ "./src/app/shared/must-match.ts":
-/*!**************************************!*\
-  !*** ./src/app/shared/must-match.ts ***!
-  \**************************************/
-/*! exports provided: MustMatch */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MustMatch", function() { return MustMatch; });
-/*
-; =======================================================
-; Title: login.component.ts (Week 6)
-; Authors: https://jasonwatmore.com/post/2018/11/07/angular-7-reactive-forms-validation-example
-; Date: 08 Nov 2019
-; Description: Custom Validator for matching passwords
-;========================================================
-*/
-// custom validator to check that two fields match
-function MustMatch(controlName, matchingControlName) {
-    return (formGroup) => {
-        const control = formGroup.controls[controlName];
-        const matchingControl = formGroup.controls[matchingControlName];
-        if (matchingControl.errors && !matchingControl.errors.mustMatch) {
-            // return if another validator has already found an error on the matchingControl
-            return;
-        }
-        // set error on matchingControl if validation fails
-        if (control.value !== matchingControl.value) {
-            matchingControl.setErrors({ mustMatch: true });
-        }
-        else {
-            matchingControl.setErrors(null);
-        }
-    };
-}
 
 
 /***/ }),
