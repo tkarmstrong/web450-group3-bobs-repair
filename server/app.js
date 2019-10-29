@@ -277,8 +277,8 @@ app.post('/api/security-questions', (req, res, next) => {
 });
 
 // Read one security question by id.
-app.get('api/security-questions/:id', (req, res, next) => {
-  SecurityQuestion.findOne({ securityQuestion: req.params.id }, (err, securityQuestion) => {
+app.get('/api/security-questions/:id', (req, res, next) => {
+  SecurityQuestion.findOne({ '_id': req.params.id }, (err, securityQuestion) => {
     if (err) {
       console.log(err);
       return next(err);
