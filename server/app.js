@@ -235,8 +235,8 @@ app.post('/api/roles', (req, res, next) => {
 });
 
 // Read one role by id.
-app.get('api/roles/:id', (req, res, next) => {
-  Role.findOne({ roleId: req.params.id }, (err, role) => {
+app.get('/api/roles/:id', (req, res, next) => {
+  Role.findOne({ '_id': req.params.id }, (err, role) => {
     if (err) {
       console.log(err);
       return next(err);
