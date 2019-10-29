@@ -224,7 +224,7 @@ app.post('/api/roles', (req, res, next) => {
     roleTitle: req.body.roleTitle,
   };
 
-  User.create(role, (err) => {
+  Role.create(role, (err) => {
     if (err) {
       console.log(err);
       return next(err);
