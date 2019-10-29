@@ -115,7 +115,7 @@ app.post('/api/users/', function(req, res, next) {
 })
 
 // User login
-app.post("/api/users", (req, res, next) => {
+app.post("/api/login", (req, res, next) => {
   let thisUser;
   User.findOne({ username: req.body.username })
     .then(user => {
