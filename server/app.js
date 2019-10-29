@@ -258,6 +258,47 @@ app.get('/api/roles', (req, res, next) => {
   });
 });
 
+// Update role
+app.put('/api/roles/update/:id', (req, res, next) => {
+  Role.findOne({'_id': req.params.id}, (err, role) => {
+    console.log(role);
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+
+      console.log(role);
+
+      role.set({
+        roleTitle: req.body.roleTitle
+      })
+
+      role.save((err, savedRole) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedRole);
+          res.json(savedRole);
+        }
+      })
+    }
+  })
+})
+
+// Delete role
+app.delete('/api/roles/:id', (req, res, next) => {
+  Role.findByIdAndDelete({'_id': req.params.id}, (err, role) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(role);
+      res.json(role);
+    }
+  })
+})
+
 // SecurityQuestions CRUD Operations
 
 // Create new security question.
@@ -299,6 +340,47 @@ app.get('/api/security-questions', (req, res, next) => {
     return res.json(securityQuestions);
   });
 });
+
+// Update security question
+app.put('/api/security-questions/update/:id', (req, res, next) => {
+  SecurityQuestion.findOne({'_id': req.params.id}, (err, securityQuestion) => {
+    console.log(securityQuestion);
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+
+      console.log(securityQuestion);
+
+      securityQuestion.set({
+        questionText: req.body.questionText
+      })
+
+      securityQuestion.save((err, savedSecurityQuestion) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedSecurityQuestion);
+          res.json(savedSecurityQuestion);
+        }
+      })
+    }
+  })
+})
+
+// Delete role
+app.delete('/api/security-questions/:id', (req, res, next) => {
+  SecurityQuestion.findByIdAndDelete({'_id': req.params.id}, (err, securityQuestion) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(securityQuestion);
+      res.json(securityQuestion);
+    }
+  })
+})
 
 // Invoice CRUD Operations
 
@@ -346,6 +428,137 @@ app.get('/api/invoices', (req, res, next) => {
     return res.json(invoices);
   });
 });
+
+// Update invoice
+app.put('/api/invoices/update/:id', (req, res, next) => {
+  Invoice.findOne({'_id': req.params.id}, (err, invoice) => {
+    console.log(invoice);
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+
+      console.log(invoice);
+
+      invoice.set({
+        userId: req.body.userId,
+        dateCreated: req.body.date_created,
+        services: [],
+        partsCost: req.body.partsCost,
+        laborHrs: req.body.laborHrs,
+        totalCost: req.body.totalCost
+      })
+
+      invoice.save((err, invoice) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedInvoice);
+          res.json(savedInvoice);
+        }
+      })
+    }
+  })
+})
+
+// Delete invoice
+app.delete('/api/invoices/:id', (req, res, next) => {
+  Invoice.findByIdAndDelete({'_id': req.params.id}, (err, invoice) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(invoice);
+      res.json(invoice);
+    }
+  })
+})
+
+// Service CRUD Operations
+
+// Create new service.
+app.post('/api/services', (req, res, next) => {
+  const service = {
+    serviceText: req.body.serviceText,
+    cost: req.body.cost
+  };
+
+  Service.create(service, (err) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    }
+    console.log(service);
+    return res.json(service);
+  });
+});
+
+// Read one role by id.
+app.get('/api/services/:id', (req, res, next) => {
+  Service.findOne({ '_id': req.params.id }, (err, service) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    }
+    console.log(service);
+    return res.json(service);
+  });
+});
+
+// Read for all roles.
+app.get('/api/services', (req, res, next) => {
+  Service.find({}, (err, services) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    }
+    console.log(services);
+    return res.json(services);
+  });
+});
+
+// Update service
+app.put('/api/services/update/:id', (req, res, next) => {
+  Service.findOne({'_id': req.params.id}, (err, service) => {
+    console.log(service);
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+
+      console.log(service);
+
+      service.set({
+        serviceText: req.body.serviceText,
+        cost: req.body.cost
+      })
+
+      role.save((err, savedService) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedService);
+          res.json(savedService);
+        }
+      })
+    }
+  })
+})
+
+// Delete service
+app.delete('/api/services/:id', (req, res, next) => {
+  Service.findByIdAndDelete({'_id': req.params.id}, (err, service) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(service);
+      res.json(service);
+    }
+  })
+})
 
 /**
  * Creates an express server and listens on port 3000

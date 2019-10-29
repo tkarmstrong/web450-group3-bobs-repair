@@ -47,6 +47,7 @@ import { MatTableModule } from '@angular/material/table';
 
 // Flex
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 // PrimeNg
 
@@ -61,7 +62,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     NotFoundComponent,
     RegisterComponent,
     SecurityQuestionsComponent,
-    UserManagementComponent
+    UserManagementComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

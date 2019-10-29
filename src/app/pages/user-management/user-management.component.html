@@ -1,11 +1,77 @@
 <!-- /*
 ; =======================================================
 ; Title: user-management.component.html (Week 6)
-; Authors: Tyler Armstrong, David Tarvin, [Aaron Wilson]
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
 ; Date: 23 Oct 2019
 ; Description: Bob's Computer Repair Shop
 ; Legend: [] -> Team member responsible for page.
 ;========================================================
 */ -->
 
-<p>user-management works!</p>
+<div fxLayout="column" style="margin-top: 8%;">
+  <mat-card style="width: 50%; margin: 0 auto;">
+    <mat-card-title>Users Configuration</mat-card-title>
+    <mat-card-content *ngIf="users">
+      <table mat-table [dataSource]="users">
+
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef>Username</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.username }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef>First Name</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.firstName }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef>Last Name</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.lastName }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="phoneNumber">
+          <th mat-header-cell *matHeaderCellDef>Phone Number</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.phoneNumber }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="address">
+          <th mat-header-cell *matHeaderCellDef>Address</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.address }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.email }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="functions">
+          <th mat-header-cell *matHeaderCellDef>Functions</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button routerLink="/users/{{ element._id }}">
+              <mat-icon color="accent">Edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="delete(element._id, element.username)">
+              <mat-icon color="accent">Delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>
