@@ -72,31 +72,46 @@ db.once("open", function() {
 // User CRUD Operations
 
 // Create new user.
-app.post('/api/registration', (req, res, next) => {
-  const user = new User({
-    userId: req.body._id,
-    username: req.body.username,
-    password: req.body.password,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    phoneNumber: req.body.phoneNumber,
-    address: req.body.address,
-    email: req.body.email,
-    role: req.body.role,
-    selectedSecurityQuestions: [],
-    dateCreated: req.body.date_created,
-    dateModified: req.body.date_modified,
-  });
-
-  User.create(user, (err) => {
+app.post('/api/users/register', function(req, res, next) {
+  User.findOne({'username': req.body.username}, function(err, user) {
     if (err) {
       console.log(err);
       return next(err);
+    } else {
+      if (!user) {
+        // The selected username is unique
+        let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
+        let u = {
+          username: req.body.username,
+          password: hashedPassword,
+          firstName: req.body.firstName,
+          lastName: req.body.lastName,
+          phoneNumber: req.body.phoneNumber,
+          address: req.body.address,
+          email: req.body.email,
+          selectedSecurityQuestions: req.body.selectedSecurityQuestions,
+          dateCreated: req.body.dateCreated
+        }
+        User.create(u, function(err, newUser) {
+          if (err) {
+            console.log(err);
+            return next(err);
+          } else {
+            console.log(newUser);
+            res.json(newUser);
+          }
+        })
+      } else {
+        // The selected username is already in use
+        console.log('The selected username: ${req.body.username} is already in use!');
+        res.status(500).send({
+          text: 'The selected username: ${req.body.username} is already in use!',
+          time_stamp: new Date()
+        })
+      }
     }
-    console.log(user);
-    return res.json(user);
-  });
-});
+  })
+})
 
 // User login
 app.post("/login", (req, res, next) => {
