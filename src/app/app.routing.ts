@@ -24,13 +24,13 @@ export const AppRoutes: Routes = [
     path: '',
     component: BaseLayoutComponent,
     children: [
+      { path: 'login', component: LoginComponent },
       { path: 'home', component: HomeComponent },
       { path: 'register', component: RegisterComponent }
     ]
   },
   { path: 'session', component: SessionLayoutComponent,
     children: [
-      { path: 'login', component: LoginComponent },
       { path: 'security-questions', component: SecurityQuestionsComponent, canActivate: [AuthGuardService] },
       { path: 'user-management', component: UserManagementComponent, canActivate: [AuthGuardService] },
       { path: '404', component: NotFoundComponent }
