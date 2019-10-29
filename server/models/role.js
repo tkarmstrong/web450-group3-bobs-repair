@@ -12,6 +12,7 @@ const mongoose = require('mongoose');
 
 const roleSchema = mongoose.Schema({
   // Do we want an actual ( roleId ) field here?
+    // Tyler: MongoDB will auto-generate an _id field.
   roleTitle: { type: String },
 },
 {

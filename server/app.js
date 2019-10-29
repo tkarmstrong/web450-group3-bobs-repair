@@ -146,8 +146,9 @@ app.post("/api/login", (req, res, next) => {
 });
 
 // Read one user by id.
-app.get('api/users/:id', (req, res, next) => {
-  User.findOne({ userId: req.params.id }, (err, user) => {
+
+app.get('/api/users/:id', (req, res, next) => {
+  User.findOne({ userId: req.params._id }, (err, user) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -173,6 +174,7 @@ app.get('/api/users', (req, res, next) => {
 // Update user
 app.put('/api/users/update/:id', (req, res, next) => {
   User.findOne({'_id': req.params.id}, (err, user) => {
+    console.log(user);
     if (err) {
       console.log(err);
       return next(err);
@@ -222,7 +224,7 @@ app.post('/api/roles', (req, res, next) => {
     roleTitle: req.body.roleTitle,
   };
 
-  User.create(role, (err) => {
+  Role.create(role, (err) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -233,8 +235,8 @@ app.post('/api/roles', (req, res, next) => {
 });
 
 // Read one role by id.
-app.get('api/roles/:id', (req, res, next) => {
-  Role.findOne({ roleId: req.params.id }, (err, role) => {
+app.get('/api/roles/:id', (req, res, next) => {
+  Role.findOne({ '_id': req.params.id }, (err, role) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -261,7 +263,7 @@ app.get('/api/roles', (req, res, next) => {
 // Create new security question.
 app.post('/api/security-questions', (req, res, next) => {
   const securityQuestion = {
-    question: req.body.question,
+    questionText: req.body.questionText
   };
 
   SecurityQuestion.create(securityQuestion, (err) => {
@@ -275,8 +277,8 @@ app.post('/api/security-questions', (req, res, next) => {
 });
 
 // Read one security question by id.
-app.get('api/security-questions/:id', (req, res, next) => {
-  SecurityQuestion.findOne({ securityQuestion: req.params.id }, (err, securityQuestion) => {
+app.get('/api/security-questions/:id', (req, res, next) => {
+  SecurityQuestion.findOne({ '_id': req.params.id }, (err, securityQuestion) => {
     if (err) {
       console.log(err);
       return next(err);
