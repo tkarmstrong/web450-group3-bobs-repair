@@ -63,7 +63,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>register works!</p>\n"
+module.exports = "<mat-card>\n  <mat-card-header>\n    <mat-card-title>Please fill out the form to register</mat-card-title>\n    <mat-card-subtitle>Bob's Computer Repair Shop</mat-card-subtitle>\n  </mat-card-header>\n  <mat-card-content>\n\n      <form [formGroup]=\"form\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(form.value); form.reset()\">\n\n          <div class=\"errors\">\n            <small *ngIf=\"errorMessage\">{{ errorMessage }}</small>\n\n            <small class=\"warn\"\n              *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\">\n              Password is required\n            </small>\n\n            <small class=\"warn\"\n              *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\">\n              Password is required\n            </small>\n          </div>\n\n          <div class=\"form-group\">\n            <mat-form-field>\n              <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"Username \" />\n            </mat-form-field>\n            <div *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\">Username required.</div>\n          </div>\n\n          <mat-form-field class=\"form-group\">\n            <input type=\"password\" matInput [formControl]=\"form.controls['password']\" placeholder=\"Password\" />\n          </mat-form-field>\n\n          <mat-form-field *ngIf=\"expression\" >\n            <input type=\"password\" matInput placeholder=\"Password\" />\n          </mat-form-field>\n\n          <br>\n\n          <mat-card-actions>\n            <button\n              mat-raised-button\n              color=\"primary\"\n              [disabled]=\"!form.valid\"\n              type=\"submit\"\n            >\n              Log in\n            </button>\n\n            <button\n              mat-raised-button\n              color=\"accent\"\n              [routerLink]=\"['/register']\"\n            >\n              Register\n            </button>\n          </mat-card-actions>\n        </form>\n\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-button>Ok</button>\n  </mat-card-actions>\n</mat-card>\n"
 
 /***/ }),
 
@@ -170,26 +170,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared */ "./src/app/shared/index.ts");
+/* harmony import */ var _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/base-layout/base-layout.component */ "./src/app/shared/base-layout/base-layout.component.ts");
 /* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
-/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
-/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
-/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/esm2015/card.js");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/esm2015/button.js");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm2015/icon.js");
-/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm2015/menu.js");
-/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm2015/toolbar.js");
-/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm2015/sidenav.js");
-/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm2015/checkbox.js");
-/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm2015/input.js");
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/material/divider */ "./node_modules/@angular/material/esm2015/divider.js");
-/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/esm2015/radio.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm2015/table.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm2015/flex-layout.js");
+/* harmony import */ var _shared_session_layout_session_layout_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./shared/session-layout/session-layout.component */ "./src/app/shared/session-layout/session-layout.component.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
+/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
+/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
+/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/esm2015/card.js");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/esm2015/button.js");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm2015/icon.js");
+/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm2015/menu.js");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm2015/toolbar.js");
+/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm2015/sidenav.js");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm2015/checkbox.js");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm2015/input.js");
+/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/material/divider */ "./node_modules/@angular/material/esm2015/divider.js");
+/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/esm2015/radio.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm2015/table.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm2015/flex-layout.js");
 /*
 ; =======================================================
 ; Title: app.module.ts (Week 6)
@@ -241,14 +242,14 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
-            _shared__WEBPACK_IMPORTED_MODULE_10__["BaseLayoutComponent"],
+            _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_10__["BaseLayoutComponent"],
             _pages_home_home_component__WEBPACK_IMPORTED_MODULE_11__["HomeComponent"],
-            _shared__WEBPACK_IMPORTED_MODULE_10__["SessionLayoutComponent"],
-            _pages_login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"],
-            _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_13__["NotFoundComponent"],
-            _pages_register_register_component__WEBPACK_IMPORTED_MODULE_16__["RegisterComponent"],
-            _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_14__["SecurityQuestionsComponent"],
-            _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_15__["UserManagementComponent"]
+            _shared_session_layout_session_layout_component__WEBPACK_IMPORTED_MODULE_12__["SessionLayoutComponent"],
+            _pages_login_login_component__WEBPACK_IMPORTED_MODULE_13__["LoginComponent"],
+            _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_14__["NotFoundComponent"],
+            _pages_register_register_component__WEBPACK_IMPORTED_MODULE_17__["RegisterComponent"],
+            _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_15__["SecurityQuestionsComponent"],
+            _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_16__["UserManagementComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -257,19 +258,19 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_7__["ReactiveFormsModule"],
-            _angular_flex_layout__WEBPACK_IMPORTED_MODULE_29__["FlexLayoutModule"],
-            _angular_material_card__WEBPACK_IMPORTED_MODULE_17__["MatCardModule"],
-            _angular_material_button__WEBPACK_IMPORTED_MODULE_18__["MatButtonModule"],
-            _angular_material_icon__WEBPACK_IMPORTED_MODULE_19__["MatIconModule"],
-            _angular_material_menu__WEBPACK_IMPORTED_MODULE_20__["MatMenuModule"],
-            _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_21__["MatToolbarModule"],
-            _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_22__["MatSidenavModule"],
-            _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_23__["MatCheckboxModule"],
-            _angular_material_input__WEBPACK_IMPORTED_MODULE_24__["MatInputModule"],
-            _angular_material_divider__WEBPACK_IMPORTED_MODULE_25__["MatDividerModule"],
-            _angular_material_radio__WEBPACK_IMPORTED_MODULE_26__["MatRadioModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatDialogModule"],
-            _angular_material_table__WEBPACK_IMPORTED_MODULE_28__["MatTableModule"]
+            _angular_flex_layout__WEBPACK_IMPORTED_MODULE_30__["FlexLayoutModule"],
+            _angular_material_card__WEBPACK_IMPORTED_MODULE_18__["MatCardModule"],
+            _angular_material_button__WEBPACK_IMPORTED_MODULE_19__["MatButtonModule"],
+            _angular_material_icon__WEBPACK_IMPORTED_MODULE_20__["MatIconModule"],
+            _angular_material_menu__WEBPACK_IMPORTED_MODULE_21__["MatMenuModule"],
+            _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_22__["MatToolbarModule"],
+            _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_23__["MatSidenavModule"],
+            _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_24__["MatCheckboxModule"],
+            _angular_material_input__WEBPACK_IMPORTED_MODULE_25__["MatInputModule"],
+            _angular_material_divider__WEBPACK_IMPORTED_MODULE_26__["MatDividerModule"],
+            _angular_material_radio__WEBPACK_IMPORTED_MODULE_27__["MatRadioModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_28__["MatDialogModule"],
+            _angular_material_table__WEBPACK_IMPORTED_MODULE_29__["MatTableModule"]
         ],
         providers: [ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__["CookieService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
@@ -607,13 +608,73 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterComponent", function() { return RegisterComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _shared_must_match__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/must-match */ "./src/app/shared/must-match.ts");
+/*
+; =======================================================
+; Title: register.component.ts (Week 6)
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+;========================================================
+*/
+
+
+
+
+
 
 
 let RegisterComponent = class RegisterComponent {
-    constructor() { }
+    constructor(cookie, router, fb, http) {
+        this.cookie = cookie;
+        this.router = router;
+        this.fb = fb;
+        this.http = http;
+    }
     ngOnInit() {
+        this.form = this.fb.group({
+            username: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
+            password: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm')])],
+            confirmPassword: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
+            firstName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
+            lastName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
+            phoneNumber: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
+            address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
+            email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern('/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]'
+                        + '{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/')])],
+            role: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])],
+            selectedSecurityQuestions: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])]
+        }, {
+            validator: Object(_shared_must_match__WEBPACK_IMPORTED_MODULE_6__["MustMatch"])('password', 'confirmPassword')
+        });
+    }
+    onSubmit() {
+        const apiBaseURL = '/api/user/';
+        // tslint:disable-next-line: no-string-literal
+        const userId = this.form.controls['userId'].value;
+        this.http.get(apiBaseURL + userId).subscribe(res => {
+            if (res) {
+                this.cookie.set('isAuthenticated', 'true', 1);
+                this.cookie.set(userId, 'true', 1);
+                this.router.navigate(['/dashboard']);
+            }
+            else {
+                this.errorMessage = 'Invalid User ID';
+            }
+        });
     }
 };
+RegisterComponent.ctorParameters = () => [
+    { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_2__["CookieService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] }
+];
 RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-register',
@@ -838,6 +899,46 @@ __webpack_require__.r(__webpack_exports__);
 */
 
 
+
+
+/***/ }),
+
+/***/ "./src/app/shared/must-match.ts":
+/*!**************************************!*\
+  !*** ./src/app/shared/must-match.ts ***!
+  \**************************************/
+/*! exports provided: MustMatch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MustMatch", function() { return MustMatch; });
+/*
+; =======================================================
+; Title: login.component.ts (Week 6)
+; Authors: https://jasonwatmore.com/post/2018/11/07/angular-7-reactive-forms-validation-example
+; Date: 08 Nov 2019
+; Description: Custom Validator for matching passwords
+;========================================================
+*/
+// custom validator to check that two fields match
+function MustMatch(controlName, matchingControlName) {
+    return (formGroup) => {
+        const control = formGroup.controls[controlName];
+        const matchingControl = formGroup.controls[matchingControlName];
+        if (matchingControl.errors && !matchingControl.errors.mustMatch) {
+            // return if another validator has already found an error on the matchingControl
+            return;
+        }
+        // set error on matchingControl if validation fails
+        if (control.value !== matchingControl.value) {
+            matchingControl.setErrors({ mustMatch: true });
+        }
+        else {
+            matchingControl.setErrors(null);
+        }
+    };
+}
 
 
 /***/ }),

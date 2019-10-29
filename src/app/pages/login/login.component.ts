@@ -34,23 +34,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      username: [
-        null,
-        Validators.compose([
-          Validators.required
-        ])
-      ],
-      password: [
-        null,
-        Validators.compose([
-          Validators.required,
-        ])
-      ]
+      username: [null, Validators.compose([Validators.required])],
+      password: [null, Validators.compose([Validators.required])]
     });
   }
 
   onSubmit() {
-    const apiBaseURL = '/api/user/';
+    const apiBaseURL = '/api/login/';
     // tslint:disable-next-line: no-string-literal
     const username = this.form.controls['username'].value;
     // tslint:disable-next-line: no-string-literal
