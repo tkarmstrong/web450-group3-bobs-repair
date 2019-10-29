@@ -96,7 +96,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: base-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n;========================================================\n*/ -->\n\n<div>\n  <!-- Page header -->\n  <header>\n    <!-- Toolbar -->\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"primary\">\n      <mat-toolbar-row>\n        <button mat-button class=\"toolbar__icon-button mat-button\">\n          <mat-icon>menu</mat-icon>\n        </button>\n        <button mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\" [routerLink]=\"['/']\">Bob's</span>\n        </button>\n        <button mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/session/login']\">\n          <span style=\"margin-left: 5px !important\">Login</span>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n          <mat-icon>account_circle</mat-icon>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <button mat-menu-item>\n            <mat-icon>perm_contact_calendar</mat-icon>\n            <span>My Profile</span>\n          </button>\n          <button mat-menu-item>\n            <mat-icon>settings</mat-icon>\n            <span>Settings</span>\n          </button>\n          <button mat-menu-item (click)=\"userLogout()\">\n            <mat-icon>exit_to_app</mat-icon>\n            <span>Logout</span>\n          </button>\n        </mat-menu>\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </header>\n  </div>\n\n  <!-- Main page content -->\n  <main>\n    <router-outlet></router-outlet>\n  </main>\n\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: base-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n;========================================================\n*/ -->\n\n<div>\n  <!-- Page header -->\n  <header>\n    <!-- Toolbar -->\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"primary\">\n      <mat-toolbar-row>\n        <button mat-button class=\"toolbar__icon-button mat-button\">\n          <mat-icon>menu</mat-icon>\n        </button>\n        <button mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\" [routerLink]=\"['/']\">Bob's</span>\n        </button>\n        <button mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/login']\">\n          <span style=\"margin-left: 5px !important\">Login</span>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n          <mat-icon>account_circle</mat-icon>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <button mat-menu-item>\n            <mat-icon>perm_contact_calendar</mat-icon>\n            <span>My Profile</span>\n          </button>\n          <button mat-menu-item>\n            <mat-icon>settings</mat-icon>\n            <span>Settings</span>\n          </button>\n          <button mat-menu-item (click)=\"userLogout()\">\n            <mat-icon>exit_to_app</mat-icon>\n            <span>Logout</span>\n          </button>\n        </mat-menu>\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </header>\n  </div>\n\n  <!-- Main page content -->\n  <main>\n    <router-outlet></router-outlet>\n  </main>\n\n"
 
 /***/ }),
 
@@ -107,7 +107,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: session-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n;========================================================\n*/ -->\n\n  <div>\n    <!-- Page header -->\n    <header>\n      <!-- Toolbar -->\n      <mat-toolbar class=\"menu\" role=\"header\" color=\"primary\">\n        <mat-toolbar-row>\n            <button mat-button class=\"toolbar__icon-button mat-button\">\n              <mat-icon>menu</mat-icon>\n            </button>\n          <button mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/']\">\n            <span style=\"margin-left: 5px !important\" >Bob's</span>\n          </button>\n\n          <div fxFlex></div>\n\n          <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n            <mat-icon>account_circle</mat-icon>\n          </button>\n          <mat-menu #menu=\"matMenu\">\n            <button mat-menu-item>\n              <mat-icon>perm_contact_calendar</mat-icon>\n              <span>My Profile</span>\n            </button>\n            <button mat-menu-item>\n              <mat-icon>settings</mat-icon>\n              <span>Settings</span>\n            </button>\n            <button mat-menu-item (click)=\"userLogout()\">\n              <mat-icon>exit_to_app</mat-icon>\n              <span>Logout</span>\n            </button>\n          </mat-menu>\n        </mat-toolbar-row>\n      </mat-toolbar>\n    </header>\n  </div>\n\n  <!-- Main page content -->\n  <main>\n    <router-outlet></router-outlet>\n  </main>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: session-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n;========================================================\n*/ -->\n\n  <div>\n    <!-- Page header -->\n    <header>\n      <!-- Toolbar -->\n      <mat-toolbar class=\"menu\" role=\"header\" color=\"primary\">\n        <mat-toolbar-row>\n            <button mat-button class=\"toolbar__icon-button mat-button\">\n              <mat-icon>menu</mat-icon>\n            </button>\n          <button mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/']\">\n            <span style=\"margin-left: 5px !important\" >Bob's</span>\n          </button>\n          <button mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/session/security-questions']\">\n            <span style=\"margin-left: 5px !important\" >Security Questions</span>\n          </button>\n          <button mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/session/user-management']\">\n            <span style=\"margin-left: 5px !important\" >User Management</span>\n          </button>\n\n          <div fxFlex></div>\n\n          <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n            <mat-icon>account_circle</mat-icon>\n          </button>\n          <mat-menu #menu=\"matMenu\">\n            <button mat-menu-item>\n              <mat-icon>perm_contact_calendar</mat-icon>\n              <span>My Profile</span>\n            </button>\n            <button mat-menu-item>\n              <mat-icon>settings</mat-icon>\n              <span>Settings</span>\n            </button>\n            <button mat-menu-item (click)=\"userLogout()\">\n              <mat-icon>exit_to_app</mat-icon>\n              <span>Logout</span>\n            </button>\n          </mat-menu>\n        </mat-toolbar-row>\n      </mat-toolbar>\n    </header>\n  </div>\n\n  <!-- Main page content -->\n  <main>\n    <router-outlet></router-outlet>\n  </main>\n"
 
 /***/ }),
 
@@ -192,6 +192,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./shared/guards/auth-guard.service */ "./src/app/shared/guards/auth-guard.service.ts");
 /*
 ; =======================================================
 ; Title: app.module.ts (Week 6)
@@ -236,6 +237,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // Flex
 
+
 // PrimeNg
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -274,7 +276,7 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_28__["MatDialogModule"],
                 _angular_material_table__WEBPACK_IMPORTED_MODULE_29__["MatTableModule"]
             ],
-            providers: [ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__["CookieService"]],
+            providers: [ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__["CookieService"], _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_31__["AuthGuardService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
             entryComponents: []
         })
@@ -303,6 +305,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
 /* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
 /* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
+/* harmony import */ var _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/guards/auth-guard.service */ "./src/app/shared/guards/auth-guard.service.ts");
 /*
 ; =======================================================
 ; Title: app.routing.ts (Week 6)
@@ -319,48 +322,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var AppRoutes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
         path: '',
         component: _shared__WEBPACK_IMPORTED_MODULE_0__["BaseLayoutComponent"],
         children: [
-            {
-                path: 'home',
-                component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"]
-            },
-            {
-                path: 'register',
-                component: _pages_register_register_component__WEBPACK_IMPORTED_MODULE_6__["RegisterComponent"]
-            }
+            { path: 'login', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"] },
+            { path: 'home', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
+            { path: 'register', component: _pages_register_register_component__WEBPACK_IMPORTED_MODULE_6__["RegisterComponent"] }
         ]
     },
-    {
-        path: 'session',
-        component: _shared__WEBPACK_IMPORTED_MODULE_0__["SessionLayoutComponent"],
+    { path: 'session', component: _shared__WEBPACK_IMPORTED_MODULE_0__["SessionLayoutComponent"],
         children: [
-            {
-                path: 'login',
-                component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"]
-            },
-            {
-                path: 'security-questions',
-                component: _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_4__["SecurityQuestionsComponent"]
-            },
-            {
-                path: '404',
-                component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_3__["NotFoundComponent"]
-            }
+            { path: 'security-questions', component: _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_4__["SecurityQuestionsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_7__["AuthGuardService"]] },
+            { path: 'user-management', component: _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_5__["UserManagementComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_7__["AuthGuardService"]] },
+            { path: '404', component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_3__["NotFoundComponent"] }
         ]
     },
-    {
-        path: 'user-management',
-        component: _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_5__["UserManagementComponent"]
-    },
-    {
-        path: '**',
-        redirectTo: 'session/404'
-    }
+    { path: '**', redirectTo: 'session/404' }
 ];
 
 
@@ -873,6 +854,63 @@ var BaseLayoutComponent = /** @class */ (function () {
         })
     ], BaseLayoutComponent);
     return BaseLayoutComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/guards/auth-guard.service.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/guards/auth-guard.service.ts ***!
+  \*****************************************************/
+/*! exports provided: AuthGuardService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuardService", function() { return AuthGuardService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.es5.js");
+/*
+=====================================
+  ; Title: Auth-guard Service
+  ; Author: Tyler Armstrong, David Tarvin, Aaron Wilson
+  ; Date: 29 Oct 2019
+  ; Description: Service for checking cookie.
+======================================
+*/
+
+
+
+
+var AuthGuardService = /** @class */ (function () {
+    function AuthGuardService(router, cookieService) {
+        this.router = router;
+        this.cookieService = cookieService;
+    }
+    AuthGuardService.prototype.canActivate = function (route, state) {
+        var isAuthenticated = this.cookieService.get('isAuthenticated');
+        if (isAuthenticated) {
+            return true;
+        }
+        else {
+            this.router.navigate(['/session/login']);
+            return false;
+        }
+    };
+    AuthGuardService.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__["CookieService"] }
+    ]; };
+    AuthGuardService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], AuthGuardService);
+    return AuthGuardService;
 }());
 
 

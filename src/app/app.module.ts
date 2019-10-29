@@ -48,6 +48,7 @@ import { MatTableModule } from '@angular/material/table';
 // Flex
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { AuthGuardService } from './shared/guards/auth-guard.service';
 
 // PrimeNg
 
@@ -86,7 +87,7 @@ import { UserDetailsComponent } from './pages/user-details/user-details.componen
     MatDialogModule,
     MatTableModule
   ],
-  providers: [CookieService],
+  providers: [CookieService, AuthGuardService],
   bootstrap: [AppComponent],
   entryComponents: []
 })
