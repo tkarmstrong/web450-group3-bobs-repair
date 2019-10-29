@@ -171,7 +171,7 @@ app.get('/api/users', (req, res, next) => {
 
 
 // Update user
-app.put('/api/users/:id', (req, res, next) => {
+app.put('/api/users/update/:id', (req, res, next) => {
   User.findOne({'_id': req.params.id}, (err, user) => {
     if (err) {
       console.log(err);
