@@ -169,12 +169,56 @@ app.get('/api/users', (req, res, next) => {
   });
 });
 
+
+// Update user
+app.put('/api/users/:id', (req, res, next) => {
+  User.findOne({'_id': req.params.id}, (err, user) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+
+      console.log(user);
+
+      user.set({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        phoneNumber: req.body.phoneNumber,
+        address: req.body.address,
+        email: req.body.email
+      })
+
+      user.save((err, savedUser) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedUser);
+          res.json(savedUser);
+        }
+      })
+    }
+  })
+})
+
+// Delete user
+app.delete('/api/users/:id', (req, res, next) => {
+  User.findByIdAndDelete({'_id': req.params.id}, (err, user) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(user);
+      res.json(user);
+    }
+  })
+})
+
 // Role CRUD Operations
 
 // Create new role.
 app.post('/api/roles', (req, res, next) => {
   const role = {
-    roleId: req.body.userId,
     roleTitle: req.body.roleTitle,
   };
 
@@ -217,7 +261,6 @@ app.get('/api/roles', (req, res, next) => {
 // Create new security question.
 app.post('/api/security-questions', (req, res, next) => {
   const securityQuestion = {
-    securityQuestionId: req.body.securityQuestionId,
     question: req.body.question,
   };
 
