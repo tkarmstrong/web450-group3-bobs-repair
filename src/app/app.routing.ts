@@ -15,6 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuardService } from './shared/guards/auth-guard.service';
 
@@ -33,6 +34,7 @@ export const AppRoutes: Routes = [
     children: [
       { path: 'security-questions', component: SecurityQuestionsComponent, canActivate: [AuthGuardService] },
       { path: 'user-management', component: UserManagementComponent, canActivate: [AuthGuardService] },
+      { path: 'user-details/:id', component: UserDetailsComponent, canActivate: [AuthGuardService]},
       { path: '404', component: NotFoundComponent }
     ]
   },

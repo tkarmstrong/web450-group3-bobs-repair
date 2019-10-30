@@ -53,6 +53,6 @@ export class UserDetailsComponent implements OnInit {
   }
 
   cancel() {
-    this.router.navigate(['/users'])
+    this.router.navigate(['/session/user-management'])
   }
 }
