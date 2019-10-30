@@ -104,9 +104,9 @@ app.post('/api/users/', function(req, res, next) {
         })
       } else {
         // The selected username is already in use
-        console.log('The selected username: ${req.body.username} is already in use!');
+        console.log(`The selected username: ${req.body.username} is already in use!`);
         res.status(500).send({
-          text: 'The selected username: ${req.body.username} is already in use!',
+          text: `The selected username: ${req.body.username} is already in use!`,
           time_stamp: new Date()
         })
       }

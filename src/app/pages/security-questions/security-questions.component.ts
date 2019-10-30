@@ -9,29 +9,54 @@
 */
 
 import { Component, OnInit } from '@angular/core';
+import { SecurityQuestionService } from '../../shared/services/security-question.service';
+import { MatDialog } from '@angular/material';
+import { QuestionEditDialogComponent } from '../../shared/question-edit-dialog/question-edit-dialog.component';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-security-questions',
   templateUrl: './security-questions.component.html',
-  styleUrls: ['./security-questions.component.css']
+  styleUrls: ['./security-questions.component.css'],
+  providers: [SecurityQuestionService]
 })
 export class SecurityQuestionsComponent implements OnInit {
 
-  displayedColumns: string[] = ['question-id', 'question'];
-  securityQuestions: any;
+  displayedColumns: string[] = ['questionText', 'actions'];
+  data;
 
-  constructor(private http: HttpClient, private router: Router) {
-    this.http.get('/api/security-questions').subscribe(data => {
-      this.securityQuestions = data;
-      console.log(this.securityQuestions);
-    }, err => {
-      console.log(err);
-    });
-  }
+  constructor(
+    private securityService: SecurityQuestionService,
+    private router: Router,
+    private http: HttpClient,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit() {
+    this.securityService.get()
+      .subscribe(res => {
+        this.data = res;
+      });
+  }
+
+  addNew() {
+
+  }
+
+  delete() {
+
+  }
+
+  edit(question) {
+    console.log(question);
+    const dialogRef = this.dialog.open(QuestionEditDialogComponent, {
+      width: '80%',
+      height: '600px',
+      data: question
+    });
+
+    dialogRef.afterClosed().subscribe(result => { location.reload(); });
   }
 
 }

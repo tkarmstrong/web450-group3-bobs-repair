@@ -19,6 +19,7 @@ import { AppRoutes } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
+import { AuthGuardService } from './shared/guards/auth-guard.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -30,6 +31,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { QuestionEditDialogComponent } from './shared/question-edit-dialog/question-edit-dialog.component';
+import { UserDeleteDialogComponent } from './shared/user-delete-dialog/user-delete-dialog.component';
 
 // Material
 import { MatCardModule } from '@angular/material/card';
@@ -47,9 +51,6 @@ import { MatTableModule } from '@angular/material/table';
 
 // Flex
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { UserDetailsComponent } from './pages/user-details/user-details.component';
-import { AuthGuardService } from './shared/guards/auth-guard.service';
-import { UserDeleteDialogComponent } from './shared/user-delete-dialog/user-delete-dialog.component';
 
 // PrimeNg
 
@@ -66,7 +67,8 @@ import { UserDeleteDialogComponent } from './shared/user-delete-dialog/user-dele
     SecurityQuestionsComponent,
     UserManagementComponent,
     UserDetailsComponent,
-    UserDeleteDialogComponent
+    UserDeleteDialogComponent,
+    QuestionEditDialogComponent
   ],
   imports: [
     BrowserModule,
