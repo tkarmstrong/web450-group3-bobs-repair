@@ -12,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { UserDeleteDialogComponent } from './../../shared/user-delete-dialog/user-delete-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-management',
@@ -23,7 +24,8 @@ export class UserManagementComponent implements OnInit {
   users: any;
   displayedColumns = ['username', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'functions' ];
 
-  constructor(private http: HttpClient, private dialog: MatDialog) {
+  constructor(private http: HttpClient, private dialog: MatDialog,
+              private router: Router) {
     this.http.get('/api/users').subscribe(res => {
       this.users = res;
       console.log(this.users);
@@ -33,6 +35,12 @@ export class UserManagementComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  edit(userId, username) {
+    console.log('Username is ' + username);
+    console.log('userId is ' + userId);
+    this.router.navigate(['/session/user-details/' + userId]);
   }
 
   delete(userId, username) {
