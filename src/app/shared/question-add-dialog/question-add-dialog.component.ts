@@ -1,10 +1,11 @@
 /*
-=====================================
-  ; Title: Add Question Component
-  ; Author: Tyler Armstrong
-  ; Date: 30 Oct 2019
-  ; Description: Component for adding a question.
-======================================
+; =======================================================
+; Title:  question-add-dialog.component.ts (Week 6)
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date:   29 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
 */
 
 import { Component, OnInit } from '@angular/core';

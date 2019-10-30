@@ -2,10 +2,10 @@
 ; =======================================================
 ; Title:  service.js (Week 6)
 ; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
-; Date:   23 Oct 2019
+; Date:   28 Oct 2019
 ; Description: Bob's Computer Repair Shop
 ; Legend: [] -> Team member responsible for page.
-;========================================================
+; =======================================================
 */
 
 const mongoose = require('mongoose');

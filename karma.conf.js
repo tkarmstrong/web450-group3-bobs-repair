@@ -5,7 +5,7 @@
 ; Date: 23 Oct 2019
 ; Description: Bob's Computer Repair Shop
 ; Legend: [] -> Team member responsible for page.
-;========================================================
+; =======================================================
 */
 
 // Karma configuration file, see link for more information

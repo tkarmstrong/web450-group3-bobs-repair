@@ -1,3 +1,13 @@
+/*
+; =======================================================
+; Title:  user-details.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date:   29 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';

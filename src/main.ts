@@ -5,7 +5,7 @@
 ; Date: 23 Oct 2019
 ; Description: Bob's Computer Repair Shop
 ; Legend: [] -> Team member responsible for page.
-;========================================================
+; =======================================================
 */
 
 import { enableProdMode } from '@angular/core';
