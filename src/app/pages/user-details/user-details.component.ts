@@ -25,7 +25,7 @@ export class UserDetailsComponent implements OnInit {
   form: FormGroup;
 
   constructor(private route: ActivatedRoute, private http: HttpClient, private fb: FormBuilder, private router: Router) {
-    this.userId = this.route.snapshot.paramMap.get('userId');
+    this.userId = this.route.snapshot.paramMap.get('_id');
 
     this.http.get('/api/users/' + this.userId).subscribe(res => {
       this.user = res;
