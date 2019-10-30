@@ -11,7 +11,7 @@
 const mongoose = require('mongoose');
 
 const roleSchema = mongoose.Schema({
-  // Do we want an actual ( roleId ) field here?
+  // Do we want an actual ( roleId ) field here? David: no
   roleTitle: { type: String },
 },
 {

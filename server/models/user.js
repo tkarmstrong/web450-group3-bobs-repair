@@ -20,7 +20,7 @@ const userSchema = mongoose.Schema({
   username: {
     type: String, required: true, unique: true, dropDups: true,
   },
-  password: { type: String, required: true }, // Should this be ( unique: true ) as well?
+  password: { type: String, required: true }, // Should this be ( unique: true ) as well? David: no
   firstName: { type: String },
   lastName: { type: String },
   phoneNumber: { type: String },
