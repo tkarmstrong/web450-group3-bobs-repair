@@ -8,31 +8,39 @@
 ;========================================================
 */ -->
 
-<div fxLayout="column" style="margin-top: 75px;">
-  <mat-card class="mat-elevation-z8" style="width: 50%;">
-    <mat-card-title>Create new Composer</mat-card-title>
-    <form (ngSubmit)="createComposer()" [formGroup]="form" #composerForm>
-      <mat-card-content>
-        <mat-form-field>
-          <input type="text" matInput [formControl]="form.controls['firstName']" placeholder="First Name..." />
-        </mat-form-field>
-        <small style="color: red;" *ngIf="form.controls['firstName'].hasError('required') && form.controls['firstName'].touched">
-          First name is a required field.
-        </small>
+<div fxLayout="column" style="margin-top: 8%;">
+  <mat-card style="margin: 0 auto;">
+    <mat-card-title>Security Questions</mat-card-title>
+    <mat-card-content *ngIf="data">
+      <table mat-table [dataSource]="data">
 
-        <br />
-        <mat-form-field>
-          <input type="text" matInput [formControl]="form.controls['lastName']" placeholder="Last Name..." />
-        </mat-form-field>
-        <small style="color: red;" *ngIf="form.controls['lastName'].hasError('required') && form.controls['lastName'].touched">
-          Last name is a required field.
-        </small>
-      </mat-card-content>
+        <ng-container matColumnDef="questionText">
+          <th mat-header-cell *matHeaderCellDef>Question</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.questionText }}
+          </td>
+        </ng-container>
 
-      <mat-card-actions align="end">
-        <button mat-raised-button color="accent" (click)="goBack()">Cancel</button>
-        <button mat-raised-button [disabled]="!form.valid" color="primary">Create</button>
-      </mat-card-actions>
-    </form>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button (click)="edit()">
+              <mat-icon color="accent">create</mat-icon>
+            </button>
+            <button mat-icon-button>
+              <mat-icon color="warn">delete_forever</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+    </mat-card-content>
+    <mat-card-actions>
+      <div fxFlex></div>
+      <button mat-button color="primary"><mat-icon>add_box</mat-icon>Add New</button>
+    </mat-card-actions>
   </mat-card>
 </div>

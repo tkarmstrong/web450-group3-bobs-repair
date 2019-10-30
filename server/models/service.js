@@ -1,6 +1,6 @@
 /*
 ; =======================================================
-; Title:  role.js (Week 6)
+; Title:  service.js (Week 6)
 ; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
 ; Date:   23 Oct 2019
 ; Description: Bob's Computer Repair Shop
@@ -10,13 +10,12 @@
 
 const mongoose = require('mongoose');
 
-const roleSchema = mongoose.Schema({
-  // Do we want an actual ( roleId ) field here? David: no
-  // Tyler: MongoDB will auto-generate an _id field.
-  roleTitle: { type: String },
+const serviceSchema = mongoose.Schema({
+  serviceText: { type: String },
+  cost: { type: Number }
 },
 {
-  collection: 'roles',
+  collection: 'services',
 });
 
-module.exports = mongoose.model('Role', roleSchema);
+module.exports = mongoose.model('Service', serviceSchema);

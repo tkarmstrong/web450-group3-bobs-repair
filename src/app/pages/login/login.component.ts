@@ -34,33 +34,26 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      username: [
-        null,
-        Validators.compose([
-          Validators.required
-        ])
-      ],
-      password: [
-        null,
-        Validators.compose([
-          Validators.required,
-        ])
-      ]
+      username: [null, Validators.compose([Validators.required])],
+      password: [null, Validators.compose([Validators.required])]
     });
   }
 
   onSubmit() {
-    const apiBaseURL = '/api/user/';
+    const apiBaseURL = '/api/login/';
     // tslint:disable-next-line: no-string-literal
     const username = this.form.controls['username'].value;
     // tslint:disable-next-line: no-string-literal
     const password = this.form.controls['password'].value;
 
-    this.http.get(apiBaseURL + username).subscribe(res => {
+    this.http.post(apiBaseURL, {
+      username,
+      password
+    }).subscribe(res => {
       if (res) {
         this.cookie.set('isAuthenticated', 'true', 1);
         this.cookie.set(username, 'true', 1);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/user-management']);
       } else {
         this.errorMessage = 'Invalid User ID';
       }

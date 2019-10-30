@@ -72,40 +72,56 @@ db.once("open", function() {
 // User CRUD Operations
 
 // Create new user.
-app.post('/api/registration', (req, res, next) => {
-  const user = new User({
-    userId: req.body._id,
-    username: req.body.username,
-    password: req.body.password,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    phoneNumber: req.body.phoneNumber,
-    address: req.body.address,
-    email: req.body.email,
-    role: req.body.role,
-    selectedSecurityQuestions: [],
-    dateCreated: req.body.date_created,
-    dateModified: req.body.date_modified,
-  });
-
-  User.create(user, (err) => {
+app.post('/api/users/', function(req, res, next) {
+  let saltRounds = 10;
+  User.findOne({'username': req.body.username}, function(err, user) {
     if (err) {
       console.log(err);
       return next(err);
+    } else {
+      if (!user) {
+        // The selected username is unique
+        let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
+        let u = {
+          username: req.body.username,
+          password: hashedPassword,
+          firstName: req.body.firstName,
+          lastName: req.body.lastName,
+          phoneNumber: req.body.phoneNumber,
+          address: req.body.address,
+          email: req.body.email,
+          selectedSecurityQuestions: req.body.selectedSecurityQuestions,
+          dateCreated: req.body.dateCreated
+        }
+        User.create(u, function(err, newUser) {
+          if (err) {
+            console.log(err);
+            return next(err);
+          } else {
+            console.log(newUser);
+            res.json(newUser);
+          }
+        })
+      } else {
+        // The selected username is already in use
+        console.log(`The selected username: ${req.body.username} is already in use!`);
+        res.status(500).send({
+          text: `The selected username: ${req.body.username} is already in use!`,
+          time_stamp: new Date()
+        })
+      }
     }
-    console.log(user);
-    return res.json(user);
-  });
-});
+  })
+})
 
 // User login
-app.post("/login", (req, res, next) => {
+app.post("/api/login", (req, res, next) => {
   let thisUser;
   User.findOne({ username: req.body.username })
     .then(user => {
       if (!user) {
         return res.status(401).json({
-          message: "Authentication failed"
+          message: "Authentication failed. No user."
         });
       }
       thisUser = user;
@@ -114,24 +130,25 @@ app.post("/login", (req, res, next) => {
     .then(result => {
       if (!result) {
         return res.status(401).json({
-          message: "Authentication failed"
+          message: "Authentication failed. Password mismatch."
         });
       }
       res.status(200).json({
         userId: thisUser._id,
-        name_first: thisUser.firstName
+        firstName: thisUser.firstName
       });
     })
     .catch(err => {
       return res.status(401).json({
-        message: "Authentication failed"
+        message: "Authentication failed. Unknown error."
       });
     });
 });
 
 // Read one user by id.
-app.get('api/user/:id', (req, res, next) => {
-  User.findOne({ userId: req.params.id }, (err, user) => {
+
+app.get('/api/users/:id', (req, res, next) => {
+  User.findOne({ userId: req.params._id }, (err, user) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -153,16 +170,61 @@ app.get('/api/users', (req, res, next) => {
   });
 });
 
+
+// Update user
+app.put('/api/users/update/:id', (req, res, next) => {
+  User.findOne({'_id': req.params.id}, (err, user) => {
+    console.log(user);
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+
+      console.log(user);
+
+      user.set({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        phoneNumber: req.body.phoneNumber,
+        address: req.body.address,
+        email: req.body.email
+      })
+
+      user.save((err, savedUser) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedUser);
+          res.json(savedUser);
+        }
+      })
+    }
+  })
+})
+
+// Delete user
+app.delete('/api/users/:id', (req, res, next) => {
+  User.findByIdAndDelete({'_id': req.params.id}, (err, user) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(user);
+      res.json(user);
+    }
+  })
+})
+
 // Role CRUD Operations
 
 // Create new role.
-app.post('/api/role', (req, res, next) => {
+app.post('/api/roles', (req, res, next) => {
   const role = {
-    roleId: req.body.userId,
     roleTitle: req.body.roleTitle,
   };
 
-  User.create(role, (err) => {
+  Role.create(role, (err) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -173,8 +235,8 @@ app.post('/api/role', (req, res, next) => {
 });
 
 // Read one role by id.
-app.get('api/role/:id', (req, res, next) => {
-  Role.findOne({ roleId: req.params.id }, (err, role) => {
+app.get('/api/roles/:id', (req, res, next) => {
+  Role.findOne({ '_id': req.params.id }, (err, role) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -196,13 +258,53 @@ app.get('/api/roles', (req, res, next) => {
   });
 });
 
+// Update role
+app.put('/api/roles/update/:id', (req, res, next) => {
+  Role.findOne({'_id': req.params.id}, (err, role) => {
+    console.log(role);
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+
+      console.log(role);
+
+      role.set({
+        roleTitle: req.body.roleTitle
+      })
+
+      role.save((err, savedRole) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedRole);
+          res.json(savedRole);
+        }
+      })
+    }
+  })
+})
+
+// Delete role
+app.delete('/api/roles/:id', (req, res, next) => {
+  Role.findByIdAndDelete({'_id': req.params.id}, (err, role) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(role);
+      res.json(role);
+    }
+  })
+})
+
 // SecurityQuestions CRUD Operations
 
 // Create new security question.
-app.post('/api/security-question', (req, res, next) => {
+app.post('/api/security-questions', (req, res, next) => {
   const securityQuestion = {
-    securityQuestionId: req.body.securityQuestionId,
-    question: req.body.question,
+    questionText: req.body.questionText
   };
 
   SecurityQuestion.create(securityQuestion, (err) => {
@@ -216,8 +318,8 @@ app.post('/api/security-question', (req, res, next) => {
 });
 
 // Read one security question by id.
-app.get('api/security-question/:id', (req, res, next) => {
-  SecurityQuestion.findOne({ securityQuestion: req.params.id }, (err, securityQuestion) => {
+app.get('/api/security-questions/:id', (req, res, next) => {
+  SecurityQuestion.findOne({ '_id': req.params.id }, (err, securityQuestion) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -239,10 +341,51 @@ app.get('/api/security-questions', (req, res, next) => {
   });
 });
 
+// Update security question
+app.put('/api/security-questions/update/:id', (req, res, next) => {
+  SecurityQuestion.findOne({'_id': req.params.id}, (err, securityQuestion) => {
+    console.log(securityQuestion);
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+
+      console.log(securityQuestion);
+
+      securityQuestion.set({
+        questionText: req.body.questionText
+      })
+
+      securityQuestion.save((err, savedSecurityQuestion) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedSecurityQuestion);
+          res.json(savedSecurityQuestion);
+        }
+      })
+    }
+  })
+})
+
+// Delete role
+app.delete('/api/security-questions/:id', (req, res, next) => {
+  SecurityQuestion.findByIdAndDelete({'_id': req.params.id}, (err, securityQuestion) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(securityQuestion);
+      res.json(securityQuestion);
+    }
+  })
+})
+
 // Invoice CRUD Operations
 
 // Create new invoice.
-app.post('/api/invoice', (req, res, next) => {
+app.post('/api/invoices', (req, res, next) => {
   const invoice = {
     userId: req.body.userId,
     dateCreated: req.body.date_created,
@@ -263,7 +406,7 @@ app.post('/api/invoice', (req, res, next) => {
 });
 
 // Read one invoice by id.
-app.get('api/invoice/:id', (req, res, next) => {
+app.get('api/invoices/:id', (req, res, next) => {
   Role.findOne({ invoiceId: req.params.id }, (err, invoice) => {
     if (err) {
       console.log(err);
@@ -285,6 +428,137 @@ app.get('/api/invoices', (req, res, next) => {
     return res.json(invoices);
   });
 });
+
+// Update invoice
+app.put('/api/invoices/update/:id', (req, res, next) => {
+  Invoice.findOne({'_id': req.params.id}, (err, invoice) => {
+    console.log(invoice);
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+
+      console.log(invoice);
+
+      invoice.set({
+        userId: req.body.userId,
+        dateCreated: req.body.date_created,
+        services: [],
+        partsCost: req.body.partsCost,
+        laborHrs: req.body.laborHrs,
+        totalCost: req.body.totalCost
+      })
+
+      invoice.save((err, invoice) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedInvoice);
+          res.json(savedInvoice);
+        }
+      })
+    }
+  })
+})
+
+// Delete invoice
+app.delete('/api/invoices/:id', (req, res, next) => {
+  Invoice.findByIdAndDelete({'_id': req.params.id}, (err, invoice) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(invoice);
+      res.json(invoice);
+    }
+  })
+})
+
+// Service CRUD Operations
+
+// Create new service.
+app.post('/api/services', (req, res, next) => {
+  const service = {
+    serviceText: req.body.serviceText,
+    cost: req.body.cost
+  };
+
+  Service.create(service, (err) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    }
+    console.log(service);
+    return res.json(service);
+  });
+});
+
+// Read one role by id.
+app.get('/api/services/:id', (req, res, next) => {
+  Service.findOne({ '_id': req.params.id }, (err, service) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    }
+    console.log(service);
+    return res.json(service);
+  });
+});
+
+// Read for all roles.
+app.get('/api/services', (req, res, next) => {
+  Service.find({}, (err, services) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    }
+    console.log(services);
+    return res.json(services);
+  });
+});
+
+// Update service
+app.put('/api/services/update/:id', (req, res, next) => {
+  Service.findOne({'_id': req.params.id}, (err, service) => {
+    console.log(service);
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+
+      console.log(service);
+
+      service.set({
+        serviceText: req.body.serviceText,
+        cost: req.body.cost
+      })
+
+      role.save((err, savedService) => {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedService);
+          res.json(savedService);
+        }
+      })
+    }
+  })
+})
+
+// Delete service
+app.delete('/api/services/:id', (req, res, next) => {
+  Service.findByIdAndDelete({'_id': req.params.id}, (err, service) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(service);
+      res.json(service);
+    }
+  })
+})
 
 /**
  * Creates an express server and listens on port 3000

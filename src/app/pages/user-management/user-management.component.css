@@ -7,3 +7,11 @@
 ; Legend: [] -> Team member responsible for page.
 ;========================================================
 */
+
+ng-container {
+  padding: 0 15px;
+}
+
+table {
+  width: 100%;
+}

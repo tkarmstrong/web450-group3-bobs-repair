@@ -29,7 +29,7 @@ const userSchema = mongoose.Schema({
   role: { type: String, default: 'standard' },
   selectedSecurityQuestions: [selectedSecurityQuestions],
   date_created: { type: Date, default: new Date() },
-  date_modified: { type: Date },
+  date_modified: { type: Date, default: new Date() },
 },
 {
   collection: 'users',

@@ -1,3 +1,14 @@
+/*
+; =======================================================
+; Title: register.component.ts (Week 6)
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+;========================================================
+*/
+
+
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -23,66 +34,18 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      username: [
-        null,
-        Validators.compose([
-          Validators.required
-        ])
-      ],
-      password: [
-        null,
-        Validators.compose([
-          Validators.required,
-          Validators.pattern('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm')
-        ])
-      ],
-      firstName: [
-        null,
-        Validators.compose([
-          Validators.required
-        ])
-      ],
-      lastName: [
-        null,
-        Validators.compose([
-          Validators.required
-        ])
-      ],
-      phoneNumber: [
-        null,
-        Validators.compose([
-          Validators.required
-        ])
-      ],
-      address: [
-        null,
-        Validators.compose([
-          Validators.required
-        ])
-      ],
-      email: [
-        null,
-        Validators.compose([
-          Validators.required,
-          Validators
-            .pattern(
-              // tslint:disable-next-line: max-line-length
-              '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
-            )
-        ])
-      ],
-      role: [
-        null,
-        Validators.compose([
-          Validators.required
-        ])
-      ],
-      selectedSecurityQuestions: [
-        null,
-        Validators.compose([
-          Validators.required
-        ])
-      ]
+      username: [null, Validators.compose([Validators.required])],
+      password: [null, Validators.compose([
+        Validators.required,
+        Validators.pattern('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm')
+      ])],
+      firstName: [null, Validators.compose([Validators.required])],
+      lastName: [null, Validators.compose([Validators.required])],
+      phoneNumber: [null, Validators.compose([Validators.required])],
+      address: [null, Validators.compose([Validators.required])],
+      email: [null, Validators.compose([Validators.required, Validators.email])],
+      role: [null, Validators.compose([Validators.required])],
+      selectedSecurityQuestions: [null, Validators.compose([Validators.required])]
     });
   }
 
