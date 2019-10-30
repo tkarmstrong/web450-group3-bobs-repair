@@ -11,6 +11,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
+import { UserDeleteDialogComponent } from './../../shared/user-delete-dialog/user-delete-dialog.component';
 
 @Component({
   selector: 'app-user-management',

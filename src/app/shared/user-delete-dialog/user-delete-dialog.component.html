@@ -1,0 +1,17 @@
+<mat-dialog-content>
+  <div fxLayout="column">
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title style="font-weight: darker; text-align: center;">
+        Delete User
+      </mat-card-title>
+      <br><br>
+      <mat-card-content>
+        Do you wish to delete user {{ username }}?
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-raised-button matDialogClose="confirm" color="primary">Confirm</button>
+        <button mat-raised-button onclick="cancel()" color="warn">Cancel</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</mat-dialog-content>

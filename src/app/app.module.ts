@@ -49,6 +49,7 @@ import { MatTableModule } from '@angular/material/table';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { AuthGuardService } from './shared/guards/auth-guard.service';
+import { UserDeleteDialogComponent } from './shared/user-delete-dialog/user-delete-dialog.component';
 
 // PrimeNg
 
@@ -64,7 +65,8 @@ import { AuthGuardService } from './shared/guards/auth-guard.service';
     RegisterComponent,
     SecurityQuestionsComponent,
     UserManagementComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    UserDeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +91,6 @@ import { AuthGuardService } from './shared/guards/auth-guard.service';
   ],
   providers: [CookieService, AuthGuardService],
   bootstrap: [AppComponent],
-  entryComponents: []
+  entryComponents: [UserDeleteDialogComponent]
 })
 export class AppModule { }
