@@ -51,6 +51,7 @@ import { MatTableModule } from '@angular/material/table';
 
 // Flex
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { QuestionAddDialogComponent } from './shared/question-add-dialog/question-add-dialog.component';
 
 // PrimeNg
 
@@ -68,7 +69,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     UserManagementComponent,
     UserDetailsComponent,
     UserDeleteDialogComponent,
-    QuestionEditDialogComponent
+    QuestionEditDialogComponent,
+    QuestionAddDialogComponent
   ],
   imports: [
     BrowserModule,

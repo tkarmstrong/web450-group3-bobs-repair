@@ -24,7 +24,7 @@
         <ng-container matColumnDef="actions">
           <th mat-header-cell *matHeaderCellDef>Actions</th>
           <td mat-cell *matCellDef="let element">
-            <button mat-icon-button routerLink="/security-questions/{{ element._id }}">
+            <button mat-icon-button (click)="edit()">
               <mat-icon color="accent">create</mat-icon>
             </button>
             <button mat-icon-button>

@@ -22,8 +22,8 @@ export class SecurityQuestionService {
     return this.http.get(apiURL);
   }
 
-  getQuestionById() {
-    const apiURL = '/api/security-questions/:id';
+  getQuestionById(id) {
+    const apiURL = `/api/security-questions/${id}`;
     return this.http.get(apiURL);
   }
 }
