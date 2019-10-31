@@ -1386,15 +1386,15 @@ __webpack_require__.r(__webpack_exports__);
 
 let QuestionEditDialogComponent = class QuestionEditDialogComponent {
     constructor(data, fb) {
-        this.data = data;
         this.fb = fb;
-    }
-    ngOnInit() {
+        this.questionText = data.questionText;
         this.form = this.fb.group({
             questionText: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])]
         });
+        this.form.controls['questionText'].setValue(this.questionText);
+    }
+    ngOnInit() {
         // tslint:disable-next-line: no-string-literal
-        this.form.controls['questionText'].setValue(this.data.questionText);
     }
     onSubmit() {
         console.log(this.form.value);
@@ -1679,7 +1679,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/tyler-macbook/Documents/1.School/1.Bellevue/bu-webdev/bobs-repair/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/davidtarvin/web450-group3-bobs-repair/src/main.ts */"./src/main.ts");
 
 
 /***/ })
