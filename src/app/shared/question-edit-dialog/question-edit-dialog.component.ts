@@ -31,7 +31,7 @@ export class QuestionEditDialogComponent implements OnInit {
     });
 
     // tslint:disable-next-line: no-string-literal
-    this.form.controls['questionText'].setValue(this.data.questionText);
+    this.form.controls['questionText'].setValue(this.data);
   }
 
   onSubmit() {
