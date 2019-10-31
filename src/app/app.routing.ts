@@ -34,7 +34,7 @@ export const AppRoutes: Routes = [
     children: [
       { path: 'security-questions', component: SecurityQuestionsComponent, canActivate: [AuthGuardService] },
       { path: 'user-management', component: UserManagementComponent, canActivate: [AuthGuardService] },
-      { path: 'user-details/:_id', component: UserDetailsComponent, canActivate: [AuthGuardService]},
+      { path: 'user-details/:id', component: UserDetailsComponent, canActivate: [AuthGuardService]},
       { path: '404', component: NotFoundComponent }
     ]
   },

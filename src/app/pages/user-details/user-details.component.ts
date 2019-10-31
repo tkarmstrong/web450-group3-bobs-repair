@@ -25,10 +25,13 @@ export class UserDetailsComponent implements OnInit {
   form: FormGroup;
 
   constructor(private route: ActivatedRoute, private http: HttpClient, private fb: FormBuilder, private router: Router) {
-    this.userId = this.route.snapshot.paramMap.get('_id');
+    this.userId = this.route.snapshot.paramMap.get('id');
+    console.log('userId is ' + this.userId);
 
     this.http.get('/api/users/' + this.userId).subscribe(res => {
+      console.log('The userId in the GET request is ' + this.userId);
       this.user = res;
+      console.log('This user is ' + JSON.stringify(this.user));
     }, err => {
       console.log(err);
     }, () => {
