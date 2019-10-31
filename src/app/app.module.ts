@@ -97,11 +97,6 @@ import { QuestionDeleteDialogComponent } from './shared/question-delete-dialog/q
   ],
   providers: [CookieService, AuthGuardService],
   bootstrap: [AppComponent],
-<<<<<<< HEAD
-  entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent]
-=======
-  entryComponents: [UserDeleteDialogComponent,
-                    QuestionDeleteDialogComponent]
->>>>>>> d80cda5400e1bace49fb75b3548558675bc6baee
+  entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent, QuestionDeleteDialogComponent]
 })
 export class AppModule { }

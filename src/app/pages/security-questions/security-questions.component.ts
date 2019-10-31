@@ -26,13 +26,9 @@ export class SecurityQuestionsComponent implements OnInit {
 
   displayedColumns: string[] = ['questionText', 'actions'];
   data;
-<<<<<<< HEAD
-  question;
   // dialogRef;
-=======
   questions: any;
   question: any;
->>>>>>> d80cda5400e1bace49fb75b3548558675bc6baee
 
   constructor(
     private securityService: SecurityQuestionService,
