@@ -9,9 +9,9 @@
         A question required.
       </small> -->
 
-      <form [formGroup]="editForm" #loginForm="ngForm" (ngSubmit)="onSubmit(form.value); form.reset()">
+      <form [formGroup]="form" #editForm="ngForm" (ngSubmit)="onSubmit(form.value); form.reset()">
         <mat-form-field class="inputStyle">
-          <input type="text" matInput [formControl]="form.controls['selectedQuestion']" placeholder="Edit question" />
+          <input type="text" matInput [formControl]="form.controls['questionText']" placeholder="Edit question" />
         </mat-form-field>
 
         <br>

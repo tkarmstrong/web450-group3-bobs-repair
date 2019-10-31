@@ -21,21 +21,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class QuestionEditDialogComponent implements OnInit {
   errorMessage: string;
-  editForm: FormGroup;
+  form: FormGroup;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.editForm = this.fb.group({
-      selectedQuestion: [null, Validators.compose([Validators.required])]
+    this.form = this.fb.group({
+      questionText: [null, Validators.compose([Validators.required])]
     });
 
     // tslint:disable-next-line: no-string-literal
-    this.editForm.controls['selectedQuestion'].setValue(this.data.questionText);
+    this.form.controls['questionText'].setValue(this.data.questionText);
   }
 
   onSubmit() {
-    console.log(this.editForm.value);
+    console.log(this.form.value);
   }
 
 }

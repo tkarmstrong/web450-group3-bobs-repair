@@ -91,7 +91,7 @@ export class SecurityQuestionsComponent implements OnInit {
         const dialogRef = this.dialog.open(QuestionEditDialogComponent, {
           width: '80%',
           height: '600px',
-          data: this.question
+          data: this.question.questionText
         });
       });
 
