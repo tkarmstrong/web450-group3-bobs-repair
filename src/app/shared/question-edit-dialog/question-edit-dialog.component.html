@@ -1,11 +1,40 @@
-<!-- /*
-; =======================================================
-; Title: question-edit-dialog.component.html (Week 6)
-; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
-; Date: 29 Oct 2019
-; Description: Bob's Computer Repair Shop
-; Legend: [] -> Team member responsible for page.
-; =======================================================
-*/ -->
+<div class="container">
+  <mat-card class="form">
+    <mat-card-content>
 
-<p>question-edit-dialog works!</p>
+      <h2>Edit</h2>
+
+      <!-- <small class="warn"
+        *ngIf="form.controls['selectedQuestion'].hasError('required') && form.controls['selectedQuestion'].touched">
+        A question required.
+      </small> -->
+
+      <form [formGroup]="editForm" #loginForm="ngForm" (ngSubmit)="onSubmit(form.value); form.reset()">
+        <mat-form-field class="inputStyle">
+          <input type="text" matInput [formControl]="form.controls['selectedQuestion']" placeholder="Edit question" />
+        </mat-form-field>
+
+        <br>
+
+        <mat-card-actions>
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!form.valid"
+            type="submit"
+          >
+            Save
+          </button>
+          <button
+            mat-raised-button
+            color="accent"
+            (click)="closeDialog()"
+          >
+            Cancel
+          </button>
+        </mat-card-actions>
+      </form>
+      <br /><br />
+    </mat-card-content>
+  </mat-card>
+</div>

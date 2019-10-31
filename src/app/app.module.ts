@@ -95,6 +95,6 @@ import { QuestionAddDialogComponent } from './shared/question-add-dialog/questio
   ],
   providers: [CookieService, AuthGuardService],
   bootstrap: [AppComponent],
-  entryComponents: [UserDeleteDialogComponent]
+  entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent]
 })
 export class AppModule { }

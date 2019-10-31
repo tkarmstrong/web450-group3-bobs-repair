@@ -11,6 +11,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
 import { Inject } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-question-edit-dialog',
@@ -18,10 +20,22 @@ import { Inject } from '@angular/core';
   styleUrls: ['./question-edit-dialog.component.css']
 })
 export class QuestionEditDialogComponent implements OnInit {
+  errorMessage: string;
+  editForm: FormGroup;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.editForm = this.fb.group({
+      selectedQuestion: [null, Validators.compose([Validators.required])]
+    });
+
+    // tslint:disable-next-line: no-string-literal
+    this.editForm.controls['selectedQuestion'].setValue(this.data.questionText);
+  }
+
+  onSubmit() {
+    console.log(this.editForm.value);
   }
 
 }

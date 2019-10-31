@@ -14,7 +14,6 @@ import { MatDialog } from '@angular/material';
 import { QuestionEditDialogComponent } from '../../shared/question-edit-dialog/question-edit-dialog.component';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-security-questions',
@@ -27,6 +26,7 @@ export class SecurityQuestionsComponent implements OnInit {
   displayedColumns: string[] = ['questionText', 'actions'];
   data;
   question;
+  // dialogRef;
 
   constructor(
     private securityService: SecurityQuestionService,
@@ -53,27 +53,39 @@ export class SecurityQuestionsComponent implements OnInit {
   edit(questionId) {
 
     // 1. Get question user selected to edit
-    // this.securityService.getQuestionById(questionId).subscribe(res => { this.question = res; });
-    // console.log(this.question);
+    // this.securityService.getQuestionById(questionId).toPromise().then(data => {
+    //   this.question = data;
+    //   console.log(this.question);
+    //   const dialogRef = this.dialog.open(QuestionEditDialogComponent, {
+    //     width: '400px',
+    //     height: '600px',
+    //     data: this.question
+    //   });
+    // });
 
-      this.securityService.getQuestionById(questionId).toPromise().then(data => {
-        this.question = data;
-        console.log('Promise resolved.');
-        console.log(this.question);
+    this.securityService.getQuestionById(questionId)
+      .subscribe(res => { this.question = res; },
+        err => { console.log(err); },
+        () =>  {
+        const dialogRef = this.dialog.open(QuestionEditDialogComponent, {
+          width: '80%',
+          height: '600px',
+          data: this.question
+        });
       });
-    }
 
     // 2. Open dialog form with user's selected question
-    // const dialogRef = this.dialog.open(QuestionEditDialogComponent, {
+    // this.dialogRef = this.dialog.open(QuestionEditDialogComponent, {
     //   width: '80%',
     //   height: '600px',
-    //   data: question
+    //   data: this.question
     // });
 
     // 3. Save user's changes to db
 
     // 4. Reload table
     // dialogRef.afterClosed().subscribe(result => { location.reload(); });
+  }
 
 
 }
