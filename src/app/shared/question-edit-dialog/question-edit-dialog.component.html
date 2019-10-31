@@ -17,19 +17,10 @@
         <br>
 
         <mat-card-actions>
-          <button
-            mat-raised-button
-            color="primary"
-            [disabled]="!form.valid"
-            type="submit"
-          >
+          <button mat-raised-button color="primary" [disabled]="!form.valid">
             Save
           </button>
-          <button
-            mat-raised-button
-            color="accent"
-            (click)="closeDialog()"
-          >
+          <button mat-raised-button color="accent" (click)="closeDialog()">
             Cancel
           </button>
         </mat-card-actions>

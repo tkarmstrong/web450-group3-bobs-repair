@@ -72,40 +72,26 @@ export class SecurityQuestionsComponent implements OnInit {
   }
 
   edit(questionId) {
-
-    // 1. Get question user selected to edit
-    // this.securityService.getQuestionById(questionId).toPromise().then(data => {
-    //   this.question = data;
-    //   console.log(this.question);
-    //   const dialogRef = this.dialog.open(QuestionEditDialogComponent, {
-    //     width: '400px',
-    //     height: '600px',
-    //     data: this.question
-    //   });
-    // });
-
+    // 1. Get selected question
     this.securityService.getQuestionById(questionId)
       .subscribe(res => { this.question = res; },
         err => { console.log(err); },
         () =>  {
+
+        // 2. Open Dialog
         const dialogRef = this.dialog.open(QuestionEditDialogComponent, {
           width: '80%',
           height: '600px',
-          data: this.question.questionText
+          data: this.question
         });
+
+        // 3. Save user's changes to db
+          // * See dialog
+
+        // 4. Reload table
+        dialogRef.afterClosed().subscribe(result => { location.reload(); });
+
       });
-
-    // 2. Open dialog form with user's selected question
-    // this.dialogRef = this.dialog.open(QuestionEditDialogComponent, {
-    //   width: '80%',
-    //   height: '600px',
-    //   data: this.question
-    // });
-
-    // 3. Save user's changes to db
-
-    // 4. Reload table
-    // dialogRef.afterClosed().subscribe(result => { location.reload(); });
   }
 
 
