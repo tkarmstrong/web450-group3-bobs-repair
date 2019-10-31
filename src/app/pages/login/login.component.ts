@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
       if (res) {
         this.cookie.set('isAuthenticated', 'true', 1);
         this.cookie.set(username, 'true', 1);
-        this.router.navigate(['/user-management']);
+        this.router.navigate(['/session/user-management']);
       } else {
         this.errorMessage = 'Invalid User ID';
       }
