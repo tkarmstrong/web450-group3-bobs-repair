@@ -27,7 +27,7 @@
             <button mat-icon-button (click)="edit(element._id)">
               <mat-icon color="accent">create</mat-icon>
             </button>
-            <button mat-icon-button>
+            <button mat-icon-button (click)="delete(element._id, element.questionText)">
               <mat-icon color="warn">delete_forever</mat-icon>
             </button>
           </td>

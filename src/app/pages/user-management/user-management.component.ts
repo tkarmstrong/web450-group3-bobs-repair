@@ -58,6 +58,8 @@ export class UserManagementComponent implements OnInit {
           console.log('User deleted');
           this.users = this.users.filter(u => u._id !== userId);
         })
+      } else if(result === 'cancel') {
+        this.router.navigate(['/session/user-management']);
       }
     })
   }

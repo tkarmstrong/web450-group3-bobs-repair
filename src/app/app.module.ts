@@ -52,6 +52,7 @@ import { MatTableModule } from '@angular/material/table';
 // Flex
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { QuestionAddDialogComponent } from './shared/question-add-dialog/question-add-dialog.component';
+import { QuestionDeleteDialogComponent } from './shared/question-delete-dialog/question-delete-dialog.component';
 
 // PrimeNg
 
@@ -70,7 +71,8 @@ import { QuestionAddDialogComponent } from './shared/question-add-dialog/questio
     UserDetailsComponent,
     UserDeleteDialogComponent,
     QuestionEditDialogComponent,
-    QuestionAddDialogComponent
+    QuestionAddDialogComponent,
+    QuestionDeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -95,6 +97,11 @@ import { QuestionAddDialogComponent } from './shared/question-add-dialog/questio
   ],
   providers: [CookieService, AuthGuardService],
   bootstrap: [AppComponent],
+<<<<<<< HEAD
   entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent]
+=======
+  entryComponents: [UserDeleteDialogComponent,
+                    QuestionDeleteDialogComponent]
+>>>>>>> d80cda5400e1bace49fb75b3548558675bc6baee
 })
 export class AppModule { }
