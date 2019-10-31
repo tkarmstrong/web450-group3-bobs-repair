@@ -54,14 +54,14 @@ export class UserDetailsComponent implements OnInit {
   }
 
   saveUser() {
-    this.http.put('/api/users/' + this.userId, {
+    this.http.put('/api/users/update/' + this.userId, {
       firstName: this.form.controls['firstName'].value,
       lastName: this.form.controls['lastName'].value,
       phoneNumber: this.form.controls['phoneNumber'].value,
       address: this.form.controls['address'].value,
       email: this.form.controls['email'].value
     }).subscribe(res => {
-      this.router.navigate(['/users'])
+      this.router.navigate(['/session/user-management'])
     })
   }
 

@@ -9,10 +9,10 @@
 */
 
 import { Component, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-question-edit-dialog',
@@ -23,7 +23,11 @@ export class QuestionEditDialogComponent implements OnInit {
   errorMessage: string;
   form: FormGroup;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private fb: FormBuilder) { }
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private fb: FormBuilder,
+    private http: HttpClient,
+    public dialogRef: MatDialogRef<QuestionEditDialogComponent>) { }
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -35,7 +39,17 @@ export class QuestionEditDialogComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.form.value);
+    // 3. Save user's edits to db
+    this.http.put(`/api/security-questions/update/${this.data._id}`, {
+      // tslint:disable-next-line: no-string-literal
+      questionText: this.form.controls['questionText'].value
+    }).subscribe(res => {
+      this.dialogRef.close();
+    });
+  }
+
+  closeDialog() {
+    this.dialogRef.close();
   }
 
 }

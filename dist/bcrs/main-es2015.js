@@ -140,7 +140,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <mat-card class=\"form\">\n    <mat-card-content>\n\n      <h2>Edit</h2>\n\n      <!-- <small class=\"warn\"\n        *ngIf=\"form.controls['selectedQuestion'].hasError('required') && form.controls['selectedQuestion'].touched\">\n        A question required.\n      </small> -->\n\n      <form [formGroup]=\"form\" #editForm=\"ngForm\" (ngSubmit)=\"onSubmit(form.value); form.reset()\">\n        <mat-form-field class=\"inputStyle\">\n          <input type=\"text\" matInput [formControl]=\"form.controls['questionText']\" placeholder=\"Edit question\" />\n        </mat-form-field>\n\n        <br>\n\n        <mat-card-actions>\n          <button\n            mat-raised-button\n            color=\"primary\"\n            [disabled]=\"!form.valid\"\n            type=\"submit\"\n          >\n            Save\n          </button>\n          <button\n            mat-raised-button\n            color=\"accent\"\n            (click)=\"closeDialog()\"\n          >\n            Cancel\n          </button>\n        </mat-card-actions>\n      </form>\n      <br /><br />\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <mat-card class=\"form\">\n    <mat-card-content>\n\n      <h2>Edit</h2>\n\n      <!-- <small class=\"warn\"\n        *ngIf=\"form.controls['selectedQuestion'].hasError('required') && form.controls['selectedQuestion'].touched\">\n        A question required.\n      </small> -->\n\n      <form [formGroup]=\"form\" #editForm=\"ngForm\" (ngSubmit)=\"onSubmit(form.value); form.reset()\">\n        <mat-form-field class=\"inputStyle\">\n          <input type=\"text\" matInput [formControl]=\"form.controls['questionText']\" placeholder=\"Edit question\" />\n        </mat-form-field>\n\n        <br>\n\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!form.valid\">\n            Save\n          </button>\n          <button mat-raised-button color=\"accent\" (click)=\"closeDialog()\">\n            Cancel\n          </button>\n        </mat-card-actions>\n      </form>\n      <br /><br />\n    </mat-card-content>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -814,33 +814,20 @@ let SecurityQuestionsComponent = class SecurityQuestionsComponent {
         });
     }
     edit(questionId) {
-        // 1. Get question user selected to edit
-        // this.securityService.getQuestionById(questionId).toPromise().then(data => {
-        //   this.question = data;
-        //   console.log(this.question);
-        //   const dialogRef = this.dialog.open(QuestionEditDialogComponent, {
-        //     width: '400px',
-        //     height: '600px',
-        //     data: this.question
-        //   });
-        // });
+        // 1. Get selected question
         this.securityService.getQuestionById(questionId)
             .subscribe(res => { this.question = res; }, err => { console.log(err); }, () => {
+            // 2. Open Dialog
             const dialogRef = this.dialog.open(_shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_4__["QuestionEditDialogComponent"], {
                 width: '80%',
                 height: '600px',
-                data: this.question.questionText
+                data: this.question
             });
+            // 3. Save user's changes to db
+            // * See dialog
+            // 4. Reload table
+            dialogRef.afterClosed().subscribe(result => { location.reload(); });
         });
-        // 2. Open dialog form with user's selected question
-        // this.dialogRef = this.dialog.open(QuestionEditDialogComponent, {
-        //   width: '80%',
-        //   height: '600px',
-        //   data: this.question
-        // });
-        // 3. Save user's changes to db
-        // 4. Reload table
-        // dialogRef.afterClosed().subscribe(result => { location.reload(); });
     }
 };
 SecurityQuestionsComponent.ctorParameters = () => [
@@ -934,14 +921,14 @@ let UserDetailsComponent = class UserDetailsComponent {
         });
     }
     saveUser() {
-        this.http.put('/api/users/' + this.userId, {
+        this.http.put('/api/users/update/' + this.userId, {
             firstName: this.form.controls['firstName'].value,
             lastName: this.form.controls['lastName'].value,
             phoneNumber: this.form.controls['phoneNumber'].value,
             address: this.form.controls['address'].value,
             email: this.form.controls['email'].value
         }).subscribe(res => {
-            this.router.navigate(['/users']);
+            this.router.navigate(['/session/user-management']);
         });
     }
     cancel() {
@@ -1370,6 +1357,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /*
 ; =======================================================
 ; Title:  question-edit-dialog.component.ts (Week 6)
@@ -1384,25 +1372,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 let QuestionEditDialogComponent = class QuestionEditDialogComponent {
-    constructor(data, fb) {
+    constructor(data, fb, http, dialogRef) {
+        this.data = data;
         this.fb = fb;
-        this.questionText = data.questionText;
+        this.http = http;
+        this.dialogRef = dialogRef;
+    }
+    ngOnInit() {
         this.form = this.fb.group({
             questionText: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])]
         });
-        this.form.controls['questionText'].setValue(this.questionText);
-    }
-    ngOnInit() {
         // tslint:disable-next-line: no-string-literal
+        this.form.controls['questionText'].setValue(this.data.questionText);
     }
     onSubmit() {
-        console.log(this.form.value);
+        // 3. Save user's edits to db
+        this.http.put(`/api/security-questions/update/${this.data._id}`, {
+            // tslint:disable-next-line: no-string-literal
+            questionText: this.form.controls['questionText'].value
+        }).subscribe(res => {
+            this.dialogRef.close();
+        });
+    }
+    closeDialog() {
+        this.dialogRef.close();
     }
 };
 QuestionEditDialogComponent.ctorParameters = () => [
     { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] }
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] }
 ];
 QuestionEditDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
