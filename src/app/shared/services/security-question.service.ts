@@ -8,7 +8,7 @@
 ; =======================================================
 */
 
-import { Injectable } from '@angular/core';
+import { Injectable, APP_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

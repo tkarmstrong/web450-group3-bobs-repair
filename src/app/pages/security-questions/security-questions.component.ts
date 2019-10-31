@@ -14,6 +14,7 @@ import { MatDialog } from '@angular/material';
 import { QuestionEditDialogComponent } from '../../shared/question-edit-dialog/question-edit-dialog.component';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-security-questions',
@@ -25,6 +26,7 @@ export class SecurityQuestionsComponent implements OnInit {
 
   displayedColumns: string[] = ['questionText', 'actions'];
   data;
+  question;
 
   constructor(
     private securityService: SecurityQuestionService,
@@ -51,8 +53,15 @@ export class SecurityQuestionsComponent implements OnInit {
   edit(questionId) {
 
     // 1. Get question user selected to edit
-    const question = this.securityService.getQuestionById(questionId);
-    console.log(question);
+    // this.securityService.getQuestionById(questionId).subscribe(res => { this.question = res; });
+    // console.log(this.question);
+
+      this.securityService.getQuestionById(questionId).toPromise().then(data => {
+        this.question = data;
+        console.log('Promise resolved.');
+        console.log(this.question);
+      });
+    }
 
     // 2. Open dialog form with user's selected question
     // const dialogRef = this.dialog.open(QuestionEditDialogComponent, {
@@ -65,6 +74,6 @@ export class SecurityQuestionsComponent implements OnInit {
 
     // 4. Reload table
     // dialogRef.afterClosed().subscribe(result => { location.reload(); });
-  }
+
 
 }

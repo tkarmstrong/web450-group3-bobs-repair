@@ -336,7 +336,6 @@ app.get('/api/security-questions', (req, res, next) => {
       console.log(err);
       return next(err);
     }
-    console.log(securityQuestions);
     return res.json(securityQuestions);
   });
 });
