@@ -214,6 +214,19 @@ app.delete('/api/users/:id', (req, res, next) => {
   })
 })
 
+// Forgot Password
+app.get('/api/forgot-password/:email', function(req, res, next){
+  User.findOne({'email': req.params.email}, function(err, user) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(user);
+      res.json(user);
+    }
+  })
+})
+
 // Role CRUD Operations
 
 // Create new role.

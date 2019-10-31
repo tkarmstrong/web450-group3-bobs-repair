@@ -12,8 +12,8 @@
 const mongoose = require('mongoose');
 
 const selectedSecurityQuestions = mongoose.Schema({
-  questionId: { type: String },
-  answerText: { type: String },
+  questionText: { type: String },
+  answerText: {type: String}
 });
 
 const userSchema = mongoose.Schema({
@@ -25,7 +25,7 @@ const userSchema = mongoose.Schema({
   lastName: { type: String },
   phoneNumber: { type: String },
   address: { type: String },
-  email: { type: String },
+  email: { type: String, required: true, unique: true },
   role: { type: String, default: 'standard' },
   selectedSecurityQuestions: [selectedSecurityQuestions],
   date_created: { type: Date, default: new Date() },
