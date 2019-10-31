@@ -26,10 +26,6 @@ export class UserDeleteDialogComponent implements OnInit {
     console.log(this.username);
   }
 
-  cancel() {
-    this.router.navigate(['/user-management']);
-  }
-
   ngOnInit() {
   }
 
