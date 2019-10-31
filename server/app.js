@@ -55,15 +55,24 @@ const serverPort = process.env.PORT || 3000;
 
 // * Connect to Production DB - Remove comment block then comment dev above before build
 
-
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://super-admin:Pa$$word1@bcrs-prod1-zhpta.mongodb.net/bcrs-prod1?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
+const mongoDB = 'mongodb+srv://super-admin:Pa$$word1@bcrs-prod1-zhpta.mongodb.net/bcrs-prod1?retryWrites=true&w=majority';
+mongoose.connect(mongoDB, {
+  useNewUrlParser: true,
 });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connected error: '));
+db.once('open', () => {
+  console.log('Application connected to Atlas MongoDB instance');
+});
+
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://super-admin:Pa$$word1@bcrs-prod1-zhpta.mongodb.net/bcrs-prod1?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
 
 
 
