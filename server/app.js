@@ -233,7 +233,7 @@ app.get('/api/forgot-password/:username', function(req, res, next){
         let securePassword = {
           password: hashedPassword
         }
-        User.update(query, securePassword, function(err, rawResponse) {
+        User.updateOne(query, securePassword, function(err, rawResponse) {
           if (err) {
             console.log(err);
             return next(err);
