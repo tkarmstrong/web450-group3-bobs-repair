@@ -25,7 +25,7 @@ const userSchema = mongoose.Schema({
   lastName: { type: String },
   phoneNumber: { type: String },
   address: { type: String },
-  email: { type: String, required: true, unique: true },
+  email: { type: String },
   role: { type: String, default: 'standard' },
   selectedSecurityQuestions: [selectedSecurityQuestions],
   date_created: { type: Date, default: new Date() },
