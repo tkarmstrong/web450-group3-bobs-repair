@@ -214,6 +214,40 @@ app.delete('/api/users/:id', (req, res, next) => {
   })
 })
 
+// Forgot Password
+app.get('/api/forgot-password/:username', function(req, res, next){
+  let saltRounds = 10;
+  const query = { 'username': req.params.username };
+  User.findOne(query, function(err, user) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(user);
+      if (!user.username) {
+        return status(500).json({
+          message: "This user does not exist. Register for an account instead."
+        })
+      } else {
+        let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
+        let securePassword = {
+          password: hashedPassword
+        }
+        User.updateOne(query, securePassword, function(err, rawResponse) {
+          if (err) {
+            console.log(err);
+            return next(err);
+          } else {
+            console.log(rawResponse);
+            res.json(rawResponse);
+          }
+        })
+      }
+
+    }
+  })
+})
+
 // Role CRUD Operations
 
 // Create new role.

@@ -11,12 +11,14 @@
 <div class="container">
   <mat-card class="form">
     <mat-card-content>
-      <h2>Please sign in</h2>
+      <mat-card-title>Please sign in</mat-card-title>
+      <mat-card-subtitle><a [routerLink]="['/register']">Register</a></mat-card-subtitle>
       <small *ngIf="errorMessage">{{ errorMessage }}</small>
       <small class="warn"
         *ngIf="form.controls['username'].hasError('required') && form.controls['username'].touched">
         Username is required
       </small>
+      <br />
       <small class="warn"
         *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched">
         Password is required
@@ -25,28 +27,19 @@
         <mat-form-field class="inputStyle">
           <input type="text" matInput [formControl]="form.controls['username']" placeholder="Username " />
         </mat-form-field>
+        <br />
         <mat-form-field class="inputStyle">
           <input type="password" matInput [formControl]="form.controls['password']" placeholder="Password" />
         </mat-form-field>
-
-        <br>
-
         <mat-card-actions>
           <button
             mat-raised-button
             color="primary"
             [disabled]="!form.valid"
-            type="submit"
-          >
-            Log in
+            type="submit">Log in
           </button>
-          <button
-            mat-raised-button
-            color="accent"
-            [routerLink]="['/register']"
-          >
-            Register
-          </button>
+          <br /><br />
+          <small><a [routerLink]="['/forgot-password']">Forgot Password?</a></small>
         </mat-card-actions>
       </form>
       <br /><br />

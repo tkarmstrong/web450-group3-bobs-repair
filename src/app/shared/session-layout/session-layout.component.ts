@@ -26,7 +26,7 @@ export class SessionLayoutComponent implements OnInit {
 
   userLogout() {
     this.cookie.deleteAll();
-    this.router.navigate(['/session/login']);
+    this.router.navigate(['/login']);
   }
 
 }

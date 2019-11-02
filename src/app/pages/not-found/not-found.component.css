@@ -1,9 +1,32 @@
 /*
 ; =======================================================
 ; Title: not-found.component.css (Week 6)
-; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
 ; Date: 23 Oct 2019
 ; Description: Bob's Computer Repair Shop
 ; Legend: [] -> Team member responsible for page.
 ; =======================================================
 */
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    background-image: url('../../../assets/images/magnifying-glass-computer.jpg'); /* image source: https://win10faq.com/change-font-sizes-icon-sizes-windows-10/ */
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.message {
+    width: 100%;
+    height: 45%;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    color: #fff;
+    padding: 0.5em;
+}

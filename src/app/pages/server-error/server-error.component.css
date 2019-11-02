@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+}
+
+.container {
+    background-image: url(../../../assets/images/crashed-server.jpg); /* image source: https://www.reddit.com/r/funny/comments/be03cc/dont_forget_to_tip_your_server/ */
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.message {
+    width: 100%;
+    height: 45%;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    color: #fff;
+    padding: 0.5em;
+}

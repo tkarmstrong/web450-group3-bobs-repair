@@ -56,6 +56,8 @@ import { QuestionDeleteDialogComponent } from './shared/question-delete-dialog/q
 import { VerifyUsernameFormComponent } from './verify-username-form/verify-username-form.component';
 import { VerifySecurityQuestionsFormComponent } from './verify-security-questions-form/verify-security-questions-form.component';
 import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
+import { ServerErrorComponent } from './pages/server-error/server-error.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 // PrimeNg
 
@@ -78,7 +80,9 @@ import { ResetPasswordFormComponent } from './reset-password-form/reset-password
     QuestionDeleteDialogComponent,
     VerifyUsernameFormComponent,
     VerifySecurityQuestionsFormComponent,
-    ResetPasswordFormComponent
+    ResetPasswordFormComponent,
+    ServerErrorComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

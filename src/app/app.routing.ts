@@ -18,6 +18,8 @@ import { UserManagementComponent } from './pages/user-management/user-management
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuardService } from './shared/guards/auth-guard.service';
+import { ServerErrorComponent } from './pages/server-error/server-error.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 export const AppRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -27,7 +29,9 @@ export const AppRoutes: Routes = [
     children: [
       { path: 'login', component: LoginComponent },
       { path: 'home', component: HomeComponent },
-      { path: 'register', component: RegisterComponent }
+      { path: 'register', component: RegisterComponent },
+      { path: 'server-error', component: ServerErrorComponent },
+      { path: 'contact', component: ContactComponent }
     ]
   },
   { path: 'session', component: SessionLayoutComponent,

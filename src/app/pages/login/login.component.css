@@ -10,6 +10,29 @@
 
 
 .container {
-  max-width: 320px;
+  width: 40%;
   margin: 0 auto;
+  margin-top: 200px;
+}
+
+.mat-card {
+  text-align: center;
+}
+
+.mat-form-field {
+  width: 90%;
+  font-size: 1.5em;
+}
+
+.mat-form-field:first-of-type {
+  margin-top: 20px;
+}
+
+.mat-card-actions .mat-raised-button {
+  width: 90%;
+  margin-top: 25px;
+}
+
+.mat-card-content>:last-child:not(.mat-card-footer), .mat-card>:last-child:not(.mat-card-footer) {
+  margin-bottom: -25px;
 }
