@@ -535,7 +535,7 @@ let LoginComponent = class LoginComponent {
             if (res) {
                 this.cookie.set('isAuthenticated', 'true', 1);
                 this.cookie.set(username, 'true', 1);
-                this.router.navigate(['/user-management']);
+                this.router.navigate(['/session/user-management']);
             }
             else {
                 this.errorMessage = 'Invalid User ID';
@@ -701,14 +701,18 @@ let RegisterComponent = class RegisterComponent {
         const apiBaseURL = '/api/user/';
         // tslint:disable-next-line: no-string-literal
         const userId = this.form.controls['userId'].value;
+        console.log('userId for new user is ' + userId);
         this.http.get(apiBaseURL + userId).subscribe(res => {
             if (res) {
                 this.cookie.set('isAuthenticated', 'true', 1);
+                console.log('isAuthenticated is set to true');
                 this.cookie.set(userId, 'true', 1);
+                console.log('userId is set to true');
                 this.router.navigate(['/dashboard']);
             }
             else {
                 this.errorMessage = 'Invalid User ID';
+                console.log('Invalid User ID');
             }
         });
     }
@@ -908,7 +912,7 @@ let UserDetailsComponent = class UserDetailsComponent {
             this.form.controls['lastName'].setValue(this.user.lastName);
             this.form.controls['phoneNumber'].setValue(this.user.phoneNumber);
             this.form.controls['address'].setValue(this.user.address);
-            this.form.controls['email'].setValue(this.user.emai);
+            this.form.controls['email'].setValue(this.user.email);
         });
     }
     ngOnInit() {
