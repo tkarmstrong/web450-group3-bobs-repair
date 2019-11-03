@@ -146,9 +146,20 @@ app.post("/api/login", (req, res, next) => {
 });
 
 // Read one user by id.
-
 app.get('/api/users/:id', (req, res, next) => {
   User.findOne({ '_id': req.params.id }, (err, user) => {
+    if (err) {
+      console.log(err);
+      return next(err);
+    }
+    console.log(user);
+    return res.json(user);
+  });
+});
+
+// Read one user by username.
+app.get('/api/users/username/:username', (req, res, next) => {
+  User.findOne({ 'username': req.params.username }, (err, user) => {
     if (err) {
       console.log(err);
       return next(err);
