@@ -17,11 +17,6 @@
 
       <small *ngIf="errorMessage">{{ errorMessage }}</small>
 
-      <div>
-        <p>Real-time data: {{ registrationForm.value | json }}</p>
-        <p>Your form status is : {{ registrationForm.status }}</p>
-      </div>
-
       <form [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm.value)">
 
         <mat-form-field>
@@ -151,7 +146,7 @@
         <br>
 
         <mat-card-actions>
-          <button mat-raised-button color="primary">
+          <button mat-raised-button color="primary" [disabled]="!form.valid">
             Register
           </button>
         </mat-card-actions>
