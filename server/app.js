@@ -79,6 +79,8 @@ app.post('/api/users/', function(req, res, next) {
     } else {
       if (!user) {
         // The selected username is unique
+        console.log('User is unique.')
+        console.log(req.body.password);
         let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
         let u = {
           username: req.body.username,
