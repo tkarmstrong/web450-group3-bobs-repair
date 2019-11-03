@@ -21,9 +21,10 @@ export class VerifyUsernameFormComponent implements OnInit {
 
   validateUsername() {
     const username = this.form.controls['username'].value;
-    this.http.get('/api/session/verify/users/' + username).subscribe(res => {
+    this.http.get('/api/verify/users/' + username).subscribe(res => {
       if (res) {
-        this.router.navigate(['/session/verify-security-questions'], {queryParams: {username: username}, skipLocationChange: true});
+        console.log('verified username');
+        this.router.navigate(['/forgot-password/' + username], {queryParams: {username: username}, skipLocationChange: true});
       }
     }, err => {
       console.log(err);

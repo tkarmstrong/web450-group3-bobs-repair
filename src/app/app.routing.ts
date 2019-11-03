@@ -1,3 +1,5 @@
+import { VerifySecurityQuestionsFormComponent } from './verify-security-questions-form/verify-security-questions-form.component';
+import { VerifyUsernameFormComponent } from './verify-username-form/verify-username-form.component';
 /*
 ; =======================================================
 ; Title: app.routing.ts (Week 6)
@@ -31,7 +33,9 @@ export const AppRoutes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'server-error', component: ServerErrorComponent },
-      { path: 'contact', component: ContactComponent }
+      { path: 'contact', component: ContactComponent },
+      { path: 'forgot-password', component: VerifyUsernameFormComponent },
+      { path: 'forgot-password/:username', component: VerifySecurityQuestionsFormComponent}
     ]
   },
   { path: 'session', component: SessionLayoutComponent,

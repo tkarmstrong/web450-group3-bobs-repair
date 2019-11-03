@@ -215,38 +215,125 @@ app.delete('/api/users/:id', (req, res, next) => {
 })
 
 // Forgot Password
-app.get('/api/forgot-password/:username', function(req, res, next){
-  let saltRounds = 10;
-  const query = { 'username': req.params.username };
-  User.findOne(query, function(err, user) {
+// app.get('/api/forgot-password/:username', function(req, res, next){
+//   let saltRounds = 10;
+//   const query = { 'username': req.params.username };
+//   User.findOne(query, function(err, user) {
+//     if (err) {
+//       console.log(err);
+//       return next(err);
+//     } else {
+//       console.log(user);
+//       if (!user.username) {
+//         return status(500).json({
+//           message: "This user does not exist. Register for an account instead."
+//         })
+//       } else {
+//         let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
+//         let securePassword = {
+//           password: hashedPassword
+//         }
+//         User.updateOne(query, securePassword, function(err, rawResponse) {
+//           if (err) {
+//             console.log(err);
+//             return next(err);
+//           } else {
+//             console.log(rawResponse);
+//             res.json(rawResponse);
+//           }
+//         })
+//       }
+
+//     }
+//   })
+// })
+
+// Forgot Password Operations
+// Verify username
+app.get('/api/verify/users/:username', function(req, res, next) {
+  User.findOne({'username': req.params.username}, function(err, user) {
+    if (err) {
+      console.log(err);
+      return next(err)
+    } else {
+      console.log(user);
+      res.json(user);
+    }
+  })
+})
+
+// Verify security questions
+app.post('/api/verify/users/:username/security-questions', function(req, res, next) {
+  const answerToSecurityQuestion1 = req.body.answerToSecurityQuestion1;
+  console.log('The answer to Security Question 1 is ' + answerToSecurityQuestion1);
+
+  const answerToSecurityQuestion1 = req.body.answerToSecurityQuestion2;
+  console.log('The answer to Security Question 2 is ' + answerToSecurityQuestion2);
+
+  const answerToSecurityQuestion1 = req.body.answerToSecurityQuestion3;
+  console.log('The answer to Security Question 3 is ' + answerToSecurityQuestion3);
+
+  User.findOne({'username': req.params.username}, function(err, user) {
     if (err) {
       console.log(err);
       return next(err);
     } else {
       console.log(user);
-      if (!user.username) {
-        return status(500).json({
-          message: "This user does not exist. Register for an account instead."
+
+      let answer1IsValid = answerToSecurityQuestion1 === user.securityQuestions[0].answer;
+      console.log('answer1IsValid = ' + answer1IsValid);
+
+      let answer2IsValid = answerToSecurityQuestion2 === user.securityQuestions[1].answer;
+      console.log('answer2IsValid = ' + answer2IsValid);
+
+      let answer3IsValid = answerToSecurityQuestion3 === user.securityQuestions[2].answer;
+      console.log('answer3IsValid = ' + answer3IsValid);
+
+      if (answer1IsValid && answer2IsValid && answer3IsValid) {
+        res.status(200).send({
+          type: 'success',
+          auth: true
         })
       } else {
-        let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
-        let securePassword = {
-          password: hashedPassword
-        }
-        User.updateOne(query, securePassword, function(err, rawResponse) {
-          if (err) {
-            console.log(err);
-            return next(err);
-          } else {
-            console.log(rawResponse);
-            res.json(rawResponse);
-          }
+        res.status(200).send({
+          type: 'error',
+          auth: false
         })
       }
-
     }
   })
-})
+});
+
+// Reset password
+app.post('/api/users/:username/reset-password', function(req, res, next) {
+  const password = req.body.password;
+
+  User.findOne({'username': req.params.username}, function (err, user) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(user);
+
+      let hashedPassword = bcrypt.hashSync(password, saltRounds);
+
+      user.set({
+        password: hashedPassword
+      });
+
+      user.save(function(err, user) {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(user);
+          res.json(user);
+        }
+      })
+    }
+  })
+});
+
 
 // Role CRUD Operations
 

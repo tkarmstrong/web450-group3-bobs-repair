@@ -49,6 +49,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule, MatSelect } from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
 
 // Flex
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -105,7 +106,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     MatRadioModule,
     MatDialogModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatListModule
   ],
   providers: [CookieService, AuthGuardService],
   bootstrap: [AppComponent],
