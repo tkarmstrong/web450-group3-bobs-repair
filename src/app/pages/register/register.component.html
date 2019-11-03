@@ -27,44 +27,64 @@
         <mat-form-field>
           <input matInput placeholder="Username" formControlName="username">
             <mat-error class="warn"
-                  *ngIf="registrationForm.controls['username'].hasError('required') && registrationForm.controls['username'].touched">
-                  Username is required
+                       *ngIf="registrationForm.controls['username'].hasError('required') && registrationForm.controls['username'].touched">
+                       Username is required
           </mat-error>
         </mat-form-field>
 
         <mat-form-field>
           <input type="password" matInput placeholder="Password" formControlName="password">
             <mat-error class="warn"
-                  *ngIf="registrationForm.controls['password'].hasError('required') && registrationForm.controls['password'].touched">
-                  Password is required.
+                       *ngIf="registrationForm.controls['password'].hasError('required') && registrationForm.controls['password'].touched">
+                       Password is required.
             </mat-error>
             <mat-error class="warn"
-              *ngIf="registrationForm.controls['password'].hasError('pattern') && registrationForm.controls['password'].touched">
-              Password requires at least 8 characters with one uppercase and one number.
+                       *ngIf="registrationForm.controls['password'].hasError('pattern') && registrationForm.controls['password'].touched">
+                       Password requires at least 8 characters with one uppercase and one number.
             </mat-error>
         </mat-form-field>
 
         <mat-form-field>
           <input matInput placeholder="First Name" formControlName="firstName">
+          <mat-error class="warn"
+                     *ngIf="registrationForm.controls['firstName'].hasError('required') && registrationForm.controls['firstName'].touched">
+                     Please enter your first name.
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field>
           <input matInput placeholder="Last Name" formControlName="lastName">
+          <mat-error class="warn"
+                     *ngIf="registrationForm.controls['lastName'].hasError('required') && registrationForm.controls['lastName'].touched">
+                     Please enter your last name.
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field>
           <input matInput placeholder="Phone Number" formControlName="phoneNumber">
+          <mat-error class="warn"
+                     *ngIf="registrationForm.controls['phoneNumber'].hasError('required') && registrationForm.controls['phoneNumber'].touched">
+                     Please enter your phone number.
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field>
           <input matInput placeholder="Address" formControlName="address">
+          <mat-error class="warn"
+                     *ngIf="registrationForm.controls['address'].hasError('required') && registrationForm.controls['address'].touched">
+                     Please enter your address.
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field>
           <input matInput placeholder="Email" formControlName="email">
           <mat-error class="warn"
-            *ngIf="registrationForm.controls['email'].hasError('email') && registrationForm.controls['email'].touched">
-            Not an email.
+                     *ngIf="registrationForm.controls['email'].hasError('email') && registrationForm.controls['email'].touched">
+                     Not an email.
+          </mat-error>
+          <mat-error class="warn"
+                     *ngIf="registrationForm.controls['email'].hasError('required') && registrationForm.controls['email'].touched">
+                     Please enter your email.
           </mat-error>
         </mat-form-field>
 
@@ -73,11 +93,19 @@
             <mat-option *ngFor="let question of questions" [value]="question._id">
               {{question.questionText}}
             </mat-option>
+            <mat-error class="warn"
+                     *ngIf="registrationForm.controls['securityQuestion1'].hasError('required') && registrationForm.controls['securityQuestion1'].touched">
+                     Please choose a security question.
+            </mat-error>
           </mat-select>
         </mat-form-field>
 
         <mat-form-field>
           <input matInput placeholder="Answer" formControlName="answer1">
+          <mat-error class="warn"
+                     *ngIf="registrationForm.controls['answer1'].hasError('required') && registrationForm.controls['answer1'].touched">
+                     Please answer the security question.
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field>
@@ -85,11 +113,19 @@
             <mat-option *ngFor="let question of questions" [value]="question._id">
               {{question.questionText}}
             </mat-option>
+            <mat-error class="warn"
+                       *ngIf="registrationForm.controls['securityQuestion2'].hasError('required') && registrationForm.controls['securityQuestion2'].touched">
+                       Please choose a security question.
+            </mat-error>
           </mat-select>
         </mat-form-field>
 
         <mat-form-field>
           <input matInput placeholder="Answer" formControlName="answer2">
+          <mat-error class="warn"
+                     *ngIf="registrationForm.controls['answer2'].hasError('required') && registrationForm.controls['answer2'].touched">
+                     Please answer the security question.
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field>
@@ -97,11 +133,19 @@
             <mat-option *ngFor="let question of questions" [value]="question._id">
               {{question.questionText}}
             </mat-option>
+            <mat-error class="warn"
+                       *ngIf="registrationForm.controls['securityQuestion3'].hasError('required') && registrationForm.controls['securityQuestion3'].touched">
+                       Please choose a security question.
+            </mat-error>
           </mat-select>
         </mat-form-field>
 
         <mat-form-field>
           <input matInput placeholder="Answer" formControlName="answer3">
+          <mat-error class="warn"
+                     *ngIf="registrationForm.controls['answer3'].hasError('required') && registrationForm.controls['answer3'].touched">
+                     Please answer the security question.
+          </mat-error>
         </mat-form-field>
 
         <br>
