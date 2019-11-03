@@ -18,10 +18,12 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./base-layout.component.css']
 })
 export class BaseLayoutComponent implements OnInit {
+  validated: boolean;
 
   constructor(private router: Router, private cookie: CookieService) { }
 
   ngOnInit() {
+    this.validated = this.cookie.check('isAuthenticated');
   }
 
   userLogout() {

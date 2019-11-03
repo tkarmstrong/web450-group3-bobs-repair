@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppRoutes } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthGuardService } from './shared/guards/auth-guard.service';
 
@@ -48,6 +48,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule, MatSelect } from '@angular/material/select';
 
 // Flex
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -97,7 +98,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     MatDividerModule,
     MatRadioModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [CookieService, AuthGuardService],
   bootstrap: [AppComponent],

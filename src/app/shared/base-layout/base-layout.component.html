@@ -17,11 +17,17 @@
         <button mat-button class="toolbar__icon-button mat-button">
           <mat-icon>menu</mat-icon>
         </button>
-        <button mat-button class="toolbar__icon-button mat-button">
-          <span style="margin-left: 5px !important" [routerLink]="['/']">Bob's</span>
+        <button [routerLink]="['/']" mat-button class="toolbar__icon-button mat-button">
+          <span style="margin-left: 5px !important">Bob's</span>
         </button>
-        <button mat-button class="toolbar__icon-button mat-button" [routerLink]="['/login']">
+        <button *ngIf="validated == false" mat-button class="toolbar__icon-button mat-button" [routerLink]="['/login']">
           <span style="margin-left: 5px !important">Login</span>
+        </button>
+        <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button" [routerLink]="['/session/security-questions']">
+          <span style="margin-left: 5px !important" >Security Questions</span>
+        </button>
+        <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button" [routerLink]="['/session/user-management']">
+          <span style="margin-left: 5px !important" >User Management</span>
         </button>
 
         <div fxFlex></div>

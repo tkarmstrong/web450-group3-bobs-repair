@@ -18,10 +18,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./session-layout.component.css']
 })
 export class SessionLayoutComponent implements OnInit {
+  validated: boolean;
 
   constructor(private cookie: CookieService, private router: Router) { }
 
   ngOnInit() {
+    this.validated = this.cookie.check('isAuthenticated');
   }
 
   userLogout() {
