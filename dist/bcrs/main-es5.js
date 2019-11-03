@@ -728,14 +728,18 @@ var RegisterComponent = /** @class */ (function () {
         var apiBaseURL = '/api/user/';
         // tslint:disable-next-line: no-string-literal
         var userId = this.form.controls['userId'].value;
+        console.log('userId for new user is ' + userId);
         this.http.get(apiBaseURL + userId).subscribe(function (res) {
             if (res) {
                 _this.cookie.set('isAuthenticated', 'true', 1);
+                console.log('isAuthenticated is set to true');
                 _this.cookie.set(userId, 'true', 1);
+                console.log('userId is set to true');
                 _this.router.navigate(['/dashboard']);
             }
             else {
                 _this.errorMessage = 'Invalid User ID';
+                console.log('Invalid User ID');
             }
         });
     };

@@ -54,6 +54,9 @@ import { MatSelectModule, MatSelect } from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { QuestionAddDialogComponent } from './shared/question-add-dialog/question-add-dialog.component';
 import { QuestionDeleteDialogComponent } from './shared/question-delete-dialog/question-delete-dialog.component';
+import { VerifyUsernameFormComponent } from './verify-username-form/verify-username-form.component';
+import { VerifySecurityQuestionsFormComponent } from './verify-security-questions-form/verify-security-questions-form.component';
+import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
 import { ServerErrorComponent } from './pages/server-error/server-error.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
@@ -76,6 +79,9 @@ import { ContactComponent } from './pages/contact/contact.component';
     QuestionEditDialogComponent,
     QuestionAddDialogComponent,
     QuestionDeleteDialogComponent,
+    VerifyUsernameFormComponent,
+    VerifySecurityQuestionsFormComponent,
+    ResetPasswordFormComponent,
     ServerErrorComponent,
     ContactComponent
   ],
