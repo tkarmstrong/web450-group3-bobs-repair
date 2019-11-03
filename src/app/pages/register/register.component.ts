@@ -39,16 +39,14 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  // '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm'
-  // '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}'
-  // /^[0-9]{1,6}$/
-
-
   ngOnInit() {
 
     this.registrationForm = new FormGroup({
       username: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required, Validators.pattern('')]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.pattern('^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\\D*\\d)[A-Za-z\\d!$%@#%*?&]{8,}$')
+      ]),
       firstName: new FormControl('', [Validators.required]),
       lastName: new FormControl('', [Validators.required]),
       phoneNumber: new FormControl('', [Validators.required]),
