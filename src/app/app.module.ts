@@ -60,9 +60,10 @@ import { VerifySecurityQuestionsFormComponent } from './verify-security-question
 import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
 import { ServerErrorComponent } from './pages/server-error/server-error.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 // PrimeNg
-
+import { GMapModule } from 'primeng/gmap';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     VerifySecurityQuestionsFormComponent,
     ResetPasswordFormComponent,
     ServerErrorComponent,
-    ContactComponent
+    ContactComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -107,7 +109,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     MatDialogModule,
     MatTableModule,
     MatSelectModule,
-    MatListModule
+    MatListModule,
+    GMapModule
   ],
   providers: [CookieService, AuthGuardService],
   bootstrap: [AppComponent],

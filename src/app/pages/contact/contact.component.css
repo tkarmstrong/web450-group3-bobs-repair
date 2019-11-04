@@ -1,0 +1,33 @@
+.img-wrapper {
+  margin-top: 150px;
+}
+
+.card-wrapper {
+  margin-top: -50px;
+}
+
+.mat-card {
+  width: 500px;
+}
+
+.icon-wrapper {
+  text-align: center;
+}
+
+.icon-wrapper h5 {
+  text-align: center;
+  color: #333333;
+}
+
+.mat-icon {
+  font-size: 50px;
+}
+
+.mat-card-content {
+  text-align: center;
+}
+
+.mat-card-content p {
+  font-size: 16px;
+  color: #333333;
+}
