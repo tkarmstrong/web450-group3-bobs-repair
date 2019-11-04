@@ -15,6 +15,9 @@ export class VerifySecurityQuestionsFormComponent implements OnInit {
   question1: string;
   question2: string;
   question3: string;
+  answer1: string;
+  answer2: string;
+  answer3: string;
   username: string;
   form: FormGroup;
 
@@ -30,10 +33,16 @@ export class VerifySecurityQuestionsFormComponent implements OnInit {
 
       this.question1 = this.user.selectedSecurityQuestions[0].questionText;
       console.log('This.question1 is ' + this.question1);
+      this.answer1 = this.user.selectedSecurityQuestions[0].answerText;
+      console.log('The answer to question1 is ' + this.answer1);
       this.question2 = this.user.selectedSecurityQuestions[1].questionText;
       console.log('This.question2 is ' + this.question2);
+      this.answer2 = this.user.selectedSecurityQuestions[1].answerText;
+      console.log('The answer to question2 is ' + this.answer2);
       this.question3 = this.user.selectedSecurityQuestions[2].questionText;
       console.log('This.question3 is ' + this.question3);
+      this.answer3 = this.user.selectedSecurityQuestions[2].answerText;
+      console.log('The answer to question3 is ' + this.answer3);
     }, err => {
       console.log(err);
     });
@@ -53,16 +62,21 @@ export class VerifySecurityQuestionsFormComponent implements OnInit {
     const answerToSecurityQuestion2 = this.form.controls['answerToSecurityQuestion2'].value;
     const answerToSecurityQuestion3 = this.form.controls['answerToSecurityQuestion3'].value;
 
-    this.http.post('/api/session/verify/users/' + this.username + '/security-questions', {
-      answerToSecurityQuestion1: answerToSecurityQuestion1,
-      answerToSecurityQuestion2: answerToSecurityQuestion2,
-      answerToSecurityQuestion3: answerToSecurityQuestion3
-    }).subscribe(res => {
-      if (res['auth']) {
-        this.router.navigate(['/session/reset-password'], {queryParams: {isAuthenticated: 'true', username: this.username}, skipLocationChange: true});
-      } else {
-        console.log('Unable to verify security question answers');
-      }
-    });
+    if (answerToSecurityQuestion1 == this.answer1 && answerToSecurityQuestion2 == this.answer2 && answerToSecurityQuestion3 == this.answer3) {
+      this.router.navigate(['/reset-password'], {queryParams: {isAuthenticated: 'true', username: this.username}, skipLocationChange: true});
+    } else {
+      console.log('Unable to verify security question answers');
+    }
+    // this.http.post('/api/verify/users/' + this.username + '/security-questions', {
+    //   answerToSecurityQuestion1: answerToSecurityQuestion1,
+    //   answerToSecurityQuestion2: answerToSecurityQuestion2,
+    //   answerToSecurityQuestion3: answerToSecurityQuestion3
+    // }).subscribe(res => {
+    //   if (res['auth']) {
+    //     this.router.navigate(['/reset-password'], {queryParams: {isAuthenticated: 'true', username: this.username}, skipLocationChange: true});
+    //   } else {
+    //     console.log('Unable to verify security question answers');
+    //   }
+    // });
   }
 }
