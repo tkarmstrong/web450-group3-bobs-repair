@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class VerifySecurityQuestionsFormComponent implements OnInit {
 
   selectedSecurityQuestions: any;
+  user: any;
   question1: string;
   question2: string;
   question3: string;
@@ -22,27 +23,21 @@ export class VerifySecurityQuestionsFormComponent implements OnInit {
     this.username = this.route.snapshot.queryParamMap.get('username');
     console.log(this.username);
 
-    this.http.get('/api/users/' + this.username + '/security-questions').subscribe(res => {
-      this.selectedSecurityQuestions = res;
+    this.http.get('/api/verify/users/' + this.username + '/security-questions').subscribe(res => {
+      this.user = (res);
 
-      console.log(this.selectedSecurityQuestions);
+      console.log('this.selectedSecurityQuestions is ' + this.user.selectedSecurityQuestions[0].answerText);
+
+      this.question1 = this.user.selectedSecurityQuestions[0].questionText;
+      console.log('This.question1 is ' + this.question1);
+      this.question2 = this.user.selectedSecurityQuestions[1].questionText;
+      console.log('This.question2 is ' + this.question2);
+      this.question3 = this.user.selectedSecurityQuestions[2].questionText;
+      console.log('This.question3 is ' + this.question3);
     }, err => {
       console.log(err);
-    }, () => {
-      this.http.post('/api/security-questions/find-by-ids', {
-        question1: this.selectedSecurityQuestions[0].questionId,
-        question2: this.selectedSecurityQuestions[1].questionId,
-        question3: this.selectedSecurityQuestions[2].questionId
-      }).subscribe(res => {
-        this.question1 = res[0].text;
-        this.question2 = res[1].text;
-        this.question3 = res[2].text;
-
-        console.log(this.question1);
-        console.log(this.question2);
-        console.log(this.question3);
-      });
     });
+
   }
 
   ngOnInit() {
