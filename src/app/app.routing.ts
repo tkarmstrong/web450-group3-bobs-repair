@@ -35,7 +35,7 @@ export const AppRoutes: Routes = [
       { path: 'server-error', component: ServerErrorComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'forgot-password', component: VerifyUsernameFormComponent },
-      { path: 'forgot-password/:username', component: VerifySecurityQuestionsFormComponent}
+      { path: 'verify-security-questions', component: VerifySecurityQuestionsFormComponent}
     ]
   },
   { path: 'session', component: SessionLayoutComponent,

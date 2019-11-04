@@ -276,6 +276,20 @@ app.get('/api/verify/users/:username', function(req, res, next) {
 })
 
 // Verify security questions
+app.get('/api/verify/users/:username/security-questions', function(req, res, next) {
+  User.findOne({'username': req.params.username}, function(err, user) {
+    if (err) {
+      console.log(err);
+      return next(err)
+    } else {
+      console.log(user);
+      res.json(user);
+    }
+  })
+})
+
+
+
 app.post('/api/verify/users/:username/security-questions', function(req, res, next) {
   const answerToSecurityQuestion1 = req.body.answerToSecurityQuestion1;
   console.log('The answer to Security Question 1 is ' + answerToSecurityQuestion1);
@@ -499,6 +513,28 @@ app.put('/api/security-questions/update/:id', (req, res, next) => {
     }
   })
 })
+
+app.post('/api/security-questions/find-by-ids', function(req, res, next) {
+  const question1 = req.body.question1;
+  const question2 = req.body.question2;
+  const question3 = req.body.question3;
+
+  SecurityQuestion.find({
+    $or: [
+      {'_id': question1},
+      {'_id': question2},
+      {'_id': question3}
+    ]
+  }).exec(function(err, securityQuestions ) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(securityQuestions);
+      res.json(securityQuestions);
+    }
+  })
+});
 
 // Delete role
 app.delete('/api/security-questions/:id', (req, res, next) => {

@@ -74,7 +74,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: register.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Please fill out the form to register</mat-card-title>\n      <mat-card-subtitle>Bob's Computer Repair Shop</mat-card-subtitle>\n    </mat-card-header>\n    <mat-card-content>\n\n      <small *ngIf=\"errorMessage\">{{ errorMessage }}</small>\n\n      <div>\n        <p>Real-time data: {{ registrationForm.value | json }}</p>\n        <p>Your form status is : {{ registrationForm.status }}</p>\n      </div>\n\n      <form [formGroup]=\"registrationForm\" (ngSubmit)=\"onSubmit(registrationForm.value)\">\n\n        <mat-form-field>\n          <input matInput placeholder=\"Username\" formControlName=\"username\">\n            <mat-error class=\"warn\"\n                  *ngIf=\"registrationForm.controls['username'].hasError('required') && registrationForm.controls['username'].touched\">\n                  Username is required\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input type=\"password\" matInput placeholder=\"Password\" formControlName=\"password\">\n            <mat-error class=\"warn\"\n                  *ngIf=\"registrationForm.controls['password'].hasError('required') && registrationForm.controls['password'].touched\">\n                  Password is required.\n            </mat-error>\n            <mat-error class=\"warn\"\n              *ngIf=\"registrationForm.controls['password'].hasError('pattern') && registrationForm.controls['password'].touched\">\n              Password requires at least 8 characters with one uppercase and one number.\n            </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"First Name\" formControlName=\"firstName\">\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Last Name\" formControlName=\"lastName\">\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Phone Number\" formControlName=\"phoneNumber\">\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Address\" formControlName=\"address\">\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Email\" formControlName=\"email\">\n          <mat-error class=\"warn\"\n            *ngIf=\"registrationForm.controls['email'].hasError('email') && registrationForm.controls['email'].touched\">\n            Not an email.\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <mat-select formControlName=\"securityQuestion1\" placeholder=\"Security Question\">\n            <mat-option *ngFor=\"let question of questions\" [value]=\"question._id\">\n              {{question.questionText}}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Answer\" formControlName=\"answer1\">\n        </mat-form-field>\n\n        <mat-form-field>\n          <mat-select formControlName=\"securityQuestion2\" placeholder=\"Security Question\">\n            <mat-option *ngFor=\"let question of questions\" [value]=\"question._id\">\n              {{question.questionText}}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Answer\" formControlName=\"answer2\">\n        </mat-form-field>\n\n        <mat-form-field>\n          <mat-select formControlName=\"securityQuestion3\" placeholder=\"Security Question\">\n            <mat-option *ngFor=\"let question of questions\" [value]=\"question._id\">\n              {{question.questionText}}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Answer\" formControlName=\"answer3\">\n        </mat-form-field>\n\n        <br>\n\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\">\n            Register\n          </button>\n        </mat-card-actions>\n      </form>\n\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: register.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Please fill out the form to register</mat-card-title>\n      <mat-card-subtitle>Bob's Computer Repair Shop</mat-card-subtitle>\n    </mat-card-header>\n    <mat-card-content>\n\n      <small *ngIf=\"errorMessage\">{{ errorMessage }}</small>\n\n      <form [formGroup]=\"registrationForm\" (ngSubmit)=\"onSubmit(registrationForm.value)\">\n\n        <mat-form-field>\n          <input matInput placeholder=\"Username\" formControlName=\"username\">\n            <mat-error class=\"warn\"\n                       *ngIf=\"registrationForm.controls['username'].hasError('required') && registrationForm.controls['username'].touched\">\n                       Username is required\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input type=\"password\" matInput placeholder=\"Password\" formControlName=\"password\">\n            <mat-error class=\"warn\"\n                       *ngIf=\"registrationForm.controls['password'].hasError('required') && registrationForm.controls['password'].touched\">\n                       Password is required.\n            </mat-error>\n            <mat-error class=\"warn\"\n                       *ngIf=\"registrationForm.controls['password'].hasError('pattern') && registrationForm.controls['password'].touched\">\n                       Password requires at least 8 characters with one uppercase and one number.\n            </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"First Name\" formControlName=\"firstName\">\n          <mat-error class=\"warn\"\n                     *ngIf=\"registrationForm.controls['firstName'].hasError('required') && registrationForm.controls['firstName'].touched\">\n                     Please enter your first name.\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Last Name\" formControlName=\"lastName\">\n          <mat-error class=\"warn\"\n                     *ngIf=\"registrationForm.controls['lastName'].hasError('required') && registrationForm.controls['lastName'].touched\">\n                     Please enter your last name.\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Phone Number\" formControlName=\"phoneNumber\">\n          <mat-error class=\"warn\"\n                     *ngIf=\"registrationForm.controls['phoneNumber'].hasError('required') && registrationForm.controls['phoneNumber'].touched\">\n                     Please enter your phone number.\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Address\" formControlName=\"address\">\n          <mat-error class=\"warn\"\n                     *ngIf=\"registrationForm.controls['address'].hasError('required') && registrationForm.controls['address'].touched\">\n                     Please enter your address.\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Email\" formControlName=\"email\">\n          <mat-error class=\"warn\"\n                     *ngIf=\"registrationForm.controls['email'].hasError('email') && registrationForm.controls['email'].touched\">\n                     Not an email.\n          </mat-error>\n          <mat-error class=\"warn\"\n                     *ngIf=\"registrationForm.controls['email'].hasError('required') && registrationForm.controls['email'].touched\">\n                     Please enter your email.\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <mat-select formControlName=\"securityQuestion1\" placeholder=\"Security Question\">\n            <mat-option *ngFor=\"let question of questions\" [value]=\"question._id\">\n              {{question.questionText}}\n            </mat-option>\n            <mat-error class=\"warn\"\n                     *ngIf=\"registrationForm.controls['securityQuestion1'].hasError('required') && registrationForm.controls['securityQuestion1'].touched\">\n                     Please choose a security question.\n            </mat-error>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Answer\" formControlName=\"answer1\">\n          <mat-error class=\"warn\"\n                     *ngIf=\"registrationForm.controls['answer1'].hasError('required') && registrationForm.controls['answer1'].touched\">\n                     Please answer the security question.\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <mat-select formControlName=\"securityQuestion2\" placeholder=\"Security Question\">\n            <mat-option *ngFor=\"let question of questions\" [value]=\"question._id\">\n              {{question.questionText}}\n            </mat-option>\n            <mat-error class=\"warn\"\n                       *ngIf=\"registrationForm.controls['securityQuestion2'].hasError('required') && registrationForm.controls['securityQuestion2'].touched\">\n                       Please choose a security question.\n            </mat-error>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Answer\" formControlName=\"answer2\">\n          <mat-error class=\"warn\"\n                     *ngIf=\"registrationForm.controls['answer2'].hasError('required') && registrationForm.controls['answer2'].touched\">\n                     Please answer the security question.\n          </mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <mat-select formControlName=\"securityQuestion3\" placeholder=\"Security Question\">\n            <mat-option *ngFor=\"let question of questions\" [value]=\"question._id\">\n              {{question.questionText}}\n            </mat-option>\n            <mat-error class=\"warn\"\n                       *ngIf=\"registrationForm.controls['securityQuestion3'].hasError('required') && registrationForm.controls['securityQuestion3'].touched\">\n                       Please choose a security question.\n            </mat-error>\n          </mat-select>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput placeholder=\"Answer\" formControlName=\"answer3\">\n          <mat-error class=\"warn\"\n                     *ngIf=\"registrationForm.controls['answer3'].hasError('required') && registrationForm.controls['answer3'].touched\">\n                     Please answer the security question.\n          </mat-error>\n        </mat-form-field>\n\n        <br>\n\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!registrationForm.valid\">\n            Register\n          </button>\n        </mat-card-actions>\n      </form>\n\n    </mat-card-content>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -217,7 +217,7 @@ module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  <div fxFlex.gt-sm=\"55\" fxFlex=\"100\">\n    <mat-card style=\"width: 80%;\" class=\"mat-card-top pa-0\">\n      <mat-card-title class=\"mat-headline\" style=\"text-align: center; font-size: 48px; font-weight: lighter;\">Verify User</mat-card-title>\n      <br><br>\n      <form  [formGroup]=\"form\" (ngSubmit)=\"validateUsername()\" #usernameForm>\n        <mat-card-content fxLayout=\"column\">\n          <mat-form-field fxFlex>\n            <input matInput [formControl]=\"form.controls['username']\" placeholder=\"User name\" />\n          </mat-form-field>\n\n          <br><br>\n          <div fxFlex fxLayoutAlign=\"end\">\n            <button mat-raised-button color=\"accent\">Submit</button>\n          </div>\n        </mat-card-content>\n      </form>\n    </mat-card>\n  </div>\n</div>\n"
+module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  <div fxFlex.gt-sm=\"55\" fxFlex=\"100\">\n    <!-- <div *ngIf='!user'> -->\n      <mat-card style=\"width: 80%;\" class=\"mat-card-top pa-0\">\n        <mat-card-title class=\"mat-headline\" style=\"text-align: center; font-size: 48px; font-weight: lighter;\">Verify User</mat-card-title>\n        <br><br>\n        <form  [formGroup]=\"form1\" (ngSubmit)=\"validateUsername()\" #usernameForm>\n          <mat-card-content fxLayout=\"column\">\n            <mat-form-field fxFlex>\n              <input matInput [formControl]=\"form1.controls['username']\" placeholder=\"User name\" />\n            </mat-form-field>\n            <br><br>\n            <div fxFlex fxLayoutAlign=\"end\">\n              <button mat-raised-button color=\"accent\">Submit</button>\n            </div>\n          </mat-card-content>\n        </form>\n      </mat-card>\n    <!-- </div> -->\n\n    <!-- <div *ngIf='user'>\n      <<mat-card style=\"width: 80%;\" class=\"mat-card-top pa-0\">\n        <mat-card-title style=\"text-align: center; font-size: 48px; font-weight: lighter;\" class=\"mat-headline\">\n          Verify Security Questions\n        </mat-card-title>\n        <br><br>\n        <form *ngIf=\"selectedSecurityQuestions\" [formGroup]=\"form\" (ngSubmit)=\"verifySecurityQuestions()\" #usernameForm>\n          <mat-card-content fxLayout=\"column\">\n\n            <mat-list>\n              <mat-list-item>\n                {{question1}} &nbsp; &nbsp;\n                <mat-form-field fxFlex>\n                  <input matInput [formControl]=\"form.controls['answerToSecurityQuestion1']\" placeholder=\"Answer 1\">\n                </mat-form-field>\n              </mat-list-item>\n\n              <mat-list-item>\n                {{question2}} &nbsp; &nbsp;\n                <mat-form-field fxFlex>\n                  <input matInput [formControl]=\"form.controls['answerToSecurityQuestion2']\" placeholder=\"Answer 1\">\n                </mat-form-field>\n              </mat-list-item>\n\n              <mat-list-item>\n                {{question3}} &nbsp; &nbsp;\n                <mat-form-field fxFlex>\n                  <input matInput [formControl]=\"form.controls['answerToSecurityQuestion3']\" placeholder=\"Answer 1\">\n                </mat-form-field>\n              </mat-list-item>\n            </mat-list>\n            <br><br>\n            <div fxFlex fxLayoutAlign=\"end\">\n              <button mat-raised-button color=\"accent\">Submit</button>\n            </div>\n          </mat-card-content>\n        </form>\n      </mat-card>\n    </div> -->\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -482,7 +482,7 @@ var AppRoutes = [
             { path: 'server-error', component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_11__["ServerErrorComponent"] },
             { path: 'contact', component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__["ContactComponent"] },
             { path: 'forgot-password', component: _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_1__["VerifyUsernameFormComponent"] },
-            { path: 'forgot-password/:username', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_0__["VerifySecurityQuestionsFormComponent"] }
+            { path: 'verify-security-questions', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_0__["VerifySecurityQuestionsFormComponent"] }
         ]
     },
     { path: 'session', component: _shared__WEBPACK_IMPORTED_MODULE_2__["SessionLayoutComponent"],
@@ -819,29 +819,74 @@ var RegisterComponent = /** @class */ (function () {
             console.log(err);
         });
     }
-    // '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm'
-    // '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}'
-    // /^[0-9]{1,6}$/
     RegisterComponent.prototype.ngOnInit = function () {
         this.registrationForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
             username: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
-            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^[0-9]*$')]),
-            firstName: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            lastName: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            phoneNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            address: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\\D*\\d)[A-Za-z\\d!$%@#%*?&]{8,}$')
+            ]),
+            firstName: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            lastName: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            phoneNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            address: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
             email: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]),
             role: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('standard'),
-            securityQuestion1: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            answer1: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            securityQuestion2: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            answer2: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            securityQuestion3: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            answer3: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required)
+            securityQuestion1: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            answer1: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            securityQuestion2: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            answer2: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            securityQuestion3: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            answer3: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])
         });
     };
     RegisterComponent.prototype.onSubmit = function () {
-        console.log(this.registrationForm.value);
+        var _this = this;
+        // 1. Get form values
+        var username = this.registrationForm.get('username').value;
+        var password = this.registrationForm.get('password').value;
+        var firstName = this.registrationForm.get('firstName').value;
+        var lastName = this.registrationForm.get('lastName').value;
+        var phoneNumber = this.registrationForm.get('phoneNumber').value;
+        var address = this.registrationForm.get('address').value;
+        var email = this.registrationForm.get('email').value;
+        var role = this.registrationForm.get('role').value;
+        var securityQuestion1 = this.registrationForm.get('securityQuestion1').value;
+        var answer1 = this.registrationForm.get('answer1').value;
+        var securityQuestion2 = this.registrationForm.get('securityQuestion2').value;
+        var answer2 = this.registrationForm.get('answer2').value;
+        var securityQuestion3 = this.registrationForm.get('securityQuestion3').value;
+        var answer3 = this.registrationForm.get('answer3').value;
+        // 2. Create new user object literal from form values
+        var newUser = {
+            username: username,
+            password: password,
+            firstName: firstName,
+            lastName: lastName,
+            phoneNumber: phoneNumber,
+            address: address,
+            email: email,
+            role: role,
+            selectedSecurityQuestions: [
+                { questionId: securityQuestion1, answerText: answer1 },
+                { questionId: securityQuestion2, answerText: answer2 },
+                { questionId: securityQuestion3, answerText: answer3 }
+            ]
+        };
+        console.log(newUser);
+        // 3. Post new user to db
+        var apiBaseURL = '/api/users';
+        this.http.post(apiBaseURL, newUser).subscribe(function (res) {
+            if (res) {
+                _this.cookie.set('isAuthenticated', 'true', 1);
+                _this.cookie.set(username, 'true', 1);
+                _this.router.navigate(['/session/user-management']);
+            }
+            else {
+                _this.errorMessage = 'Something went wrong.';
+                console.log("Error: " + _this.errorMessage);
+            }
+        });
     };
     RegisterComponent.ctorParameters = function () { return [
         { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__["CookieService"] },
@@ -1920,24 +1965,17 @@ var VerifySecurityQuestionsFormComponent = /** @class */ (function () {
         this.fb = fb;
         this.username = this.route.snapshot.queryParamMap.get('username');
         console.log(this.username);
-        this.http.get('/api/users/' + this.username + '/security-questions').subscribe(function (res) {
-            _this.selectedSecurityQuestions = res;
-            console.log(_this.selectedSecurityQuestions);
+        this.http.get('/api/verify/users/' + this.username + '/security-questions').subscribe(function (res) {
+            _this.user = (res);
+            console.log('this.selectedSecurityQuestions is ' + _this.user.selectedSecurityQuestions[0].answerText);
+            _this.question1 = _this.user.selectedSecurityQuestions[0].questionText;
+            console.log('This.question1 is ' + _this.question1);
+            _this.question2 = _this.user.selectedSecurityQuestions[1].questionText;
+            console.log('This.question2 is ' + _this.question2);
+            _this.question3 = _this.user.selectedSecurityQuestions[2].questionText;
+            console.log('This.question3 is ' + _this.question3);
         }, function (err) {
             console.log(err);
-        }, function () {
-            _this.http.post('/api/security-questions/find-by-ids', {
-                question1: _this.selectedSecurityQuestions[0].questionId,
-                question2: _this.selectedSecurityQuestions[1].questionId,
-                question3: _this.selectedSecurityQuestions[2].questionId
-            }).subscribe(function (res) {
-                _this.question1 = res[0].text;
-                _this.question2 = res[1].text;
-                _this.question3 = res[2].text;
-                console.log(_this.question1);
-                console.log(_this.question2);
-                console.log(_this.question3);
-            });
         });
     }
     VerifySecurityQuestionsFormComponent.prototype.ngOnInit = function () {
@@ -2023,17 +2061,21 @@ var VerifyUsernameFormComponent = /** @class */ (function () {
         this.router = router;
     }
     VerifyUsernameFormComponent.prototype.ngOnInit = function () {
-        this.form = this.fb.group({
+        this.form1 = this.fb.group({
             username: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])]
         });
     };
     VerifyUsernameFormComponent.prototype.validateUsername = function () {
         var _this = this;
-        var username = this.form.controls['username'].value;
-        this.http.get('/api/verify/users/' + username).subscribe(function (res) {
+        var username = this.form1.controls['username'].value;
+        this.http.get('/api/users/username/' + username).subscribe(function (res) {
             if (res) {
-                console.log('verified username');
-                _this.router.navigate(['/forgot-password/' + username], { queryParams: { username: username }, skipLocationChange: true });
+                _this.user = res;
+                console.log(_this.user.selectedSecurityQuestions[0].answerText);
+                _this.question1 = _this.user.selectedSecurityQuestions[0].questionText;
+                _this.question2 = _this.user.selectedSecurityQuestions[1].questionText;
+                _this.question3 = _this.user.selectedSecurityQuestions[2].questionText;
+                _this.router.navigate(['/verify-security-questions/'], { queryParams: { username: username }, skipLocationChange: true });
             }
         }, function (err) {
             console.log(err);

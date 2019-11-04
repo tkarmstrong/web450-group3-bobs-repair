@@ -1,3 +1,4 @@
+import { logging } from 'protractor';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -9,25 +10,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./verify-username-form.component.css']
 })
 export class VerifyUsernameFormComponent implements OnInit {
-  form: FormGroup;
+  form1: FormGroup;
+  user: any;
+  question1: any;
+  question2: any;
+  question3: any;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
-    this.form = this.fb.group({
+    this.form1 = this.fb.group({
       username: [null, Validators.compose([Validators.required])]
     });
   }
 
   validateUsername() {
-    const username = this.form.controls['username'].value;
-    this.http.get('/api/verify/users/' + username).subscribe(res => {
+    const username = this.form1.controls['username'].value;
+    this.http.get('/api/users/username/' + username).subscribe(res => {
       if (res) {
-        console.log('verified username');
-        this.router.navigate(['/forgot-password/' + username], {queryParams: {username: username}, skipLocationChange: true});
+        this.user = res;
+        console.log(this.user.selectedSecurityQuestions[0].answerText);
+        this.question1 = this.user.selectedSecurityQuestions[0].questionText;
+        this.question2 = this.user.selectedSecurityQuestions[1].questionText;
+        this.question3 = this.user.selectedSecurityQuestions[2].questionText;
+
+        this.router.navigate(['/verify-security-questions/'], {queryParams: {username: username}, skipLocationChange: true});
       }
     }, err => {
       console.log(err);
     });
   }
+
+
+
 }
