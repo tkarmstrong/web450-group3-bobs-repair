@@ -1,5 +1,3 @@
-import { VerifySecurityQuestionsFormComponent } from './verify-security-questions-form/verify-security-questions-form.component';
-import { VerifyUsernameFormComponent } from './verify-username-form/verify-username-form.component';
 /*
 ; =======================================================
 ; Title: app.routing.ts (Week 6)
@@ -22,6 +20,9 @@ import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuardService } from './shared/guards/auth-guard.service';
 import { ServerErrorComponent } from './pages/server-error/server-error.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { VerifySecurityQuestionsFormComponent } from './verify-security-questions-form/verify-security-questions-form.component';
+import { VerifyUsernameFormComponent } from './verify-username-form/verify-username-form.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 export const AppRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -35,7 +36,8 @@ export const AppRoutes: Routes = [
       { path: 'server-error', component: ServerErrorComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'forgot-password', component: VerifyUsernameFormComponent },
-      { path: 'forgot-password/:username', component: VerifySecurityQuestionsFormComponent}
+      { path: 'forgot-password/:username', component: VerifySecurityQuestionsFormComponent},
+      { path: 'about-us', component: AboutUsComponent }
     ]
   },
   { path: 'session', component: SessionLayoutComponent,
