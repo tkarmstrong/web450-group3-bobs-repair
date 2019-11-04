@@ -34,6 +34,14 @@ import { RegisterComponent } from './pages/register/register.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { QuestionEditDialogComponent } from './shared/question-edit-dialog/question-edit-dialog.component';
 import { UserDeleteDialogComponent } from './shared/user-delete-dialog/user-delete-dialog.component';
+import { QuestionAddDialogComponent } from './shared/question-add-dialog/question-add-dialog.component';
+import { QuestionDeleteDialogComponent } from './shared/question-delete-dialog/question-delete-dialog.component';
+import { VerifyUsernameFormComponent } from './verify-username-form/verify-username-form.component';
+import { VerifySecurityQuestionsFormComponent } from './verify-security-questions-form/verify-security-questions-form.component';
+import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
+import { ServerErrorComponent } from './pages/server-error/server-error.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 // Material
 import { MatCardModule } from '@angular/material/card';
@@ -53,16 +61,8 @@ import { MatListModule } from '@angular/material/list';
 
 // Flex
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { QuestionAddDialogComponent } from './shared/question-add-dialog/question-add-dialog.component';
-import { QuestionDeleteDialogComponent } from './shared/question-delete-dialog/question-delete-dialog.component';
-import { VerifyUsernameFormComponent } from './verify-username-form/verify-username-form.component';
-import { VerifySecurityQuestionsFormComponent } from './verify-security-questions-form/verify-security-questions-form.component';
-import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
-import { ServerErrorComponent } from './pages/server-error/server-error.component';
-import { ContactComponent } from './pages/contact/contact.component';
 
 // PrimeNg
-
 
 @NgModule({
   declarations: [
@@ -84,7 +84,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     VerifySecurityQuestionsFormComponent,
     ResetPasswordFormComponent,
     ServerErrorComponent,
-    ContactComponent
+    ContactComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -107,8 +108,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     MatDialogModule,
     MatTableModule,
     MatSelectModule,
-    MatListModule
-  ],
+    MatListModule  ],
   providers: [CookieService, AuthGuardService],
   bootstrap: [AppComponent],
   entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent, QuestionDeleteDialogComponent]

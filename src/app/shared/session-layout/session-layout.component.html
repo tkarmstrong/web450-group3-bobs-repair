@@ -20,6 +20,12 @@
           <button mat-button class="toolbar__icon-button mat-button" [routerLink]="['/']">
             <span style="margin-left: 5px !important" >Bob's</span>
           </button>
+          <button [routerLink]="['/contact']" mat-button class="toolbar__icon-button mat-button">
+            <span style="margin-left: 5px !important">Contact Us</span>
+          </button>
+          <button [routerLink]="['/about-us']" mat-button class="toolbar__icon-button mat-button">
+            <span style="margin-left: 5px !important">About Us</span>
+          </button>
           <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button" [routerLink]="['/session/security-questions']">
             <span style="margin-left: 5px !important" >Security Questions</span>
           </button>
