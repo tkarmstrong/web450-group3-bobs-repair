@@ -294,10 +294,10 @@ app.post('/api/verify/users/:username/security-questions', function(req, res, ne
   const answerToSecurityQuestion1 = req.body.answerToSecurityQuestion1;
   console.log('The answer to Security Question 1 is ' + answerToSecurityQuestion1);
 
-  const answerToSecurityQuestion1 = req.body.answerToSecurityQuestion2;
+  const answerToSecurityQuestion2 = req.body.answerToSecurityQuestion2;
   console.log('The answer to Security Question 2 is ' + answerToSecurityQuestion2);
 
-  const answerToSecurityQuestion1 = req.body.answerToSecurityQuestion3;
+  const answerToSecurityQuestion3 = req.body.answerToSecurityQuestion3;
   console.log('The answer to Security Question 3 is ' + answerToSecurityQuestion3);
 
   User.findOne({'username': req.params.username}, function(err, user) {
