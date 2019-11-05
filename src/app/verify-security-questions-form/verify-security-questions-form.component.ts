@@ -1,3 +1,13 @@
+/*
+; =======================================================
+; Title:  verify-security-questions.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date:   29 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';

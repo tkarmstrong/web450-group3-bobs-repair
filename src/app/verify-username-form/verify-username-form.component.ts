@@ -1,3 +1,13 @@
+/*
+; =======================================================
+; Title:  verify-username-form.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date:   29 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
 import { logging } from 'protractor';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
