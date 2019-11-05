@@ -17,7 +17,12 @@
 
 
   <div class="team-wrapper">
-
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap=".5%" fxLayoutAlign="center center">
+      <div class="team-member"*ngFor="let member of members">
+        <h3 style="text-align: center;">{{member.name}}, {{member.position}}</h3>
+        <img src="{{member.image}}" alt="{{member.name}}">
+      </div>
+    </div>
   </div>
 
 </div>

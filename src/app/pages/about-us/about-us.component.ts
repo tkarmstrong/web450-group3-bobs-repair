@@ -17,7 +17,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  private items: any = [
+  private members: any = [
     {
       name: 'Bob',
       image: '../../../assets/images/employees/bob.jpg',
