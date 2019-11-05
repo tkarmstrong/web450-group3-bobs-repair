@@ -15,8 +15,11 @@ export class VerifyUsernameFormComponent implements OnInit {
   question1: any;
   question2: any;
   question3: any;
+  notAUser: boolean;
 
-  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) { }
+  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) {
+    this.notAUser = false;
+  }
 
   ngOnInit() {
     this.form1 = this.fb.group({
@@ -29,12 +32,9 @@ export class VerifyUsernameFormComponent implements OnInit {
     this.http.get('/api/users/username/' + username).subscribe(res => {
       if (res) {
         this.user = res;
-        console.log(this.user.selectedSecurityQuestions[0].answerText);
-        this.question1 = this.user.selectedSecurityQuestions[0].questionText;
-        this.question2 = this.user.selectedSecurityQuestions[1].questionText;
-        this.question3 = this.user.selectedSecurityQuestions[2].questionText;
-
         this.router.navigate(['/verify-security-questions/'], {queryParams: {username: username}, skipLocationChange: true});
+      } else {
+        return this.notAUser = true;
       }
     }, err => {
       console.log(err);

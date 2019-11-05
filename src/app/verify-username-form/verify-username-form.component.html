@@ -11,6 +11,7 @@
             </mat-form-field>
             <br><br>
             <div fxFlex fxLayoutAlign="end">
+              <h3 *ngIf="notAUser" style="color: red;">That user does not exist.</h3>
               <button mat-raised-button color="accent">Submit</button>
             </div>
           </mat-card-content>

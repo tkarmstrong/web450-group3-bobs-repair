@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\n  <div class=\"img-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <img fxFlex=\"80%\" src=\"../../../assets/images/about-banner.jpg\" alt=\"\">\n  </div>\n\n  <div class=\"story-wrapper\" style=\"text-align: center;\">\n    <h1>Our Story</h1>\n    <p>\n      klhvgyftf ouytyft ouyftf oufytuftif ouyfitdftfuo ouyftdtrdrdrfv ouyfutyf uyf koyftyftfo oyfitft outftdf durtdo76\n      oufotf ouyfoufoutyf.\n    </p>\n  </div>\n\n\n  <div class=\"team-wrapper\" >\n\n  </div>\n\n</div>\n\n\n"
+module.exports = "<div class=\"container\">\n\n  <div class=\"img-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <img fxFlex=\"80%\" src=\"../../../assets/images/about-banner.jpg\" alt=\"\">\n  </div>\n\n  <div class=\"story-wrapper\">\n  <div fxLayout=\"column\" fxLayoutAlign=\"space-between center\">\n    <h1 >Our Story</h1>\n    <p style=\"width: 60%;\">\n        Long boat ahoy bring a spring upon her cable pillage barque log draught rope's end tack Spanish Main. No prey, no pay American Main hearties brig Jack Tar gangplank crack Jennys tea cup yardarm tender spanker. Strike colors Blimey tackle wherry crow's nest keel lanyard sutler aft ho.\n        Grog ye heave to trysail Davy Jones' Locker jib hogshead careen Nelsons folly square-rigged. Barbary Coast draft starboard Privateer rum six pounders Spanish Main port tender loot. Dance the hempen jig splice the main brace barkadeer bilge rat parrel clipper swing the lead aye Blimey Sea Legs.\n        Fire in the hole reef sails lass chandler cutlass dance the hempen jig skysail no prey, no pay list starboard. Barque handsomely transom marooned killick lass prow to go on account measured fer yer chains hogshead. Chandler keelhaul skysail Plate Fleet lad shrouds Pieces of Eight matey doubloon hogshead.\n    </p>\n  </div>\n</div>\n\n\n  <div class=\"team-wrapper\">\n    <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutGap=\".5%\" fxLayoutAlign=\"center center\">\n      <div class=\"team-member\"*ngFor=\"let member of members\">\n        <h3 style=\"text-align: center;\">{{member.name}}, {{member.position}}</h3>\n        <img src=\"{{member.image}}\" alt=\"{{member.name}}\">\n      </div>\n    </div>\n  </div>\n\n</div>\n\n\n"
 
 /***/ }),
 
@@ -228,7 +228,7 @@ module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  <div fxFlex.gt-sm=\"55\" fxFlex=\"100\">\n    <!-- <div *ngIf='!user'> -->\n      <mat-card style=\"width: 80%;\" class=\"mat-card-top pa-0\">\n        <mat-card-title class=\"mat-headline\" style=\"text-align: center; font-size: 48px; font-weight: lighter;\">Verify User</mat-card-title>\n        <br><br>\n        <form  [formGroup]=\"form1\" (ngSubmit)=\"validateUsername()\" #usernameForm>\n          <mat-card-content fxLayout=\"column\">\n            <mat-form-field fxFlex>\n              <input matInput [formControl]=\"form1.controls['username']\" placeholder=\"User name\" />\n            </mat-form-field>\n            <br><br>\n            <div fxFlex fxLayoutAlign=\"end\">\n              <button mat-raised-button color=\"accent\">Submit</button>\n            </div>\n          </mat-card-content>\n        </form>\n      </mat-card>\n    <!-- </div> -->\n\n    <!-- <div *ngIf='user'>\n      <<mat-card style=\"width: 80%;\" class=\"mat-card-top pa-0\">\n        <mat-card-title style=\"text-align: center; font-size: 48px; font-weight: lighter;\" class=\"mat-headline\">\n          Verify Security Questions\n        </mat-card-title>\n        <br><br>\n        <form *ngIf=\"selectedSecurityQuestions\" [formGroup]=\"form\" (ngSubmit)=\"verifySecurityQuestions()\" #usernameForm>\n          <mat-card-content fxLayout=\"column\">\n\n            <mat-list>\n              <mat-list-item>\n                {{question1}} &nbsp; &nbsp;\n                <mat-form-field fxFlex>\n                  <input matInput [formControl]=\"form.controls['answerToSecurityQuestion1']\" placeholder=\"Answer 1\">\n                </mat-form-field>\n              </mat-list-item>\n\n              <mat-list-item>\n                {{question2}} &nbsp; &nbsp;\n                <mat-form-field fxFlex>\n                  <input matInput [formControl]=\"form.controls['answerToSecurityQuestion2']\" placeholder=\"Answer 1\">\n                </mat-form-field>\n              </mat-list-item>\n\n              <mat-list-item>\n                {{question3}} &nbsp; &nbsp;\n                <mat-form-field fxFlex>\n                  <input matInput [formControl]=\"form.controls['answerToSecurityQuestion3']\" placeholder=\"Answer 1\">\n                </mat-form-field>\n              </mat-list-item>\n            </mat-list>\n            <br><br>\n            <div fxFlex fxLayoutAlign=\"end\">\n              <button mat-raised-button color=\"accent\">Submit</button>\n            </div>\n          </mat-card-content>\n        </form>\n      </mat-card>\n    </div> -->\n  </div>\n</div>\n"
+module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  <div fxFlex.gt-sm=\"55\" fxFlex=\"100\">\n    <!-- <div *ngIf='!user'> -->\n      <mat-card style=\"width: 80%;\" class=\"mat-card-top pa-0\">\n        <mat-card-title class=\"mat-headline\" style=\"text-align: center; font-size: 48px; font-weight: lighter;\">Verify User</mat-card-title>\n        <br><br>\n        <form  [formGroup]=\"form1\" (ngSubmit)=\"validateUsername()\" #usernameForm>\n          <mat-card-content fxLayout=\"column\">\n            <mat-form-field fxFlex>\n              <input matInput [formControl]=\"form1.controls['username']\" placeholder=\"User name\" />\n            </mat-form-field>\n            <br><br>\n            <div fxFlex fxLayoutAlign=\"end\">\n              <h3 *ngIf=\"notAUser\" style=\"color: red;\">That user does not exist.</h3>\n              <button mat-raised-button color=\"accent\">Submit</button>\n            </div>\n          </mat-card-content>\n        </form>\n      </mat-card>\n    <!-- </div> -->\n\n    <!-- <div *ngIf='user'>\n      <<mat-card style=\"width: 80%;\" class=\"mat-card-top pa-0\">\n        <mat-card-title style=\"text-align: center; font-size: 48px; font-weight: lighter;\" class=\"mat-headline\">\n          Verify Security Questions\n        </mat-card-title>\n        <br><br>\n        <form *ngIf=\"selectedSecurityQuestions\" [formGroup]=\"form\" (ngSubmit)=\"verifySecurityQuestions()\" #usernameForm>\n          <mat-card-content fxLayout=\"column\">\n\n            <mat-list>\n              <mat-list-item>\n                {{question1}} &nbsp; &nbsp;\n                <mat-form-field fxFlex>\n                  <input matInput [formControl]=\"form.controls['answerToSecurityQuestion1']\" placeholder=\"Answer 1\">\n                </mat-form-field>\n              </mat-list-item>\n\n              <mat-list-item>\n                {{question2}} &nbsp; &nbsp;\n                <mat-form-field fxFlex>\n                  <input matInput [formControl]=\"form.controls['answerToSecurityQuestion2']\" placeholder=\"Answer 1\">\n                </mat-form-field>\n              </mat-list-item>\n\n              <mat-list-item>\n                {{question3}} &nbsp; &nbsp;\n                <mat-form-field fxFlex>\n                  <input matInput [formControl]=\"form.controls['answerToSecurityQuestion3']\" placeholder=\"Answer 1\">\n                </mat-form-field>\n              </mat-list-item>\n            </mat-list>\n            <br><br>\n            <div fxFlex fxLayoutAlign=\"end\">\n              <button mat-raised-button color=\"accent\">Submit</button>\n            </div>\n          </mat-card-content>\n        </form>\n      </mat-card>\n    </div> -->\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -527,7 +527,7 @@ const AppRoutes = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  margin-top: 150px;\n}\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWJvdXQtdXMvYWJvdXQtdXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Fib3V0LXVzL2Fib3V0LXVzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcbiAgbWFyZ2luLXRvcDogMTUwcHg7XG59XG5cbiJdfQ== */"
+module.exports = ".container {\n  margin-top: 150px;\n}\n\n.story-wrapper {\n  text-align: center;\n}\n\n.team-wrapper {\n  padding: 50px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWJvdXQtdXMvYWJvdXQtdXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Fib3V0LXVzL2Fib3V0LXVzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcbiAgbWFyZ2luLXRvcDogMTUwcHg7XG59XG5cbi5zdG9yeS13cmFwcGVyIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4udGVhbS13cmFwcGVyIHtcbiAgcGFkZGluZzogNTBweDtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -556,7 +556,7 @@ __webpack_require__.r(__webpack_exports__);
 
 let AboutUsComponent = class AboutUsComponent {
     constructor() {
-        this.items = [
+        this.members = [
             {
                 name: 'Bob',
                 image: '../../../assets/images/employees/bob.jpg',
@@ -2135,6 +2135,7 @@ let VerifyUsernameFormComponent = class VerifyUsernameFormComponent {
         this.http = http;
         this.fb = fb;
         this.router = router;
+        this.notAUser = false;
     }
     ngOnInit() {
         this.form1 = this.fb.group({
@@ -2146,11 +2147,10 @@ let VerifyUsernameFormComponent = class VerifyUsernameFormComponent {
         this.http.get('/api/users/username/' + username).subscribe(res => {
             if (res) {
                 this.user = res;
-                console.log(this.user.selectedSecurityQuestions[0].answerText);
-                this.question1 = this.user.selectedSecurityQuestions[0].questionText;
-                this.question2 = this.user.selectedSecurityQuestions[1].questionText;
-                this.question3 = this.user.selectedSecurityQuestions[2].questionText;
                 this.router.navigate(['/verify-security-questions/'], { queryParams: { username: username }, skipLocationChange: true });
+            }
+            else {
+                return this.notAUser = true;
             }
         }, err => {
             console.log(err);
