@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>about-us works!</p>\n"
+module.exports = "<div class=\"container\">\n\n  <div class=\"img-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <img fxFlex=\"80%\" src=\"../../../assets/images/about-banner.jpg\" alt=\"\">\n  </div>\n\n  <div class=\"story-wrapper\" style=\"text-align: center;\">\n    <h1>Our Story</h1>\n    <p>\n      klhvgyftf ouytyft ouyftf oufytuftif ouyfitdftfuo ouyftdtrdrdrfv ouyfutyf uyf koyftyftfo oyfitft outftdf durtdo76\n      oufotf ouyfoufoutyf.\n    </p>\n  </div>\n\n\n  <div class=\"team-wrapper\" >\n\n  </div>\n\n</div>\n\n\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<p>about-us works!</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\n  <div class=\"img-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <img fxFlex=\"80%\" src=\"../../../assets/images/contact-banner.jpg\" alt=\"\">\n  </div>\n\n  <div fxLayout=\"row wrap\" fxLayoutGap=\"32px\" fxLayoutAlign=\"center center\">\n    <div class=\"card-wrapper\">\n      <mat-card>\n\n          <div class=\"icon-wrapper\">\n            <mat-icon color=\"primary\">phonelink_ring</mat-icon>\n            <br><br>\n          </div>\n          <mat-card-content>\n            <h4><strong>Sales Department</strong></h4>\n            <br>\n            <p>Need some help? All you need to do is pick up your phone and call to speak to a sales rep.</p>\n            <br>\n            <h1>123-456-7890</h1>\n          </mat-card-content>\n\n      </mat-card>\n    </div>\n\n    <div class=\"card-wrapper\">\n      <mat-card>\n        <div class=\"icon-wrapper\">\n          <mat-icon color=\"primary\">forum</mat-icon>\n          <br><br>\n        </div>\n        <mat-card-content>\n          <h4><strong>Customer Support</strong></h4>\n          <br>\n          <p>When things aren't going your way, don't worry our extremely qualified support team is here for you. </p>\n          <br><br>\n          <button mat-raised-button color=\"accent\">Customer Support</button>\n        </mat-card-content>\n\n      </mat-card>\n    </div>\n\n  </div>\n</div>\n"
+module.exports = "<div class=\"container\">\n\n  <div class=\"img-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <img fxFlex=\"80%\" src=\"../../../assets/images/contact-banner.jpg\" alt=\"\">\n  </div>\n\n  <div fxLayout=\"row wrap\" fxLayout.xs=\"column\" fxLayoutGap=\"2%\" fxLayoutAlign=\"center center\">\n    <div class=\"card-wrapper\" fxFlex=\"35%\">\n      <mat-card>\n\n          <div class=\"icon-wrapper\">\n            <mat-icon color=\"primary\">phonelink_ring</mat-icon>\n            <br><br>\n          </div>\n          <mat-card-content>\n            <h4><strong>Sales Department</strong></h4>\n            <br>\n            <p>Need some help? All you need to do is pick up your phone and call to speak to a sales rep.</p>\n            <br>\n            <h1>123-456-7890</h1>\n          </mat-card-content>\n\n      </mat-card>\n    </div>\n\n    <div class=\"card-wrapper\" fxFlex=\"35%\">\n      <mat-card>\n        <div class=\"icon-wrapper\">\n          <mat-icon color=\"primary\">forum</mat-icon>\n          <br><br>\n        </div>\n        <mat-card-content>\n          <h4><strong>Customer Support</strong></h4>\n          <br>\n          <p>When things aren't going your way, don't worry our extremely qualified support team is here for you. </p>\n          <br><br>\n          <button mat-raised-button color=\"accent\">Customer Support</button>\n        </mat-card-content>\n\n      </mat-card>\n    </div>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -140,7 +140,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  <div fxFlex.gt-sm=\"55\" fxFlex=\"100\">\n    <mat-card style=\"width: 80%;\" class=\"mat-card-top pa-0\">\n      <mat-card-title style=\"text-align: center; font-size: 48px; font-weight: lighter;\" class=\"mat-headline\">\n        Change Password\n      </mat-card-title>\n      <br><br>\n      <form [formGroup]=\"form\" (ngSubmit)=\"resetPassword()\" #resetPasswordForm>\n        <mat-card-content fxLayout=\"column\">\n          <mat-form-field fxFlex>\n            <input matInput type=\"password\" [formControl]=\"form.controls['password']\" placeholder=\"New password\">\n          </mat-form-field>\n          <br><br>\n          <div fxFlex fxLayoutAlign=\"end\">\n            <button mat-raised-button color=\"accent\">Submit</button>\n          </div>\n        </mat-card-content>\n      </form>\n    </mat-card>\n  </div>\n</div>\n"
+module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  <div fxFlex.gt-sm=\"55\" fxFlex=\"100\">\n    <mat-card style=\"width: 80%;\" class=\"pa-0\">\n      <mat-card-title style=\"text-align: center; font-size: 48px; font-weight: lighter;\" class=\"mat-headline\">\n        Change Password\n      </mat-card-title>\n      <br><br>\n      <form [formGroup]=\"form\" (ngSubmit)=\"resetPassword()\" #resetPasswordForm>\n        <mat-card-content fxLayout=\"column\">\n          <mat-form-field fxFlex>\n            <input matInput type=\"password\" [formControl]=\"form.controls['password']\" placeholder=\"New password\">\n          </mat-form-field>\n          <br><br>\n          <div fxFlex fxLayoutAlign=\"end\">\n            <button mat-raised-button color=\"accent\">Submit</button>\n          </div>\n        </mat-card-content>\n      </form>\n    </mat-card>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -217,7 +217,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  <div fxFlex.gt-sm=\"55\" fxFlex=\"100\">\n    <mat-card style=\"width: 80%;\" class=\"mat-card-top pa-0\">\n      <mat-card-title style=\"text-align: center; font-size: 48px; font-weight: lighter;\" class=\"mat-headline\">\n        Verify Security Questions\n      </mat-card-title>\n      <br><br>\n      <form *ngIf=\"user\" [formGroup]=\"form\" (ngSubmit)=\"verifySecurityQuestions()\" #usernameForm>\n        <mat-card-content fxLayout=\"column\">\n\n          <mat-list>\n            <mat-list-item>\n              {{question1}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion1']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n\n            <mat-list-item>\n              {{question2}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion2']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n\n            <mat-list-item>\n             {{question3}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion3']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n          </mat-list>\n          <br><br>\n          <div fxFlex fxLayoutAlign=\"end\">\n            <button mat-raised-button color=\"accent\">Submit</button>\n          </div>\n        </mat-card-content>\n      </form>\n    </mat-card>\n  </div>\n</div>\n"
+module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  <div fxFlex.gt-sm=\"55\" fxFlex=\"100\">\n    <mat-card style=\"width: 80%;\" class=\"pa-0\">\n      <mat-card-title style=\"text-align: center; font-size: 48px; font-weight: lighter;\" class=\"mat-headline\">\n        Verify Security Questions\n      </mat-card-title>\n      <br><br>\n      <form *ngIf=\"user\" [formGroup]=\"form\" (ngSubmit)=\"verifySecurityQuestions()\" #usernameForm>\n        <mat-card-content fxLayout=\"column\">\n\n          <mat-list>\n            <mat-list-item>\n              {{question1}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion1']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n\n            <mat-list-item>\n              {{question2}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion2']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n\n            <mat-list-item>\n             {{question3}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion3']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n          </mat-list>\n          <br><br>\n          <h3 *ngIf='wrongAnswer' style=\"color: red\">One or more of your answers was incorrect.</h3>\n          <div fxFlex fxLayoutAlign=\"end\">\n            <button mat-raised-button color=\"accent\">Submit</button>\n          </div>\n        </mat-card-content>\n      </form>\n    </mat-card>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -326,6 +326,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/esm2015/select.js");
 /* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! @angular/material/list */ "./node_modules/@angular/material/esm2015/list.js");
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm2015/flex-layout.js");
+/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! primeng/carousel */ "./node_modules/primeng/carousel.js");
+/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_45___default = /*#__PURE__*/__webpack_require__.n(primeng_carousel__WEBPACK_IMPORTED_MODULE_45__);
 /*
 ; =======================================================
 ; Title: app.module.ts (Week 6)
@@ -385,6 +387,7 @@ __webpack_require__.r(__webpack_exports__);
 // Flex
 
 // PrimeNg
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -432,7 +435,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_material__WEBPACK_IMPORTED_MODULE_40__["MatDialogModule"],
             _angular_material_table__WEBPACK_IMPORTED_MODULE_41__["MatTableModule"],
             _angular_material_select__WEBPACK_IMPORTED_MODULE_42__["MatSelectModule"],
-            _angular_material_list__WEBPACK_IMPORTED_MODULE_43__["MatListModule"]
+            _angular_material_list__WEBPACK_IMPORTED_MODULE_43__["MatListModule"],
+            primeng_carousel__WEBPACK_IMPORTED_MODULE_45__["CarouselModule"]
         ],
         providers: [ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__["CookieService"], _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__["AuthGuardService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]],
@@ -523,7 +527,7 @@ const AppRoutes = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Fib3V0LXVzL2Fib3V0LXVzLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".container {\n  margin-top: 150px;\n}\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWJvdXQtdXMvYWJvdXQtdXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Fib3V0LXVzL2Fib3V0LXVzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcbiAgbWFyZ2luLXRvcDogMTUwcHg7XG59XG5cbiJdfQ== */"
 
 /***/ }),
 
@@ -539,10 +543,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutUsComponent", function() { return AboutUsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/*
+; =======================================================
+; Title: about us page
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 4 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
 
 
 let AboutUsComponent = class AboutUsComponent {
-    constructor() { }
+    constructor() {
+        this.items = [
+            {
+                name: 'Bob',
+                image: '../../../assets/images/employees/bob.jpg',
+                position: 'Owner'
+            },
+            {
+                name: 'Janet',
+                image: '../../../assets/images/employees/janet.jpg',
+                position: 'Manager'
+            },
+            {
+                name: 'Jane',
+                image: '../../../assets/images/employees/jane.jpg',
+                position: 'Sales'
+            }
+        ];
+    }
     ngOnInit() {
     }
 };
@@ -565,7 +596,7 @@ AboutUsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".img-wrapper {\n  margin-top: 150px;\n}\n\n.card-wrapper {\n  margin-top: -50px;\n}\n\n.mat-card {\n  width: 500px;\n}\n\n.icon-wrapper {\n  text-align: center;\n}\n\n.icon-wrapper h5 {\n  text-align: center;\n  color: #333333;\n}\n\n.mat-icon {\n  font-size: 50px;\n}\n\n.mat-card-content {\n  text-align: center;\n}\n\n.mat-card-content p {\n  font-size: 16px;\n  color: #333333;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvY29udGFjdC9jb250YWN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsY0FBYztBQUNoQiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2NvbnRhY3QvY29udGFjdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmltZy13cmFwcGVyIHtcbiAgbWFyZ2luLXRvcDogMTUwcHg7XG59XG5cbi5jYXJkLXdyYXBwZXIge1xuICBtYXJnaW4tdG9wOiAtNTBweDtcbn1cblxuLm1hdC1jYXJkIHtcbiAgd2lkdGg6IDUwMHB4O1xufVxuXG4uaWNvbi13cmFwcGVyIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uaWNvbi13cmFwcGVyIGg1IHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBjb2xvcjogIzMzMzMzMztcbn1cblxuLm1hdC1pY29uIHtcbiAgZm9udC1zaXplOiA1MHB4O1xufVxuXG4ubWF0LWNhcmQtY29udGVudCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLm1hdC1jYXJkLWNvbnRlbnQgcCB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgY29sb3I6ICMzMzMzMzM7XG59XG4iXX0= */"
+module.exports = ".img-wrapper {\n  margin-top: 150px;\n}\n\n.card-wrapper {\n  margin-top: -50px;\n}\n\n/* .mat-card {\n  width: 500px;\n} */\n\n.icon-wrapper {\n  text-align: center;\n}\n\n.icon-wrapper h5 {\n  text-align: center;\n  color: #333333;\n}\n\n.mat-icon {\n  font-size: 50px;\n}\n\n.mat-card-content {\n  text-align: center;\n}\n\n.mat-card-content p {\n  font-size: 16px;\n  color: #333333;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvY29udGFjdC9jb250YWN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7O0dBRUc7O0FBRUg7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsY0FBYztBQUNoQiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2NvbnRhY3QvY29udGFjdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmltZy13cmFwcGVyIHtcbiAgbWFyZ2luLXRvcDogMTUwcHg7XG59XG5cbi5jYXJkLXdyYXBwZXIge1xuICBtYXJnaW4tdG9wOiAtNTBweDtcbn1cblxuLyogLm1hdC1jYXJkIHtcbiAgd2lkdGg6IDUwMHB4O1xufSAqL1xuXG4uaWNvbi13cmFwcGVyIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uaWNvbi13cmFwcGVyIGg1IHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBjb2xvcjogIzMzMzMzMztcbn1cblxuLm1hdC1pY29uIHtcbiAgZm9udC1zaXplOiA1MHB4O1xufVxuXG4ubWF0LWNhcmQtY29udGVudCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLm1hdC1jYXJkLWNvbnRlbnQgcCB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgY29sb3I6ICMzMzMzMzM7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -1337,7 +1368,7 @@ UserManagementComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-card-top {\n  margin-top: -10%;\n  margin-left: 10%;\n  margin-right: 10%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVzZXQtcGFzc3dvcmQtZm9ybS9yZXNldC1wYXNzd29yZC1mb3JtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL3Jlc2V0LXBhc3N3b3JkLWZvcm0vcmVzZXQtcGFzc3dvcmQtZm9ybS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC1jYXJkLXRvcCB7XG4gIG1hcmdpbi10b3A6IC0xMCU7XG4gIG1hcmdpbi1sZWZ0OiAxMCU7XG4gIG1hcmdpbi1yaWdodDogMTAlO1xufVxuIl19 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jlc2V0LXBhc3N3b3JkLWZvcm0vcmVzZXQtcGFzc3dvcmQtZm9ybS5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -1375,11 +1406,11 @@ let ResetPasswordFormComponent = class ResetPasswordFormComponent {
     }
     ngOnInit() {
         this.form = this.fb.group({
-            password: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])]
+            password: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].pattern('^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\\D*\\d)[A-Za-z\\d!$%@#%*?&]{8,}$')]]
         });
     }
     resetPassword() {
-        this.http.post('/api/session/users/' + this.username + '/reset-password', {
+        this.http.post('/api/users/' + this.username + '/reset-password', {
             password: this.form.controls['password'].value
         }).subscribe(res => {
             this.cookieService.set('isAuthenticated', 'true', 1);
@@ -1967,7 +1998,7 @@ UserDeleteDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-card-top {\n  margin-top: -10%;\n  margin-left: 10%;\n  margin-right: 10%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmVyaWZ5LXNlY3VyaXR5LXF1ZXN0aW9ucy1mb3JtL3ZlcmlmeS1zZWN1cml0eS1xdWVzdGlvbnMtZm9ybS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGdCQUFnQjtFQUNoQixpQkFBaUI7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC92ZXJpZnktc2VjdXJpdHktcXVlc3Rpb25zLWZvcm0vdmVyaWZ5LXNlY3VyaXR5LXF1ZXN0aW9ucy1mb3JtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWNhcmQtdG9wIHtcbiAgbWFyZ2luLXRvcDogLTEwJTtcbiAgbWFyZ2luLWxlZnQ6IDEwJTtcbiAgbWFyZ2luLXJpZ2h0OiAxMCU7XG59XG4iXX0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ZlcmlmeS1zZWN1cml0eS1xdWVzdGlvbnMtZm9ybS92ZXJpZnktc2VjdXJpdHktcXVlc3Rpb25zLWZvcm0uY29tcG9uZW50LmNzcyJ9 */"
 
 /***/ }),
 
@@ -1997,6 +2028,7 @@ let VerifySecurityQuestionsFormComponent = class VerifySecurityQuestionsFormComp
         this.router = router;
         this.http = http;
         this.fb = fb;
+        this.wrongAnswer = false;
         this.username = this.route.snapshot.queryParamMap.get('username');
         console.log(this.username);
         this.http.get('/api/verify/users/' + this.username + '/security-questions').subscribe(res => {
@@ -2033,6 +2065,7 @@ let VerifySecurityQuestionsFormComponent = class VerifySecurityQuestionsFormComp
             this.router.navigate(['/reset-password'], { queryParams: { isAuthenticated: 'true', username: this.username }, skipLocationChange: true });
         }
         else {
+            this.wrongAnswer = true;
             console.log('Unable to verify security question answers');
         }
         // this.http.post('/api/verify/users/' + this.username + '/security-questions', {

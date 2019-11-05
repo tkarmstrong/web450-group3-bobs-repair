@@ -342,7 +342,7 @@ app.post('/api/users/:username/reset-password', function(req, res, next) {
     } else {
       console.log(user);
 
-      let hashedPassword = bcrypt.hashSync(password, saltRounds);
+      let hashedPassword = bcrypt.hashSync(password, 10);
 
       user.set({
         password: hashedPassword
