@@ -63,6 +63,7 @@ import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 // PrimeNg
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -108,7 +109,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDialogModule,
     MatTableModule,
     MatSelectModule,
-    MatListModule  ],
+    MatListModule,
+    CarouselModule
+  ],
   providers: [CookieService, AuthGuardService],
   bootstrap: [AppComponent],
   entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent, QuestionDeleteDialogComponent]
