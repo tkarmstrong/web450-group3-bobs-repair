@@ -1,3 +1,4 @@
+import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
 /*
 ; =======================================================
 ; Title: app.routing.ts (Week 6)
@@ -38,6 +39,7 @@ export const AppRoutes: Routes = [
       { path: 'forgot-password', component: VerifyUsernameFormComponent },
       { path: 'verify-security-questions', component: VerifySecurityQuestionsFormComponent},
       { path: 'forgot-password/:username', component: VerifySecurityQuestionsFormComponent},
+      { path: 'reset-password', component: ResetPasswordFormComponent},
       { path: 'about-us', component: AboutUsComponent }
     ]
   },
