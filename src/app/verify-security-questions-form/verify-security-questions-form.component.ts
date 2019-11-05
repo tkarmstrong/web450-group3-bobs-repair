@@ -20,9 +20,11 @@ export class VerifySecurityQuestionsFormComponent implements OnInit {
   answer3: string;
   username: string;
   form: FormGroup;
+  wrongAnswer: boolean;
 
   constructor(private route: ActivatedRoute, private router: Router,
               private http: HttpClient, private fb: FormBuilder) {
+    this.wrongAnswer = false;
     this.username = this.route.snapshot.queryParamMap.get('username');
     console.log(this.username);
 
@@ -65,6 +67,7 @@ export class VerifySecurityQuestionsFormComponent implements OnInit {
     if (answerToSecurityQuestion1 == this.answer1 && answerToSecurityQuestion2 == this.answer2 && answerToSecurityQuestion3 == this.answer3) {
       this.router.navigate(['/reset-password'], {queryParams: {isAuthenticated: 'true', username: this.username}, skipLocationChange: true});
     } else {
+      this.wrongAnswer = true;
       console.log('Unable to verify security question answers');
     }
     // this.http.post('/api/verify/users/' + this.username + '/security-questions', {
