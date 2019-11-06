@@ -1,4 +1,3 @@
-import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
 /*
 ; =======================================================
 ; Title: app.routing.ts (Week 6)
@@ -24,6 +23,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { VerifySecurityQuestionsFormComponent } from './verify-security-questions-form/verify-security-questions-form.component';
 import { VerifyUsernameFormComponent } from './verify-username-form/verify-username-form.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
+
 
 export const AppRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
