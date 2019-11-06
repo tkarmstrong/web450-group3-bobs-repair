@@ -1,3 +1,13 @@
+/*
+; =======================================================
+; Title: reset-password-form.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date: 04 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
