@@ -1,4 +1,3 @@
-
 /*
 ; =======================================================
 ; Title: app.module.ts (Week 6)
@@ -16,10 +15,11 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppRoutes } from './app.routing';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthGuardService } from './shared/guards/auth-guard.service';
+import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor';
 
 // Components
 import { AppComponent } from './app.component';
@@ -112,7 +112,8 @@ import { CarouselModule } from 'primeng/carousel';
     MatListModule,
     CarouselModule
   ],
-  providers: [CookieService, AuthGuardService],
+  providers: [CookieService, AuthGuardService,
+              {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}],
   bootstrap: [AppComponent],
   entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent, QuestionDeleteDialogComponent]
 })

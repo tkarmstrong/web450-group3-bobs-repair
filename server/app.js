@@ -42,20 +42,7 @@ const serverPort = process.env.PORT || 3000;
 
 // ! Connect to Development DB - Must comment out for prod build
 
-// const mongoDB = 'mongodb+srv://super-admin:Pa$$word1@bcrs1-r0sf0.mongodb.net/BCRS-dev?retryWrites=true&w=majority';
-// mongoose.connect(mongoDB, {
-//   useNewUrlParser: true,
-// });
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'MongoDB connected error: '));
-// db.once('open', () => {
-//   console.log('Application connected to Atlas MongoDB instance');
-// });
-
-
-// ! Connect to Production DB - Remove comment block then comment dev above before build
-
-const mongoDB = 'mongodb+srv://super-admin:Pa$$word1@bcrs-prod1-zhpta.mongodb.net/bcrs-prod1?retryWrites=true&w=majority';
+const mongoDB = 'mongodb+srv://super-admin:Pa$$word1@bcrs1-r0sf0.mongodb.net/BCRS-dev?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, {
   useNewUrlParser: true,
 });
@@ -64,6 +51,19 @@ db.on('error', console.error.bind(console, 'MongoDB connected error: '));
 db.once('open', () => {
   console.log('Application connected to Atlas MongoDB instance');
 });
+
+
+// ! Connect to Production DB - Remove comment block then comment dev above before build
+
+// const mongoDB = 'mongodb+srv://super-admin:Pa$$word1@bcrs-prod1-zhpta.mongodb.net/bcrs-prod1?retryWrites=true&w=majority';
+// mongoose.connect(mongoDB, {
+//   useNewUrlParser: true,
+// });
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'MongoDB connected error: '));
+// db.once('open', () => {
+//   console.log('Application connected to Atlas MongoDB instance');
+// });
 
 /** *********************** API routes go below this line ******************* */
 
@@ -227,39 +227,6 @@ app.delete('/api/users/:id', (req, res, next) => {
   })
 })
 
-// Forgot Password
-// app.get('/api/forgot-password/:username', function(req, res, next){
-//   let saltRounds = 10;
-//   const query = { 'username': req.params.username };
-//   User.findOne(query, function(err, user) {
-//     if (err) {
-//       console.log(err);
-//       return next(err);
-//     } else {
-//       console.log(user);
-//       if (!user.username) {
-//         return status(500).json({
-//           message: "This user does not exist. Register for an account instead."
-//         })
-//       } else {
-//         let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
-//         let securePassword = {
-//           password: hashedPassword
-//         }
-//         User.updateOne(query, securePassword, function(err, rawResponse) {
-//           if (err) {
-//             console.log(err);
-//             return next(err);
-//           } else {
-//             console.log(rawResponse);
-//             res.json(rawResponse);
-//           }
-//         })
-//       }
-
-//     }
-//   })
-// })
 
 // Forgot Password Operations
 // Verify username
@@ -287,8 +254,6 @@ app.get('/api/verify/users/:username/security-questions', function(req, res, nex
     }
   })
 })
-
-
 
 app.post('/api/verify/users/:username/security-questions', function(req, res, next) {
   const answerToSecurityQuestion1 = req.body.answerToSecurityQuestion1;
