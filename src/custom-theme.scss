@@ -10,14 +10,126 @@
 
 
 @import '~@angular/material/theming';
-
 @include mat-core();
 
-$custom-theme-primary: mat-palette($mat-teal);
-$custom-theme-accent:  mat-palette($mat-amber, A200, A100, A400);
+/* For use in src/lib/core/theming/_palette.scss */
+/* For use in src/lib/core/theming/_palette.scss */
+$md-mcgpalette0: (
+    50 : #e0c2e0,
+    100 : #c78fc7,
+    200 : #b469b4,
+    300 : #8f478f,
+    400 : #7a3d7a,
+    500 : #663366,
+    600 : #522952,
+    700 : #3d1f3d,
+    800 : #291429,
+    900 : #140a14,
+    A100 : #ecacec,
+    A200 : #da58da,
+    A400 : #973597,
+    A700 : #7b377b,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
 
-$custom-theme-warn:    mat-palette($mat-red);
+$md-mcgpalette1: (
+    50 : #c2e0c2,
+    100 : #8fc78f,
+    200 : #69b469,
+    300 : #478f47,
+    400 : #3d7a3d,
+    500 : #336633,
+    600 : #295229,
+    700 : #1f3d1f,
+    800 : #142914,
+    900 : #0a140a,
+    A100 : #acecac,
+    A200 : #58da58,
+    A400 : #359735,
+    A700 : #377b37,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
 
-$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+$md-mcgpalette2: (
+    50 : #ffffff,
+    100 : #fef3e9,
+    200 : #fcd6b3,
+    300 : #f9b16e,
+    400 : #f8a250,
+    500 : #f79233,
+    600 : #f68216,
+    700 : #e47309,
+    800 : #c66408,
+    900 : #a95507,
+    A100 : #ffffff,
+    A200 : #ffe1c4,
+    A400 : #ffac5e,
+    A700 : #fd9f47,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
 
-@include angular-material-theme($custom-theme);
+$my-app-primary: mat-palette($md-mcgpalette0, 300, 500, 900);
+$my-app-accent:  mat-palette($md-mcgpalette1, 500, 900, A100);
+$my-app-warn:    mat-palette($md-mcgpalette2);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+html {
+  
+    // Get a specific hue for a palette. 
+    // See https://material.io/archive/guidelines/style/color.html#color-color-palette for hues.
+    background-color: mat-color($my-app-primary, 100);
+  }
+
+  body {
+
+    background-color: mat-color($my-app-primary, 100);
+    
+    }

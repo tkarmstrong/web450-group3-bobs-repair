@@ -14,11 +14,8 @@
     <!-- Toolbar -->
     <mat-toolbar class="menu" role="header" color="primary">
       <mat-toolbar-row>
-        <button mat-button class="toolbar__icon-button mat-button">
-          <mat-icon>menu</mat-icon>
-        </button>
         <button [routerLink]="['/']" mat-button class="toolbar__icon-button mat-button">
-          <span style="margin-left: 5px !important">Bob's</span>
+          <span style="margin-left: 5px !important">BCRS</span>
         </button>
         <button [routerLink]="['/contact']" mat-button class="toolbar__icon-button mat-button">
           <span style="margin-left: 5px !important">Contact Us</span>
@@ -39,14 +36,14 @@
         <div fxFlex></div>
 
         <button mat-icon-button class="toolbar__icon-button" [matMenuTriggerFor]="menu">
-          <mat-icon>account_circle</mat-icon>
+          <mat-icon>exit_to_app</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item (click)="userLogout()">
-            <mat-icon>exit_to_app</mat-icon>
             <span>Logout</span>
           </button>
         </mat-menu>
+        
       </mat-toolbar-row>
     </mat-toolbar>
   </header>

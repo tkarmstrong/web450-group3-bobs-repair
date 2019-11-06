@@ -6,6 +6,11 @@
   text-align: center;
 }
 
-.team-wrapper {
-  padding: 50px;
+.team-member{
+  justify-content: center;
+  align-content: center;
+}
+
+p {
+  font-size: 25px;
 }
