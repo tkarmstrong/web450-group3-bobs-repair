@@ -1,3 +1,14 @@
+/*
+; =======================================================
+; Title:  error.interceptor.ts (Week 7)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date:   02 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { Injectable } from '@angular/core';
