@@ -54,7 +54,7 @@ export const AppRoutes: Routes = [
       { path: 'user-management', component: UserManagementComponent, canActivate: [AuthGuardService] },
       { path: 'user-details/:id', component: UserDetailsComponent, canActivate: [AuthGuardService]},
       { path: '404', component: NotFoundComponent },
-      { path: 'service-repair', component: ServiceRepairComponent }
+      { path: 'service-repair', component: ServiceRepairComponent },
       { path: 'role-configuration', component: RoleConfigurationComponent, canActivate: [AuthGuardService]},
       { path: 'role-edit/:id', component: RoleEditComponent, canActivate: [AuthGuardService]},
       { path: '404', component: NotFoundComponent }

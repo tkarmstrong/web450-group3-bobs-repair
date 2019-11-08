@@ -56,7 +56,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
-import { MatSelectModule, MatSelect } from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 
 // Flex
@@ -93,7 +93,7 @@ import { RoleEditComponent } from './pages/role-edit/role-edit.component';
     ContactComponent,
     AboutUsComponent,
     ServiceRepairComponent,
-    InvoiceDialogComponent
+    InvoiceDialogComponent,
     RoleConfigurationComponent,
     RoleDeleteDialogComponent,
     RoleEditComponent
