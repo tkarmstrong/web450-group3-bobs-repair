@@ -1,0 +1,27 @@
+<!-- /*
+; =======================================================
+; Title: role-delete-dialog.component.html (Week 7)
+; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy
+; Date: 06 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/ -->
+
+<mat-dialog-content>
+    <div fxLayout="column">
+      <mat-card class="mat-elevation-z8">
+        <mat-card-title style="font-weight: darker; text-align: center;">
+          Delete Role
+        </mat-card-title>
+        <br><br>
+        <mat-card-content>
+          Do you wish to delete role {{ roleTitle }}?
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-raised-button matDialogClose="confirm" color="primary">Confirm</button>
+          <button mat-raised-button matDialogClose="cancel" color="warn">Cancel</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </mat-dialog-content>
