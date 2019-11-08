@@ -1,3 +1,5 @@
+import { RoleEditComponent } from './pages/role-edit/role-edit.component';
+import { RoleConfigurationComponent } from './pages/role-configuration/role-configuration.component';
 /*
 ; =======================================================
 ; Title: app.routing.ts (Week 6)
@@ -53,6 +55,9 @@ export const AppRoutes: Routes = [
       { path: 'user-details/:id', component: UserDetailsComponent, canActivate: [AuthGuardService]},
       { path: '404', component: NotFoundComponent },
       { path: 'service-repair', component: ServiceRepairComponent }
+      { path: 'role-configuration', component: RoleConfigurationComponent, canActivate: [AuthGuardService]},
+      { path: 'role-edit/:id', component: RoleEditComponent, canActivate: [AuthGuardService]},
+      { path: '404', component: NotFoundComponent }
     ]
   },
   { path: '**', redirectTo: 'session/404' }

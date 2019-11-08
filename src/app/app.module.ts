@@ -66,6 +66,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CarouselModule } from 'primeng/carousel';
 import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
 import { InvoiceDialogComponent } from './shared/invoice-dialog/invoice-dialog.component';
+import { RoleConfigurationComponent } from './pages/role-configuration/role-configuration.component';
+import { RoleDeleteDialogComponent } from './shared/role-delete-dialog/role-delete-dialog.component';
+import { RoleEditComponent } from './pages/role-edit/role-edit.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +94,9 @@ import { InvoiceDialogComponent } from './shared/invoice-dialog/invoice-dialog.c
     AboutUsComponent,
     ServiceRepairComponent,
     InvoiceDialogComponent
+    RoleConfigurationComponent,
+    RoleDeleteDialogComponent,
+    RoleEditComponent
   ],
   imports: [
     BrowserModule,
@@ -119,6 +125,7 @@ import { InvoiceDialogComponent } from './shared/invoice-dialog/invoice-dialog.c
   providers: [CookieService, AuthGuardService,
               {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}],
   bootstrap: [AppComponent],
-  entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent, QuestionDeleteDialogComponent]
+  entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent, QuestionDeleteDialogComponent,
+                    RoleDeleteDialogComponent]
 })
 export class AppModule { }

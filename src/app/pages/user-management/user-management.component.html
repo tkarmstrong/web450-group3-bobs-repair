@@ -9,7 +9,7 @@
 */ -->
 
 <div fxLayout="column" style="margin-top: 8%;">
-  <mat-card style="width: 90%; margin: 0 auto;">
+  <mat-card style="width: 95%; margin: 0 auto;">
     <mat-card-title>Users Configuration</mat-card-title>
     <mat-card-content *ngIf="users">
       <table mat-table [dataSource]="users">
@@ -54,6 +54,11 @@
           <td mat-cell *matCellDef="let element">
             {{ element.email }}
           </td>
+        </ng-container>
+
+        <ng-container matColumnDef="role">
+          <th mat-header-cell *matHeaderCellDef>Role</th>
+          <td mat-cell *matCellDef="let element"> {{ element.role }}</td>
         </ng-container>
 
         <ng-container matColumnDef="functions">
