@@ -1,22 +1,25 @@
-<div class="container">
-    <mat-card class="form">
+<div fxLayout="column" style="margin-top: 8%;">
+  <mat-card style="width: 90%; margin: 0 auto;" class="mat-elevation-z8">
+    <mat-card-title>Role</mat-card-title>
+    <mat-card-subtitle>
+      <button mat-button color="accent">Edit</button>
+    </mat-card-subtitle>
+
+    <br>
+    <form [formGroup]="form" (ngSubmit)="saveRole()" #roleForm>
       <mat-card-content>
-
-        <h2>Edit</h2>
-
-        <form [formGroup]="form" #editRoleForm (ngSubmit)="saveRole(); form.reset()">
-          <mat-form-field class="inputStyle">
-            <input type="text" matInput [formControl]="form.controls['roleTitle']" placeholder="Edit role" />
+        <div fxLayout="column" fxLayoutGap="10px">
+          <mat-form-field>
+            <input type="text" matInput [formControl]="form.controls['roleTitle']" placeholder="roleTitle"/>
           </mat-form-field>
-
-          <br>
-
-          <mat-card-actions align="end">
-              <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
-              <button mat-raised-button color="accent">Submit</button>
-            </mat-card-actions>
-        </form>
-        <br /><br />
+        </div>
       </mat-card-content>
-    </mat-card>
-  </div>
+
+      <br>
+      <mat-card-actions align="end">
+        <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
+        <button mat-raised-button color="accent">Submit</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

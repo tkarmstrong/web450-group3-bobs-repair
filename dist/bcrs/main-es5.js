@@ -107,7 +107,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <mat-card class=\"form\">\n      <mat-card-content>\n\n        <h2>Edit</h2>\n\n        <form [formGroup]=\"form\" #editRoleForm (ngSubmit)=\"saveRole(); form.reset()\">\n          <mat-form-field class=\"inputStyle\">\n            <input type=\"text\" matInput [formControl]=\"form.controls['roleTitle']\" placeholder=\"Edit role\" />\n          </mat-form-field>\n\n          <br>\n\n          <mat-card-actions align=\"end\">\n              <button mat-raised-button (click)=\"cancel()\" color=\"warn\">Cancel</button>\n              <button mat-raised-button color=\"accent\">Submit</button>\n            </mat-card-actions>\n        </form>\n        <br /><br />\n      </mat-card-content>\n    </mat-card>\n  </div>\n"
+module.exports = "<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"width: 90%; margin: 0 auto;\" class=\"mat-elevation-z8\">\n    <mat-card-title>Role</mat-card-title>\n    <mat-card-subtitle>\n      <button mat-button color=\"accent\">Edit</button>\n    </mat-card-subtitle>\n\n    <br>\n    <form [formGroup]=\"form\" (ngSubmit)=\"saveRole()\" #roleForm>\n      <mat-card-content>\n        <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['roleTitle']\" placeholder=\"roleTitle\"/>\n          </mat-form-field>\n        </div>\n      </mat-card-content>\n\n      <br>\n      <mat-card-actions align=\"end\">\n        <button mat-raised-button (click)=\"cancel()\" color=\"warn\">Cancel</button>\n        <button mat-raised-button color=\"accent\">Submit</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -1187,10 +1187,10 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleEditComponent", function() { return RoleEditComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /*
 ; =======================================================
 ; Title:  role-edit.component.ts (Week 7)
@@ -1213,8 +1213,11 @@ var RoleEditComponent = /** @class */ (function () {
         this.fb = fb;
         this.router = router;
         this.roleId = this.route.snapshot.paramMap.get('id');
+        console.log('roleId is ' + this.roleId);
         this.http.get('/api/roles/' + this.roleId).subscribe(function (res) {
+            console.log('The roleId in the GET request is ' + _this.roleId);
             _this.role = res;
+            console.log('This role is ' + JSON.stringify(_this.role));
         }, function (err) {
             console.log(err);
         }, function () {
@@ -1222,6 +1225,9 @@ var RoleEditComponent = /** @class */ (function () {
         });
     }
     RoleEditComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            roleTitle: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
+        });
     };
     RoleEditComponent.prototype.saveRole = function () {
         var _this = this;
@@ -1235,13 +1241,13 @@ var RoleEditComponent = /** @class */ (function () {
         this.router.navigate(['/session/role-configuration']);
     };
     RoleEditComponent.ctorParameters = function () { return [
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
-        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
-        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
     ]; };
     RoleEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-role-edit',
             template: __webpack_require__(/*! raw-loader!./role-edit.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/role-edit/role-edit.component.html"),
             styles: [__webpack_require__(/*! ./role-edit.component.css */ "./src/app/pages/role-edit/role-edit.component.css")]

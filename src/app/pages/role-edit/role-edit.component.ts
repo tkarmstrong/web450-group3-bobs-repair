@@ -8,10 +8,10 @@
 ; =======================================================
 */
 
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-role-edit',
@@ -24,12 +24,14 @@ export class RoleEditComponent implements OnInit {
   roleId: string;
   form: FormGroup;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient,
-              private fb: FormBuilder, private router: Router) {
+  constructor(private route: ActivatedRoute, private http: HttpClient, private fb: FormBuilder, private router: Router) {
     this.roleId = this.route.snapshot.paramMap.get('id');
+    console.log('roleId is ' + this.roleId);
 
     this.http.get('/api/roles/' + this.roleId).subscribe(res => {
+      console.log('The roleId in the GET request is ' + this.roleId);
       this.role = res;
+      console.log('This role is ' + JSON.stringify(this.role));
     }, err => {
       console.log(err);
     }, () => {
@@ -38,6 +40,9 @@ export class RoleEditComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.form = this.fb.group({
+      roleTitle: [null, Validators.compose([Validators.required])],
+    })
   }
 
   saveRole() {
