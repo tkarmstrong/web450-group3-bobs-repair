@@ -21,6 +21,11 @@ import { error } from 'util';
 })
 export class UserDetailsComponent implements OnInit {
 
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  address: string;
+  email: string;
   user: any;
   userId: string;
   form: FormGroup;
@@ -36,12 +41,14 @@ export class UserDetailsComponent implements OnInit {
     console.log('userId is ' + this.userId);
 
     this.http.get('/api/roles').subscribe(res => {
-      this.role = res;
-      //console.log("roletitle is  " + this.roleTitle)
-      //console.log("role:  " + this.role);
+      this.roles = res;
+      this.roleTitle = res['roleTitle'];
+      console.table(res);
+      console.log("roletitle is  " + this.roleTitle)
+      console.log("role:  " + this.role);
       console.log("user role:  " + this.user.role);
-      //console.log("user roleTitle" + this.user.roleTitle)
-      //console.log("roles:  " + this.roles);
+      console.log("user roleTitle" + this.user.roleTitle)
+      console.log("roles:  " + this.roles);
     }, err => {
       { { error } }
     },
@@ -52,12 +59,12 @@ export class UserDetailsComponent implements OnInit {
   saveUser() {
     console.log("clicked submit button");
     this.http.put('/api/users/update/' + this.userId, {
-      firstName: this.form.controls['firstName'].value,
-      lastName: this.form.controls['lastName'].value,
-      phoneNumber: this.form.controls['phoneNumber'].value,
-      address: this.form.controls['address'].value,
-      email: this.form.controls['email'].value,
-      role: this.role
+      firstName: this.firstName,
+      lastName: this.lastName,
+      phoneNumber: this.phoneNumber,
+      address: this.address,
+      email: this.email,
+      roleTitle: this.roleTitle
     }).subscribe(res => {
       //localStorage.setItem('user', 'lastname');
       this.router.navigate(['/session/user-management'])
@@ -70,7 +77,14 @@ export class UserDetailsComponent implements OnInit {
       console.log('The userId in the GET request is ' + this.userId);
       this.user = res;
       this.userId = res['userId'];
-      this.selected = this.SelectedRoleTitle = res['roles'];
+      this.firstName = res['firstName']
+      this.lastName = res['lastName']
+      this.phoneNumber = res['phoneNumber']
+      this.address = res['address']
+      this.email = res['email']
+      this.roleTitle = res['roleTitle']
+
+      this.selected = this.SelectedRoleTitle = res['roleTitle'];
       console.log(this.SelectedRoleTitle)
       console.log('This user is ' + JSON.stringify(this.user));
     }, err => {
@@ -81,7 +95,7 @@ export class UserDetailsComponent implements OnInit {
       this.form.controls['phoneNumber'].setValue(this.user.phoneNumber);
       this.form.controls['address'].setValue(this.user.address);
       this.form.controls['email'].setValue(this.user.email);
-      this.form.controls['roles'].setValue(this.role)
+      this.form.controls['roles'].setValue(this.roles)
     })
     this.form = this.fb.group({
       firstName: [null, Validators.compose([Validators.required])],
@@ -89,7 +103,7 @@ export class UserDetailsComponent implements OnInit {
       phoneNumber: [null, Validators.compose([Validators.required])],
       address: [null, Validators.compose([Validators.required])],
       email: [null, Validators.compose([Validators.required])],
-      role: [null, Validators.compose([Validators.required])]
+      roles: [null, Validators.compose([Validators.required])]
 
 
     })

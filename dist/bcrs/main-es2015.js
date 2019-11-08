@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\n  <div class=\"img-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <img fxFlex=\"80%\" src=\"../../../assets/images/about-banner.jpg\" alt=\"\">\n  </div>\n  <div fxLayout=\"row\">\n    <div fxFlex=\"50%\">\n      <h1>Our Story</h1>\n      <p>\n        Long boat ahoy bring a spring upon her cable pillage barque log draught rope's end tack Spanish Main. No prey,\n        no pay American Main hearties brig Jack Tar gangplank crack Jennys tea cup yardarm tender spanker. Strike colors\n        Blimey tackle wherry crow's nest keel lanyard sutler aft ho.\n        Grog ye heave to trysail Davy Jones' Locker jib hogshead careen Nelsons folly square-rigged. Barbary Coast draft\n        starboard Privateer rum six pounders Spanish Main port tender loot. Dance the hempen jig splice the main brace\n        barkadeer bilge rat parrel clipper swing the lead aye Blimey Sea Legs.\n        Fire in the hole reef sails lass chandler cutlass dance the hempen jig skysail no prey, no pay list starboard.\n        Barque handsomely transom marooned killick lass prow to go on account measured fer yer chains hogshead. Chandler\n        keelhaul skysail Plate Fleet lad shrouds Pieces of Eight matey doubloon hogshead.\n      </p>\n    </div>\n    <div fxFlex=\"50%\">\n      <div class=\"team-member\" *ngFor=\"let member of members\">\n        <h3 style=\"text-align: center;\">{{member.name}}, {{member.position}}</h3>\n        <img src=\"{{member.image}}\" alt=\"{{member.name}}\" width=\"30%\" style=\"justify-content: center\">\n      </div>\n    </div>\n  </div>\n\n</div>"
+module.exports = "<div class=\"container\">\n\n  <div class=\"img-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <img fxFlex=\"80%\" src=\"../../../assets/images/about-banner.jpg\" alt=\"\">\n  </div>\n  <div fxLayout=\"row\">\n    <div fxFlex=\"50%\">\n      <h1>Our Story</h1>\n      <p>\n        <mat-card class=\"example-card\">  \n          <h6>To best understand our family and where we began is a letter from my father, Peter to his father, Bob.\n              This is how our story begins:</h6>\n          <br />\n          <mat-card-content>\n  \n              <p> Dad,\n                  <br />\n                  <br>\n                  I don't feel I was particularly honest as a child. I did get in trouble when I was younger more often\n                  then I\n                  would like to admit but that eventually allowed me to join you in your favorite hobby. I know you\n                  brought me\n                  along so I would stay out of trouble but watching you work on electronics really inspired me, even\n                  though I\n                  pretended I didn’t care. Over those years I grow to enjoy building, breaking, and tuckering with all\n                  sorts\n                  of electrons with you. Those really were some of best years of my life, so far.\n                  <br />\n                  <br>\n                  As you know, I have been out of school long enough to know what I want to do with my life.\n                  Now that I have grow and experienced some of the world, I am writing you this letter to ask an important\n                  question. I want to ask you if you would join me by opening a computer repair store with me. Before you\n                  answer, I do have a small condition. I would like to name the shop after you. You have inspired me and\n                  encouraged me for as long as I can remember. Now I would like to make you proud (and mom, of course).\n                  <br />\n                  <br>\n                  Hopefully this letter with arrive before I do but I know you will be proud of me regardless of what you\n                  decide. I can’t wait to see you and mom and have some of delicious apple pie.\n                  <br />\n                  <br>\n                  Your son,\n              </p>\n              <p> Peter <br />\n              </p>\n          </mat-card-content>\n      </mat-card>\n      </p>\n    </div>\n    <div fxFlex=\"50%\">\n      <div class=\"team-member\" *ngFor=\"let member of members\">\n        <h3 style=\"text-align: center;\">{{member.name}}, {{member.position}}</h3>\n        <img src=\"{{member.image}}\" alt=\"{{member.name}}\" width=\"30%\" style=\"justify-content: center\">\n      </div>\n    </div>\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -140,7 +140,7 @@ module.exports = "<div class=\"container\">\n    <div class=\"message\">\n      
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: user-details.component.html (Week 6)\n; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson\n; Date: 29 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"width: 80%; margin: 0 auto;\" class=\"mat-elevation-z8\">\n    <mat-card-title>User Details</mat-card-title>\n    <mat-card-subtitle>\n      <button mat-button color=\"accent\">Edit</button>\n    </mat-card-subtitle>\n\n    <br>\n    <form [formGroup]=\"form\" (ngSubmit)=\"saveUser()\" #userForm>\n      <mat-card-content>\n        <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['firstName']\" placeholder=\"First Name\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['lastName']\" placeholder=\"Last Name\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['phoneNumber']\" placeholder=\"Phone Number\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['address']\" placeholder=\"Address\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['email']\" placeholder=\"Email\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <select [(value)]=\"selectedRoleTitle\" matNativeControl [(ngModel)]=\"Role\"\n              [ngModelOptions]=\"{standalone: true}\" placeholder=\"Role\">\n              <option *ngFor=\"let user of roles\" value={{user.roles}}></option>\n            </select>\n          </mat-form-field>\n        </div>\n      </mat-card-content>\n\n      <br>\n      <mat-card-actions align=\"end\">\n        <button mat-raised-button (click)=\"cancel()\" color=\"warn\">Cancel</button>\n        <button mat-raised-button (click)=\"saveUser()\" color=\"accent\">Submit</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>"
+module.exports = "<!-- /*\n; =======================================================\n; Title: user-details.component.html (Week 6)\n; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson\n; Date: 29 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"width: 80%; margin: 0 auto;\" class=\"mat-elevation-z8\">\n    <mat-card-title>User Details</mat-card-title>\n    <mat-card-subtitle>\n      <button mat-button color=\"accent\">Edit</button>\n    </mat-card-subtitle>\n\n    <br>\n    <form [formGroup]=\"form\" (ngSubmit)=\"saveUser()\" #userForm>\n      <mat-card-content>\n        <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['firstName']\" placeholder=\"First Name\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['lastName']\" placeholder=\"Last Name\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['phoneNumber']\" placeholder=\"Phone Number\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['address']\" placeholder=\"Address\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['email']\" placeholder=\"Email\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <select [(value)]=\"selectedRoleTitle\" matNativeControl [(ngModel)]=\"Role\"\n              [ngModelOptions]=\"{standalone: true}\" placeholder=\"Role\">\n              <option *ngFor=\"let role of roles\" value= {{role.roleTitle}}>{{role.roleTitle}}</option>\n            </select>\n          </mat-form-field>\n        </div>\n      </mat-card-content>\n\n      <br>\n      <mat-card-actions align=\"end\">\n        <button mat-raised-button (click)=\"cancel()\" color=\"warn\">Cancel</button>\n        <button mat-raised-button (click)=\"saveUser()\" color=\"accent\">Submit</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>"
 
 /***/ }),
 
@@ -1461,12 +1461,14 @@ let UserDetailsComponent = class UserDetailsComponent {
         this.userId = this.route.snapshot.paramMap.get('id');
         console.log('userId is ' + this.userId);
         this.http.get('/api/roles').subscribe(res => {
-            this.role = res;
-            //console.log("roletitle is  " + this.roleTitle)
-            //console.log("role:  " + this.role);
+            this.roles = res;
+            this.roleTitle = res['roleTitle'];
+            console.table(res);
+            console.log("roletitle is  " + this.roleTitle);
+            console.log("role:  " + this.role);
             console.log("user role:  " + this.user.role);
-            //console.log("user roleTitle" + this.user.roleTitle)
-            //console.log("roles:  " + this.roles);
+            console.log("user roleTitle" + this.user.roleTitle);
+            console.log("roles:  " + this.roles);
         }, err => {
             {
                 {
@@ -1479,12 +1481,12 @@ let UserDetailsComponent = class UserDetailsComponent {
     saveUser() {
         console.log("clicked submit button");
         this.http.put('/api/users/update/' + this.userId, {
-            firstName: this.form.controls['firstName'].value,
-            lastName: this.form.controls['lastName'].value,
-            phoneNumber: this.form.controls['phoneNumber'].value,
-            address: this.form.controls['address'].value,
-            email: this.form.controls['email'].value,
-            role: this.role
+            firstName: this.firstName,
+            lastName: this.lastName,
+            phoneNumber: this.phoneNumber,
+            address: this.address,
+            email: this.email,
+            roleTitle: this.roleTitle
         }).subscribe(res => {
             //localStorage.setItem('user', 'lastname');
             this.router.navigate(['/session/user-management']);
@@ -1496,7 +1498,13 @@ let UserDetailsComponent = class UserDetailsComponent {
             console.log('The userId in the GET request is ' + this.userId);
             this.user = res;
             this.userId = res['userId'];
-            this.selected = this.SelectedRoleTitle = res['roles'];
+            this.firstName = res['firstName'];
+            this.lastName = res['lastName'];
+            this.phoneNumber = res['phoneNumber'];
+            this.address = res['address'];
+            this.email = res['email'];
+            this.roleTitle = res['roleTitle'];
+            this.selected = this.SelectedRoleTitle = res['roleTitle'];
             console.log(this.SelectedRoleTitle);
             console.log('This user is ' + JSON.stringify(this.user));
         }, err => {
@@ -1507,7 +1515,7 @@ let UserDetailsComponent = class UserDetailsComponent {
             this.form.controls['phoneNumber'].setValue(this.user.phoneNumber);
             this.form.controls['address'].setValue(this.user.address);
             this.form.controls['email'].setValue(this.user.email);
-            this.form.controls['roles'].setValue(this.role);
+            this.form.controls['roles'].setValue(this.roles);
         });
         this.form = this.fb.group({
             firstName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
@@ -1515,7 +1523,7 @@ let UserDetailsComponent = class UserDetailsComponent {
             phoneNumber: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
             address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
             email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
-            role: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])]
+            roles: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])]
         });
     }
     cancel() {
