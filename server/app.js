@@ -23,7 +23,7 @@ const Role = require('./models/role');
 const SecurityQuestion = require('./models/securityQuestion');
 const User = require('./models/user');
 const bcrypt = require('bcrypt');
-
+const Service = require('./models/service');
 const router = express.Router();
 
 const app = express();

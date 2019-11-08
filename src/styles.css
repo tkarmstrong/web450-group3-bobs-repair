@@ -1,9 +1,25 @@
+
 /*
 ; =======================================================
-; Title: session-layout.component.css (Week 6)
+; Title: styles.scss (Week 6)
 ; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
 ; Date: 23 Oct 2019
 ; Description: Bob's Computer Repair Shop
 ; Legend: [] -> Team member responsible for page.
 ; =======================================================
 */
+html{
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  margin-top: 25px !important;
+  Font-Family: 'Playfair Display', Serif;
+Font-Size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  Font-Family: 'PT Sans', Sans-Serif;
+Font-Size: 46px;
+}
