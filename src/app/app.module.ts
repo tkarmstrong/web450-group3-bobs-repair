@@ -64,6 +64,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 // PrimeNg
 import { CarouselModule } from 'primeng/carousel';
+import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
+import { InvoiceDialogComponent } from './shared/invoice-dialog/invoice-dialog.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +88,9 @@ import { CarouselModule } from 'primeng/carousel';
     ResetPasswordFormComponent,
     ServerErrorComponent,
     ContactComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ServiceRepairComponent,
+    InvoiceDialogComponent
   ],
   imports: [
     BrowserModule,
