@@ -56,7 +56,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
-import { MatSelectModule, MatSelect } from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 
 // Flex
@@ -64,6 +64,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 // PrimeNg
 import { CarouselModule } from 'primeng/carousel';
+import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
+import { InvoiceDialogComponent } from './shared/invoice-dialog/invoice-dialog.component';
 import { RoleConfigurationComponent } from './pages/role-configuration/role-configuration.component';
 import { RoleDeleteDialogComponent } from './shared/role-delete-dialog/role-delete-dialog.component';
 import { RoleEditComponent } from './pages/role-edit/role-edit.component';
@@ -91,6 +93,8 @@ import { QuestionAddComponent } from './pages/question-add/question-add.componen
     ServerErrorComponent,
     ContactComponent,
     AboutUsComponent,
+    ServiceRepairComponent,
+    InvoiceDialogComponent,
     RoleConfigurationComponent,
     RoleDeleteDialogComponent,
     RoleEditComponent,
