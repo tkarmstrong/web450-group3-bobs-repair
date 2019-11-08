@@ -78,6 +78,17 @@ module.exports = "<!-- /*\n; ===================================================
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/question-add/question-add.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/question-add/question-add.component.html ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Security Question</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addQuestionForm\" (ngSubmit)=\"addQuestion(addQuestionForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Security Question\" formControlName=\"securityQuestion\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addQuestionForm.valid\">Submit</button>\n          <button mat-raised-button color=\"warn\" onclick=\"cancel()\">Cancel</button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/register/register.component.html":
 /*!**********************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/register/register.component.html ***!
@@ -89,6 +100,17 @@ module.exports = "<!-- /*\n; ===================================================
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/role-add/role-add.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/role-add/role-add.component.html ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Role</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addRoleForm\" (ngSubmit)=\"addRole(addRoleForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Role\" formControlName=\"role\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addRoleForm.valid\">\n            Submit\n          </button>\n          <button mat-raised-button color=\"warn\" onclick=\"cancel()\">\n            Cancel\n          </button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/role-configuration/role-configuration.component.html":
 /*!******************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/role-configuration/role-configuration.component.html ***!
@@ -96,7 +118,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: role-configuration.component.html (Week 8)\n; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy, Aaron Wilson\n; Date: 5 Nov 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n    <mat-card style=\"margin: 0 auto;\">\n      <mat-card-title>Roles</mat-card-title>\n      <mat-card-content *ngIf=\"roles\">\n        <table mat-table [dataSource]=\"roles\">\n\n          <ng-container matColumnDef=\"roleTitle\">\n            <th mat-header-cell *matHeaderCellDef>Role</th>\n            <td mat-cell *matCellDef=\"let element\">\n              {{ element.roleTitle }}\n            </td>\n          </ng-container>\n\n          <ng-container matColumnDef=\"actions\">\n            <th mat-header-cell *matHeaderCellDef>Actions</th>\n            <td mat-cell *matCellDef=\"let element\">\n              <button mat-icon-button (click)=\"edit(element._id)\">\n                <mat-icon color=\"accent\">create</mat-icon>\n              </button>\n              <button mat-icon-button (click)=\"delete(element._id, element.roleTitle)\">\n                <mat-icon color=\"warn\">delete_forever</mat-icon>\n              </button>\n            </td>\n          </ng-container>\n\n          <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n          <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n        </table>\n      </mat-card-content>\n      <mat-card-actions>\n        <div fxFlex></div>\n        <button mat-button color=\"primary\"><mat-icon>add_box</mat-icon>Add New</button>\n      </mat-card-actions>\n    </mat-card>\n  </div>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: role-configuration.component.html (Week 8)\n; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy, Aaron Wilson\n; Date: 5 Nov 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n    <mat-card style=\"margin: 0 auto;\">\n      <mat-card-title>Roles</mat-card-title>\n      <mat-card-content *ngIf=\"roles\">\n        <table mat-table [dataSource]=\"roles\">\n\n          <ng-container matColumnDef=\"roleTitle\">\n            <th mat-header-cell *matHeaderCellDef>Role</th>\n            <td mat-cell *matCellDef=\"let element\">\n              {{ element.roleTitle }}\n            </td>\n          </ng-container>\n\n          <ng-container matColumnDef=\"actions\">\n            <th mat-header-cell *matHeaderCellDef>Actions</th>\n            <td mat-cell *matCellDef=\"let element\">\n              <button mat-icon-button (click)=\"edit(element._id)\">\n                <mat-icon color=\"accent\">create</mat-icon>\n              </button>\n              <button mat-icon-button (click)=\"delete(element._id, element.roleTitle)\">\n                <mat-icon color=\"warn\">delete_forever</mat-icon>\n              </button>\n            </td>\n          </ng-container>\n\n          <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n          <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n        </table>\n      </mat-card-content>\n      <mat-card-actions>\n        <div fxFlex></div>\n        <button mat-button color=\"primary\" [routerLink]=\"['/session/role-add']\"><mat-icon>add_box</mat-icon>Add New Role</button>\n      </mat-card-actions>\n    </mat-card>\n  </div>\n"
 
 /***/ }),
 
@@ -118,7 +140,7 @@ module.exports = "<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-ca
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: security-questions.component.html (Week 6)\n; Authors: Tyler Armstrong, David Tarvin, [Aaron Wilson]\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"margin: 0 auto;\">\n    <mat-card-title>Security Questions</mat-card-title>\n    <mat-card-content *ngIf=\"data\">\n      <table mat-table [dataSource]=\"data\">\n\n        <ng-container matColumnDef=\"questionText\">\n          <th mat-header-cell *matHeaderCellDef>Question</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.questionText }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"actions\">\n          <th mat-header-cell *matHeaderCellDef>Actions</th>\n          <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"edit(element._id)\">\n              <mat-icon color=\"accent\">create</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element._id, element.questionText)\">\n              <mat-icon color=\"warn\">delete_forever</mat-icon>\n            </button>\n          </td>\n        </ng-container>\n\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n      </table>\n    </mat-card-content>\n    <mat-card-actions>\n      <div fxFlex></div>\n      <button mat-button color=\"primary\"><mat-icon>add_box</mat-icon>Add New</button>\n    </mat-card-actions>\n  </mat-card>\n</div>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: security-questions.component.html (Week 6)\n; Authors: Tyler Armstrong, David Tarvin, [Aaron Wilson]\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"margin: 0 auto;\">\n    <mat-card-title>Security Questions</mat-card-title>\n    <mat-card-content *ngIf=\"data\">\n      <table mat-table [dataSource]=\"data\">\n\n        <ng-container matColumnDef=\"questionText\">\n          <th mat-header-cell *matHeaderCellDef>Question</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.questionText }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"actions\">\n          <th mat-header-cell *matHeaderCellDef>Actions</th>\n          <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"edit(element._id)\">\n              <mat-icon color=\"accent\">create</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element._id, element.questionText)\">\n              <mat-icon color=\"warn\">delete_forever</mat-icon>\n            </button>\n          </td>\n        </ng-container>\n\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n      </table>\n    </mat-card-content>\n    <mat-card-actions>\n      <div fxFlex></div>\n      <button mat-button color=\"primary\" [routerLink]=\"['/session/question-add']\"><mat-icon>add_box</mat-icon>Add New</button>\n    </mat-card-actions>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -174,17 +196,6 @@ module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  
 /***/ (function(module, exports) {
 
 module.exports = "<!-- /*\n; =======================================================\n; Title: base-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div>\n  <!-- Page header -->\n  <header>\n    <!-- Toolbar -->\n    <mat-toolbar class=\"menu\" role=\"header\" style=\"color: black; background-color: white\">\n        <mat-toolbar-row>\n        <button [routerLink]=\"['/']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">BCRS</span>\n        </button>\n        <button [routerLink]=\"['/contact']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">Contact Us</span>\n        </button>\n        <button [routerLink]=\"['/about-us']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">About Us</span>\n        </button>\n        <button *ngIf=\"validated == false\" mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/login']\">\n          <span style=\"margin-left: 5px !important\">Login</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/security-questions']\">\n          <span style=\"margin-left: 5px !important\">Security Questions</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/user-management']\">\n          <span style=\"margin-left: 5px !important\">User Management</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/role-configuration']\">\n          <span style=\"margin-left: 5px !important\">Role Configuration</span>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n          <mat-icon>exit_to_app</mat-icon>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <button mat-menu-item (click)=\"userLogout()\">\n            <span>Logout</span>\n          </button>\n        </mat-menu>\n\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </header>\n</div>\n\n<!-- Main page content -->\n<main>\n  <router-outlet></router-outlet>\n</main>"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/shared/question-add-dialog/question-add-dialog.component.html":
-/*!*********************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/shared/question-add-dialog/question-add-dialog.component.html ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!-- /*\n; =======================================================\n; Title: question-add-dialog.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 29 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<p>question-add-dialog works!</p>\n"
 
 /***/ }),
 
@@ -324,20 +335,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
 /* harmony import */ var _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shared/guards/auth-guard.service */ "./src/app/shared/guards/auth-guard.service.ts");
-/* harmony import */ var _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/route-interceptors/error.interceptor */ "./src/app/shared/route-interceptors/error.interceptor.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./shared/base-layout/base-layout.component */ "./src/app/shared/base-layout/base-layout.component.ts");
-/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _shared_session_layout_session_layout_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./shared/session-layout/session-layout.component */ "./src/app/shared/session-layout/session-layout.component.ts");
-/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
-/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
-/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
-/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
-/* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
-/* harmony import */ var _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./shared/question-edit-dialog/question-edit-dialog.component */ "./src/app/shared/question-edit-dialog/question-edit-dialog.component.ts");
-/* harmony import */ var _shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./shared/user-delete-dialog/user-delete-dialog.component */ "./src/app/shared/user-delete-dialog/user-delete-dialog.component.ts");
-/* harmony import */ var _shared_question_add_dialog_question_add_dialog_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./shared/question-add-dialog/question-add-dialog.component */ "./src/app/shared/question-add-dialog/question-add-dialog.component.ts");
+/* harmony import */ var _shared_guards_role_guard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/guards/role.guard */ "./src/app/shared/guards/role.guard.ts");
+/* harmony import */ var _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./shared/route-interceptors/error.interceptor */ "./src/app/shared/route-interceptors/error.interceptor.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./shared/base-layout/base-layout.component */ "./src/app/shared/base-layout/base-layout.component.ts");
+/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
+/* harmony import */ var _shared_session_layout_session_layout_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./shared/session-layout/session-layout.component */ "./src/app/shared/session-layout/session-layout.component.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
+/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
+/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
+/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
+/* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
+/* harmony import */ var _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./shared/question-edit-dialog/question-edit-dialog.component */ "./src/app/shared/question-edit-dialog/question-edit-dialog.component.ts");
+/* harmony import */ var _shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./shared/user-delete-dialog/user-delete-dialog.component */ "./src/app/shared/user-delete-dialog/user-delete-dialog.component.ts");
 /* harmony import */ var _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./shared/question-delete-dialog/question-delete-dialog.component */ "./src/app/shared/question-delete-dialog/question-delete-dialog.component.ts");
 /* harmony import */ var _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./verify-username-form/verify-username-form.component */ "./src/app/verify-username-form/verify-username-form.component.ts");
 /* harmony import */ var _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./verify-security-questions-form/verify-security-questions-form.component */ "./src/app/verify-security-questions-form/verify-security-questions-form.component.ts");
@@ -365,6 +376,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./pages/role-configuration/role-configuration.component */ "./src/app/pages/role-configuration/role-configuration.component.ts");
 /* harmony import */ var _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./shared/role-delete-dialog/role-delete-dialog.component */ "./src/app/shared/role-delete-dialog/role-delete-dialog.component.ts");
 /* harmony import */ var _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./pages/role-edit/role-edit.component */ "./src/app/pages/role-edit/role-edit.component.ts");
+/* harmony import */ var _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./pages/role-add/role-add.component */ "./src/app/pages/role-add/role-add.component.ts");
+/* harmony import */ var _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./pages/question-add/question-add.component */ "./src/app/pages/question-add/question-add.component.ts");
 /*
 ; =======================================================
 ; Title: app.module.ts (Week 6)
@@ -386,8 +399,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// Components
 
+// Components
 
 
 
@@ -429,24 +442,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
-            _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_12__["BaseLayoutComponent"],
-            _pages_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
-            _shared_session_layout_session_layout_component__WEBPACK_IMPORTED_MODULE_14__["SessionLayoutComponent"],
-            _pages_login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
-            _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_16__["NotFoundComponent"],
-            _pages_register_register_component__WEBPACK_IMPORTED_MODULE_19__["RegisterComponent"],
-            _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_17__["SecurityQuestionsComponent"],
-            _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_18__["UserManagementComponent"],
-            _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_20__["UserDetailsComponent"],
-            _shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_22__["UserDeleteDialogComponent"],
-            _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_21__["QuestionEditDialogComponent"],
-            _shared_question_add_dialog_question_add_dialog_component__WEBPACK_IMPORTED_MODULE_23__["QuestionAddDialogComponent"],
+            _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
+            _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_13__["BaseLayoutComponent"],
+            _pages_home_home_component__WEBPACK_IMPORTED_MODULE_14__["HomeComponent"],
+            _shared_session_layout_session_layout_component__WEBPACK_IMPORTED_MODULE_15__["SessionLayoutComponent"],
+            _pages_login_login_component__WEBPACK_IMPORTED_MODULE_16__["LoginComponent"],
+            _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_17__["NotFoundComponent"],
+            _pages_register_register_component__WEBPACK_IMPORTED_MODULE_20__["RegisterComponent"],
+            _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_18__["SecurityQuestionsComponent"],
+            _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_19__["UserManagementComponent"],
+            _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_21__["UserDetailsComponent"],
+            _shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_23__["UserDeleteDialogComponent"],
+            _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_22__["QuestionEditDialogComponent"],
             _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_24__["QuestionDeleteDialogComponent"],
             _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_25__["VerifyUsernameFormComponent"],
             _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_26__["VerifySecurityQuestionsFormComponent"],
@@ -456,7 +470,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_30__["AboutUsComponent"],
             _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_47__["RoleConfigurationComponent"],
             _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_48__["RoleDeleteDialogComponent"],
-            _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_49__["RoleEditComponent"]
+            _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_49__["RoleEditComponent"],
+            _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_50__["RoleAddComponent"],
+            _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_51__["QuestionAddComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -482,10 +498,10 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_material_list__WEBPACK_IMPORTED_MODULE_44__["MatListModule"],
             primeng_carousel__WEBPACK_IMPORTED_MODULE_46__["CarouselModule"]
         ],
-        providers: [ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__["CookieService"], _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__["AuthGuardService"],
-            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HTTP_INTERCEPTORS"], useClass: _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_10__["ErrorInterceptor"], multi: true }],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]],
-        entryComponents: [_shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_22__["UserDeleteDialogComponent"], _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_21__["QuestionEditDialogComponent"], _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_24__["QuestionDeleteDialogComponent"],
+        providers: [ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__["CookieService"], _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__["AuthGuardService"], _shared_guards_role_guard__WEBPACK_IMPORTED_MODULE_10__["RoleGuard"],
+            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HTTP_INTERCEPTORS"], useClass: _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_11__["ErrorInterceptor"], multi: true }],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]],
+        entryComponents: [_shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_23__["UserDeleteDialogComponent"], _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_22__["QuestionEditDialogComponent"], _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_24__["QuestionDeleteDialogComponent"],
             _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_48__["RoleDeleteDialogComponent"]]
     })
 ], AppModule);
@@ -504,23 +520,27 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutes", function() { return AppRoutes; });
-/* harmony import */ var _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/role-edit/role-edit.component */ "./src/app/pages/role-edit/role-edit.component.ts");
-/* harmony import */ var _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/role-configuration/role-configuration.component */ "./src/app/pages/role-configuration/role-configuration.component.ts");
-/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared */ "./src/app/shared/index.ts");
-/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
-/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
-/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
-/* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
-/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
-/* harmony import */ var _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/guards/auth-guard.service */ "./src/app/shared/guards/auth-guard.service.ts");
-/* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
-/* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
-/* harmony import */ var _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./verify-security-questions-form/verify-security-questions-form.component */ "./src/app/verify-security-questions-form/verify-security-questions-form.component.ts");
-/* harmony import */ var _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./verify-username-form/verify-username-form.component */ "./src/app/verify-username-form/verify-username-form.component.ts");
-/* harmony import */ var _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
-/* harmony import */ var _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./reset-password-form/reset-password-form.component */ "./src/app/reset-password-form/reset-password-form.component.ts");
+/* harmony import */ var _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/question-add/question-add.component */ "./src/app/pages/question-add/question-add.component.ts");
+/* harmony import */ var _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/role-add/role-add.component */ "./src/app/pages/role-add/role-add.component.ts");
+/* harmony import */ var _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/role-edit/role-edit.component */ "./src/app/pages/role-edit/role-edit.component.ts");
+/* harmony import */ var _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/role-configuration/role-configuration.component */ "./src/app/pages/role-configuration/role-configuration.component.ts");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared */ "./src/app/shared/index.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
+/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
+/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
+/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
+/* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
+/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
+/* harmony import */ var _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./shared/guards/auth-guard.service */ "./src/app/shared/guards/auth-guard.service.ts");
+/* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
+/* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
+/* harmony import */ var _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./verify-security-questions-form/verify-security-questions-form.component */ "./src/app/verify-security-questions-form/verify-security-questions-form.component.ts");
+/* harmony import */ var _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./verify-username-form/verify-username-form.component */ "./src/app/verify-username-form/verify-username-form.component.ts");
+/* harmony import */ var _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
+/* harmony import */ var _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./reset-password-form/reset-password-form.component */ "./src/app/reset-password-form/reset-password-form.component.ts");
+
+
 
 
 
@@ -542,28 +562,30 @@ const AppRoutes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
         path: '',
-        component: _shared__WEBPACK_IMPORTED_MODULE_2__["BaseLayoutComponent"],
+        component: _shared__WEBPACK_IMPORTED_MODULE_4__["BaseLayoutComponent"],
         children: [
-            { path: 'login', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
-            { path: 'home', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"] },
-            { path: 'register', component: _pages_register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"] },
-            { path: 'server-error', component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_11__["ServerErrorComponent"] },
-            { path: 'contact', component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__["ContactComponent"] },
-            { path: 'forgot-password', component: _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_14__["VerifyUsernameFormComponent"] },
-            { path: 'verify-security-questions', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_13__["VerifySecurityQuestionsFormComponent"] },
-            { path: 'forgot-password/:username', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_13__["VerifySecurityQuestionsFormComponent"] },
-            { path: 'reset-password', component: _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_16__["ResetPasswordFormComponent"] },
-            { path: 'about-us', component: _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_15__["AboutUsComponent"] }
+            { path: 'login', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"] },
+            { path: 'home', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"] },
+            { path: 'register', component: _pages_register_register_component__WEBPACK_IMPORTED_MODULE_11__["RegisterComponent"] },
+            { path: 'server-error', component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_13__["ServerErrorComponent"] },
+            { path: 'contact', component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_14__["ContactComponent"] },
+            { path: 'forgot-password', component: _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_16__["VerifyUsernameFormComponent"] },
+            { path: 'verify-security-questions', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_15__["VerifySecurityQuestionsFormComponent"] },
+            { path: 'forgot-password/:username', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_15__["VerifySecurityQuestionsFormComponent"] },
+            { path: 'reset-password', component: _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_18__["ResetPasswordFormComponent"] },
+            { path: 'about-us', component: _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_17__["AboutUsComponent"] }
         ]
     },
-    { path: 'session', component: _shared__WEBPACK_IMPORTED_MODULE_2__["SessionLayoutComponent"],
+    { path: 'session', component: _shared__WEBPACK_IMPORTED_MODULE_4__["SessionLayoutComponent"],
         children: [
-            { path: 'security-questions', component: _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_6__["SecurityQuestionsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_10__["AuthGuardService"]] },
-            { path: 'user-management', component: _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_7__["UserManagementComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_10__["AuthGuardService"]] },
-            { path: 'user-details/:id', component: _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_8__["UserDetailsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_10__["AuthGuardService"]] },
-            { path: 'role-configuration', component: _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_1__["RoleConfigurationComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_10__["AuthGuardService"]] },
-            { path: 'role-edit/:id', component: _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_0__["RoleEditComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_10__["AuthGuardService"]] },
-            { path: '404', component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_5__["NotFoundComponent"] }
+            { path: 'security-questions', component: _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__["SecurityQuestionsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'user-management', component: _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_9__["UserManagementComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'user-details/:id', component: _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_10__["UserDetailsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'role-configuration', component: _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_3__["RoleConfigurationComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'role-edit/:id', component: _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_2__["RoleEditComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'role-add', component: _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_1__["RoleAddComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'question-add', component: _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_0__["QuestionAddComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: '404', component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_7__["NotFoundComponent"] }
         ]
     },
     { path: '**', redirectTo: 'session/404' }
@@ -908,6 +930,90 @@ NotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/pages/question-add/question-add.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/pages/question-add/question-add.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3F1ZXN0aW9uLWFkZC9xdWVzdGlvbi1hZGQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/pages/question-add/question-add.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/pages/question-add/question-add.component.ts ***!
+  \**************************************************************/
+/*! exports provided: QuestionAddComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionAddComponent", function() { return QuestionAddComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/*
+; =======================================================
+; Title: question-add.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy
+; Date: 08 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+
+
+
+let QuestionAddComponent = class QuestionAddComponent {
+    constructor(router, http) {
+        this.router = router;
+        this.http = http;
+    }
+    ngOnInit() {
+        this.addQuestionForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
+            securityQuestion: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])
+        });
+    }
+    addQuestion() {
+        const questionText = this.addQuestionForm.get('securityQuestion').value;
+        const newQuestion = { questionText };
+        console.log(newQuestion);
+        this.http.post('/api/security-questions', newQuestion).subscribe(res => {
+            if (res) {
+                console.log('Question ' + questionText + ' added to list');
+                this.router.navigate(['/session/security-questions']);
+            }
+            else {
+                console.log('Something went wrong');
+            }
+        });
+    }
+    cancel() {
+        this.router.navigate(['/session/security-questions']);
+    }
+};
+QuestionAddComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+QuestionAddComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
+        selector: 'app-question-add',
+        template: __webpack_require__(/*! raw-loader!./question-add.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/question-add/question-add.component.html"),
+        styles: [__webpack_require__(/*! ./question-add.component.css */ "./src/app/pages/question-add/question-add.component.css")]
+    })
+], QuestionAddComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/register/register.component.css":
 /*!*******************************************************!*\
   !*** ./src/app/pages/register/register.component.css ***!
@@ -1044,6 +1150,94 @@ RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/pages/register/register.component.css")]
     })
 ], RegisterComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/role-add/role-add.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/pages/role-add/role-add.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JvbGUtYWRkL3JvbGUtYWRkLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/pages/role-add/role-add.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/pages/role-add/role-add.component.ts ***!
+  \******************************************************/
+/*! exports provided: RoleAddComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleAddComponent", function() { return RoleAddComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/*
+; =======================================================
+; Title: role-add.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy
+; Date: 08 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+
+
+
+
+let RoleAddComponent = class RoleAddComponent {
+    constructor(cookieService, router, http) {
+        this.cookieService = cookieService;
+        this.router = router;
+        this.http = http;
+    }
+    ngOnInit() {
+        this.addRoleForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
+            role: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])
+        });
+    }
+    addRole() {
+        const roleTitle = this.addRoleForm.get('role').value;
+        const newRole = { roleTitle };
+        console.log(newRole);
+        this.http.post('/api/roles', newRole).subscribe(res => {
+            if (res) {
+                console.log('Role ' + roleTitle + ' added to list');
+                this.router.navigate(['/session/role-configuration']);
+            }
+            else {
+                console.log('Something went wrong');
+            }
+        });
+    }
+    cancel() {
+        this.router.navigate(['/session/role-configuration']);
+    }
+};
+RoleAddComponent.ctorParameters = () => [
+    { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__["CookieService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+RoleAddComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Component"])({
+        selector: 'app-role-add',
+        template: __webpack_require__(/*! raw-loader!./role-add.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/role-add/role-add.component.html"),
+        styles: [__webpack_require__(/*! ./role-add.component.css */ "./src/app/pages/role-add/role-add.component.css")]
+    })
+], RoleAddComponent);
 
 
 
@@ -1860,6 +2054,63 @@ AuthGuardService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/shared/guards/role.guard.ts":
+/*!*********************************************!*\
+  !*** ./src/app/shared/guards/role.guard.ts ***!
+  \*********************************************/
+/*! exports provided: RoleGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleGuard", function() { return RoleGuard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+
+
+
+
+let RoleGuard = class RoleGuard {
+    constructor(router, http, cookieService) {
+        this.router = router;
+        this.http = http;
+        this.cookieService = cookieService;
+    }
+    canActivate(route, state) {
+        return this.getRole().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(res => {
+            console.log(res);
+            if (res === 'admin') {
+                return true;
+            }
+            else {
+                this.router.navigate(['/']);
+                return false;
+            }
+        }));
+    }
+    getRole() {
+        return this.http.get('/api/users/' + this.cookieService.get('username') + '/role');
+    }
+};
+RoleGuard.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+    { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__["CookieService"] }
+];
+RoleGuard = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Injectable"])({ providedIn: 'root' })
+], RoleGuard);
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/index.ts":
 /*!*********************************!*\
   !*** ./src/app/shared/index.ts ***!
@@ -1885,66 +2136,6 @@ __webpack_require__.r(__webpack_exports__);
 ; =======================================================
 */
 
-
-
-
-/***/ }),
-
-/***/ "./src/app/shared/question-add-dialog/question-add-dialog.component.css":
-/*!******************************************************************************!*\
-  !*** ./src/app/shared/question-add-dialog/question-add-dialog.component.css ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/*\n; =======================================================\n; Title: question-add-dialog.component.css (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 29 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL3F1ZXN0aW9uLWFkZC1kaWFsb2cvcXVlc3Rpb24tYWRkLWRpYWxvZy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7OztDQVFDIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL3F1ZXN0aW9uLWFkZC1kaWFsb2cvcXVlc3Rpb24tYWRkLWRpYWxvZy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcbjsgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuOyBUaXRsZTogcXVlc3Rpb24tYWRkLWRpYWxvZy5jb21wb25lbnQuY3NzIChXZWVrIDYpXG47IEF1dGhvcnM6IFtUeWxlciBBcm1zdHJvbmddLCBEYXZpZCBUYXJ2aW4sIEFhcm9uIFdpbHNvblxuOyBEYXRlOiAyOSBPY3QgMjAxOVxuOyBEZXNjcmlwdGlvbjogQm9iJ3MgQ29tcHV0ZXIgUmVwYWlyIFNob3BcbjsgTGVnZW5kOiBbXSAtPiBUZWFtIG1lbWJlciByZXNwb25zaWJsZSBmb3IgcGFnZS5cbjsgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuKi8iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/shared/question-add-dialog/question-add-dialog.component.ts":
-/*!*****************************************************************************!*\
-  !*** ./src/app/shared/question-add-dialog/question-add-dialog.component.ts ***!
-  \*****************************************************************************/
-/*! exports provided: QuestionAddDialogComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionAddDialogComponent", function() { return QuestionAddDialogComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-/*
-; =======================================================
-; Title:  question-add-dialog.component.ts (Week 6)
-; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
-; Date:   29 Oct 2019
-; Description: Bob's Computer Repair Shop
-; Legend: [] -> Team member responsible for page.
-; =======================================================
-*/
-
-
-
-
-let QuestionAddDialogComponent = class QuestionAddDialogComponent {
-    constructor(data) {
-        this.data = data;
-    }
-    ngOnInit() {
-    }
-};
-QuestionAddDialogComponent.ctorParameters = () => [
-    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
-];
-QuestionAddDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-question-add-dialog',
-        template: __webpack_require__(/*! raw-loader!./question-add-dialog.component.html */ "./node_modules/raw-loader/index.js!./src/app/shared/question-add-dialog/question-add-dialog.component.html"),
-        styles: [__webpack_require__(/*! ./question-add-dialog.component.css */ "./src/app/shared/question-add-dialog/question-add-dialog.component.css")]
-    }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
-], QuestionAddDialogComponent);
 
 
 
@@ -2693,7 +2884,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/leatrueworthy/Desktop/web450-group3-bobs-repair/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/davidtarvin/web450-group3-bobs-repair/src/main.ts */"./src/main.ts");
 
 
 /***/ })

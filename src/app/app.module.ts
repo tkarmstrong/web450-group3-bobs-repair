@@ -19,6 +19,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthGuardService } from './shared/guards/auth-guard.service';
+import { RoleGuard } from './shared/guards/role.guard';
 import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor';
 
 // Components
@@ -34,7 +35,6 @@ import { RegisterComponent } from './pages/register/register.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { QuestionEditDialogComponent } from './shared/question-edit-dialog/question-edit-dialog.component';
 import { UserDeleteDialogComponent } from './shared/user-delete-dialog/user-delete-dialog.component';
-import { QuestionAddDialogComponent } from './shared/question-add-dialog/question-add-dialog.component';
 import { QuestionDeleteDialogComponent } from './shared/question-delete-dialog/question-delete-dialog.component';
 import { VerifyUsernameFormComponent } from './verify-username-form/verify-username-form.component';
 import { VerifySecurityQuestionsFormComponent } from './verify-security-questions-form/verify-security-questions-form.component';
@@ -67,6 +67,8 @@ import { CarouselModule } from 'primeng/carousel';
 import { RoleConfigurationComponent } from './pages/role-configuration/role-configuration.component';
 import { RoleDeleteDialogComponent } from './shared/role-delete-dialog/role-delete-dialog.component';
 import { RoleEditComponent } from './pages/role-edit/role-edit.component';
+import { RoleAddComponent } from './pages/role-add/role-add.component';
+import { QuestionAddComponent } from './pages/question-add/question-add.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +84,6 @@ import { RoleEditComponent } from './pages/role-edit/role-edit.component';
     UserDetailsComponent,
     UserDeleteDialogComponent,
     QuestionEditDialogComponent,
-    QuestionAddDialogComponent,
     QuestionDeleteDialogComponent,
     VerifyUsernameFormComponent,
     VerifySecurityQuestionsFormComponent,
@@ -92,7 +93,9 @@ import { RoleEditComponent } from './pages/role-edit/role-edit.component';
     AboutUsComponent,
     RoleConfigurationComponent,
     RoleDeleteDialogComponent,
-    RoleEditComponent
+    RoleEditComponent,
+    RoleAddComponent,
+    QuestionAddComponent
   ],
   imports: [
     BrowserModule,
@@ -118,7 +121,7 @@ import { RoleEditComponent } from './pages/role-edit/role-edit.component';
     MatListModule,
     CarouselModule
   ],
-  providers: [CookieService, AuthGuardService,
+  providers: [CookieService, AuthGuardService, RoleGuard,
               {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}],
   bootstrap: [AppComponent],
   entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent, QuestionDeleteDialogComponent,
