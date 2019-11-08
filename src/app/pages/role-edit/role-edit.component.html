@@ -4,7 +4,7 @@
 
         <h2>Edit</h2>
 
-        <form [formGroup]="form" #editForm="ngForm" (ngSubmit)="saveRole()">
+        <form [formGroup]="form" #editRoleForm (ngSubmit)="saveRole(); form.reset()">
           <mat-form-field class="inputStyle">
             <input type="text" matInput [formControl]="form.controls['roleTitle']" placeholder="Edit role" />
           </mat-form-field>

@@ -38,11 +38,11 @@ export class RoleConfigurationComponent implements OnInit {
   ngOnInit() {
   }
 
-  edit(_id) {
-    this.router.navigate(['/session/role-edit/' + _id]);
+  edit(roleId) {
+    this.router.navigate(['/session/role-edit/' + roleId]);
   }
 
-  delete(_id, roleTitle) {
+  delete(roleId, roleTitle) {
     const dialogRef = this.dialog.open(RoleDeleteDialogComponent, {
       data: {
         roleTitle: roleTitle
@@ -53,9 +53,9 @@ export class RoleConfigurationComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if(result === 'confirm') {
-        this.http.delete('/api/roles/' + _id).subscribe(res => {
+        this.http.delete('/api/roles/' + roleId).subscribe(res => {
           console.log('Role deleted');
-          this.roles = this.roles.filter(r => r._id !== _id);
+          this.roles = this.roles.filter(r => r._id !== roleId);
         })
       } else if (result === 'cancel') {
         this.router.navigate(['/session/role-configuration']);
