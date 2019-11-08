@@ -22,7 +22,7 @@ import { Router } from '@angular/router';
 export class UserManagementComponent implements OnInit {
 
   users: any;
-  displayedColumns = ['username', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'functions' ];
+  displayedColumns = ['username', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'role', 'functions' ];
 
   constructor(private http: HttpClient, private dialog: MatDialog,
               private router: Router) {
