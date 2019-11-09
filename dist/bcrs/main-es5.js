@@ -85,7 +85,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Security Question</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addQuestionForm\" (ngSubmit)=\"addQuestion(addQuestionForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Security Question\" formControlName=\"securityQuestion\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addQuestionForm.valid\">Submit</button>\n          <button mat-raised-button color=\"warn\" onclick=\"cancel()\">Cancel</button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Security Question</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addQuestionForm\" (ngSubmit)=\"addQuestion(addQuestionForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Security Question\" formControlName=\"securityQuestion\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addQuestionForm.valid\">Submit</button>\n          <button mat-raised-button color=\"warn\" (click)=\"cancel()\">Cancel</button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -107,7 +107,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Role</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addRoleForm\" (ngSubmit)=\"addRole(addRoleForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Role\" formControlName=\"role\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addRoleForm.valid\">\n            Submit\n          </button>\n          <button mat-raised-button color=\"warn\" onclick=\"cancel()\">\n            Cancel\n          </button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Role</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addRoleForm\" (ngSubmit)=\"addRole(addRoleForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Role\" formControlName=\"role\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addRoleForm.valid\">\n            Submit\n          </button>\n          <button mat-raised-button color=\"warn\" (click)=\"cancel()\">\n            Cancel\n          </button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
