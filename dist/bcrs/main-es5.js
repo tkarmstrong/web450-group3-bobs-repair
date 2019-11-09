@@ -1827,8 +1827,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
 /*
 ; =======================================================
 ; Title:  user-details.component.ts (Week 6)
@@ -1843,7 +1841,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 var UserDetailsComponent = /** @class */ (function () {
     function UserDetailsComponent(route, http, fb, router) {
         var _this = this;
@@ -1851,22 +1848,11 @@ var UserDetailsComponent = /** @class */ (function () {
         this.http = http;
         this.fb = fb;
         this.router = router;
-        this.Role = '';
+        this.SelectedRole = '';
         this.userId = this.route.snapshot.paramMap.get('id');
-        console.log('userId is ' + this.userId);
         this.http.get('/api/users/' + this.userId).subscribe(function (res) {
-            console.log('The userId in the GET request is ' + _this.userId);
             _this.user = res;
-            _this.userId = res['userId'];
-            _this.firstName = res['firstName'];
-            _this.lastName = res['lastName'];
-            _this.phoneNumber = res['phoneNumber'];
-            _this.address = res['address'];
-            _this.email = res['email'];
-            //this.roleTitle = res['roleTitle']
-            _this.selected = _this.SelectedRoleTitle = res['roleTitle'];
-            console.log(_this.SelectedRoleTitle);
-            console.log('This user is ' + JSON.stringify(_this.user));
+            _this.selected = _this.SelectedRole = res['role'];
         }, function (err) {
             console.log(err);
         }, function () {
@@ -1875,18 +1861,11 @@ var UserDetailsComponent = /** @class */ (function () {
             _this.form.controls.phoneNumber.setValue(_this.user.phoneNumber);
             _this.form.controls.address.setValue(_this.user.address);
             _this.form.controls.email.setValue(_this.user.email);
-            _this.form.controls.roles.setValue(_this.user.roles);
-            _this.http.get('/api/roles').subscribe(function (res) {
+            _this.http.get('api/roles').subscribe(function (res) {
                 _this.roles = res;
-                _this.roleTitle = res['roleTitle'];
-                console.table(res);
-                //console.log("roletitle is  " + this.roleTitle)
-                //console.log("role:  " + this.role);
-                //console.log("user role:  " + this.user.role);
-                //console.log("user roleTitle" + this.user.roleTitle)
-                //console.log("roles:  " + this.roles);
+                console.log(_this.roles);
             }, function (err) {
-                console.log(util__WEBPACK_IMPORTED_MODULE_5__["error"]);
+                console.log(err);
             });
         });
     }
@@ -1897,21 +1876,21 @@ var UserDetailsComponent = /** @class */ (function () {
             phoneNumber: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
             address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
             email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
-            roles: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])]
+            role: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])]
         });
     };
     UserDetailsComponent.prototype.saveUser = function () {
         var _this = this;
         console.log("clicked submit button");
+        console.log(this.selected);
         this.http.put('/api/users/' + this.userId, {
-            firstName: this.firstName,
-            lastName: this.lastName,
-            phoneNumber: this.phoneNumber,
-            address: this.address,
-            email: this.email,
-            roleTitle: this.roleTitle
+            firstName: this.form.controls['firstName'].value,
+            lastName: this.form.controls['lastName'].value,
+            phoneNumber: this.form.controls['phoneNumber'].value,
+            address: this.form.controls['address'].value,
+            email: this.form.controls['email'].value,
+            role: this.form.controls['role'].value
         }).subscribe(function (res) {
-            //localStorage.setItem('user', 'lastname');
             _this.router.navigate(['/session/user-management']);
             console.log(_this.user);
         });

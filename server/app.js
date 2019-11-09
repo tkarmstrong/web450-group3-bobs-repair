@@ -163,27 +163,29 @@ app.get('/api/users/', (req, res, next) => {
     if (err) {
       console.log(err);
       return next(err);
-    }
+    } else{
     console.log(users);
-    return res.json(users);
+    res.json(users);
+    }
   });
 });
 // Read one user by id.
 app.get('/api/users/:id', (req, res, next) => {
-  User.findOne({ '_id': req.params.id }, (err, user) => {
+  User.findOne({ '_id': req.params.id }, function (err, user) {
     console.log('this is a message inside the app get one id on app')
     if (err) {
       console.log(err);
       return next(err);
-    }
+    } else {
     console.log(user);
-    return res.json(user);
+    res.json(user);
+    }
   });
 });
 
-// Update user
+// Update one user
 app.put('/api/users/:id', (req, res, next) => {
-  User.findOne({ '_id': req.params.id }, (err, user) => {
+  User.findOne({ '_id': req.params.id }, function (err, user){
     console.log(user);
     if (err) {
       console.log(err);
@@ -199,9 +201,9 @@ app.put('/api/users/:id', (req, res, next) => {
         address: req.body.address,
         email: req.body.email,
         role: req.body.role
-      })
+      });
 
-      user.save((err, savedUser) => {
+      user.save(function (err, savedUser) {
         if (err) {
           console.log(err);
           return next(err);
@@ -212,7 +214,7 @@ app.put('/api/users/:id', (req, res, next) => {
       })
     }
   })
-})
+});
 
 // Delete user
 app.delete('/api/users/:id', (req, res, next) => {

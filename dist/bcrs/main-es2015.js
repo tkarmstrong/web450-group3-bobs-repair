@@ -1793,8 +1793,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
 /*
 ; =======================================================
 ; Title:  user-details.component.ts (Week 6)
@@ -1809,29 +1807,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 let UserDetailsComponent = class UserDetailsComponent {
     constructor(route, http, fb, router) {
         this.route = route;
         this.http = http;
         this.fb = fb;
         this.router = router;
-        this.Role = '';
+        this.SelectedRole = '';
         this.userId = this.route.snapshot.paramMap.get('id');
-        console.log('userId is ' + this.userId);
         this.http.get('/api/users/' + this.userId).subscribe(res => {
-            console.log('The userId in the GET request is ' + this.userId);
             this.user = res;
-            this.userId = res['userId'];
-            this.firstName = res['firstName'];
-            this.lastName = res['lastName'];
-            this.phoneNumber = res['phoneNumber'];
-            this.address = res['address'];
-            this.email = res['email'];
-            //this.roleTitle = res['roleTitle']
-            this.selected = this.SelectedRoleTitle = res['roleTitle'];
-            console.log(this.SelectedRoleTitle);
-            console.log('This user is ' + JSON.stringify(this.user));
+            this.selected = this.SelectedRole = res['role'];
         }, err => {
             console.log(err);
         }, () => {
@@ -1840,18 +1826,11 @@ let UserDetailsComponent = class UserDetailsComponent {
             this.form.controls.phoneNumber.setValue(this.user.phoneNumber);
             this.form.controls.address.setValue(this.user.address);
             this.form.controls.email.setValue(this.user.email);
-            this.form.controls.roles.setValue(this.user.roles);
-            this.http.get('/api/roles').subscribe(res => {
+            this.http.get('api/roles').subscribe(res => {
                 this.roles = res;
-                this.roleTitle = res['roleTitle'];
-                console.table(res);
-                //console.log("roletitle is  " + this.roleTitle)
-                //console.log("role:  " + this.role);
-                //console.log("user role:  " + this.user.role);
-                //console.log("user roleTitle" + this.user.roleTitle)
-                //console.log("roles:  " + this.roles);
+                console.log(this.roles);
             }, err => {
-                console.log(util__WEBPACK_IMPORTED_MODULE_5__["error"]);
+                console.log(err);
             });
         });
     }
@@ -1862,20 +1841,20 @@ let UserDetailsComponent = class UserDetailsComponent {
             phoneNumber: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
             address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
             email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
-            roles: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])]
+            role: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])]
         });
     }
     saveUser() {
         console.log("clicked submit button");
+        console.log(this.selected);
         this.http.put('/api/users/' + this.userId, {
-            firstName: this.firstName,
-            lastName: this.lastName,
-            phoneNumber: this.phoneNumber,
-            address: this.address,
-            email: this.email,
-            roleTitle: this.roleTitle
+            firstName: this.form.controls['firstName'].value,
+            lastName: this.form.controls['lastName'].value,
+            phoneNumber: this.form.controls['phoneNumber'].value,
+            address: this.form.controls['address'].value,
+            email: this.form.controls['email'].value,
+            role: this.form.controls['role'].value
         }).subscribe(res => {
-            //localStorage.setItem('user', 'lastname');
             this.router.navigate(['/session/user-management']);
             console.log(this.user);
         });
