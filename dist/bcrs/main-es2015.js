@@ -85,7 +85,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Security Question</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addQuestionForm\" (ngSubmit)=\"addQuestion(addQuestionForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Security Question\" formControlName=\"securityQuestion\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addQuestionForm.valid\">Submit</button>\n          <button mat-raised-button color=\"warn\" onclick=\"cancel()\">Cancel</button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Security Question</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addQuestionForm\" (ngSubmit)=\"addQuestion(addQuestionForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Security Question\" formControlName=\"securityQuestion\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addQuestionForm.valid\">Submit</button>\n          <button mat-raised-button color=\"warn\" (click)=\"cancel()\">Cancel</button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -107,7 +107,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Role</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addRoleForm\" (ngSubmit)=\"addRole(addRoleForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Role\" formControlName=\"role\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addRoleForm.valid\">\n            Submit\n          </button>\n          <button mat-raised-button color=\"warn\" onclick=\"cancel()\">\n            Cancel\n          </button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Role</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addRoleForm\" (ngSubmit)=\"addRole(addRoleForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Role\" formControlName=\"role\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addRoleForm.valid\">\n            Submit\n          </button>\n          <button mat-raised-button color=\"warn\" (click)=\"cancel()\">\n            Cancel\n          </button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -155,6 +155,17 @@ module.exports = "<div class=\"container\">\n    <div class=\"message\">\n      
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/service-repair/service-repair.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/service-repair/service-repair.component.html ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  Form Value: {{ serviceForm.value | json }}\n</p>\n\n<p>\n  Form Status: {{ serviceForm.status }}\n</p>\n\n  <form [formGroup]='serviceForm' (ngSubmit)=\"onSubmit(serviceForm.value)\">\n\n    <mat-card class=\"main-card\" fxFlex=\"80%\">\n      <mat-card-content fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"0.5%\">\n        <section class=\"services-section\" fxFlex=\"50%\">\n          <h1>Services</h1>\n          <mat-card class=\"services\">\n            <mat-card-header *ngFor=\"let service of data\">\n              <div mat-card-avatar class=\"header-image\"><mat-icon>{{service.icon}}</mat-icon></div>\n              <mat-card-title>{{service.serviceText}}</mat-card-title>\n              <mat-card-subtitle>{{service.cost | currency}}</mat-card-subtitle>\n              <div fxFlex></div>\n              <mat-checkbox formControlName=\"{{service.control}}\"></mat-checkbox>\n            </mat-card-header>\n          </mat-card>\n        </section>\n\n        <section class=\"fees-section\" fxFlex=\"50%\">\n          <h1>Fees</h1>\n          <mat-form-field class=\"full-width\">\n            <input\n              name=\"parts\"\n              type=\"number\"\n              step=\"0.01\"\n              matInput\n              placeholder=\"Parts (Enter Value)\"\n              formControlName=\"parts\"\n            >\n            <mat-error\n              class=\"warn\"\n              *ngIf=\"serviceForm.controls['parts'].hasError('required') && serviceForm.controls['parts'].touched\">\n              Please enter cost for parts.\n            </mat-error>\n          </mat-form-field>\n\n          <mat-form-field class=\"full-width\">\n            <input formControlName=\"labor\" matInput placeholder=\"Labor (Enter Hours) @$50.00/hr\">\n            <mat-error\n              class=\"warn\"\n              *ngIf=\"serviceForm.controls['labor'].hasError('required') && serviceForm.controls['labor'].touched\">\n              Please enter hours for labor.\n            </mat-error>\n          </mat-form-field>\n\n          <br>\n          <button\n            color=\"primary\"\n            mat-raised-button class=\"full-width\"\n            type=\"submit\"\n            >Calculate</button>\n            <!-- <p>[disabled]=\"serviceForm.invalid\"</p> -->\n        </section>\n      </mat-card-content>\n    </mat-card>\n  </form>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/user-details/user-details.component.html":
 /*!******************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/user-details/user-details.component.html ***!
@@ -196,6 +207,17 @@ module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  
 /***/ (function(module, exports) {
 
 module.exports = "<!-- /*\n; =======================================================\n; Title: base-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div>\n  <!-- Page header -->\n  <header>\n    <!-- Toolbar -->\n    <mat-toolbar class=\"menu\" role=\"header\" style=\"color: black; background-color: white\">\n        <mat-toolbar-row>\n        <button [routerLink]=\"['/']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">BCRS</span>\n        </button>\n        <button [routerLink]=\"['/contact']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">Contact Us</span>\n        </button>\n        <button [routerLink]=\"['/about-us']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">About Us</span>\n        </button>\n        <button *ngIf=\"validated == false\" mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/login']\">\n          <span style=\"margin-left: 5px !important\">Login</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/security-questions']\">\n          <span style=\"margin-left: 5px !important\">Security Questions</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/user-management']\">\n          <span style=\"margin-left: 5px !important\">User Management</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/role-configuration']\">\n          <span style=\"margin-left: 5px !important\">Role Configuration</span>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n          <mat-icon>exit_to_app</mat-icon>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <button mat-menu-item (click)=\"userLogout()\">\n            <span>Logout</span>\n          </button>\n        </mat-menu>\n\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </header>\n</div>\n\n<!-- Main page content -->\n<main>\n  <router-outlet></router-outlet>\n</main>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/shared/invoice-dialog/invoice-dialog.component.html":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/shared/invoice-dialog/invoice-dialog.component.html ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>invoice-dialog works!</p>\n"
 
 /***/ }),
 
@@ -373,11 +395,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm2015/flex-layout.js");
 /* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! primeng/carousel */ "./node_modules/primeng/carousel.js");
 /* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_46___default = /*#__PURE__*/__webpack_require__.n(primeng_carousel__WEBPACK_IMPORTED_MODULE_46__);
-/* harmony import */ var _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./pages/role-configuration/role-configuration.component */ "./src/app/pages/role-configuration/role-configuration.component.ts");
-/* harmony import */ var _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./shared/role-delete-dialog/role-delete-dialog.component */ "./src/app/shared/role-delete-dialog/role-delete-dialog.component.ts");
-/* harmony import */ var _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./pages/role-edit/role-edit.component */ "./src/app/pages/role-edit/role-edit.component.ts");
-/* harmony import */ var _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./pages/role-add/role-add.component */ "./src/app/pages/role-add/role-add.component.ts");
-/* harmony import */ var _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./pages/question-add/question-add.component */ "./src/app/pages/question-add/question-add.component.ts");
+/* harmony import */ var _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./pages/service-repair/service-repair.component */ "./src/app/pages/service-repair/service-repair.component.ts");
+/* harmony import */ var _shared_invoice_dialog_invoice_dialog_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./shared/invoice-dialog/invoice-dialog.component */ "./src/app/shared/invoice-dialog/invoice-dialog.component.ts");
+/* harmony import */ var _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./pages/role-configuration/role-configuration.component */ "./src/app/pages/role-configuration/role-configuration.component.ts");
+/* harmony import */ var _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./shared/role-delete-dialog/role-delete-dialog.component */ "./src/app/shared/role-delete-dialog/role-delete-dialog.component.ts");
+/* harmony import */ var _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./pages/role-edit/role-edit.component */ "./src/app/pages/role-edit/role-edit.component.ts");
+/* harmony import */ var _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./pages/role-add/role-add.component */ "./src/app/pages/role-add/role-add.component.ts");
+/* harmony import */ var _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./pages/question-add/question-add.component */ "./src/app/pages/question-add/question-add.component.ts");
 /*
 ; =======================================================
 ; Title: app.module.ts (Week 6)
@@ -444,6 +468,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -468,11 +494,13 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_28__["ServerErrorComponent"],
             _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_29__["ContactComponent"],
             _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_30__["AboutUsComponent"],
-            _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_47__["RoleConfigurationComponent"],
-            _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_48__["RoleDeleteDialogComponent"],
-            _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_49__["RoleEditComponent"],
-            _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_50__["RoleAddComponent"],
-            _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_51__["QuestionAddComponent"]
+            _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_47__["ServiceRepairComponent"],
+            _shared_invoice_dialog_invoice_dialog_component__WEBPACK_IMPORTED_MODULE_48__["InvoiceDialogComponent"],
+            _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_49__["RoleConfigurationComponent"],
+            _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_50__["RoleDeleteDialogComponent"],
+            _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_51__["RoleEditComponent"],
+            _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_52__["RoleAddComponent"],
+            _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_53__["QuestionAddComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -502,7 +530,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HTTP_INTERCEPTORS"], useClass: _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_11__["ErrorInterceptor"], multi: true }],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]],
         entryComponents: [_shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_23__["UserDeleteDialogComponent"], _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_22__["QuestionEditDialogComponent"], _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_24__["QuestionDeleteDialogComponent"],
-            _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_48__["RoleDeleteDialogComponent"]]
+            _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_50__["RoleDeleteDialogComponent"]]
     })
 ], AppModule);
 
@@ -539,6 +567,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./verify-username-form/verify-username-form.component */ "./src/app/verify-username-form/verify-username-form.component.ts");
 /* harmony import */ var _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
 /* harmony import */ var _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./reset-password-form/reset-password-form.component */ "./src/app/reset-password-form/reset-password-form.component.ts");
+/* harmony import */ var _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/service-repair/service-repair.component */ "./src/app/pages/service-repair/service-repair.component.ts");
+
 
 
 
@@ -573,7 +603,7 @@ const AppRoutes = [
             { path: 'verify-security-questions', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_15__["VerifySecurityQuestionsFormComponent"] },
             { path: 'forgot-password/:username', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_15__["VerifySecurityQuestionsFormComponent"] },
             { path: 'reset-password', component: _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_18__["ResetPasswordFormComponent"] },
-            { path: 'about-us', component: _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_17__["AboutUsComponent"] }
+            { path: 'about-us', component: _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_17__["AboutUsComponent"] },
         ]
     },
     { path: 'session', component: _shared__WEBPACK_IMPORTED_MODULE_4__["SessionLayoutComponent"],
@@ -581,6 +611,8 @@ const AppRoutes = [
             { path: 'security-questions', component: _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__["SecurityQuestionsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
             { path: 'user-management', component: _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_9__["UserManagementComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
             { path: 'user-details/:id', component: _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_10__["UserDetailsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: '404', component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_7__["NotFoundComponent"] },
+            { path: 'service-repair', component: _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_19__["ServiceRepairComponent"] },
             { path: 'role-configuration', component: _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_3__["RoleConfigurationComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
             { path: 'role-edit/:id', component: _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_2__["RoleEditComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
             { path: 'role-add', component: _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_1__["RoleAddComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
@@ -1121,7 +1153,6 @@ let RegisterComponent = class RegisterComponent {
                 { questionId: securityQuestion3, answerText: answer3 }
             ]
         };
-        console.log(newUser);
         // 3. Post new user to db
         const apiBaseURL = '/api/users';
         this.http.post(apiBaseURL, newUser).subscribe(res => {
@@ -1597,6 +1628,140 @@ ServerErrorComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./server-error.component.css */ "./src/app/pages/server-error/server-error.component.css")]
     })
 ], ServerErrorComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/service-repair/service-repair.component.css":
+/*!*******************************************************************!*\
+  !*** ./src/app/pages/service-repair/service-repair.component.css ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3NlcnZpY2UtcmVwYWlyL3NlcnZpY2UtcmVwYWlyLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/pages/service-repair/service-repair.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/pages/service-repair/service-repair.component.ts ***!
+  \******************************************************************/
+/*! exports provided: ServiceRepairComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceRepairComponent", function() { return ServiceRepairComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_services_bcrs_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/services/bcrs-services.service */ "./src/app/shared/services/bcrs-services.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/*
+; =======================================================
+; Title: service repair page
+; Authors: [Tyler Armstrong], David Tarvin, Lea Trueworthy
+; Date: 05 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+
+
+
+
+
+let ServiceRepairComponent = class ServiceRepairComponent {
+    constructor(services, cookie, router, http) {
+        this.services = services;
+        this.cookie = cookie;
+        this.router = router;
+        this.http = http;
+    }
+    ngOnInit() {
+        this.services.get().subscribe(res => { this.data = res; });
+        this.serviceForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
+            passwordReset: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            spywareRemoval: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            ramUpgrade: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            softwareInstallation: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            tuneup: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            keyboardCleaning: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            discCleanup: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            parts: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
+            labor: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern('[0-9]*')]),
+            total: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            date: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]()
+        });
+    }
+    onSubmit(formValues) {
+        this.services.get().subscribe(res => { this.data = res; });
+        if (!this.serviceForm) {
+            // 1. Check if at least one service was selected.
+            return this.errorMessage = 'You must select at least one service.';
+        }
+        else {
+            // 2. Get values to build invoice
+            // user
+            console.log(this.cookie.getAll());
+            for (const key in this.data) {
+                if (this.data.hasOwnProperty(key)) {
+                    const service = this.data[key];
+                    if (service.control === 'passwordReset') {
+                        if (this.serviceForm.get('passwordReset').value) {
+                            console.log(service);
+                            // this.invoice.services.push(service);
+                        }
+                    }
+                }
+            }
+            if (this.serviceForm.get('spywareRemoval').value) {
+                this.invoice.spywareRemoval = this.data.spywareRemoval.cost;
+            }
+            const ramUpgrade = this.serviceForm.get('ramUpgrade').value;
+            const softwareInstallation = this.serviceForm.get('softwareInstallation').value;
+            const tuneup = this.serviceForm.get('tuneup').value;
+            const keyboardCleaning = this.serviceForm.get('keyboardCleaning').value;
+            const discCleanup = this.serviceForm.get('discCleanup').value;
+            const parts = this.serviceForm.get('parts').value;
+            const labor = this.serviceForm.get('labor').value;
+            const total = this.serviceForm.get('total').value;
+            // 3. Create Invoice object
+            // this.invoice = {
+            //   passwordReset,
+            //   spywareRemoval,
+            //   ramUpgrade,
+            //   softwareInstallation,
+            //   tuneup,
+            //   keyboardCleaning,
+            //   discCleanup,
+            //   parts,
+            //   labor: labor * 50
+            // };
+            // 4. Save Invoice to db
+            // 5. Open Invoice Dialog
+        }
+    }
+};
+ServiceRepairComponent.ctorParameters = () => [
+    { type: _shared_services_bcrs_services_service__WEBPACK_IMPORTED_MODULE_2__["BcrsServicesService"] },
+    { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_4__["CookieService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"] }
+];
+ServiceRepairComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-service-repair',
+        template: __webpack_require__(/*! raw-loader!./service-repair.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/service-repair/service-repair.component.html"),
+        styles: [__webpack_require__(/*! ./service-repair.component.css */ "./src/app/pages/service-repair/service-repair.component.css")]
+    })
+], ServiceRepairComponent);
 
 
 
@@ -2141,6 +2306,57 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/app/shared/invoice-dialog/invoice-dialog.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/shared/invoice-dialog/invoice-dialog.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9pbnZvaWNlLWRpYWxvZy9pbnZvaWNlLWRpYWxvZy5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/shared/invoice-dialog/invoice-dialog.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/shared/invoice-dialog/invoice-dialog.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: InvoiceDialogComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvoiceDialogComponent", function() { return InvoiceDialogComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/*
+; =======================================================
+; Title: invoice dialog
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 5 Nov 19
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+let InvoiceDialogComponent = class InvoiceDialogComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+InvoiceDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-invoice-dialog',
+        template: __webpack_require__(/*! raw-loader!./invoice-dialog.component.html */ "./node_modules/raw-loader/index.js!./src/app/shared/invoice-dialog/invoice-dialog.component.html"),
+        styles: [__webpack_require__(/*! ./invoice-dialog.component.css */ "./src/app/shared/invoice-dialog/invoice-dialog.component.css")]
+    })
+], InvoiceDialogComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/question-delete-dialog/question-delete-dialog.component.css":
 /*!************************************************************************************!*\
   !*** ./src/app/shared/question-delete-dialog/question-delete-dialog.component.css ***!
@@ -2415,6 +2631,44 @@ ErrorInterceptor.ctorParameters = () => [
 ErrorInterceptor = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Injectable"])()
 ], ErrorInterceptor);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/services/bcrs-services.service.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/shared/services/bcrs-services.service.ts ***!
+  \**********************************************************/
+/*! exports provided: BcrsServicesService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BcrsServicesService", function() { return BcrsServicesService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+let BcrsServicesService = class BcrsServicesService {
+    constructor(http) {
+        this.http = http;
+    }
+    get() {
+        const apiURL = `/api/services`;
+        return this.http.get(apiURL);
+    }
+};
+BcrsServicesService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+BcrsServicesService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], BcrsServicesService);
 
 
 
