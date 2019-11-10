@@ -15,7 +15,7 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-
+import * as moment from 'moment';
 @Component({
   selector: 'app-service-repair',
   templateUrl: './service-repair.component.html',
@@ -25,17 +25,26 @@ export class ServiceRepairComponent implements OnInit {
   errorMessage: string;
   data: any;
   serviceForm: FormGroup;
-  invoice: any;
+
+  invoice = {
+    dateCreated: '',
+    services: [{}],
+    partsCost: 0,
+    laborHrs: 0,
+    totalCost: 0,
+    user: ''
+  };
 
   constructor(
-    private services: BcrsServicesService,
+    private bcrsServices: BcrsServicesService,
     private cookie: CookieService,
     private router: Router,
-    private http: HttpClient) { }
+    private http: HttpClient,
+  ) { }
 
   ngOnInit() {
 
-    this.services.get().subscribe(res => { this.data = res; });
+    this.bcrsServices.get().subscribe(res => { this.data = res; });
 
     this.serviceForm = new FormGroup({
       passwordReset: new FormControl(),
@@ -45,72 +54,121 @@ export class ServiceRepairComponent implements OnInit {
       tuneup: new FormControl(),
       keyboardCleaning: new FormControl(),
       discCleanup: new FormControl(),
-      parts: new FormControl([Validators.required]),
-      labor: new FormControl([Validators.required, Validators.pattern('[0-9]*')]),
-      total: new FormControl(),
-      date: new FormControl()
+      parts: new FormControl(null, [Validators.required]),
+      labor: new FormControl(null, [Validators.required, Validators.pattern('[0-9]*')])
     });
   }
 
   onSubmit(formValues) {
 
-    this.services.get().subscribe(res => { this.data = res; });
+    this.bcrsServices.get().subscribe(res => { this.data = res; });
 
-    if (!this.serviceForm) {
-      // 1. Check if at least one service was selected.
-      return this.errorMessage = 'You must select at least one service.';
-    } else {
-      // 2. Get values to build invoice
+    const selectedServices = [];
+    let sum = 0;
 
-      // user
-      console.log(this.cookie.getAll());
+    // * 2. Get values to build invoice
+    // user
+    const cookies = this.cookie.getAll();
 
-      for (const key in this.data) {
-        if (this.data.hasOwnProperty(key)) {
-          const service = this.data[key];
+    if (!this.cookie.check) {
+        this.router.navigate(['/']);
+      }
 
-          if (service.control === 'passwordReset') {
-            if (this.serviceForm.get('passwordReset').value) {
-              console.log(service);
-              // this.invoice.services.push(service);
-            }
-          }
-
+    for (const key in cookies) {
+      if (cookies.hasOwnProperty(key)) {
+        if (key !== 'isAuthenticated') {
+          this.invoice.user = key;
         }
       }
-
-
-
-      if (this.serviceForm.get('spywareRemoval').value) {
-        this.invoice.spywareRemoval = this.data.spywareRemoval.cost;
-      }
-
-      const ramUpgrade = this.serviceForm.get('ramUpgrade').value;
-      const softwareInstallation = this.serviceForm.get('softwareInstallation').value;
-      const tuneup = this.serviceForm.get('tuneup').value;
-      const keyboardCleaning = this.serviceForm.get('keyboardCleaning').value;
-      const discCleanup = this.serviceForm.get('discCleanup').value;
-      const parts = this.serviceForm.get('parts').value;
-      const labor = this.serviceForm.get('labor').value;
-      const total = this.serviceForm.get('total').value;
-
-      // 3. Create Invoice object
-      // this.invoice = {
-      //   passwordReset,
-      //   spywareRemoval,
-      //   ramUpgrade,
-      //   softwareInstallation,
-      //   tuneup,
-      //   keyboardCleaning,
-      //   discCleanup,
-      //   parts,
-      //   labor: labor * 50
-      // };
-
-      // 4. Save Invoice to db
-
-      // 5. Open Invoice Dialog
-
     }
+
+      // Services
+    for (const key in this.data) {
+      if (this.data.hasOwnProperty(key)) {
+        const service = this.data[key];
+
+        if (service.control === 'passwordReset') {
+          if (this.serviceForm.get('passwordReset').value) {
+            selectedServices.push(service);
+          }
+        }
+
+        if (service.control === 'spywareRemoval') {
+          if (this.serviceForm.get('spywareRemoval').value) {
+            selectedServices.push(service);
+          }
+        }
+
+        if (service.control === 'ramUpgrade') {
+          if (this.serviceForm.get('ramUpgrade').value) {
+            selectedServices.push(service);
+          }
+        }
+
+        if (service.control === 'softwareInstallation') {
+          if (this.serviceForm.get('softwareInstallation').value) {
+            selectedServices.push(service);
+          }
+        }
+
+        if (service.control === 'tuneup') {
+          if (this.serviceForm.get('tuneup').value) {
+            selectedServices.push(service);
+          }
+        }
+
+        if (service.control === 'keyboardCleaning') {
+          if (this.serviceForm.get('keyboardCleaning').value) {
+            selectedServices.push(service);
+          }
+        }
+
+        if (service.control === 'discCleanup') {
+          if (this.serviceForm.get('discCleanup').value) {
+            selectedServices.push(service);
+          }
+        }
+
+      }
+    }
+
+    this.invoice.services = selectedServices;
+
+    // Date
+    this.invoice.dateCreated = moment().format('DD-MMM-YYYY');
+
+    // Parts & Labor
+    const parts = this.serviceForm.get('parts').value;
+    this.invoice.partsCost = parts;
+    const labor = this.serviceForm.get('labor').value * 50;
+    this.invoice.laborHrs = labor;
+
+    // Total Cost
+    selectedServices.forEach(service => {
+      sum += service.cost;
+    });
+
+    sum += this.invoice.partsCost;
+    sum += this.invoice.laborHrs;
+    this.invoice.totalCost = sum;
+
+    console.log(this.invoice);
+
+    // * 3. Save invoice to db.
+    const apiBaseURL = '/api/invoices';
+    const newInvoice = this.invoice;
+
+    this.http.post(apiBaseURL, newInvoice).subscribe(res => {
+      if (res) {
+        console.log('Invoice Posted');
+      } else {
+        this.errorMessage = 'Something went wrong.';
+        console.log(`Error: ${this.errorMessage}`);
+      }
+    });
+
+    // * 4. Open Invoice dialog
+
+
   }
 }

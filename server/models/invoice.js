@@ -13,17 +13,12 @@
 const mongoose = require('mongoose');
 
 const invoiceSchema = mongoose.Schema({
-  date_created: { type: Date, required: true, default: new Date() },
-  services: [ // i corrected this because arrays should be pluralized for industry standard best practices
-    {
-      description: { type: String },
-      cost: { type: Number },
-    },
-  ],
+  dateCreated: { type: Date, required: true },
+  services: Array,
   partsCost: { type: Number },
   laborHrs: { type: Number },
   totalCost: { type: Number },
-  userId: { type: String, required: true },
+  user: { type: String, required: true },
 },
 {
   collection: 'invoices',
