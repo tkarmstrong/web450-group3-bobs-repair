@@ -1,3 +1,5 @@
+import { QuestionAddComponent } from './pages/question-add/question-add.component';
+import { RoleAddComponent } from './pages/role-add/role-add.component';
 import { RoleEditComponent } from './pages/role-edit/role-edit.component';
 import { RoleConfigurationComponent } from './pages/role-configuration/role-configuration.component';
 /*
@@ -57,6 +59,8 @@ export const AppRoutes: Routes = [
       { path: 'service-repair', component: ServiceRepairComponent },
       { path: 'role-configuration', component: RoleConfigurationComponent, canActivate: [AuthGuardService]},
       { path: 'role-edit/:id', component: RoleEditComponent, canActivate: [AuthGuardService]},
+      { path: 'role-add', component: RoleAddComponent, canActivate: [AuthGuardService]},
+      { path: 'question-add', component: QuestionAddComponent, canActivate: [AuthGuardService]},
       { path: '404', component: NotFoundComponent }
     ]
   },

@@ -70,9 +70,9 @@ db.once('open', () => {
 // User CRUD Operations
 
 // Create new user.
-app.post('/api/users/', function(req, res, next) {
+app.post('/api/users/', function (req, res, next) {
   let saltRounds = 10;
-  User.findOne({'username': req.body.username}, function(err, user) {
+  User.findOne({ 'username': req.body.username }, function (err, user) {
     if (err) {
       console.log(err);
       return next(err);
@@ -93,7 +93,7 @@ app.post('/api/users/', function(req, res, next) {
           selectedSecurityQuestions: req.body.selectedSecurityQuestions,
           dateCreated: req.body.dateCreated
         }
-        User.create(u, function(err, newUser) {
+        User.create(u, function (err, newUser) {
           if (err) {
             console.log(err);
             return next(err);
@@ -145,18 +145,6 @@ app.post("/api/login", (req, res, next) => {
     });
 });
 
-// Read one user by id.
-app.get('/api/users/:id', (req, res, next) => {
-  User.findOne({ '_id': req.params.id }, (err, user) => {
-    if (err) {
-      console.log(err);
-      return next(err);
-    }
-    console.log(user);
-    return res.json(user);
-  });
-});
-
 // Read one user by username.
 app.get('/api/users/username/:username', (req, res, next) => {
   User.findOne({ 'username': req.params.username }, (err, user) => {
@@ -170,21 +158,34 @@ app.get('/api/users/username/:username', (req, res, next) => {
 });
 
 // Read for all users.
-app.get('/api/users', (req, res, next) => {
+app.get('/api/users/', (req, res, next) => {
   User.find({}, (err, users) => {
     if (err) {
       console.log(err);
       return next(err);
-    }
+    } else{
     console.log(users);
-    return res.json(users);
+    res.json(users);
+    }
+  });
+});
+// Read one user by id.
+app.get('/api/users/:id', (req, res, next) => {
+  User.findOne({ '_id': req.params.id }, function (err, user) {
+    console.log('this is a message inside the app get one id on app')
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+    console.log(user);
+    res.json(user);
+    }
   });
 });
 
-
-// Update user
-app.put('/api/users/update/:id', (req, res, next) => {
-  User.findOne({'_id': req.params.id}, (err, user) => {
+// Update one user
+app.put('/api/users/:id', (req, res, next) => {
+  User.findOne({ '_id': req.params.id }, function (err, user){
     console.log(user);
     if (err) {
       console.log(err);
@@ -198,10 +199,11 @@ app.put('/api/users/update/:id', (req, res, next) => {
         lastName: req.body.lastName,
         phoneNumber: req.body.phoneNumber,
         address: req.body.address,
-        email: req.body.email
-      })
+        email: req.body.email,
+        role: req.body.role
+      });
 
-      user.save((err, savedUser) => {
+      user.save(function (err, savedUser) {
         if (err) {
           console.log(err);
           return next(err);
@@ -212,11 +214,11 @@ app.put('/api/users/update/:id', (req, res, next) => {
       })
     }
   })
-})
+});
 
 // Delete user
 app.delete('/api/users/:id', (req, res, next) => {
-  User.findByIdAndDelete({'_id': req.params.id}, (err, user) => {
+  User.findByIdAndDelete({ '_id': req.params.id }, (err, user) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -230,8 +232,8 @@ app.delete('/api/users/:id', (req, res, next) => {
 
 // Forgot Password Operations
 // Verify username
-app.get('/api/verify/users/:username', function(req, res, next) {
-  User.findOne({'username': req.params.username}, function(err, user) {
+app.get('/api/verify/users/:username', function (req, res, next) {
+  User.findOne({ 'username': req.params.username }, function (err, user) {
     if (err) {
       console.log(err);
       return next(err)
@@ -243,8 +245,8 @@ app.get('/api/verify/users/:username', function(req, res, next) {
 })
 
 // Verify security questions
-app.get('/api/verify/users/:username/security-questions', function(req, res, next) {
-  User.findOne({'username': req.params.username}, function(err, user) {
+app.get('/api/verify/users/:username/security-questions', function (req, res, next) {
+  User.findOne({ 'username': req.params.username }, function (err, user) {
     if (err) {
       console.log(err);
       return next(err)
@@ -255,7 +257,7 @@ app.get('/api/verify/users/:username/security-questions', function(req, res, nex
   })
 })
 
-app.post('/api/verify/users/:username/security-questions', function(req, res, next) {
+app.post('/api/verify/users/:username/security-questions', function (req, res, next) {
   const answerToSecurityQuestion1 = req.body.answerToSecurityQuestion1;
   console.log('The answer to Security Question 1 is ' + answerToSecurityQuestion1);
 
@@ -265,7 +267,7 @@ app.post('/api/verify/users/:username/security-questions', function(req, res, ne
   const answerToSecurityQuestion3 = req.body.answerToSecurityQuestion3;
   console.log('The answer to Security Question 3 is ' + answerToSecurityQuestion3);
 
-  User.findOne({'username': req.params.username}, function(err, user) {
+  User.findOne({ 'username': req.params.username }, function (err, user) {
     if (err) {
       console.log(err);
       return next(err);
@@ -297,10 +299,10 @@ app.post('/api/verify/users/:username/security-questions', function(req, res, ne
 });
 
 // Reset password
-app.post('/api/users/:username/reset-password', function(req, res, next) {
+app.post('/api/users/:username/reset-password', function (req, res, next) {
   const password = req.body.password;
 
-  User.findOne({'username': req.params.username}, function (err, user) {
+  User.findOne({ 'username': req.params.username }, function (err, user) {
     if (err) {
       console.log(err);
       return next(err);
@@ -313,7 +315,7 @@ app.post('/api/users/:username/reset-password', function(req, res, next) {
         password: hashedPassword
       });
 
-      user.save(function(err, user) {
+      user.save(function (err, user) {
         if (err) {
           console.log(err);
           return next(err);
@@ -371,7 +373,7 @@ app.get('/api/roles', (req, res, next) => {
 
 // Update role
 app.put('/api/roles/update/:id', (req, res, next) => {
-  Role.findOne({'_id': req.params.id}, (err, role) => {
+  Role.findOne({ '_id': req.params.id }, (err, role) => {
     console.log(role);
     if (err) {
       console.log(err);
@@ -399,7 +401,7 @@ app.put('/api/roles/update/:id', (req, res, next) => {
 
 // Delete role
 app.delete('/api/roles/:id', (req, res, next) => {
-  Role.findByIdAndDelete({'_id': req.params.id}, (err, role) => {
+  Role.findByIdAndDelete({ '_id': req.params.id }, (err, role) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -453,7 +455,7 @@ app.get('/api/security-questions', (req, res, next) => {
 
 // Update security question
 app.put('/api/security-questions/update/:id', (req, res, next) => {
-  SecurityQuestion.findOne({'_id': req.params.id}, (err, securityQuestion) => {
+  SecurityQuestion.findOne({ '_id': req.params.id }, (err, securityQuestion) => {
     console.log(securityQuestion);
     if (err) {
       console.log(err);
@@ -479,18 +481,18 @@ app.put('/api/security-questions/update/:id', (req, res, next) => {
   })
 })
 
-app.post('/api/security-questions/find-by-ids', function(req, res, next) {
+app.post('/api/security-questions/find-by-ids', function (req, res, next) {
   const question1 = req.body.question1;
   const question2 = req.body.question2;
   const question3 = req.body.question3;
 
   SecurityQuestion.find({
     $or: [
-      {'_id': question1},
-      {'_id': question2},
-      {'_id': question3}
+      { '_id': question1 },
+      { '_id': question2 },
+      { '_id': question3 }
     ]
-  }).exec(function(err, securityQuestions ) {
+  }).exec(function (err, securityQuestions) {
     if (err) {
       console.log(err);
       return next(err);
@@ -503,7 +505,7 @@ app.post('/api/security-questions/find-by-ids', function(req, res, next) {
 
 // Delete role
 app.delete('/api/security-questions/:id', (req, res, next) => {
-  SecurityQuestion.findByIdAndDelete({'_id': req.params.id}, (err, securityQuestion) => {
+  SecurityQuestion.findByIdAndDelete({ '_id': req.params.id }, (err, securityQuestion) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -563,7 +565,7 @@ app.get('/api/invoices', (req, res, next) => {
 
 // Update invoice
 app.put('/api/invoices/update/:id', (req, res, next) => {
-  Invoice.findOne({'_id': req.params.id}, (err, invoice) => {
+  Invoice.findOne({ '_id': req.params.id }, (err, invoice) => {
     console.log(invoice);
     if (err) {
       console.log(err);
@@ -596,7 +598,7 @@ app.put('/api/invoices/update/:id', (req, res, next) => {
 
 // Delete invoice
 app.delete('/api/invoices/:id', (req, res, next) => {
-  Invoice.findByIdAndDelete({'_id': req.params.id}, (err, invoice) => {
+  Invoice.findByIdAndDelete({ '_id': req.params.id }, (err, invoice) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -652,7 +654,7 @@ app.get('/api/services', (req, res, next) => {
 
 // Update service
 app.put('/api/services/update/:id', (req, res, next) => {
-  Service.findOne({'_id': req.params.id}, (err, service) => {
+  Service.findOne({ '_id': req.params.id }, (err, service) => {
     console.log(service);
     if (err) {
       console.log(err);
@@ -681,7 +683,7 @@ app.put('/api/services/update/:id', (req, res, next) => {
 
 // Delete service
 app.delete('/api/services/:id', (req, res, next) => {
-  Service.findByIdAndDelete({'_id': req.params.id}, (err, service) => {
+  Service.findByIdAndDelete({ '_id': req.params.id }, (err, service) => {
     if (err) {
       console.log(err);
       return next(err);

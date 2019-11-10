@@ -41,7 +41,7 @@
 
           <mat-form-field>
             <select [(value)]="selectedRoleTitle" matNativeControl [(ngModel)]="Role"
-              [ngModelOptions]="{standalone: true}" placeholder="Role">
+            [formControl]="form.controls['role']" placeholder="Role">
               <option *ngFor="let role of roles" value= {{role.roleTitle}}>{{role.roleTitle}}</option>
             </select>
           </mat-form-field>
