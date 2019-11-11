@@ -521,9 +521,9 @@ app.delete('/api/security-questions/:id', (req, res, next) => {
 // Create new invoice.
 app.post('/api/invoices', (req, res, next) => {
   const invoice = {
-    userId: req.body.userId,
-    dateCreated: req.body.date_created,
-    services: [],
+    user: req.body.user,
+    dateCreated: req.body.dateCreated,
+    services: req.body.services,
     partsCost: req.body.partsCost,
     laborHrs: req.body.laborHrs,
     totalCost: req.body.totalCost,
@@ -540,8 +540,8 @@ app.post('/api/invoices', (req, res, next) => {
 });
 
 // Read one invoice by id.
-app.get('api/invoices/:id', (req, res, next) => {
-  Role.findOne({ invoiceId: req.params.id }, (err, invoice) => {
+app.get('/api/invoices/:id', (req, res, next) => {
+  Invoice.findOne({ invoiceId: req.params.id }, (err, invoice) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -553,7 +553,7 @@ app.get('api/invoices/:id', (req, res, next) => {
 
 // Read for all invoices.
 app.get('/api/invoices', (req, res, next) => {
-  Role.find({}, (err, invoices) => {
+  Invoice.find({}, (err, invoices) => {
     if (err) {
       console.log(err);
       return next(err);
@@ -575,7 +575,7 @@ app.put('/api/invoices/update/:id', (req, res, next) => {
       console.log(invoice);
 
       invoice.set({
-        userId: req.body.userId,
+        user: req.body.user,
         dateCreated: req.body.date_created,
         services: [],
         partsCost: req.body.partsCost,
