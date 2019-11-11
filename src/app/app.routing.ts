@@ -1,3 +1,5 @@
+import { QuestionAddComponent } from './pages/question-add/question-add.component';
+import { RoleAddComponent } from './pages/role-add/role-add.component';
 import { RoleEditComponent } from './pages/role-edit/role-edit.component';
 import { RoleConfigurationComponent } from './pages/role-configuration/role-configuration.component';
 /*
@@ -26,6 +28,7 @@ import { VerifySecurityQuestionsFormComponent } from './verify-security-question
 import { VerifyUsernameFormComponent } from './verify-username-form/verify-username-form.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
+import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
 
 
 export const AppRoutes: Routes = [
@@ -43,7 +46,8 @@ export const AppRoutes: Routes = [
       { path: 'verify-security-questions', component: VerifySecurityQuestionsFormComponent},
       { path: 'forgot-password/:username', component: VerifySecurityQuestionsFormComponent},
       { path: 'reset-password', component: ResetPasswordFormComponent},
-      { path: 'about-us', component: AboutUsComponent }
+      { path: 'about-us', component: AboutUsComponent },
+
     ]
   },
   { path: 'session', component: SessionLayoutComponent,
@@ -51,8 +55,12 @@ export const AppRoutes: Routes = [
       { path: 'security-questions', component: SecurityQuestionsComponent, canActivate: [AuthGuardService] },
       { path: 'user-management', component: UserManagementComponent, canActivate: [AuthGuardService] },
       { path: 'user-details/:id', component: UserDetailsComponent, canActivate: [AuthGuardService]},
+      { path: '404', component: NotFoundComponent },
+      { path: 'service-repair', component: ServiceRepairComponent },
       { path: 'role-configuration', component: RoleConfigurationComponent, canActivate: [AuthGuardService]},
       { path: 'role-edit/:id', component: RoleEditComponent, canActivate: [AuthGuardService]},
+      { path: 'role-add', component: RoleAddComponent, canActivate: [AuthGuardService]},
+      { path: 'question-add', component: QuestionAddComponent, canActivate: [AuthGuardService]},
       { path: '404', component: NotFoundComponent }
     ]
   },
