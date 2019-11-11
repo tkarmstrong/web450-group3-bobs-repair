@@ -28,7 +28,7 @@ export class ServiceRepairComponent implements OnInit {
 
   invoice = {
     dateCreated: '',
-    services: [{}],
+    services: [],
     partsCost: 0,
     laborHrs: 0,
     totalCost: 0,
@@ -89,43 +89,59 @@ export class ServiceRepairComponent implements OnInit {
 
         if (service.control === 'passwordReset') {
           if (this.serviceForm.get('passwordReset').value) {
-            selectedServices.push(service);
+            console.log(service.serviceText);
+            console.log(service.cost);
+            selectedServices.push(
+              {serviceText: service.serviceText, cost: service.cost}
+            );
           }
         }
 
         if (service.control === 'spywareRemoval') {
           if (this.serviceForm.get('spywareRemoval').value) {
-            selectedServices.push(service);
+            selectedServices.push(
+              {serviceText: service.serviceText, cost: service.cost}
+            );
           }
         }
 
         if (service.control === 'ramUpgrade') {
           if (this.serviceForm.get('ramUpgrade').value) {
-            selectedServices.push(service);
+            selectedServices.push(
+              {serviceText: service.serviceText, cost: service.cost}
+            );
           }
         }
 
         if (service.control === 'softwareInstallation') {
           if (this.serviceForm.get('softwareInstallation').value) {
-            selectedServices.push(service);
+            selectedServices.push(
+              {serviceText: service.serviceText, cost: service.cost}
+            );
           }
         }
 
         if (service.control === 'tuneup') {
           if (this.serviceForm.get('tuneup').value) {
-            selectedServices.push(service);
+            selectedServices.push(
+              {serviceText: service.serviceText, cost: service.cost}
+            );
           }
         }
 
         if (service.control === 'keyboardCleaning') {
           if (this.serviceForm.get('keyboardCleaning').value) {
-            selectedServices.push(service);
+            selectedServices.push(
+              {serviceText: service.serviceText, cost: service.cost}
+            );
           }
         }
 
         if (service.control === 'discCleanup') {
           if (this.serviceForm.get('discCleanup').value) {
-            selectedServices.push(service);
+            selectedServices.push(
+              {serviceText: service.serviceText, cost: service.cost}
+            );
           }
         }
 
@@ -150,7 +166,7 @@ export class ServiceRepairComponent implements OnInit {
 
     sum += this.invoice.partsCost;
     sum += this.invoice.laborHrs;
-    this.invoice.totalCost = sum;
+    this.invoice.totalCost = parseFloat(sum.toFixed(2));
 
     console.log(this.invoice);
 
@@ -160,7 +176,7 @@ export class ServiceRepairComponent implements OnInit {
 
     this.http.post(apiBaseURL, newInvoice).subscribe(res => {
       if (res) {
-        console.log('Invoice Posted');
+        console.log(newInvoice);
       } else {
         this.errorMessage = 'Something went wrong.';
         console.log(`Error: ${this.errorMessage}`);

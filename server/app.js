@@ -523,7 +523,7 @@ app.post('/api/invoices', (req, res, next) => {
   const invoice = {
     user: req.body.user,
     dateCreated: req.body.dateCreated,
-    services: [],
+    services: req.body.services,
     partsCost: req.body.partsCost,
     laborHrs: req.body.laborHrs,
     totalCost: req.body.totalCost,

@@ -14,7 +14,10 @@ const mongoose = require('mongoose');
 
 const invoiceSchema = mongoose.Schema({
   dateCreated: { type: Date, required: true },
-  services: Array,
+  services: [{
+    serviceText: String,
+    cost: Number
+  }],
   partsCost: { type: Number },
   laborHrs: { type: Number },
   totalCost: { type: Number },
