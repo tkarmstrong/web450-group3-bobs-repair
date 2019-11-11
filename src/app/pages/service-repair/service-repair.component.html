@@ -1,11 +1,3 @@
-<p>
-  Form Value: {{ serviceForm.value | json }}
-</p>
-
-<p>
-  Form Status: {{ serviceForm.status }}
-</p>
-
   <form *ngIf="data" [formGroup]='serviceForm' (ngSubmit)="onSubmit(serviceForm.value)">
 
     <mat-card class="main-card" fxFlex="80%">
@@ -63,7 +55,6 @@
             type="submit"
             [disabled]="serviceForm.invalid"
             >Calculate</button>
-            <!-- <p></p> -->
         </section>
       </mat-card-content>
     </mat-card>

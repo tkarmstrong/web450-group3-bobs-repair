@@ -8,8 +8,6 @@
 ; =======================================================
 */
 
-/* eslint-disable max-len */
-
 const mongoose = require('mongoose');
 
 const invoiceSchema = mongoose.Schema({

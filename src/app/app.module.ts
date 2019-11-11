@@ -125,10 +125,19 @@ import { QuestionAddComponent } from './pages/question-add/question-add.componen
     MatListModule,
     CarouselModule
   ],
-  providers: [CookieService, AuthGuardService, RoleGuard,
-              {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}],
+  providers: [
+    CookieService,
+    AuthGuardService,
+    RoleGuard,
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent],
-  entryComponents: [UserDeleteDialogComponent, QuestionEditDialogComponent, QuestionDeleteDialogComponent,
-                    RoleDeleteDialogComponent]
+  entryComponents: [
+    UserDeleteDialogComponent,
+    QuestionEditDialogComponent,
+    QuestionDeleteDialogComponent,
+    RoleDeleteDialogComponent,
+    InvoiceDialogComponent
+  ]
 })
 export class AppModule { }

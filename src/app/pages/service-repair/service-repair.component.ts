@@ -16,6 +16,9 @@ import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
+import { InvoiceDialogComponent } from '../../shared/invoice-dialog/invoice-dialog.component';
+import { MatDialog } from '@angular/material';
+
 @Component({
   selector: 'app-service-repair',
   templateUrl: './service-repair.component.html',
@@ -40,6 +43,7 @@ export class ServiceRepairComponent implements OnInit {
     private cookie: CookieService,
     private router: Router,
     private http: HttpClient,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit() {
@@ -93,8 +97,6 @@ export class ServiceRepairComponent implements OnInit {
 
         if (service.control === 'passwordReset') {
           if (this.serviceForm.get('passwordReset').value) {
-            console.log(service.serviceText);
-            console.log(service.cost);
             selectedServices.push(
               {serviceText: service.serviceText, cost: service.cost}
             );
@@ -151,7 +153,7 @@ export class ServiceRepairComponent implements OnInit {
 
       }
     }
-    console.log('The selected services are: ' + selectedServices);
+
     this.invoice.services = selectedServices;
 
     // Date
@@ -172,7 +174,6 @@ export class ServiceRepairComponent implements OnInit {
     sum += this.invoice.laborHrs;
     this.invoice.totalCost = parseFloat(sum.toFixed(2));
 
-    console.log(this.invoice);
 
     // * 3. Save invoice to db.
     const apiBaseURL = '/api/invoices';
@@ -180,7 +181,7 @@ export class ServiceRepairComponent implements OnInit {
 
     this.http.post(apiBaseURL, newInvoice).subscribe(res => {
       if (res) {
-        console.log(newInvoice);
+        console.log('Invoice added to db.');
       } else {
         this.errorMessage = 'Something went wrong.';
         console.log(`Error: ${this.errorMessage}`);
@@ -188,7 +189,14 @@ export class ServiceRepairComponent implements OnInit {
     });
 
     // * 4. Open Invoice dialog
+    const dialogRef = this.dialog.open(InvoiceDialogComponent, {
+      width: '80%',
+      height: '600px',
+      data: this.invoice
+    });
 
+    // 5. Reload page
+    dialogRef.afterClosed().subscribe(result => { location.reload(); });
 
   }
 }
