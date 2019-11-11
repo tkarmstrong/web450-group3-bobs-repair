@@ -42,6 +42,14 @@ import { ResetPasswordFormComponent } from './reset-password-form/reset-password
 import { ServerErrorComponent } from './pages/server-error/server-error.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
+import { InvoiceDialogComponent } from './shared/invoice-dialog/invoice-dialog.component';
+import { RoleConfigurationComponent } from './pages/role-configuration/role-configuration.component';
+import { RoleDeleteDialogComponent } from './shared/role-delete-dialog/role-delete-dialog.component';
+import { RoleEditComponent } from './pages/role-edit/role-edit.component';
+import { RoleAddComponent } from './pages/role-add/role-add.component';
+import { QuestionAddComponent } from './pages/question-add/question-add.component';
+import { PurchaseByServiceComponent } from './pages/purchase-by-service/purchase-by-service.component';
 
 // Material
 import { MatCardModule } from '@angular/material/card';
@@ -64,13 +72,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 // PrimeNg
 import { CarouselModule } from 'primeng/carousel';
-import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
-import { InvoiceDialogComponent } from './shared/invoice-dialog/invoice-dialog.component';
-import { RoleConfigurationComponent } from './pages/role-configuration/role-configuration.component';
-import { RoleDeleteDialogComponent } from './shared/role-delete-dialog/role-delete-dialog.component';
-import { RoleEditComponent } from './pages/role-edit/role-edit.component';
-import { RoleAddComponent } from './pages/role-add/role-add.component';
-import { QuestionAddComponent } from './pages/question-add/question-add.component';
 
 @NgModule({
   declarations: [
@@ -99,7 +100,8 @@ import { QuestionAddComponent } from './pages/question-add/question-add.componen
     RoleDeleteDialogComponent,
     RoleEditComponent,
     RoleAddComponent,
-    QuestionAddComponent
+    QuestionAddComponent,
+    PurchaseByServiceComponent
   ],
   imports: [
     BrowserModule,

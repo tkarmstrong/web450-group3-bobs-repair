@@ -61,7 +61,8 @@ export const AppRoutes: Routes = [
       { path: 'role-edit/:id', component: RoleEditComponent, canActivate: [AuthGuardService]},
       { path: 'role-add', component: RoleAddComponent, canActivate: [AuthGuardService]},
       { path: 'question-add', component: QuestionAddComponent, canActivate: [AuthGuardService]},
-      { path: '404', component: NotFoundComponent }
+      { path: '404', component: NotFoundComponent },
+      { path: 'service-repair', component: ServiceRepairComponent }
     ]
   },
   { path: '**', redirectTo: 'session/404' }
