@@ -28,7 +28,7 @@ export class ServiceRepairComponent implements OnInit {
 
   invoice = {
     dateCreated: '',
-    services: [{}],
+    selectedServices: [],
     partsCost: 0,
     laborHrs: 0,
     totalCost: 0,
@@ -44,7 +44,9 @@ export class ServiceRepairComponent implements OnInit {
 
   ngOnInit() {
 
-    this.bcrsServices.get().subscribe(res => { this.data = res; });
+    this.bcrsServices.get().subscribe(res => {
+      this.data = res;
+    });
 
     this.serviceForm = new FormGroup({
       passwordReset: new FormControl(),
@@ -61,7 +63,9 @@ export class ServiceRepairComponent implements OnInit {
 
   onSubmit(formValues) {
 
-    this.bcrsServices.get().subscribe(res => { this.data = res; });
+    this.bcrsServices.get().subscribe(res => {
+      this.data = res;
+    });
 
     const selectedServices = [];
     let sum = 0;
@@ -131,8 +135,8 @@ export class ServiceRepairComponent implements OnInit {
 
       }
     }
-
-    this.invoice.services = selectedServices;
+    console.log('The selected services are: ' + selectedServices);
+    this.invoice.selectedServices = selectedServices;
 
     // Date
     this.invoice.dateCreated = moment().format('DD-MMM-YYYY');

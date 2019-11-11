@@ -12,9 +12,15 @@
 
 const mongoose = require('mongoose');
 
+const selectedServices = mongoose.Schema({
+  serviceId: { type: String },
+  serviceText: { type: String },
+  cost: { type: Number }
+})
+
 const invoiceSchema = mongoose.Schema({
   dateCreated: { type: Date, required: true },
-  services: Array,
+  selectedServices: [selectedServices],
   partsCost: { type: Number },
   laborHrs: { type: Number },
   totalCost: { type: Number },
