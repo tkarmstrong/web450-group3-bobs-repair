@@ -8,6 +8,8 @@ import { Injectable } from '@angular/core';
 @Injectable({providedIn: 'root'})
 export class RoleGuard implements CanActivate {
 
+  user: any;
+
   constructor(
     private router: Router,
     private http: HttpClient,
@@ -17,7 +19,8 @@ export class RoleGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     return this.getRole().pipe(map(res => {
       console.log(res);
-      if (res === 'admin') {
+      this.user = res;
+      if (this.user.role === 'admin') {
         return true;
       } else {
         this.router.navigate(['/']);

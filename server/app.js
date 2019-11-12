@@ -298,6 +298,19 @@ app.post('/api/verify/users/:username/security-questions', function (req, res, n
   })
 });
 
+// Get user's role for Purchases By Service graph
+app.get('/api/users/:username/role', function (req, res, next) {
+  User.findOne({ 'username': req.params.username }, function (err, user) {
+    if (err) {
+      console.log(err);
+      return next(err)
+    } else {
+      console.log(user);
+      res.json(user);
+    }
+  })
+})
+
 // Reset password
 app.post('/api/users/:username/reset-password', function (req, res, next) {
   const password = req.body.password;
