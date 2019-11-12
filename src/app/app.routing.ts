@@ -1,7 +1,3 @@
-import { QuestionAddComponent } from './pages/question-add/question-add.component';
-import { RoleAddComponent } from './pages/role-add/role-add.component';
-import { RoleEditComponent } from './pages/role-edit/role-edit.component';
-import { RoleConfigurationComponent } from './pages/role-configuration/role-configuration.component';
 /*
 ; =======================================================
 ; Title: app.routing.ts (Week 6)
@@ -12,6 +8,10 @@ import { RoleConfigurationComponent } from './pages/role-configuration/role-conf
 ; =======================================================
 */
 
+import { QuestionAddComponent } from './pages/question-add/question-add.component';
+import { RoleAddComponent } from './pages/role-add/role-add.component';
+import { RoleEditComponent } from './pages/role-edit/role-edit.component';
+import { RoleConfigurationComponent } from './pages/role-configuration/role-configuration.component';
 import { Routes } from '@angular/router';
 import { BaseLayoutComponent, SessionLayoutComponent } from './shared';
 import { LoginComponent } from './pages/login/login.component';
@@ -29,6 +29,8 @@ import { VerifyUsernameFormComponent } from './verify-username-form/verify-usern
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
 import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
+import { PurchaseByServiceComponent } from './pages/purchase-by-service/purchase-by-service.component';
+import { RoleGuard } from './shared/guards/role.guard';
 
 
 export const AppRoutes: Routes = [
@@ -61,7 +63,9 @@ export const AppRoutes: Routes = [
       { path: 'role-edit/:id', component: RoleEditComponent, canActivate: [AuthGuardService]},
       { path: 'role-add', component: RoleAddComponent, canActivate: [AuthGuardService]},
       { path: 'question-add', component: QuestionAddComponent, canActivate: [AuthGuardService]},
-      { path: '404', component: NotFoundComponent }
+      { path: '404', component: NotFoundComponent },
+      { path: 'service-repair', component: ServiceRepairComponent, canActivate: [AuthGuardService] },
+      { path: 'purchase-by-service', component: PurchaseByServiceComponent, canActivate: [AuthGuardService] }
     ]
   },
   { path: '**', redirectTo: 'session/404' }
