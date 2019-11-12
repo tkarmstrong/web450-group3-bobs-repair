@@ -1,55 +1,51 @@
-<div class="container">
-
-  <div class="img-wrapper" fxLayout="row" fxLayoutAlign="center center">
+<div class="img-wrapper" fxLayout="row" fxLayoutAlign="center center">
     <img fxFlex="80%" src="../../../assets/images/about-banner.jpg" alt="">
   </div>
+<div class="container" >
   <div fxLayout="row">
     <div fxFlex="50%">
-      <h1>Our Story</h1>
-      <p>
-        <mat-card class="example-card" fxLayout="row" fxLayoutAlign="center center">  
-          <h6>To best understand our family and where we began is a letter from my father, Peter to his father, Bob.
-              This is how our story begins:</h6>
-          <br />
+      <h1 style="text-align: center">Our Story</h1>
+      <mat-card class="example-card" fxLayout="column">
           <mat-card-content>
-  
-              <p> Dad,
-                  <br />
-                  <br>
-                  I don't feel I was particularly honest as a child. I did get in trouble when I was younger more often
-                  then I
-                  would like to admit but that eventually allowed me to join you in your favorite hobby. I know you
-                  brought me
-                  along so I would stay out of trouble but watching you work on electronics really inspired me, even
-                  though I
-                  pretended I didn’t care. Over those years I grow to enjoy building, breaking, and tuckering with all
-                  sorts
-                  of electrons with you. Those really were some of best years of my life, so far.
-                  <br />
-                  <br>
-                  As you know, I have been out of school long enough to know what I want to do with my life.
-                  Now that I have grow and experienced some of the world, I am writing you this letter to ask an important
-                  question. I want to ask you if you would join me by opening a computer repair store with me. Before you
-                  answer, I do have a small condition. I would like to name the shop after you. You have inspired me and
-                  encouraged me for as long as I can remember. Now I would like to make you proud (and mom, of course).
-                  <br />
-                  <br>
-                  Hopefully this letter with arrive before I do but I know you will be proud of me regardless of what you
-                  decide. I can’t wait to see you and mom and have some of delicious apple pie.
-                  <br />
-                  <br>
-                  Your son,
-              </p>
-              <p> Peter <br />
-              </p>
-          </mat-card-content>
+        <br />
+        <h4>To best understand our family and where we began is a letter from my father, Peter to his father, Bob.
+            This is how our story begins:</h4>
+          <p> Dad,
+            <br />
+            <br>
+            I don't feel I was particularly honest as a child. I did get in trouble when I was younger more often
+            then I
+            would like to admit but that eventually allowed me to join you in your favorite hobby. I know you
+            brought me
+            along so I would stay out of trouble but watching you work on electronics really inspired me, even
+            though I
+            pretended I didn’t care. Over those years I grow to enjoy building, breaking, and tuckering with all
+            sorts
+            of electrons with you. Those really were some of best years of my life, so far.
+            <br />
+            <br>
+            As you know, I have been out of school long enough to know what I want to do with my life.
+            Now that I have grow and experienced some of the world, I am writing you this letter to ask an important
+            question. I want to ask you if you would join me by opening a computer repair store with me. Before you
+            answer, I do have a small condition. I would like to name the shop after you. You have inspired me and
+            encouraged me for as long as I can remember. Now I would like to make you proud (and mom, of course).
+            <br />
+            <br>
+            Hopefully this letter with arrive before I do but I know you will be proud of me regardless of what you
+            decide. I can’t wait to see you and mom and have some of delicious apple pie.
+            <br />
+            <br>
+            Your son,
+            <br>
+            Peter
+          </p>
+        </mat-card-content>
       </mat-card>
-      </p>
     </div>
-    <div fxFlex="50%">
+    <div fxFlex="50%" style="display: table-column">
       <div class="team-member" *ngFor="let member of members">
-        <h3 style="text-align: center;">{{member.name}}, {{member.position}}</h3>
-        <img src="{{member.image}}" alt="{{member.name}}" width="30%" style="justify-content: center">
+        <h2 style="text-align: center;">{{member.name}}, {{member.position}}</h2>
+        <img src="{{member.image}}" alt="{{member.name}}" width="40%" style="padding-left: 50%">
       </div>
     </div>
   </div>
