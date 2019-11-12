@@ -65,7 +65,7 @@ export const AppRoutes: Routes = [
       { path: 'question-add', component: QuestionAddComponent, canActivate: [AuthGuardService]},
       { path: '404', component: NotFoundComponent },
       { path: 'service-repair', component: ServiceRepairComponent, canActivate: [AuthGuardService] },
-      { path: 'purchase-by-service', component: PurchaseByServiceComponent, canActivate: [AuthGuardService, RoleGuard] }
+      { path: 'purchase-by-service', component: PurchaseByServiceComponent, canActivate: [AuthGuardService] }
     ]
   },
   { path: '**', redirectTo: 'session/404' }

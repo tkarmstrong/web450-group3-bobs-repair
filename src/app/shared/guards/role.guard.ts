@@ -31,6 +31,7 @@ export class RoleGuard implements CanActivate {
       console.log(res);
       this.user = res;
       if (this.user.role === 'admin') {
+        this.router.navigate(['/session/purchase-by-service']);
         return true;
       } else {
         this.router.navigate(['/']);
