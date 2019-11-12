@@ -72,6 +72,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 // PrimeNg
 import { CarouselModule } from 'primeng/carousel';
+import { ChartModule } from 'primeng/chart';
 
 @NgModule({
   declarations: [
@@ -125,7 +126,8 @@ import { CarouselModule } from 'primeng/carousel';
     MatTableModule,
     MatSelectModule,
     MatListModule,
-    CarouselModule
+    CarouselModule,
+    ChartModule
   ],
   providers: [
     CookieService,
