@@ -1,3 +1,13 @@
+/*
+; =======================================================
+; Title: role guard (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
 import { catchError, map } from 'rxjs/operators';
 import { from, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
