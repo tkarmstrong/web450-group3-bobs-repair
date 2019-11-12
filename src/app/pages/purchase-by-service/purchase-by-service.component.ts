@@ -10,7 +10,15 @@ export class PurchaseByServiceComponent implements OnInit {
 
   invoices: any;
   data: any;
+  options: any;
   labels;
+  passwordReset = 0;
+  spywareRemoval = 0;
+  ramUpgrade = 0;
+  tuneup = 0;
+  keyboardCleaning = 0;
+  softwareInstallation = 0;
+  discCleanup = 0;
 
   constructor(private http: HttpClient) {
 
@@ -19,6 +27,7 @@ export class PurchaseByServiceComponent implements OnInit {
 
       // 1. Get labels for chart
       const labelsUnfiltered = [];
+      const pieData = {};
 
       for (const item of this.invoices) {
         item.services.forEach(element => {
@@ -31,26 +40,81 @@ export class PurchaseByServiceComponent implements OnInit {
       });
 
       // 2. Get data for chart
+      for (const item of this.invoices) {
+        item.services.forEach(service => {
+          // console.log(service);
+          if (service.serviceText === 'Password Reset') {
+            this.passwordReset += service.cost;
+          }
+
+          if (service.serviceText === 'Spyware Removal') {
+            this.spywareRemoval += service.cost;
+          }
+
+          if (service.serviceText === 'Ram Upgrade') {
+            this.ramUpgrade += service.cost;
+          }
+
+          if (service.serviceText === 'Tuneup') {
+            this.tuneup += service.cost;
+          }
+
+          if (service.serviceText === 'Keyboard Cleaning') {
+            this.keyboardCleaning += service.cost;
+          }
+
+          if (service.serviceText === 'Software Installation') {
+            this.softwareInstallation += service.cost;
+          }
+
+          if (service.serviceText === 'Disc Cleanup') {
+            this.discCleanup += service.cost;
+          }
+
+        });
+      }
 
       // 3. Build object literal for data used in chart
       this.data = {
         labels: this.labels,
-        datasets: [
-            {
-                data: [300, 50, 100],
-                backgroundColor: [
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56'
-                ],
-                hoverBackgroundColor: [
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56'
-                ]
-            }]
-        };
+        datasets: [{
+          data: [
+            this.passwordReset.toFixed(2),
+            this.spywareRemoval.toFixed(2),
+            this.ramUpgrade.toFixed(2),
+            this.tuneup.toFixed(2),
+            this.keyboardCleaning.toFixed(2),
+            this.softwareInstallation.toFixed(2),
+            this.discCleanup.toFixed(2)
+          ],
+          backgroundColor: [
+            '#1E3D1E',
+            '#8AE58A',
+            '#FEF5ED',
+            '#8F478F',
+            '#478F47',
+            '#FBD1A9',
+            '#E37209'
+          ],
+          hoverBackgroundColor: [
+            '#1E3D1E',
+            '#8AE58A',
+            '#FEF5ED',
+            '#8F478F',
+            '#478F47',
+            '#FBD1A9',
+            '#E37209'
+          ]
+        }]
+      };
 
+      this.options = {
+        title: {
+          display: true,
+          text: 'Purchases By Service In Dollars',
+          fontSize: 22
+        }
+      };
 
     }, err => {
       console.log(err);
