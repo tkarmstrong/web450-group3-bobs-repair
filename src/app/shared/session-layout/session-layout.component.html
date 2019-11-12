@@ -36,7 +36,11 @@
         </button>
         <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button"
           [routerLink]="['/session/service-repair']">
-          <span style="margin-left: 5px !important">Role Configuration</span>
+          <span style="margin-left: 5px !important">Services</span>
+        </button>
+        <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button"
+          [routerLink]="['/session/purchase-by-service']">
+          <span style="margin-left: 5px !important">Purchase Summary</span>
         </button>
 
         <div fxFlex></div>

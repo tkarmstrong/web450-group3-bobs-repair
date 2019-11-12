@@ -29,6 +29,7 @@ import { VerifyUsernameFormComponent } from './verify-username-form/verify-usern
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ResetPasswordFormComponent } from './reset-password-form/reset-password-form.component';
 import { ServiceRepairComponent } from './pages/service-repair/service-repair.component';
+import { PurchaseByServiceComponent } from './pages/purchase-by-service/purchase-by-service.component';
 
 
 export const AppRoutes: Routes = [
@@ -62,7 +63,8 @@ export const AppRoutes: Routes = [
       { path: 'role-add', component: RoleAddComponent, canActivate: [AuthGuardService]},
       { path: 'question-add', component: QuestionAddComponent, canActivate: [AuthGuardService]},
       { path: '404', component: NotFoundComponent },
-      { path: 'service-repair', component: ServiceRepairComponent }
+      { path: 'service-repair', component: ServiceRepairComponent, canActivate: [AuthGuardService] },
+      { path: 'purchase-by-service', component: PurchaseByServiceComponent }
     ]
   },
   { path: '**', redirectTo: 'session/404' }
