@@ -23,6 +23,292 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-SG": "./node_modules/moment/locale/en-SG.js",
+	"./en-SG.js": "./node_modules/moment/locale/en-SG.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/about-us/about-us.component.html":
 /*!**********************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/about-us/about-us.component.html ***!
@@ -30,7 +316,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\n  <div class=\"img-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <img fxFlex=\"80%\" src=\"../../../assets/images/about-banner.jpg\" alt=\"\">\n  </div>\n\n  <div class=\"story-wrapper\">\n  <div fxLayout=\"column\" fxLayoutAlign=\"space-between center\">\n    <h1 >Our Story</h1>\n    <p style=\"width: 60%;\">\n        Long boat ahoy bring a spring upon her cable pillage barque log draught rope's end tack Spanish Main. No prey, no pay American Main hearties brig Jack Tar gangplank crack Jennys tea cup yardarm tender spanker. Strike colors Blimey tackle wherry crow's nest keel lanyard sutler aft ho.\n        Grog ye heave to trysail Davy Jones' Locker jib hogshead careen Nelsons folly square-rigged. Barbary Coast draft starboard Privateer rum six pounders Spanish Main port tender loot. Dance the hempen jig splice the main brace barkadeer bilge rat parrel clipper swing the lead aye Blimey Sea Legs.\n        Fire in the hole reef sails lass chandler cutlass dance the hempen jig skysail no prey, no pay list starboard. Barque handsomely transom marooned killick lass prow to go on account measured fer yer chains hogshead. Chandler keelhaul skysail Plate Fleet lad shrouds Pieces of Eight matey doubloon hogshead.\n    </p>\n  </div>\n</div>\n\n\n  <div class=\"team-wrapper\">\n    <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutGap=\".5%\" fxLayoutAlign=\"center center\">\n      <div class=\"team-member\"*ngFor=\"let member of members\">\n        <h3 style=\"text-align: center;\">{{member.name}}, {{member.position}}</h3>\n        <img src=\"{{member.image}}\" alt=\"{{member.name}}\">\n      </div>\n    </div>\n  </div>\n\n</div>\n\n\n"
+module.exports = "<div class=\"img-wrapper\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <img fxFlex=\"80%\" src=\"../../../assets/images/about-banner.jpg\" alt=\"\">\n  </div>\n<div class=\"container\" >\n  <div fxLayout=\"row\">\n    <div fxFlex=\"50%\">\n      <h1 style=\"text-align: center\">Our Story</h1>\n      <mat-card class=\"example-card\" fxLayout=\"column\">\n          <mat-card-content>\n        <br />\n        <h4>To best understand our family and where we began is a letter from my father, Peter to his father, Bob.\n            This is how our story begins:</h4>\n          <p> Dad,\n            <br />\n            <br>\n            I don't feel I was particularly honest as a child. I did get in trouble when I was younger more often\n            then I\n            would like to admit but that eventually allowed me to join you in your favorite hobby. I know you\n            brought me\n            along so I would stay out of trouble but watching you work on electronics really inspired me, even\n            though I\n            pretended I didn’t care. Over those years I grow to enjoy building, breaking, and tuckering with all\n            sorts\n            of electrons with you. Those really were some of best years of my life, so far.\n            <br />\n            <br>\n            As you know, I have been out of school long enough to know what I want to do with my life.\n            Now that I have grow and experienced some of the world, I am writing you this letter to ask an important\n            question. I want to ask you if you would join me by opening a computer repair store with me. Before you\n            answer, I do have a small condition. I would like to name the shop after you. You have inspired me and\n            encouraged me for as long as I can remember. Now I would like to make you proud (and mom, of course).\n            <br />\n            <br>\n            Hopefully this letter with arrive before I do but I know you will be proud of me regardless of what you\n            decide. I can’t wait to see you and mom and have some of delicious apple pie.\n            <br />\n            <br>\n            Your son,\n            <br>\n            Peter\n          </p>\n        </mat-card-content>\n      </mat-card>\n    </div>\n    <div fxFlex=\"50%\" style=\"display: table-column\">\n      <div class=\"team-member\" *ngFor=\"let member of members\">\n        <h2 style=\"text-align: center;\">{{member.name}}, {{member.position}}</h2>\n        <img src=\"{{member.image}}\" alt=\"{{member.name}}\" width=\"40%\" style=\"padding-left: 50%\">\n      </div>\n    </div>\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -52,7 +338,7 @@ module.exports = "<div class=\"container\">\n\n  <div class=\"img-wrapper\" fxLa
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: home.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<h1 style=\"text-align: center; margin-top: 100px;\">Welcome To Bob's Computer Repair</h1>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: home.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<h1 style=\"text-align: center; margin-top: 100px;\">Welcome To Bob's Computer Repair</h1>\n\n<div id=\"services\" class=\"cards-1\" fxLayout=\"row\" fxLayoutAlign=\"center center\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-lg-12\">\n                <h2>Our Services</h2>\n                <p class=\"p-heading p-large\"> Here at Bob’s Computer Repair Shop, we strive to be the best by being the only place you would want to go. </p>\n            </div> <!-- end of col -->\n        </div> <!-- end of row -->\n        <div class=\"row\">\n            <div class=\"col-lg-12\">\n\n                <!-- Card -->\n                <div class=\"card\">\n                        <mat-icon color=\"accent\">devices</mat-icon>\n                        <div class=\"card-body\">\n                        <h4 class=\"card-title\">Screen Repair</h4>\n                        \n                    </div>\n                </div>\n                <!-- end of card -->\n                <div class=\"card\">\n                        <mat-icon color=\"accent\">lock</mat-icon>\n                        <div class=\"card-body\">\n                        <h4 class=\"card-title\">Managed Antivirus</h4>\n                    </div>\n                </div>\n\n                <div class=\"card\">\n                        <mat-icon color=\"accent\">laptop</mat-icon>\n                        <div class=\"card-body\">\n                        <h4 class=\"card-title\">Laptop Repair</h4>\n                    </div>\n                </div>\n                <!-- Card -->\n                <div class=\"card\">\n                    <mat-icon color=\"accent\">security</mat-icon>\n                    <div class=\"card-body\">\n                        <h4 class=\"card-title\">Virus Removal</h4>\n                    </div>\n                </div>\n                <!-- end of card -->\n\n                <!-- Card -->\n                <div class=\"card\">\n                    <mat-icon color=\"accent\">wifi</mat-icon>\n                    <div class=\"card-body\">\n                        <h4 class=\"card-title\">PC Repair</h4>\n                    </div>\n                </div>\n                <!-- end of card -->\n\n                <!-- Card -->\n\n                <div class=\"card\">\n                    <mat-icon color=\"accent\">network_locked</mat-icon>\n                    <div class=\"card-body\">\n                        <h4 class=\"card-title\">Custom Build Computers</h4>\n                    </div>\n                </div>\n                <!-- end of card -->\n\n            </div> <!-- end of col -->\n        </div> <!-- end of row -->\n    </div>\n</div>"
 
 /***/ }),
 
@@ -63,7 +349,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: login.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div class=\"container\">\n  <mat-card class=\"form\">\n    <mat-card-content>\n      <mat-card-title>Please sign in</mat-card-title>\n      <mat-card-subtitle><a [routerLink]=\"['/register']\">Register</a></mat-card-subtitle>\n      <small *ngIf=\"errorMessage\">{{ errorMessage }}</small>\n      <small class=\"warn\"\n        *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\">\n        Username is required\n      </small>\n      <br />\n      <small class=\"warn\"\n        *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\">\n        Password is required\n      </small>\n      <form [formGroup]=\"form\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(form.value); form.reset()\">\n        <mat-form-field class=\"inputStyle\">\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"Username \" />\n        </mat-form-field>\n        <br />\n        <mat-form-field class=\"inputStyle\">\n          <input type=\"password\" matInput [formControl]=\"form.controls['password']\" placeholder=\"Password\" />\n        </mat-form-field>\n        <mat-card-actions>\n          <button\n            mat-raised-button\n            color=\"primary\"\n            [disabled]=\"!form.valid\"\n            type=\"submit\">Log in\n          </button>\n          <br /><br />\n          <small><a [routerLink]=\"['/forgot-password']\">Forgot Password?</a></small>\n        </mat-card-actions>\n      </form>\n      <br /><br />\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: login.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div class=\"container\">\n  <mat-card class=\"form\">\n    <mat-card-content>\n      <mat-card-title>Please sign in</mat-card-title>\n      <mat-card-subtitle><a [routerLink]=\"['/register']\">Register</a></mat-card-subtitle>\n      <small *ngIf=\"errorMessage\">{{ errorMessage }}</small>\n      <small class=\"warn\"\n        *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\">\n        Username is required\n      </small>\n      <br />\n      <small class=\"warn\"\n        *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\">\n        Password is required\n      </small>\n      <form [formGroup]=\"form\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(form.value); form.reset()\">\n        <mat-form-field class=\"inputStyle\">\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"Username \" />\n        </mat-form-field>\n        <br />\n        <mat-form-field class=\"inputStyle\">\n          <input type=\"password\" matInput [formControl]=\"form.controls['password']\" placeholder=\"Password\" />\n        </mat-form-field>\n        <mat-card-actions>\n          <button\n            mat-raised-button\n            color=\"accent\"\n            [disabled]=\"!form.valid\"\n            type=\"submit\">Log in\n          </button>\n          <br /><br />\n          <small><a [routerLink]=\"['/forgot-password']\">Forgot Password?</a></small>\n        </mat-card-actions>\n      </form>\n      <br /><br />\n    </mat-card-content>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -78,6 +364,28 @@ module.exports = "<!-- /*\n; ===================================================
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/purchase-by-service/purchase-by-service.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/purchase-by-service/purchase-by-service.component.html ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>summary works!</p>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/question-add/question-add.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/question-add/question-add.component.html ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Security Question</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addQuestionForm\" (ngSubmit)=\"addQuestion(addQuestionForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Security Question\" formControlName=\"securityQuestion\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addQuestionForm.valid\">Submit</button>\n          <button mat-raised-button color=\"warn\" (click)=\"cancel()\">Cancel</button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/register/register.component.html":
 /*!**********************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/register/register.component.html ***!
@@ -89,6 +397,39 @@ module.exports = "<!-- /*\n; ===================================================
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/role-add/role-add.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/role-add/role-add.component.html ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add Role</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"addRoleForm\" (ngSubmit)=\"addRole(addRoleForm.value)\">\n        <mat-form-field>\n          <input matInput placeholder=\"Role\" formControlName=\"role\">\n        </mat-form-field>\n\n        <br><br>\n        <mat-card-actions>\n          <button mat-raised-button color=\"primary\" [disabled]=\"!addRoleForm.valid\">\n            Submit\n          </button>\n          <button mat-raised-button color=\"warn\" (click)=\"cancel()\">\n            Cancel\n          </button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/role-configuration/role-configuration.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/role-configuration/role-configuration.component.html ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- /*\n; =======================================================\n; Title: role-configuration.component.html (Week 8)\n; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy, Aaron Wilson\n; Date: 5 Nov 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n    <mat-card style=\"margin: 0 auto;\">\n      <mat-card-title>Roles</mat-card-title>\n      <mat-card-content *ngIf=\"roles\">\n        <table mat-table [dataSource]=\"roles\">\n\n          <ng-container matColumnDef=\"roleTitle\">\n            <th mat-header-cell *matHeaderCellDef>Role</th>\n            <td mat-cell *matCellDef=\"let element\">\n              {{ element.roleTitle }}\n            </td>\n          </ng-container>\n\n          <ng-container matColumnDef=\"actions\">\n            <th mat-header-cell *matHeaderCellDef>Actions</th>\n            <td mat-cell *matCellDef=\"let element\">\n              <button mat-icon-button (click)=\"edit(element._id)\">\n                <mat-icon color=\"accent\">create</mat-icon>\n              </button>\n              <button mat-icon-button (click)=\"delete(element._id, element.roleTitle)\">\n                <mat-icon color=\"warn\">delete_forever</mat-icon>\n              </button>\n            </td>\n          </ng-container>\n\n          <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n          <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n        </table>\n      </mat-card-content>\n      <mat-card-actions>\n        <div fxFlex></div>\n        <button mat-button color=\"primary\" [routerLink]=\"['/session/role-add']\"><mat-icon>add_box</mat-icon>Add New Role</button>\n      </mat-card-actions>\n    </mat-card>\n  </div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/role-edit/role-edit.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/role-edit/role-edit.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"width: 90%; margin: 0 auto;\" class=\"mat-elevation-z8\">\n    <mat-card-title>Role</mat-card-title>\n    <mat-card-subtitle>\n      <button mat-button color=\"accent\">Edit</button>\n    </mat-card-subtitle>\n\n    <br>\n    <form [formGroup]=\"form\" (ngSubmit)=\"saveRole()\" #roleForm>\n      <mat-card-content>\n        <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['roleTitle']\" placeholder=\"roleTitle\"/>\n          </mat-form-field>\n        </div>\n      </mat-card-content>\n\n      <br>\n      <mat-card-actions align=\"end\">\n        <button mat-raised-button (click)=\"cancel()\" color=\"warn\">Cancel</button>\n        <button mat-raised-button color=\"accent\">Submit</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/security-questions/security-questions.component.html":
 /*!******************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/security-questions/security-questions.component.html ***!
@@ -96,7 +437,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: security-questions.component.html (Week 6)\n; Authors: Tyler Armstrong, David Tarvin, [Aaron Wilson]\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"margin: 0 auto;\">\n    <mat-card-title>Security Questions</mat-card-title>\n    <mat-card-content *ngIf=\"data\">\n      <table mat-table [dataSource]=\"data\">\n\n        <ng-container matColumnDef=\"questionText\">\n          <th mat-header-cell *matHeaderCellDef>Question</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.questionText }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"actions\">\n          <th mat-header-cell *matHeaderCellDef>Actions</th>\n          <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"edit(element._id)\">\n              <mat-icon color=\"accent\">create</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element._id, element.questionText)\">\n              <mat-icon color=\"warn\">delete_forever</mat-icon>\n            </button>\n          </td>\n        </ng-container>\n\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n      </table>\n    </mat-card-content>\n    <mat-card-actions>\n      <div fxFlex></div>\n      <button mat-button color=\"primary\"><mat-icon>add_box</mat-icon>Add New</button>\n    </mat-card-actions>\n  </mat-card>\n</div>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: security-questions.component.html (Week 6)\n; Authors: Tyler Armstrong, David Tarvin, [Aaron Wilson]\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"margin: 0 auto;\">\n    <mat-card-title>Security Questions</mat-card-title>\n    <mat-card-content *ngIf=\"data\">\n      <table mat-table [dataSource]=\"data\">\n\n        <ng-container matColumnDef=\"questionText\">\n          <th mat-header-cell *matHeaderCellDef>Question</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.questionText }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"actions\">\n          <th mat-header-cell *matHeaderCellDef>Actions</th>\n          <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"edit(element._id)\">\n              <mat-icon color=\"accent\">create</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element._id, element.questionText)\">\n              <mat-icon color=\"warn\">delete_forever</mat-icon>\n            </button>\n          </td>\n        </ng-container>\n\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n      </table>\n    </mat-card-content>\n    <mat-card-actions>\n      <div fxFlex></div>\n      <button mat-button color=\"primary\" [routerLink]=\"['/session/question-add']\"><mat-icon>add_box</mat-icon>Add New</button>\n    </mat-card-actions>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -111,6 +452,17 @@ module.exports = "<div class=\"container\">\n    <div class=\"message\">\n      
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/pages/service-repair/service-repair.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/pages/service-repair/service-repair.component.html ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "  <form *ngIf=\"data\" [formGroup]='serviceForm' (ngSubmit)=\"onSubmit(serviceForm.value)\">\n\n    <mat-card class=\"main-card\" fxFlex=\"80%\">\n      <mat-card-content fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"0.5%\">\n        <section class=\"services-section\" fxFlex=\"50%\">\n          <h1>Services</h1>\n          <mat-card class=\"services\">\n            <mat-card-header *ngFor=\"let service of data\">\n              <div mat-card-avatar class=\"header-image\"><mat-icon>{{service.icon}}</mat-icon></div>\n              <mat-card-title>{{service.serviceText}}</mat-card-title>\n              <mat-card-subtitle>{{service.cost | currency}}</mat-card-subtitle>\n              <div fxFlex></div>\n              <mat-checkbox formControlName=\"{{service.control}}\"></mat-checkbox>\n            </mat-card-header>\n          </mat-card>\n        </section>\n\n        <section class=\"fees-section\" fxFlex=\"50%\">\n          <h1>Fees</h1>\n          <mat-form-field class=\"full-width\">\n            <input\n              name=\"parts\"\n              type=\"number\"\n              step=\"0.01\"\n              matInput\n              placeholder=\"Parts (Enter Value)\"\n              formControlName=\"parts\"\n              required\n            >\n            <mat-error\n              class=\"warn mb-20\"\n              *ngIf=\"serviceForm.controls['parts'].hasError('required') && serviceForm.controls['parts'].touched\">\n              Please enter cost for parts.\n            </mat-error>\n          </mat-form-field>\n\n          <mat-form-field class=\"full-width\">\n            <input formControlName=\"labor\" matInput required placeholder=\"Labor (Enter Hours) @$50.00/hr\">\n            <mat-error\n              class=\"warn\"\n              *ngIf=\"serviceForm.controls['labor'].hasError('required') && serviceForm.controls['labor'].touched\">\n              Please enter hours for labor.\n            </mat-error>\n            <mat-error\n              class=\"warn\"\n              *ngIf=\"serviceForm.controls['labor'].hasError('pattern') && serviceForm.controls['labor'].touched\">\n              Must be a number.\n            </mat-error>\n          </mat-form-field>\n\n          <br>\n          <button\n            color=\"primary\"\n            mat-raised-button class=\"full-width mt-20\"\n            type=\"submit\"\n            [disabled]=\"serviceForm.invalid\"\n            >Calculate</button>\n        </section>\n      </mat-card-content>\n    </mat-card>\n  </form>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/pages/user-details/user-details.component.html":
 /*!******************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/pages/user-details/user-details.component.html ***!
@@ -118,7 +470,7 @@ module.exports = "<div class=\"container\">\n    <div class=\"message\">\n      
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: user-details.component.html (Week 6)\n; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson\n; Date: 29 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"width: 90%; margin: 0 auto;\" class=\"mat-elevation-z8\">\n    <mat-card-title>User Details</mat-card-title>\n    <mat-card-subtitle>\n      <button mat-button color=\"accent\">Edit</button>\n    </mat-card-subtitle>\n\n    <br>\n    <form [formGroup]=\"form\" (ngSubmit)=\"saveUser()\" #userForm>\n      <mat-card-content>\n        <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['firstName']\" placeholder=\"First Name\"/>\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['lastName']\" placeholder=\"Last Name\"/>\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['phoneNumber']\" placeholder=\"Phone Number\"/>\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['address']\" placeholder=\"Address\"/>\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['email']\" placeholder=\"Email\"/>\n          </mat-form-field>\n        </div>\n      </mat-card-content>\n\n      <br>\n      <mat-card-actions align=\"end\">\n        <button mat-raised-button (click)=\"cancel()\" color=\"warn\">Cancel</button>\n        <button mat-raised-button color=\"accent\">Submit</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: user-details.component.html (Week 6)\n; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson\n; Date: 29 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"width: 80%; margin: 0 auto;\" class=\"mat-elevation-z8\">\n    <mat-card-title>User Details</mat-card-title>\n    <mat-card-subtitle>\n      <button mat-button color=\"accent\">Edit</button>\n    </mat-card-subtitle>\n\n    <br>\n    <form [formGroup]=\"form\" (ngSubmit)=\"saveUser()\" #userForm>\n      <mat-card-content>\n        <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['firstName']\" placeholder=\"First Name\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['lastName']\" placeholder=\"Last Name\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['phoneNumber']\" placeholder=\"Phone Number\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['address']\" placeholder=\"Address\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <input type=\"text\" matInput [formControl]=\"form.controls['email']\" placeholder=\"Email\" />\n          </mat-form-field>\n\n          <mat-form-field>\n            <select [(value)]=\"selectedRoleTitle\" matNativeControl [(ngModel)]=\"Role\"\n            [formControl]=\"form.controls['role']\" placeholder=\"Role\">\n              <option *ngFor=\"let role of roles\" value= {{role.roleTitle}}>{{role.roleTitle}}</option>\n            </select>\n          </mat-form-field>\n        </div>\n      </mat-card-content>\n\n      <br>\n      <mat-card-actions align=\"end\">\n        <button mat-raised-button (click)=\"cancel()\" color=\"warn\">Cancel</button>\n        <button mat-raised-button (click)=\"saveUser()\" color=\"accent\">Submit</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -129,7 +481,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: user-management.component.html (Week 6)\n; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson\n; Date: 29 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"width: 90%; margin: 0 auto;\">\n    <mat-card-title>Users Configuration</mat-card-title>\n    <mat-card-content *ngIf=\"users\">\n      <table mat-table [dataSource]=\"users\">\n\n        <ng-container matColumnDef=\"username\">\n          <th mat-header-cell *matHeaderCellDef>Username</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.username }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"firstName\">\n          <th mat-header-cell *matHeaderCellDef>First Name</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.firstName }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"lastName\">\n          <th mat-header-cell *matHeaderCellDef>Last Name</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.lastName }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"phoneNumber\">\n          <th mat-header-cell *matHeaderCellDef>Phone Number</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.phoneNumber }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"address\">\n          <th mat-header-cell *matHeaderCellDef>Address</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.address }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"email\">\n          <th mat-header-cell *matHeaderCellDef>Email</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.email }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"functions\">\n          <th mat-header-cell *matHeaderCellDef>Functions</th>\n          <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"edit(element._id, element.username)\">\n              <mat-icon color=\"accent\">edit</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element._id, element.username)\">\n              <mat-icon color=\"warn\">delete</mat-icon>\n            </button>\n          </td>\n        </ng-container>\n\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n      </table>\n    </mat-card-content>\n  </mat-card>\n</div>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: user-management.component.html (Week 6)\n; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson\n; Date: 29 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div fxLayout=\"column\" style=\"margin-top: 8%;\">\n  <mat-card style=\"width: 95%; margin: 0 auto;\">\n    <mat-card-title>Users Configuration</mat-card-title>\n    <mat-card-content *ngIf=\"users\">\n      <table mat-table [dataSource]=\"users\">\n\n        <ng-container matColumnDef=\"username\">\n          <th mat-header-cell *matHeaderCellDef>Username</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.username }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"firstName\">\n          <th mat-header-cell *matHeaderCellDef>First Name</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.firstName }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"lastName\">\n          <th mat-header-cell *matHeaderCellDef>Last Name</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.lastName }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"phoneNumber\">\n          <th mat-header-cell *matHeaderCellDef>Phone Number</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.phoneNumber }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"address\">\n          <th mat-header-cell *matHeaderCellDef>Address</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.address }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"email\">\n          <th mat-header-cell *matHeaderCellDef>Email</th>\n          <td mat-cell *matCellDef=\"let element\">\n            {{ element.email }}\n          </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"role\">\n          <th mat-header-cell *matHeaderCellDef>Role</th>\n          <td mat-cell *matCellDef=\"let element\"> {{ element.role }}</td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"functions\">\n          <th mat-header-cell *matHeaderCellDef>Functions</th>\n          <td mat-cell *matCellDef=\"let element\">\n            <button mat-icon-button (click)=\"edit(element._id, element.username)\">\n              <mat-icon color=\"accent\">edit</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"delete(element._id, element.username)\">\n              <mat-icon color=\"warn\">delete</mat-icon>\n            </button>\n          </td>\n        </ng-container>\n\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n      </table>\n    </mat-card-content>\n  </mat-card>\n</div>"
 
 /***/ }),
 
@@ -151,18 +503,18 @@ module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: base-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div>\n  <!-- Page header -->\n  <header>\n    <!-- Toolbar -->\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"primary\">\n      <mat-toolbar-row>\n        <button mat-button class=\"toolbar__icon-button mat-button\">\n          <mat-icon>menu</mat-icon>\n        </button>\n        <button [routerLink]=\"['/']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">Bob's</span>\n        </button>\n        <button [routerLink]=\"['/contact']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">Contact Us</span>\n        </button>\n        <button [routerLink]=\"['/about-us']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">About Us</span>\n        </button>\n        <button *ngIf=\"validated == false\" mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/login']\">\n          <span style=\"margin-left: 5px !important\">Login</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/session/security-questions']\">\n          <span style=\"margin-left: 5px !important\" >Security Questions</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/session/user-management']\">\n          <span style=\"margin-left: 5px !important\" >User Management</span>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n          <mat-icon>account_circle</mat-icon>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <button mat-menu-item (click)=\"userLogout()\">\n            <mat-icon>exit_to_app</mat-icon>\n            <span>Logout</span>\n          </button>\n        </mat-menu>\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </header>\n  </div>\n\n  <!-- Main page content -->\n  <main>\n    <router-outlet></router-outlet>\n  </main>\n\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: base-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<div>\n  <!-- Page header -->\n  <header>\n    <!-- Toolbar -->\n    <mat-toolbar class=\"menu\" role=\"header\" style=\"color: black; background-color: white\">\n        <mat-toolbar-row>\n        <button [routerLink]=\"['/']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">BCRS</span>\n        </button>\n        <button [routerLink]=\"['/contact']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">Contact Us</span>\n        </button>\n        <button [routerLink]=\"['/about-us']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">About Us</span>\n        </button>\n        <button *ngIf=\"validated == false\" mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/login']\">\n          <span style=\"margin-left: 5px !important\">Login</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/security-questions']\">\n          <span style=\"margin-left: 5px !important\">Security Questions</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/user-management']\">\n          <span style=\"margin-left: 5px !important\">User Management</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/role-configuration']\">\n          <span style=\"margin-left: 5px !important\">Role Configuration</span>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n          <mat-icon>exit_to_app</mat-icon>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <button mat-menu-item (click)=\"userLogout()\">\n            <span>Logout</span>\n          </button>\n        </mat-menu>\n\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </header>\n</div>\n\n<!-- Main page content -->\n<main>\n  <router-outlet></router-outlet>\n</main>"
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/shared/question-add-dialog/question-add-dialog.component.html":
-/*!*********************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/shared/question-add-dialog/question-add-dialog.component.html ***!
-  \*********************************************************************************************************/
+/***/ "./node_modules/raw-loader/index.js!./src/app/shared/invoice-dialog/invoice-dialog.component.html":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/shared/invoice-dialog/invoice-dialog.component.html ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: question-add-dialog.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 29 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<p>question-add-dialog works!</p>\n"
+module.exports = "<div mat-dialog-content fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"0.5%\">\n  <div class=\"invoice-header\">\n    <h1 mat-dialog-title>Invoice Summary</h1>\n    <h3>{{data.dateCreated}}</h3>\n  </div>\n  <section class=\"invoice-info\" fxFlex=\"70%\">\n    <h3>Services</h3>\n    <ng-container *ngFor=\"let service of data.services\">\n      <p><span class=\"primary-text-color\">  {{service.serviceText}}: </span>{{service.cost | currency}}</p>\n    </ng-container>\n    <mat-divider></mat-divider>\n    <p><span class=\"primary-text-color\">  Labor: </span>{{data.laborHrs | currency}}</p>\n    <p><span class=\"primary-text-color\">  Parts: </span>{{data.partsCost | currency}}</p>\n    <mat-divider></mat-divider>\n    <h1 class=\"primary-text-color\">Total: {{data.totalCost | currency}}</h1>\n    <div style=\"float: right;\" mat-dialog-actions>\n      <button mat-raised-button color=\"primary\" [mat-dialog-close]=\"data\">CLOSE</button>\n    </div>\n  </section>\n</div>\n"
 
 /***/ }),
 
@@ -188,6 +540,17 @@ module.exports = "<div class=\"container\">\n  <mat-card class=\"form\">\n    <m
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/shared/role-delete-dialog/role-delete-dialog.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/shared/role-delete-dialog/role-delete-dialog.component.html ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- /*\n; =======================================================\n; Title: role-delete-dialog.component.html (Week 7)\n; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy\n; Date: 06 Nov 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n<mat-dialog-content>\n    <div fxLayout=\"column\">\n      <mat-card class=\"mat-elevation-z8\">\n        <mat-card-title style=\"font-weight: darker; text-align: center;\">\n          Delete Role\n        </mat-card-title>\n        <br><br>\n        <mat-card-content>\n          Do you wish to delete role {{ roleTitle }}?\n        </mat-card-content>\n        <mat-card-actions align=\"end\">\n          <button mat-raised-button matDialogClose=\"confirm\" color=\"primary\">Confirm</button>\n          <button mat-raised-button matDialogClose=\"cancel\" color=\"warn\">Cancel</button>\n        </mat-card-actions>\n      </mat-card>\n    </div>\n  </mat-dialog-content>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/shared/session-layout/session-layout.component.html":
 /*!***********************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/shared/session-layout/session-layout.component.html ***!
@@ -195,7 +558,7 @@ module.exports = "<div class=\"container\">\n  <mat-card class=\"form\">\n    <m
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: session-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n\n  <div>\n    <!-- Page header -->\n    <header>\n      <!-- Toolbar -->\n      <mat-toolbar class=\"menu\" role=\"header\" color=\"primary\">\n        <mat-toolbar-row>\n            <button mat-button class=\"toolbar__icon-button mat-button\">\n              <mat-icon>menu</mat-icon>\n            </button>\n          <button mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/']\">\n            <span style=\"margin-left: 5px !important\" >Bob's</span>\n          </button>\n          <button [routerLink]=\"['/contact']\" mat-button class=\"toolbar__icon-button mat-button\">\n            <span style=\"margin-left: 5px !important\">Contact Us</span>\n          </button>\n          <button [routerLink]=\"['/about-us']\" mat-button class=\"toolbar__icon-button mat-button\">\n            <span style=\"margin-left: 5px !important\">About Us</span>\n          </button>\n          <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/session/security-questions']\">\n            <span style=\"margin-left: 5px !important\" >Security Questions</span>\n          </button>\n          <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\" [routerLink]=\"['/session/user-management']\">\n            <span style=\"margin-left: 5px !important\" >User Management</span>\n          </button>\n\n          <div fxFlex></div>\n\n          <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n            <mat-icon>account_circle</mat-icon>\n          </button>\n          <mat-menu #menu=\"matMenu\">\n            <button mat-menu-item (click)=\"userLogout()\">\n              <mat-icon>exit_to_app</mat-icon>\n              <span>Logout</span>\n            </button>\n          </mat-menu>\n        </mat-toolbar-row>\n      </mat-toolbar>\n    </header>\n  </div>\n\n  <!-- Main page content -->\n  <main>\n    <router-outlet></router-outlet>\n  </main>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: session-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n<div>\n  <!-- Page header -->\n  <header>\n    <!-- Toolbar -->\n    <mat-toolbar class=\"menu\" role=\"header\" style=\"color: black; background-color: white\">\n      <mat-toolbar-row>\n        <button [routerLink]=\"['/']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">BCRS</span>\n        </button>\n        <button [routerLink]=\"['/contact']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">Contact Us</span>\n        </button>\n        <button [routerLink]=\"['/about-us']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">About Us</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/security-questions']\">\n          <span style=\"margin-left: 5px !important\">Security Questions</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/user-management']\">\n          <span style=\"margin-left: 5px !important\">User Management</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/role-configuration']\">\n          <span style=\"margin-left: 5px !important\">Role Configuration</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/service-repair']\">\n          <span style=\"margin-left: 5px !important\">Role Configuration</span>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n          <mat-icon>exit_to_app</mat-icon>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <button mat-menu-item (click)=\"userLogout()\">\n            <span>Logout</span>\n          </button>\n        </mat-menu>\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </header>\n</div>\n\n<!-- Main page content -->\n<main>\n  <router-outlet></router-outlet>\n</main>\n"
 
 /***/ }),
 
@@ -292,43 +655,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.es5.js");
 /* harmony import */ var _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shared/guards/auth-guard.service */ "./src/app/shared/guards/auth-guard.service.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./shared/base-layout/base-layout.component */ "./src/app/shared/base-layout/base-layout.component.ts");
-/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _shared_session_layout_session_layout_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./shared/session-layout/session-layout.component */ "./src/app/shared/session-layout/session-layout.component.ts");
-/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
-/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
-/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
-/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
-/* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
-/* harmony import */ var _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./shared/question-edit-dialog/question-edit-dialog.component */ "./src/app/shared/question-edit-dialog/question-edit-dialog.component.ts");
-/* harmony import */ var _shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./shared/user-delete-dialog/user-delete-dialog.component */ "./src/app/shared/user-delete-dialog/user-delete-dialog.component.ts");
-/* harmony import */ var _shared_question_add_dialog_question_add_dialog_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./shared/question-add-dialog/question-add-dialog.component */ "./src/app/shared/question-add-dialog/question-add-dialog.component.ts");
-/* harmony import */ var _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./shared/question-delete-dialog/question-delete-dialog.component */ "./src/app/shared/question-delete-dialog/question-delete-dialog.component.ts");
-/* harmony import */ var _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./verify-username-form/verify-username-form.component */ "./src/app/verify-username-form/verify-username-form.component.ts");
-/* harmony import */ var _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./verify-security-questions-form/verify-security-questions-form.component */ "./src/app/verify-security-questions-form/verify-security-questions-form.component.ts");
-/* harmony import */ var _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./reset-password-form/reset-password-form.component */ "./src/app/reset-password-form/reset-password-form.component.ts");
-/* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
-/* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
-/* harmony import */ var _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/esm5/card.es5.js");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/esm5/button.es5.js");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm5/icon.es5.js");
-/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm5/menu.es5.js");
-/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
-/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm5/sidenav.es5.js");
-/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
-/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm5/input.es5.js");
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! @angular/material/divider */ "./node_modules/@angular/material/esm5/divider.es5.js");
-/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/esm5/radio.es5.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
-/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/esm5/select.es5.js");
-/* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! @angular/material/list */ "./node_modules/@angular/material/esm5/list.es5.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! primeng/carousel */ "./node_modules/primeng/carousel.js");
-/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_45___default = /*#__PURE__*/__webpack_require__.n(primeng_carousel__WEBPACK_IMPORTED_MODULE_45__);
+/* harmony import */ var _shared_guards_role_guard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/guards/role.guard */ "./src/app/shared/guards/role.guard.ts");
+/* harmony import */ var _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./shared/route-interceptors/error.interceptor */ "./src/app/shared/route-interceptors/error.interceptor.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./shared/base-layout/base-layout.component */ "./src/app/shared/base-layout/base-layout.component.ts");
+/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
+/* harmony import */ var _shared_session_layout_session_layout_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./shared/session-layout/session-layout.component */ "./src/app/shared/session-layout/session-layout.component.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
+/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
+/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
+/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
+/* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
+/* harmony import */ var _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./shared/question-edit-dialog/question-edit-dialog.component */ "./src/app/shared/question-edit-dialog/question-edit-dialog.component.ts");
+/* harmony import */ var _shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./shared/user-delete-dialog/user-delete-dialog.component */ "./src/app/shared/user-delete-dialog/user-delete-dialog.component.ts");
+/* harmony import */ var _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./shared/question-delete-dialog/question-delete-dialog.component */ "./src/app/shared/question-delete-dialog/question-delete-dialog.component.ts");
+/* harmony import */ var _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./verify-username-form/verify-username-form.component */ "./src/app/verify-username-form/verify-username-form.component.ts");
+/* harmony import */ var _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./verify-security-questions-form/verify-security-questions-form.component */ "./src/app/verify-security-questions-form/verify-security-questions-form.component.ts");
+/* harmony import */ var _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./reset-password-form/reset-password-form.component */ "./src/app/reset-password-form/reset-password-form.component.ts");
+/* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
+/* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
+/* harmony import */ var _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
+/* harmony import */ var _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./pages/service-repair/service-repair.component */ "./src/app/pages/service-repair/service-repair.component.ts");
+/* harmony import */ var _shared_invoice_dialog_invoice_dialog_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./shared/invoice-dialog/invoice-dialog.component */ "./src/app/shared/invoice-dialog/invoice-dialog.component.ts");
+/* harmony import */ var _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./pages/role-configuration/role-configuration.component */ "./src/app/pages/role-configuration/role-configuration.component.ts");
+/* harmony import */ var _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./shared/role-delete-dialog/role-delete-dialog.component */ "./src/app/shared/role-delete-dialog/role-delete-dialog.component.ts");
+/* harmony import */ var _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./pages/role-edit/role-edit.component */ "./src/app/pages/role-edit/role-edit.component.ts");
+/* harmony import */ var _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./pages/role-add/role-add.component */ "./src/app/pages/role-add/role-add.component.ts");
+/* harmony import */ var _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./pages/question-add/question-add.component */ "./src/app/pages/question-add/question-add.component.ts");
+/* harmony import */ var _pages_purchase_by_service_purchase_by_service_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./pages/purchase-by-service/purchase-by-service.component */ "./src/app/pages/purchase-by-service/purchase-by-service.component.ts");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/esm5/card.es5.js");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/esm5/button.es5.js");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm5/icon.es5.js");
+/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm5/menu.es5.js");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
+/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm5/sidenav.es5.js");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm5/input.es5.js");
+/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! @angular/material/divider */ "./node_modules/@angular/material/esm5/divider.es5.js");
+/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/esm5/radio.es5.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
+/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/esm5/select.es5.js");
+/* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! @angular/material/list */ "./node_modules/@angular/material/esm5/list.es5.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! primeng/carousel */ "./node_modules/primeng/carousel.js");
+/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_54___default = /*#__PURE__*/__webpack_require__.n(primeng_carousel__WEBPACK_IMPORTED_MODULE_54__);
 /*
 ; =======================================================
 ; Title: app.module.ts (Week 6)
@@ -349,7 +721,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 // Components
+
+
+
+
+
+
+
 
 
 
@@ -395,26 +776,33 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
-                _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_11__["BaseLayoutComponent"],
-                _pages_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"],
-                _shared_session_layout_session_layout_component__WEBPACK_IMPORTED_MODULE_13__["SessionLayoutComponent"],
-                _pages_login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"],
-                _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_15__["NotFoundComponent"],
-                _pages_register_register_component__WEBPACK_IMPORTED_MODULE_18__["RegisterComponent"],
-                _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_16__["SecurityQuestionsComponent"],
-                _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_17__["UserManagementComponent"],
-                _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_19__["UserDetailsComponent"],
-                _shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_21__["UserDeleteDialogComponent"],
-                _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_20__["QuestionEditDialogComponent"],
-                _shared_question_add_dialog_question_add_dialog_component__WEBPACK_IMPORTED_MODULE_22__["QuestionAddDialogComponent"],
-                _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_23__["QuestionDeleteDialogComponent"],
-                _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_24__["VerifyUsernameFormComponent"],
-                _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_25__["VerifySecurityQuestionsFormComponent"],
-                _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_26__["ResetPasswordFormComponent"],
-                _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_27__["ServerErrorComponent"],
-                _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_28__["ContactComponent"],
-                _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_29__["AboutUsComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
+                _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_13__["BaseLayoutComponent"],
+                _pages_home_home_component__WEBPACK_IMPORTED_MODULE_14__["HomeComponent"],
+                _shared_session_layout_session_layout_component__WEBPACK_IMPORTED_MODULE_15__["SessionLayoutComponent"],
+                _pages_login_login_component__WEBPACK_IMPORTED_MODULE_16__["LoginComponent"],
+                _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_17__["NotFoundComponent"],
+                _pages_register_register_component__WEBPACK_IMPORTED_MODULE_20__["RegisterComponent"],
+                _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_18__["SecurityQuestionsComponent"],
+                _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_19__["UserManagementComponent"],
+                _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_21__["UserDetailsComponent"],
+                _shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_23__["UserDeleteDialogComponent"],
+                _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_22__["QuestionEditDialogComponent"],
+                _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_24__["QuestionDeleteDialogComponent"],
+                _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_25__["VerifyUsernameFormComponent"],
+                _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_26__["VerifySecurityQuestionsFormComponent"],
+                _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_27__["ResetPasswordFormComponent"],
+                _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_28__["ServerErrorComponent"],
+                _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_29__["ContactComponent"],
+                _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_30__["AboutUsComponent"],
+                _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_31__["ServiceRepairComponent"],
+                _shared_invoice_dialog_invoice_dialog_component__WEBPACK_IMPORTED_MODULE_32__["InvoiceDialogComponent"],
+                _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_33__["RoleConfigurationComponent"],
+                _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_34__["RoleDeleteDialogComponent"],
+                _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_35__["RoleEditComponent"],
+                _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_36__["RoleAddComponent"],
+                _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_37__["QuestionAddComponent"],
+                _pages_purchase_by_service_purchase_by_service_component__WEBPACK_IMPORTED_MODULE_38__["PurchaseByServiceComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -423,26 +811,37 @@ var AppModule = /** @class */ (function () {
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_7__["ReactiveFormsModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_44__["FlexLayoutModule"],
-                _angular_material_card__WEBPACK_IMPORTED_MODULE_30__["MatCardModule"],
-                _angular_material_button__WEBPACK_IMPORTED_MODULE_31__["MatButtonModule"],
-                _angular_material_icon__WEBPACK_IMPORTED_MODULE_32__["MatIconModule"],
-                _angular_material_menu__WEBPACK_IMPORTED_MODULE_33__["MatMenuModule"],
-                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_34__["MatToolbarModule"],
-                _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_35__["MatSidenavModule"],
-                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_36__["MatCheckboxModule"],
-                _angular_material_input__WEBPACK_IMPORTED_MODULE_37__["MatInputModule"],
-                _angular_material_divider__WEBPACK_IMPORTED_MODULE_38__["MatDividerModule"],
-                _angular_material_radio__WEBPACK_IMPORTED_MODULE_39__["MatRadioModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_40__["MatDialogModule"],
-                _angular_material_table__WEBPACK_IMPORTED_MODULE_41__["MatTableModule"],
-                _angular_material_select__WEBPACK_IMPORTED_MODULE_42__["MatSelectModule"],
-                _angular_material_list__WEBPACK_IMPORTED_MODULE_43__["MatListModule"],
-                primeng_carousel__WEBPACK_IMPORTED_MODULE_45__["CarouselModule"]
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_53__["FlexLayoutModule"],
+                _angular_material_card__WEBPACK_IMPORTED_MODULE_39__["MatCardModule"],
+                _angular_material_button__WEBPACK_IMPORTED_MODULE_40__["MatButtonModule"],
+                _angular_material_icon__WEBPACK_IMPORTED_MODULE_41__["MatIconModule"],
+                _angular_material_menu__WEBPACK_IMPORTED_MODULE_42__["MatMenuModule"],
+                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_43__["MatToolbarModule"],
+                _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_44__["MatSidenavModule"],
+                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_45__["MatCheckboxModule"],
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_46__["MatInputModule"],
+                _angular_material_divider__WEBPACK_IMPORTED_MODULE_47__["MatDividerModule"],
+                _angular_material_radio__WEBPACK_IMPORTED_MODULE_48__["MatRadioModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_49__["MatDialogModule"],
+                _angular_material_table__WEBPACK_IMPORTED_MODULE_50__["MatTableModule"],
+                _angular_material_select__WEBPACK_IMPORTED_MODULE_51__["MatSelectModule"],
+                _angular_material_list__WEBPACK_IMPORTED_MODULE_52__["MatListModule"],
+                primeng_carousel__WEBPACK_IMPORTED_MODULE_54__["CarouselModule"]
             ],
-            providers: [ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__["CookieService"], _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__["AuthGuardService"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]],
-            entryComponents: [_shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_21__["UserDeleteDialogComponent"], _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_20__["QuestionEditDialogComponent"], _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_23__["QuestionDeleteDialogComponent"]]
+            providers: [
+                ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__["CookieService"],
+                _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__["AuthGuardService"],
+                _shared_guards_role_guard__WEBPACK_IMPORTED_MODULE_10__["RoleGuard"],
+                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HTTP_INTERCEPTORS"], useClass: _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_11__["ErrorInterceptor"], multi: true }
+            ],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]],
+            entryComponents: [
+                _shared_user_delete_dialog_user_delete_dialog_component__WEBPACK_IMPORTED_MODULE_23__["UserDeleteDialogComponent"],
+                _shared_question_edit_dialog_question_edit_dialog_component__WEBPACK_IMPORTED_MODULE_22__["QuestionEditDialogComponent"],
+                _shared_question_delete_dialog_question_delete_dialog_component__WEBPACK_IMPORTED_MODULE_24__["QuestionDeleteDialogComponent"],
+                _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_34__["RoleDeleteDialogComponent"],
+                _shared_invoice_dialog_invoice_dialog_component__WEBPACK_IMPORTED_MODULE_32__["InvoiceDialogComponent"]
+            ]
         })
     ], AppModule);
     return AppModule;
@@ -462,21 +861,31 @@ var AppModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutes", function() { return AppRoutes; });
-/* harmony import */ var _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reset-password-form/reset-password-form.component */ "./src/app/reset-password-form/reset-password-form.component.ts");
-/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared */ "./src/app/shared/index.ts");
-/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
-/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
-/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
-/* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
-/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
-/* harmony import */ var _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shared/guards/auth-guard.service */ "./src/app/shared/guards/auth-guard.service.ts");
-/* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
-/* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
-/* harmony import */ var _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./verify-security-questions-form/verify-security-questions-form.component */ "./src/app/verify-security-questions-form/verify-security-questions-form.component.ts");
-/* harmony import */ var _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./verify-username-form/verify-username-form.component */ "./src/app/verify-username-form/verify-username-form.component.ts");
-/* harmony import */ var _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
+/* harmony import */ var _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/question-add/question-add.component */ "./src/app/pages/question-add/question-add.component.ts");
+/* harmony import */ var _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/role-add/role-add.component */ "./src/app/pages/role-add/role-add.component.ts");
+/* harmony import */ var _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/role-edit/role-edit.component */ "./src/app/pages/role-edit/role-edit.component.ts");
+/* harmony import */ var _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/role-configuration/role-configuration.component */ "./src/app/pages/role-configuration/role-configuration.component.ts");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared */ "./src/app/shared/index.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
+/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
+/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
+/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
+/* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
+/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
+/* harmony import */ var _shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./shared/guards/auth-guard.service */ "./src/app/shared/guards/auth-guard.service.ts");
+/* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
+/* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
+/* harmony import */ var _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./verify-security-questions-form/verify-security-questions-form.component */ "./src/app/verify-security-questions-form/verify-security-questions-form.component.ts");
+/* harmony import */ var _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./verify-username-form/verify-username-form.component */ "./src/app/verify-username-form/verify-username-form.component.ts");
+/* harmony import */ var _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
+/* harmony import */ var _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./reset-password-form/reset-password-form.component */ "./src/app/reset-password-form/reset-password-form.component.ts");
+/* harmony import */ var _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/service-repair/service-repair.component */ "./src/app/pages/service-repair/service-repair.component.ts");
+
+
+
+
+
 
 
 
@@ -496,26 +905,33 @@ var AppRoutes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
         path: '',
-        component: _shared__WEBPACK_IMPORTED_MODULE_1__["BaseLayoutComponent"],
+        component: _shared__WEBPACK_IMPORTED_MODULE_4__["BaseLayoutComponent"],
         children: [
-            { path: 'login', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] },
-            { path: 'home', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
-            { path: 'register', component: _pages_register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"] },
-            { path: 'server-error', component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_10__["ServerErrorComponent"] },
-            { path: 'contact', component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_11__["ContactComponent"] },
-            { path: 'forgot-password', component: _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_13__["VerifyUsernameFormComponent"] },
-            { path: 'verify-security-questions', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_12__["VerifySecurityQuestionsFormComponent"] },
-            { path: 'forgot-password/:username', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_12__["VerifySecurityQuestionsFormComponent"] },
-            { path: 'reset-password', component: _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_0__["ResetPasswordFormComponent"] },
-            { path: 'about-us', component: _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_14__["AboutUsComponent"] }
+            { path: 'login', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"] },
+            { path: 'home', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"] },
+            { path: 'register', component: _pages_register_register_component__WEBPACK_IMPORTED_MODULE_11__["RegisterComponent"] },
+            { path: 'server-error', component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_13__["ServerErrorComponent"] },
+            { path: 'contact', component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_14__["ContactComponent"] },
+            { path: 'forgot-password', component: _verify_username_form_verify_username_form_component__WEBPACK_IMPORTED_MODULE_16__["VerifyUsernameFormComponent"] },
+            { path: 'verify-security-questions', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_15__["VerifySecurityQuestionsFormComponent"] },
+            { path: 'forgot-password/:username', component: _verify_security_questions_form_verify_security_questions_form_component__WEBPACK_IMPORTED_MODULE_15__["VerifySecurityQuestionsFormComponent"] },
+            { path: 'reset-password', component: _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_18__["ResetPasswordFormComponent"] },
+            { path: 'about-us', component: _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_17__["AboutUsComponent"] },
         ]
     },
-    { path: 'session', component: _shared__WEBPACK_IMPORTED_MODULE_1__["SessionLayoutComponent"],
+    { path: 'session', component: _shared__WEBPACK_IMPORTED_MODULE_4__["SessionLayoutComponent"],
         children: [
-            { path: 'security-questions', component: _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_5__["SecurityQuestionsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__["AuthGuardService"]] },
-            { path: 'user-management', component: _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_6__["UserManagementComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__["AuthGuardService"]] },
-            { path: 'user-details/:id', component: _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__["UserDetailsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_9__["AuthGuardService"]] },
-            { path: '404', component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__["NotFoundComponent"] }
+            { path: 'security-questions', component: _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__["SecurityQuestionsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'user-management', component: _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_9__["UserManagementComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'user-details/:id', component: _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_10__["UserDetailsComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: '404', component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_7__["NotFoundComponent"] },
+            { path: 'service-repair', component: _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_19__["ServiceRepairComponent"] },
+            { path: 'role-configuration', component: _pages_role_configuration_role_configuration_component__WEBPACK_IMPORTED_MODULE_3__["RoleConfigurationComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'role-edit/:id', component: _pages_role_edit_role_edit_component__WEBPACK_IMPORTED_MODULE_2__["RoleEditComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'role-add', component: _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_1__["RoleAddComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'question-add', component: _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_0__["QuestionAddComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: '404', component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_7__["NotFoundComponent"] },
+            { path: 'service-repair', component: _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_19__["ServiceRepairComponent"] }
         ]
     },
     { path: '**', redirectTo: 'session/404' }
@@ -531,7 +947,7 @@ var AppRoutes = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  margin-top: 150px;\n}\n\n.story-wrapper {\n  text-align: center;\n}\n\n.team-wrapper {\n  padding: 50px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWJvdXQtdXMvYWJvdXQtdXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Fib3V0LXVzL2Fib3V0LXVzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcbiAgbWFyZ2luLXRvcDogMTUwcHg7XG59XG5cbi5zdG9yeS13cmFwcGVyIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4udGVhbS13cmFwcGVyIHtcbiAgcGFkZGluZzogNTBweDtcbn1cbiJdfQ== */"
+module.exports = ".img-wrapper {\n  margin-top: 150px;\n}\n\n.container{\n  width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\np {\n  font-size: 25px;\n}\n\n.team-member{\n  display: block;\n}\n\n.team-member img{\n  margin-left: auto;\n  margin-right: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWJvdXQtdXMvYWJvdXQtdXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLFVBQVU7RUFDVixpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvYWJvdXQtdXMvYWJvdXQtdXMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWctd3JhcHBlciB7XG4gIG1hcmdpbi10b3A6IDE1MHB4O1xufVxuXG4uY29udGFpbmVye1xuICB3aWR0aDogODAlO1xuICBtYXJnaW4tbGVmdDogYXV0bztcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xufVxuXG5wIHtcbiAgZm9udC1zaXplOiAyNXB4O1xufVxuXG4udGVhbS1tZW1iZXJ7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuXG4udGVhbS1tZW1iZXIgaW1ne1xuICBtYXJnaW4tbGVmdDogYXV0bztcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -654,7 +1070,7 @@ var ContactComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*\n; =======================================================\n; Title: home.component.css (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7O0NBUUMiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9ob21lL2hvbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG47ID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbjsgVGl0bGU6IGhvbWUuY29tcG9uZW50LmNzcyAoV2VlayA2KVxuOyBBdXRob3JzOiBbVHlsZXIgQXJtc3Ryb25nXSwgRGF2aWQgVGFydmluLCBBYXJvbiBXaWxzb25cbjsgRGF0ZTogMjMgT2N0IDIwMTlcbjsgRGVzY3JpcHRpb246IEJvYidzIENvbXB1dGVyIFJlcGFpciBTaG9wXG47IExlZ2VuZDogW10gLT4gVGVhbSBtZW1iZXIgcmVzcG9uc2libGUgZm9yIHBhZ2UuXG47ID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiovXG4iXX0= */"
+module.exports = "/*\n; =======================================================\n; Title: home.component.css (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/\n\ndiv #services .cards-1{\nbox-sizing:border-box;\ndisplay:block;\nfont-size:14px;\nfont-stretch:100%;\nfont-style:normal;\nfont-variant-caps:normal;\nfont-variant-east-asian:normal;\n-webkit-font-variant-ligatures:normal;\n        font-variant-ligatures:normal;\nfont-variant-numeric:normal;\nfont-weight:400;\nheight:300px;\nline-height:22px;\npadding-bottom:26px;\npadding-top:20px;\ntext-align:center;\n-webkit-text-size-adjust:100%;\n   -moz-text-size-adjust:100%;\n    -ms-text-size-adjust:100%;\n        text-size-adjust:100%;\nwidth: 100%;\n-webkit-tap-highlight-color:rgba(0, 0, 0, 0);\n}\n\n.col-lg-12{\nbox-sizing:border-box;\ndisplay:block;\nflex-basis:100%;\n-webkit-box-flex:0;\n        flex-grow:0;\nflex-shrink:0;\nfont-family:Raleway, sans-serif;\nfont-size:14px;\nfont-stretch:100%;\nfont-style:normal;\nfont-variant-caps:normal;\nfont-variant-east-asian:normal;\n-webkit-font-variant-ligatures:normal;\n        font-variant-ligatures:normal;\nfont-variant-numeric:normal;\nfont-weight:400;\nline-height:22px;\nmax-width:100%;\npadding-left:15px;\npadding-right:15px;\nposition:relative;\ntext-align:center;\n-webkit-text-size-adjust:100%;\n   -moz-text-size-adjust:100%;\n    -ms-text-size-adjust:100%;\n        text-size-adjust:100%;\nwidth:1140px;\n-webkit-tap-highlight-color:rgba(0, 0, 0, 0);\n}\n\n.cards-1 {\n\tpadding-top: 4rem;\n\tpadding-bottom: 1.625rem;\n\ttext-align: center;\n}\n\n.cards-1 .card {\n\tmax-width: 21rem;\n\tmargin-right: auto;\n\tmargin-bottom: 4.5rem;\n\tmargin-left: auto;\n\tpadding: 3.25rem 2rem 2rem 2rem;\n\tborder: 1px solid #336633;\n\tborder-radius: 0.5rem;\n\tbackground: transparent;\n}\n\n.cards-1 .card-title {\n\tmargin-bottom: 0.875rem;\n}\n\n.cards-1 .card-body {\n\tpadding: 0;\n}\n\n.cards-1 .card {\n    display: inline-block;\n    max-width: 17.125rem;\n    vertical-align: top;\n}\n\n.cards-1 .col-lg-12 div.card:nth-child(3n+2) {\n    margin-right: 2rem;\n    margin-left: 2rem;\n}\n\n.card {\n    background-clip:border-box;\n    background-color:rgba(0, 0, 0, 0);\n    border-bottom-color:rgb(196, 216, 220);\n    border-bottom-left-radius:8px;\n    border-bottom-right-radius:8px;\n    border-bottom-style:solid;\n    border-bottom-width:1px;\n    border-image-outset:0px;\n    border-image-repeat:stretch;\n    border-image-slice:100%;\n    border-image-source:none;\n    border-image-width:1;\n    border-left-color:rgb(196, 216, 220);\n    border-left-style:solid;\n    border-left-width:1px;\n    border-right-color:rgb(196, 216, 220);\n    border-right-style:solid;\n    border-right-width:1px;\n    border-top-color:rgb(196, 216, 220);\n    border-top-left-radius:8px;\n    border-top-right-radius:8px;\n    border-top-style:solid;\n    border-top-width:1px;\n    box-sizing:border-box;\n    display:inline-block;\n    -webkit-box-orient:vertical;\n    -webkit-box-direction:normal;\n            flex-direction:column;\n    font-size:14px;\n    font-stretch:100%;\n    font-style:normal;\n    font-variant-caps:normal;\n    font-variant-east-asian:normal;\n    -webkit-font-variant-ligatures:normal;\n            font-variant-ligatures:normal;\n    font-variant-numeric:normal;\n    font-weight:400;\n    height:200px;\n    line-height:22px;\n    margin-bottom:72px;\n    margin-left:0px;\n    margin-right:0px;\n    max-width:336px;\n    min-width:0px;\n    overflow-wrap:break-word;\n    padding-bottom:32px;\n    padding-left:32px;\n    padding-right:32px;\n    padding-top:52px;\n    position:relative;\n    text-align:center;\n    -webkit-text-size-adjust:100%;\n       -moz-text-size-adjust:100%;\n        -ms-text-size-adjust:100%;\n            text-size-adjust:100%;\n    vertical-align:top;\n    width:336px;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7O0NBUUM7O0FBRUQ7QUFDQSxxQkFBcUI7QUFDckIsYUFBYTtBQUNiLGNBQWM7QUFDZCxpQkFBaUI7QUFDakIsaUJBQWlCO0FBQ2pCLHdCQUF3QjtBQUN4Qiw4QkFBOEI7QUFDOUIscUNBQTZCO1FBQTdCLDZCQUE2QjtBQUM3QiwyQkFBMkI7QUFDM0IsZUFBZTtBQUNmLFlBQVk7QUFDWixnQkFBZ0I7QUFDaEIsbUJBQW1CO0FBQ25CLGdCQUFnQjtBQUNoQixpQkFBaUI7QUFDakIsNkJBQXFCO0dBQXJCLDBCQUFxQjtJQUFyQix5QkFBcUI7UUFBckIscUJBQXFCO0FBQ3JCLFdBQVc7QUFDWCw0Q0FBNEM7QUFDNUM7O0FBRUE7QUFDQSxxQkFBcUI7QUFDckIsYUFBYTtBQUNiLGVBQWU7QUFDZixrQkFBVztRQUFYLFdBQVc7QUFDWCxhQUFhO0FBQ2IsK0JBQStCO0FBQy9CLGNBQWM7QUFDZCxpQkFBaUI7QUFDakIsaUJBQWlCO0FBQ2pCLHdCQUF3QjtBQUN4Qiw4QkFBOEI7QUFDOUIscUNBQTZCO1FBQTdCLDZCQUE2QjtBQUM3QiwyQkFBMkI7QUFDM0IsZUFBZTtBQUNmLGdCQUFnQjtBQUNoQixjQUFjO0FBQ2QsaUJBQWlCO0FBQ2pCLGtCQUFrQjtBQUNsQixpQkFBaUI7QUFDakIsaUJBQWlCO0FBQ2pCLDZCQUFxQjtHQUFyQiwwQkFBcUI7SUFBckIseUJBQXFCO1FBQXJCLHFCQUFxQjtBQUNyQixZQUFZO0FBQ1osNENBQTRDO0FBQzVDOztBQUVBO0NBQ0MsaUJBQWlCO0NBQ2pCLHdCQUF3QjtDQUN4QixrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxnQkFBZ0I7Q0FDaEIsa0JBQWtCO0NBQ2xCLHFCQUFxQjtDQUNyQixpQkFBaUI7Q0FDakIsK0JBQStCO0NBQy9CLHlCQUF5QjtDQUN6QixxQkFBcUI7Q0FDckIsdUJBQXVCO0FBQ3hCOztBQUVBO0NBQ0MsdUJBQXVCO0FBQ3hCOztBQUVBO0NBQ0MsVUFBVTtBQUNYOztBQUVBO0lBQ0kscUJBQXFCO0lBQ3JCLG9CQUFvQjtJQUNwQixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsaUJBQWlCO0FBQ3JCOztBQUNJO0lBQ0EsMEJBQTBCO0lBQzFCLGlDQUFpQztJQUNqQyxzQ0FBc0M7SUFDdEMsNkJBQTZCO0lBQzdCLDhCQUE4QjtJQUM5Qix5QkFBeUI7SUFDekIsdUJBQXVCO0lBQ3ZCLHVCQUF1QjtJQUN2QiwyQkFBMkI7SUFDM0IsdUJBQXVCO0lBQ3ZCLHdCQUF3QjtJQUN4QixvQkFBb0I7SUFDcEIsb0NBQW9DO0lBQ3BDLHVCQUF1QjtJQUN2QixxQkFBcUI7SUFDckIscUNBQXFDO0lBQ3JDLHdCQUF3QjtJQUN4QixzQkFBc0I7SUFDdEIsbUNBQW1DO0lBQ25DLDBCQUEwQjtJQUMxQiwyQkFBMkI7SUFDM0Isc0JBQXNCO0lBQ3RCLG9CQUFvQjtJQUNwQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLDJCQUFxQjtJQUFyQiw0QkFBcUI7WUFBckIscUJBQXFCO0lBQ3JCLGNBQWM7SUFDZCxpQkFBaUI7SUFDakIsaUJBQWlCO0lBQ2pCLHdCQUF3QjtJQUN4Qiw4QkFBOEI7SUFDOUIscUNBQTZCO1lBQTdCLDZCQUE2QjtJQUM3QiwyQkFBMkI7SUFDM0IsZUFBZTtJQUNmLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsZUFBZTtJQUNmLGFBQWE7SUFDYix3QkFBd0I7SUFDeEIsbUJBQW1CO0lBQ25CLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtJQUNqQixpQkFBaUI7SUFDakIsNkJBQXFCO09BQXJCLDBCQUFxQjtRQUFyQix5QkFBcUI7WUFBckIscUJBQXFCO0lBQ3JCLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1giLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9ob21lL2hvbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG47ID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbjsgVGl0bGU6IGhvbWUuY29tcG9uZW50LmNzcyAoV2VlayA2KVxuOyBBdXRob3JzOiBbVHlsZXIgQXJtc3Ryb25nXSwgRGF2aWQgVGFydmluLCBBYXJvbiBXaWxzb25cbjsgRGF0ZTogMjMgT2N0IDIwMTlcbjsgRGVzY3JpcHRpb246IEJvYidzIENvbXB1dGVyIFJlcGFpciBTaG9wXG47IExlZ2VuZDogW10gLT4gVGVhbSBtZW1iZXIgcmVzcG9uc2libGUgZm9yIHBhZ2UuXG47ID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiovXG5cbmRpdiAjc2VydmljZXMgLmNhcmRzLTF7XG5ib3gtc2l6aW5nOmJvcmRlci1ib3g7XG5kaXNwbGF5OmJsb2NrO1xuZm9udC1zaXplOjE0cHg7XG5mb250LXN0cmV0Y2g6MTAwJTtcbmZvbnQtc3R5bGU6bm9ybWFsO1xuZm9udC12YXJpYW50LWNhcHM6bm9ybWFsO1xuZm9udC12YXJpYW50LWVhc3QtYXNpYW46bm9ybWFsO1xuZm9udC12YXJpYW50LWxpZ2F0dXJlczpub3JtYWw7XG5mb250LXZhcmlhbnQtbnVtZXJpYzpub3JtYWw7XG5mb250LXdlaWdodDo0MDA7XG5oZWlnaHQ6MzAwcHg7XG5saW5lLWhlaWdodDoyMnB4O1xucGFkZGluZy1ib3R0b206MjZweDtcbnBhZGRpbmctdG9wOjIwcHg7XG50ZXh0LWFsaWduOmNlbnRlcjtcbnRleHQtc2l6ZS1hZGp1c3Q6MTAwJTtcbndpZHRoOiAxMDAlO1xuLXdlYmtpdC10YXAtaGlnaGxpZ2h0LWNvbG9yOnJnYmEoMCwgMCwgMCwgMCk7XG59XG5cbi5jb2wtbGctMTJ7XG5ib3gtc2l6aW5nOmJvcmRlci1ib3g7XG5kaXNwbGF5OmJsb2NrO1xuZmxleC1iYXNpczoxMDAlO1xuZmxleC1ncm93OjA7XG5mbGV4LXNocmluazowO1xuZm9udC1mYW1pbHk6UmFsZXdheSwgc2Fucy1zZXJpZjtcbmZvbnQtc2l6ZToxNHB4O1xuZm9udC1zdHJldGNoOjEwMCU7XG5mb250LXN0eWxlOm5vcm1hbDtcbmZvbnQtdmFyaWFudC1jYXBzOm5vcm1hbDtcbmZvbnQtdmFyaWFudC1lYXN0LWFzaWFuOm5vcm1hbDtcbmZvbnQtdmFyaWFudC1saWdhdHVyZXM6bm9ybWFsO1xuZm9udC12YXJpYW50LW51bWVyaWM6bm9ybWFsO1xuZm9udC13ZWlnaHQ6NDAwO1xubGluZS1oZWlnaHQ6MjJweDtcbm1heC13aWR0aDoxMDAlO1xucGFkZGluZy1sZWZ0OjE1cHg7XG5wYWRkaW5nLXJpZ2h0OjE1cHg7XG5wb3NpdGlvbjpyZWxhdGl2ZTtcbnRleHQtYWxpZ246Y2VudGVyO1xudGV4dC1zaXplLWFkanVzdDoxMDAlO1xud2lkdGg6MTE0MHB4O1xuLXdlYmtpdC10YXAtaGlnaGxpZ2h0LWNvbG9yOnJnYmEoMCwgMCwgMCwgMCk7XG59XG5cbi5jYXJkcy0xIHtcblx0cGFkZGluZy10b3A6IDRyZW07XG5cdHBhZGRpbmctYm90dG9tOiAxLjYyNXJlbTtcblx0dGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uY2FyZHMtMSAuY2FyZCB7XG5cdG1heC13aWR0aDogMjFyZW07XG5cdG1hcmdpbi1yaWdodDogYXV0bztcblx0bWFyZ2luLWJvdHRvbTogNC41cmVtO1xuXHRtYXJnaW4tbGVmdDogYXV0bztcblx0cGFkZGluZzogMy4yNXJlbSAycmVtIDJyZW0gMnJlbTtcblx0Ym9yZGVyOiAxcHggc29saWQgIzMzNjYzMztcblx0Ym9yZGVyLXJhZGl1czogMC41cmVtO1xuXHRiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcbn1cblxuLmNhcmRzLTEgLmNhcmQtdGl0bGUge1xuXHRtYXJnaW4tYm90dG9tOiAwLjg3NXJlbTtcbn1cblxuLmNhcmRzLTEgLmNhcmQtYm9keSB7XG5cdHBhZGRpbmc6IDA7XG59XG5cbi5jYXJkcy0xIC5jYXJkIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgbWF4LXdpZHRoOiAxNy4xMjVyZW07XG4gICAgdmVydGljYWwtYWxpZ246IHRvcDtcbn1cblxuLmNhcmRzLTEgLmNvbC1sZy0xMiBkaXYuY2FyZDpudGgtY2hpbGQoM24rMikge1xuICAgIG1hcmdpbi1yaWdodDogMnJlbTtcbiAgICBtYXJnaW4tbGVmdDogMnJlbTtcbn1cbiAgICAuY2FyZCB7XG4gICAgYmFja2dyb3VuZC1jbGlwOmJvcmRlci1ib3g7XG4gICAgYmFja2dyb3VuZC1jb2xvcjpyZ2JhKDAsIDAsIDAsIDApO1xuICAgIGJvcmRlci1ib3R0b20tY29sb3I6cmdiKDE5NiwgMjE2LCAyMjApO1xuICAgIGJvcmRlci1ib3R0b20tbGVmdC1yYWRpdXM6OHB4O1xuICAgIGJvcmRlci1ib3R0b20tcmlnaHQtcmFkaXVzOjhweDtcbiAgICBib3JkZXItYm90dG9tLXN0eWxlOnNvbGlkO1xuICAgIGJvcmRlci1ib3R0b20td2lkdGg6MXB4O1xuICAgIGJvcmRlci1pbWFnZS1vdXRzZXQ6MHB4O1xuICAgIGJvcmRlci1pbWFnZS1yZXBlYXQ6c3RyZXRjaDtcbiAgICBib3JkZXItaW1hZ2Utc2xpY2U6MTAwJTtcbiAgICBib3JkZXItaW1hZ2Utc291cmNlOm5vbmU7XG4gICAgYm9yZGVyLWltYWdlLXdpZHRoOjE7XG4gICAgYm9yZGVyLWxlZnQtY29sb3I6cmdiKDE5NiwgMjE2LCAyMjApO1xuICAgIGJvcmRlci1sZWZ0LXN0eWxlOnNvbGlkO1xuICAgIGJvcmRlci1sZWZ0LXdpZHRoOjFweDtcbiAgICBib3JkZXItcmlnaHQtY29sb3I6cmdiKDE5NiwgMjE2LCAyMjApO1xuICAgIGJvcmRlci1yaWdodC1zdHlsZTpzb2xpZDtcbiAgICBib3JkZXItcmlnaHQtd2lkdGg6MXB4O1xuICAgIGJvcmRlci10b3AtY29sb3I6cmdiKDE5NiwgMjE2LCAyMjApO1xuICAgIGJvcmRlci10b3AtbGVmdC1yYWRpdXM6OHB4O1xuICAgIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOjhweDtcbiAgICBib3JkZXItdG9wLXN0eWxlOnNvbGlkO1xuICAgIGJvcmRlci10b3Atd2lkdGg6MXB4O1xuICAgIGJveC1zaXppbmc6Ym9yZGVyLWJveDtcbiAgICBkaXNwbGF5OmlubGluZS1ibG9jaztcbiAgICBmbGV4LWRpcmVjdGlvbjpjb2x1bW47XG4gICAgZm9udC1zaXplOjE0cHg7XG4gICAgZm9udC1zdHJldGNoOjEwMCU7XG4gICAgZm9udC1zdHlsZTpub3JtYWw7XG4gICAgZm9udC12YXJpYW50LWNhcHM6bm9ybWFsO1xuICAgIGZvbnQtdmFyaWFudC1lYXN0LWFzaWFuOm5vcm1hbDtcbiAgICBmb250LXZhcmlhbnQtbGlnYXR1cmVzOm5vcm1hbDtcbiAgICBmb250LXZhcmlhbnQtbnVtZXJpYzpub3JtYWw7XG4gICAgZm9udC13ZWlnaHQ6NDAwO1xuICAgIGhlaWdodDoyMDBweDtcbiAgICBsaW5lLWhlaWdodDoyMnB4O1xuICAgIG1hcmdpbi1ib3R0b206NzJweDtcbiAgICBtYXJnaW4tbGVmdDowcHg7XG4gICAgbWFyZ2luLXJpZ2h0OjBweDtcbiAgICBtYXgtd2lkdGg6MzM2cHg7XG4gICAgbWluLXdpZHRoOjBweDtcbiAgICBvdmVyZmxvdy13cmFwOmJyZWFrLXdvcmQ7XG4gICAgcGFkZGluZy1ib3R0b206MzJweDtcbiAgICBwYWRkaW5nLWxlZnQ6MzJweDtcbiAgICBwYWRkaW5nLXJpZ2h0OjMycHg7XG4gICAgcGFkZGluZy10b3A6NTJweDtcbiAgICBwb3NpdGlvbjpyZWxhdGl2ZTtcbiAgICB0ZXh0LWFsaWduOmNlbnRlcjtcbiAgICB0ZXh0LXNpemUtYWRqdXN0OjEwMCU7XG4gICAgdmVydGljYWwtYWxpZ246dG9wO1xuICAgIHdpZHRoOjMzNnB4O1xuICAgIH0iXX0= */"
 
 /***/ }),
 
@@ -868,6 +1284,136 @@ var NotFoundComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/purchase-by-service/purchase-by-service.component.css":
+/*!*****************************************************************************!*\
+  !*** ./src/app/pages/purchase-by-service/purchase-by-service.component.css ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3B1cmNoYXNlLWJ5LXNlcnZpY2UvcHVyY2hhc2UtYnktc2VydmljZS5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/pages/purchase-by-service/purchase-by-service.component.ts":
+/*!****************************************************************************!*\
+  !*** ./src/app/pages/purchase-by-service/purchase-by-service.component.ts ***!
+  \****************************************************************************/
+/*! exports provided: PurchaseByServiceComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PurchaseByServiceComponent", function() { return PurchaseByServiceComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var PurchaseByServiceComponent = /** @class */ (function () {
+    function PurchaseByServiceComponent() {
+    }
+    PurchaseByServiceComponent.prototype.ngOnInit = function () {
+    };
+    PurchaseByServiceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-purchase-by-service',
+            template: __webpack_require__(/*! raw-loader!./purchase-by-service.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/purchase-by-service/purchase-by-service.component.html"),
+            styles: [__webpack_require__(/*! ./purchase-by-service.component.css */ "./src/app/pages/purchase-by-service/purchase-by-service.component.css")]
+        })
+    ], PurchaseByServiceComponent);
+    return PurchaseByServiceComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/question-add/question-add.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/pages/question-add/question-add.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3F1ZXN0aW9uLWFkZC9xdWVzdGlvbi1hZGQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/pages/question-add/question-add.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/pages/question-add/question-add.component.ts ***!
+  \**************************************************************/
+/*! exports provided: QuestionAddComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionAddComponent", function() { return QuestionAddComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/*
+; =======================================================
+; Title: question-add.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy
+; Date: 08 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+
+
+
+var QuestionAddComponent = /** @class */ (function () {
+    function QuestionAddComponent(router, http) {
+        this.router = router;
+        this.http = http;
+    }
+    QuestionAddComponent.prototype.ngOnInit = function () {
+        this.addQuestionForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
+            securityQuestion: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])
+        });
+    };
+    QuestionAddComponent.prototype.addQuestion = function () {
+        var _this = this;
+        var questionText = this.addQuestionForm.get('securityQuestion').value;
+        var newQuestion = { questionText: questionText };
+        console.log(newQuestion);
+        this.http.post('/api/security-questions', newQuestion).subscribe(function (res) {
+            if (res) {
+                console.log('Question ' + questionText + ' added to list');
+                _this.router.navigate(['/session/security-questions']);
+            }
+            else {
+                console.log('Something went wrong');
+            }
+        });
+    };
+    QuestionAddComponent.prototype.cancel = function () {
+        this.router.navigate(['/session/security-questions']);
+    };
+    QuestionAddComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
+    QuestionAddComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
+            selector: 'app-question-add',
+            template: __webpack_require__(/*! raw-loader!./question-add.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/question-add/question-add.component.html"),
+            styles: [__webpack_require__(/*! ./question-add.component.css */ "./src/app/pages/question-add/question-add.component.css")]
+        })
+    ], QuestionAddComponent);
+    return QuestionAddComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/register/register.component.css":
 /*!*******************************************************!*\
   !*** ./src/app/pages/register/register.component.css ***!
@@ -977,7 +1523,6 @@ var RegisterComponent = /** @class */ (function () {
                 { questionId: securityQuestion3, answerText: answer3 }
             ]
         };
-        console.log(newUser);
         // 3. Post new user to db
         var apiBaseURL = '/api/users';
         this.http.post(apiBaseURL, newUser).subscribe(function (res) {
@@ -1006,6 +1551,292 @@ var RegisterComponent = /** @class */ (function () {
         })
     ], RegisterComponent);
     return RegisterComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/role-add/role-add.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/pages/role-add/role-add.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JvbGUtYWRkL3JvbGUtYWRkLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/pages/role-add/role-add.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/pages/role-add/role-add.component.ts ***!
+  \******************************************************/
+/*! exports provided: RoleAddComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleAddComponent", function() { return RoleAddComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.es5.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/*
+; =======================================================
+; Title: role-add.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy
+; Date: 08 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+
+
+
+
+var RoleAddComponent = /** @class */ (function () {
+    function RoleAddComponent(cookieService, router, http) {
+        this.cookieService = cookieService;
+        this.router = router;
+        this.http = http;
+    }
+    RoleAddComponent.prototype.ngOnInit = function () {
+        this.addRoleForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
+            role: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])
+        });
+    };
+    RoleAddComponent.prototype.addRole = function () {
+        var _this = this;
+        var roleTitle = this.addRoleForm.get('role').value;
+        var newRole = { roleTitle: roleTitle };
+        console.log(newRole);
+        this.http.post('/api/roles', newRole).subscribe(function (res) {
+            if (res) {
+                console.log('Role ' + roleTitle + ' added to list');
+                _this.router.navigate(['/session/role-configuration']);
+            }
+            else {
+                console.log('Something went wrong');
+            }
+        });
+    };
+    RoleAddComponent.prototype.cancel = function () {
+        this.router.navigate(['/session/role-configuration']);
+    };
+    RoleAddComponent.ctorParameters = function () { return [
+        { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__["CookieService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
+    RoleAddComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Component"])({
+            selector: 'app-role-add',
+            template: __webpack_require__(/*! raw-loader!./role-add.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/role-add/role-add.component.html"),
+            styles: [__webpack_require__(/*! ./role-add.component.css */ "./src/app/pages/role-add/role-add.component.css")]
+        })
+    ], RoleAddComponent);
+    return RoleAddComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/role-configuration/role-configuration.component.css":
+/*!***************************************************************************!*\
+  !*** ./src/app/pages/role-configuration/role-configuration.component.css ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JvbGUtY29uZmlndXJhdGlvbi9yb2xlLWNvbmZpZ3VyYXRpb24uY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/pages/role-configuration/role-configuration.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/pages/role-configuration/role-configuration.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: RoleConfigurationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleConfigurationComponent", function() { return RoleConfigurationComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../shared/role-delete-dialog/role-delete-dialog.component */ "./src/app/shared/role-delete-dialog/role-delete-dialog.component.ts");
+/*
+; =======================================================
+; Title: role-configuration.component.ts (Week 7)
+; Authors: [Tyler Armstrong], [David Tarvin], Lea Trueworthy
+; Date: 06 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+
+
+
+
+var RoleConfigurationComponent = /** @class */ (function () {
+    function RoleConfigurationComponent(http, router, dialog) {
+        var _this = this;
+        this.http = http;
+        this.router = router;
+        this.dialog = dialog;
+        this.displayedColumns = ['roleTitle', 'actions'];
+        this.http.get('/api/roles').subscribe(function (res) {
+            _this.roles = res;
+            console.log(_this.roles);
+        }, function (err) {
+            console.log(err);
+        });
+    }
+    RoleConfigurationComponent.prototype.ngOnInit = function () {
+    };
+    RoleConfigurationComponent.prototype.edit = function (roleId) {
+        this.router.navigate(['/session/role-edit/' + roleId]);
+    };
+    RoleConfigurationComponent.prototype.delete = function (roleId, roleTitle) {
+        var _this = this;
+        var dialogRef = this.dialog.open(_shared_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_5__["RoleDeleteDialogComponent"], {
+            data: {
+                roleTitle: roleTitle
+            },
+            disableClose: true,
+            width: '800px'
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'confirm') {
+                _this.http.delete('/api/roles/' + roleId).subscribe(function (res) {
+                    console.log('Role deleted');
+                    _this.roles = _this.roles.filter(function (r) { return r._id !== roleId; });
+                });
+            }
+            else if (result === 'cancel') {
+                _this.router.navigate(['/session/role-configuration']);
+            }
+        });
+    };
+    RoleConfigurationComponent.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] }
+    ]; };
+    RoleConfigurationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-role-configuration',
+            template: __webpack_require__(/*! raw-loader!./role-configuration.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/role-configuration/role-configuration.component.html"),
+            styles: [__webpack_require__(/*! ./role-configuration.component.css */ "./src/app/pages/role-configuration/role-configuration.component.css")]
+        })
+    ], RoleConfigurationComponent);
+    return RoleConfigurationComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/role-edit/role-edit.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/pages/role-edit/role-edit.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JvbGUtZWRpdC9yb2xlLWVkaXQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/pages/role-edit/role-edit.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/pages/role-edit/role-edit.component.ts ***!
+  \********************************************************/
+/*! exports provided: RoleEditComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleEditComponent", function() { return RoleEditComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/*
+; =======================================================
+; Title:  role-edit.component.ts (Week 7)
+; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy
+; Date:   06 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+
+
+
+var RoleEditComponent = /** @class */ (function () {
+    function RoleEditComponent(route, http, fb, router) {
+        var _this = this;
+        this.route = route;
+        this.http = http;
+        this.fb = fb;
+        this.router = router;
+        this.roleId = this.route.snapshot.paramMap.get('id');
+        console.log('roleId is ' + this.roleId);
+        this.http.get('/api/roles/' + this.roleId).subscribe(function (res) {
+            console.log('The roleId in the GET request is ' + _this.roleId);
+            _this.role = res;
+            console.log('This role is ' + JSON.stringify(_this.role));
+        }, function (err) {
+            console.log(err);
+        }, function () {
+            _this.form.controls['roleTitle'].setValue(_this.role.roleTitle);
+        });
+    }
+    RoleEditComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            roleTitle: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
+        });
+    };
+    RoleEditComponent.prototype.saveRole = function () {
+        var _this = this;
+        this.http.put('/api/roles/update/' + this.roleId, {
+            roleTitle: this.form.controls['roleTitle'].value
+        }).subscribe(function (res) {
+            _this.router.navigate(['/session/role-configuration']);
+        });
+    };
+    RoleEditComponent.prototype.cancel = function () {
+        this.router.navigate(['/session/role-configuration']);
+    };
+    RoleEditComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+    ]; };
+    RoleEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-role-edit',
+            template: __webpack_require__(/*! raw-loader!./role-edit.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/role-edit/role-edit.component.html"),
+            styles: [__webpack_require__(/*! ./role-edit.component.css */ "./src/app/pages/role-edit/role-edit.component.css")]
+        })
+    ], RoleEditComponent);
+    return RoleEditComponent;
 }());
 
 
@@ -1157,6 +1988,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServerErrorComponent", function() { return ServerErrorComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/*
+; =======================================================
+; Title:  server-error.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date:   29 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
 
 
 var ServerErrorComponent = /** @class */ (function () {
@@ -1172,6 +2012,208 @@ var ServerErrorComponent = /** @class */ (function () {
         })
     ], ServerErrorComponent);
     return ServerErrorComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/service-repair/service-repair.component.css":
+/*!*******************************************************************!*\
+  !*** ./src/app/pages/service-repair/service-repair.component.css ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".full-width {\n  width: 100%;\n}\n\n.mt-20 {\n  margin-top: 20px;\n}\n\n.main-card {\n  min-width: 80%;\n  margin-top: 30px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.services {\n  width: 300px;\n  box-shadow: none;\n  padding: 0;\n  margin-left: 20px;\n}\n\n.header-image {\n  width: 15px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvc2VydmljZS1yZXBhaXIvc2VydmljZS1yZXBhaXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsVUFBVTtFQUNWLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLFdBQVc7QUFDYiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3NlcnZpY2UtcmVwYWlyL3NlcnZpY2UtcmVwYWlyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZnVsbC13aWR0aCB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4ubXQtMjAge1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4ubWFpbi1jYXJkIHtcbiAgbWluLXdpZHRoOiA4MCU7XG4gIG1hcmdpbi10b3A6IDMwcHg7XG4gIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICBtYXJnaW4tcmlnaHQ6IGF1dG87XG59XG5cbi5zZXJ2aWNlcyB7XG4gIHdpZHRoOiAzMDBweDtcbiAgYm94LXNoYWRvdzogbm9uZTtcbiAgcGFkZGluZzogMDtcbiAgbWFyZ2luLWxlZnQ6IDIwcHg7XG59XG5cbi5oZWFkZXItaW1hZ2Uge1xuICB3aWR0aDogMTVweDtcbn1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/pages/service-repair/service-repair.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/pages/service-repair/service-repair.component.ts ***!
+  \******************************************************************/
+/*! exports provided: ServiceRepairComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceRepairComponent", function() { return ServiceRepairComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _shared_services_bcrs_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/services/bcrs-services.service */ "./src/app/shared/services/bcrs-services.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.es5.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _shared_invoice_dialog_invoice_dialog_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../shared/invoice-dialog/invoice-dialog.component */ "./src/app/shared/invoice-dialog/invoice-dialog.component.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/*
+; =======================================================
+; Title: service repair page
+; Authors: [Tyler Armstrong], David Tarvin, Lea Trueworthy
+; Date: 05 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+
+
+
+
+
+
+
+
+var ServiceRepairComponent = /** @class */ (function () {
+    function ServiceRepairComponent(bcrsServices, cookie, router, http, dialog) {
+        this.bcrsServices = bcrsServices;
+        this.cookie = cookie;
+        this.router = router;
+        this.http = http;
+        this.dialog = dialog;
+        this.invoice = {
+            dateCreated: '',
+            services: [],
+            partsCost: 0,
+            laborHrs: 0,
+            totalCost: 0,
+            user: ''
+        };
+    }
+    ServiceRepairComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.bcrsServices.get().subscribe(function (res) {
+            _this.data = res;
+        });
+        this.serviceForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
+            passwordReset: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            spywareRemoval: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            ramUpgrade: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            softwareInstallation: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            tuneup: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            keyboardCleaning: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            discCleanup: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](),
+            parts: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](null, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
+            labor: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](null, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern('[0-9]*')])
+        });
+    };
+    ServiceRepairComponent.prototype.onSubmit = function (formValues) {
+        var _this = this;
+        this.bcrsServices.get().subscribe(function (res) {
+            _this.data = res;
+        });
+        var selectedServices = [];
+        var sum = 0;
+        // * 2. Get values to build invoice
+        // user
+        var cookies = this.cookie.getAll();
+        if (!this.cookie.check) {
+            this.router.navigate(['/']);
+        }
+        for (var key in cookies) {
+            if (cookies.hasOwnProperty(key)) {
+                if (key !== 'isAuthenticated') {
+                    this.invoice.user = key;
+                }
+            }
+        }
+        // Services
+        for (var key in this.data) {
+            if (this.data.hasOwnProperty(key)) {
+                var service = this.data[key];
+                if (service.control === 'passwordReset') {
+                    if (this.serviceForm.get('passwordReset').value) {
+                        selectedServices.push({ serviceText: service.serviceText, cost: service.cost });
+                    }
+                }
+                if (service.control === 'spywareRemoval') {
+                    if (this.serviceForm.get('spywareRemoval').value) {
+                        selectedServices.push({ serviceText: service.serviceText, cost: service.cost });
+                    }
+                }
+                if (service.control === 'ramUpgrade') {
+                    if (this.serviceForm.get('ramUpgrade').value) {
+                        selectedServices.push({ serviceText: service.serviceText, cost: service.cost });
+                    }
+                }
+                if (service.control === 'softwareInstallation') {
+                    if (this.serviceForm.get('softwareInstallation').value) {
+                        selectedServices.push({ serviceText: service.serviceText, cost: service.cost });
+                    }
+                }
+                if (service.control === 'tuneup') {
+                    if (this.serviceForm.get('tuneup').value) {
+                        selectedServices.push({ serviceText: service.serviceText, cost: service.cost });
+                    }
+                }
+                if (service.control === 'keyboardCleaning') {
+                    if (this.serviceForm.get('keyboardCleaning').value) {
+                        selectedServices.push({ serviceText: service.serviceText, cost: service.cost });
+                    }
+                }
+                if (service.control === 'discCleanup') {
+                    if (this.serviceForm.get('discCleanup').value) {
+                        selectedServices.push({ serviceText: service.serviceText, cost: service.cost });
+                    }
+                }
+            }
+        }
+        this.invoice.services = selectedServices;
+        // Date
+        this.invoice.dateCreated = moment__WEBPACK_IMPORTED_MODULE_7__().format('DD-MMM-YYYY');
+        // Parts & Labor
+        var parts = this.serviceForm.get('parts').value;
+        this.invoice.partsCost = parts;
+        var labor = this.serviceForm.get('labor').value * 50;
+        this.invoice.laborHrs = labor;
+        // Total Cost
+        selectedServices.forEach(function (service) {
+            sum += service.cost;
+        });
+        sum += this.invoice.partsCost;
+        sum += this.invoice.laborHrs;
+        this.invoice.totalCost = parseFloat(sum.toFixed(2));
+        // * 3. Save invoice to db.
+        var apiBaseURL = '/api/invoices';
+        var newInvoice = this.invoice;
+        this.http.post(apiBaseURL, newInvoice).subscribe(function (res) {
+            if (res) {
+                console.log('Invoice added to db.');
+            }
+            else {
+                _this.errorMessage = 'Something went wrong.';
+                console.log("Error: " + _this.errorMessage);
+            }
+        });
+        // * 4. Open Invoice dialog
+        var dialogRef = this.dialog.open(_shared_invoice_dialog_invoice_dialog_component__WEBPACK_IMPORTED_MODULE_8__["InvoiceDialogComponent"], {
+            width: '80%',
+            height: '600px',
+            data: this.invoice
+        });
+        // 5. Reload page
+        dialogRef.afterClosed().subscribe(function (result) { location.reload(); });
+    };
+    ServiceRepairComponent.ctorParameters = function () { return [
+        { type: _shared_services_bcrs_services_service__WEBPACK_IMPORTED_MODULE_2__["BcrsServicesService"] },
+        { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_4__["CookieService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"] },
+        { type: _angular_material__WEBPACK_IMPORTED_MODULE_9__["MatDialog"] }
+    ]; };
+    ServiceRepairComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-service-repair',
+            template: __webpack_require__(/*! raw-loader!./service-repair.component.html */ "./node_modules/raw-loader/index.js!./src/app/pages/service-repair/service-repair.component.html"),
+            styles: [__webpack_require__(/*! ./service-repair.component.css */ "./src/app/pages/service-repair/service-repair.component.css")]
+        })
+    ], ServiceRepairComponent);
+    return ServiceRepairComponent;
 }());
 
 
@@ -1225,20 +2267,26 @@ var UserDetailsComponent = /** @class */ (function () {
         this.http = http;
         this.fb = fb;
         this.router = router;
+        this.SelectedRole = '';
         this.userId = this.route.snapshot.paramMap.get('id');
-        console.log('userId is ' + this.userId);
         this.http.get('/api/users/' + this.userId).subscribe(function (res) {
-            console.log('The userId in the GET request is ' + _this.userId);
             _this.user = res;
-            console.log('This user is ' + JSON.stringify(_this.user));
+            _this.selected = _this.SelectedRole = res['role'];
         }, function (err) {
             console.log(err);
         }, function () {
-            _this.form.controls['firstName'].setValue(_this.user.firstName);
-            _this.form.controls['lastName'].setValue(_this.user.lastName);
-            _this.form.controls['phoneNumber'].setValue(_this.user.phoneNumber);
-            _this.form.controls['address'].setValue(_this.user.address);
-            _this.form.controls['email'].setValue(_this.user.email);
+            _this.form.controls.firstName.setValue(_this.user.firstName);
+            _this.form.controls.lastName.setValue(_this.user.lastName);
+            _this.form.controls.phoneNumber.setValue(_this.user.phoneNumber);
+            _this.form.controls.address.setValue(_this.user.address);
+            _this.form.controls.email.setValue(_this.user.email);
+            _this.form.controls.role.setValue(_this.user.role);
+            _this.http.get('api/roles').subscribe(function (res) {
+                _this.roles = res;
+                console.log(_this.roles);
+            }, function (err) {
+                console.log(err);
+            });
         });
     }
     UserDetailsComponent.prototype.ngOnInit = function () {
@@ -1247,19 +2295,24 @@ var UserDetailsComponent = /** @class */ (function () {
             lastName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
             phoneNumber: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
             address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
-            email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])]
+            email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
+            role: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])]
         });
     };
     UserDetailsComponent.prototype.saveUser = function () {
         var _this = this;
-        this.http.put('/api/users/update/' + this.userId, {
+        console.log("clicked submit button");
+        console.log(this.selected);
+        this.http.put('/api/users/' + this.userId, {
             firstName: this.form.controls['firstName'].value,
             lastName: this.form.controls['lastName'].value,
             phoneNumber: this.form.controls['phoneNumber'].value,
             address: this.form.controls['address'].value,
-            email: this.form.controls['email'].value
+            email: this.form.controls['email'].value,
+            role: this.form.controls['role'].value
         }).subscribe(function (res) {
             _this.router.navigate(['/session/user-management']);
+            console.log(_this.user);
         });
     };
     UserDetailsComponent.prototype.cancel = function () {
@@ -1333,7 +2386,7 @@ var UserManagementComponent = /** @class */ (function () {
         this.http = http;
         this.dialog = dialog;
         this.router = router;
-        this.displayedColumns = ['username', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'functions'];
+        this.displayedColumns = ['username', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'role', 'functions'];
         this.http.get('/api/users').subscribe(function (res) {
             _this.users = res;
             console.log(_this.users);
@@ -1415,6 +2468,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/*
+; =======================================================
+; Title: reset-password-form.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date: 04 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
 
 
 
@@ -1476,7 +2538,7 @@ var ResetPasswordFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*\n; =======================================================\n; Title: base-layout.component.css (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/\n\n.menu {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 2;\n  color: white;\n  background-color: #333333;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Jhc2UtbGF5b3V0L2Jhc2UtbGF5b3V0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7O0NBUUM7O0FBRUQ7RUFDRSxlQUFlO0VBQ2YsTUFBTTtFQUNOLE9BQU87RUFDUCxRQUFRO0VBQ1IsVUFBVTtFQUNWLFlBQVk7RUFDWix5QkFBeUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvYmFzZS1sYXlvdXQvYmFzZS1sYXlvdXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG47ID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbjsgVGl0bGU6IGJhc2UtbGF5b3V0LmNvbXBvbmVudC5jc3MgKFdlZWsgNilcbjsgQXV0aG9yczogW1R5bGVyIEFybXN0cm9uZ10sIERhdmlkIFRhcnZpbiwgQWFyb24gV2lsc29uXG47IERhdGU6IDIzIE9jdCAyMDE5XG47IERlc2NyaXB0aW9uOiBCb2IncyBDb21wdXRlciBSZXBhaXIgU2hvcFxuOyBMZWdlbmQ6IFtdIC0+IFRlYW0gbWVtYmVyIHJlc3BvbnNpYmxlIGZvciBwYWdlLlxuOyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG4qL1xuXG4ubWVudSB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgdG9wOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgei1pbmRleDogMjtcbiAgY29sb3I6IHdoaXRlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzMzMzMzO1xufVxuIl19 */"
+module.exports = "/*\n; =======================================================\n; Title: base-layout.component.css (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/\n\n\nmat-toolbar{\n    margin: 0%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Jhc2UtbGF5b3V0L2Jhc2UtbGF5b3V0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7O0NBUUM7OztBQUdEO0lBQ0ksVUFBVTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL2Jhc2UtbGF5b3V0L2Jhc2UtbGF5b3V0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuOyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG47IFRpdGxlOiBiYXNlLWxheW91dC5jb21wb25lbnQuY3NzIChXZWVrIDYpXG47IEF1dGhvcnM6IFtUeWxlciBBcm1zdHJvbmddLCBEYXZpZCBUYXJ2aW4sIEFhcm9uIFdpbHNvblxuOyBEYXRlOiAyMyBPY3QgMjAxOVxuOyBEZXNjcmlwdGlvbjogQm9iJ3MgQ29tcHV0ZXIgUmVwYWlyIFNob3BcbjsgTGVnZW5kOiBbXSAtPiBUZWFtIG1lbWJlciByZXNwb25zaWJsZSBmb3IgcGFnZS5cbjsgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuKi9cblxuXG5tYXQtdG9vbGJhcntcbiAgICBtYXJnaW46IDAlO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -1595,6 +2657,65 @@ var AuthGuardService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/shared/guards/role.guard.ts":
+/*!*********************************************!*\
+  !*** ./src/app/shared/guards/role.guard.ts ***!
+  \*********************************************/
+/*! exports provided: RoleGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleGuard", function() { return RoleGuard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.es5.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+
+
+
+
+var RoleGuard = /** @class */ (function () {
+    function RoleGuard(router, http, cookieService) {
+        this.router = router;
+        this.http = http;
+        this.cookieService = cookieService;
+    }
+    RoleGuard.prototype.canActivate = function (route, state) {
+        var _this = this;
+        return this.getRole().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (res) {
+            console.log(res);
+            if (res === 'admin') {
+                return true;
+            }
+            else {
+                _this.router.navigate(['/']);
+                return false;
+            }
+        }));
+    };
+    RoleGuard.prototype.getRole = function () {
+        return this.http.get('/api/users/' + this.cookieService.get('username') + '/role');
+    };
+    RoleGuard.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__["CookieService"] }
+    ]; };
+    RoleGuard = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_5__["Injectable"])({ providedIn: 'root' })
+    ], RoleGuard);
+    return RoleGuard;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/index.ts":
 /*!*********************************!*\
   !*** ./src/app/shared/index.ts ***!
@@ -1612,7 +2733,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /*
 ; =======================================================
-; Title: session-layout.component.css (Week 6)
+; Title: index.ts (Week 6)
 ; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
 ; Date: 23 Oct 2019
 ; Description: Bob's Computer Repair Shop
@@ -1625,35 +2746,35 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/shared/question-add-dialog/question-add-dialog.component.css":
-/*!******************************************************************************!*\
-  !*** ./src/app/shared/question-add-dialog/question-add-dialog.component.css ***!
-  \******************************************************************************/
+/***/ "./src/app/shared/invoice-dialog/invoice-dialog.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/shared/invoice-dialog/invoice-dialog.component.css ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*\n; =======================================================\n; Title: question-add-dialog.component.css (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 29 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL3F1ZXN0aW9uLWFkZC1kaWFsb2cvcXVlc3Rpb24tYWRkLWRpYWxvZy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7OztDQVFDIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL3F1ZXN0aW9uLWFkZC1kaWFsb2cvcXVlc3Rpb24tYWRkLWRpYWxvZy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcbjsgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuOyBUaXRsZTogcXVlc3Rpb24tYWRkLWRpYWxvZy5jb21wb25lbnQuY3NzIChXZWVrIDYpXG47IEF1dGhvcnM6IFtUeWxlciBBcm1zdHJvbmddLCBEYXZpZCBUYXJ2aW4sIEFhcm9uIFdpbHNvblxuOyBEYXRlOiAyOSBPY3QgMjAxOVxuOyBEZXNjcmlwdGlvbjogQm9iJ3MgQ29tcHV0ZXIgUmVwYWlyIFNob3BcbjsgTGVnZW5kOiBbXSAtPiBUZWFtIG1lbWJlciByZXNwb25zaWJsZSBmb3IgcGFnZS5cbjsgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuKi8iXX0= */"
+module.exports = ".invoice-header {\n  width: 30%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2ludm9pY2UtZGlhbG9nL2ludm9pY2UtZGlhbG9nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxVQUFVO0FBQ1oiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvaW52b2ljZS1kaWFsb2cvaW52b2ljZS1kaWFsb2cuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbnZvaWNlLWhlYWRlciB7XG4gIHdpZHRoOiAzMCU7XG59XG4iXX0= */"
 
 /***/ }),
 
-/***/ "./src/app/shared/question-add-dialog/question-add-dialog.component.ts":
-/*!*****************************************************************************!*\
-  !*** ./src/app/shared/question-add-dialog/question-add-dialog.component.ts ***!
-  \*****************************************************************************/
-/*! exports provided: QuestionAddDialogComponent */
+/***/ "./src/app/shared/invoice-dialog/invoice-dialog.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/shared/invoice-dialog/invoice-dialog.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: InvoiceDialogComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionAddDialogComponent", function() { return QuestionAddDialogComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvoiceDialogComponent", function() { return InvoiceDialogComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /*
 ; =======================================================
-; Title:  question-add-dialog.component.ts (Week 6)
+; Title: invoice dialog
 ; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
-; Date:   29 Oct 2019
+; Date: 5 Nov 19
 ; Description: Bob's Computer Repair Shop
 ; Legend: [] -> Team member responsible for page.
 ; =======================================================
@@ -1662,24 +2783,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var QuestionAddDialogComponent = /** @class */ (function () {
-    function QuestionAddDialogComponent(data) {
+var InvoiceDialogComponent = /** @class */ (function () {
+    function InvoiceDialogComponent(data) {
         this.data = data;
     }
-    QuestionAddDialogComponent.prototype.ngOnInit = function () {
+    InvoiceDialogComponent.prototype.ngOnInit = function () {
+        console.log('Data below:');
+        console.log(this.data);
     };
-    QuestionAddDialogComponent.ctorParameters = function () { return [
+    InvoiceDialogComponent.ctorParameters = function () { return [
         { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
     ]; };
-    QuestionAddDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    InvoiceDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-question-add-dialog',
-            template: __webpack_require__(/*! raw-loader!./question-add-dialog.component.html */ "./node_modules/raw-loader/index.js!./src/app/shared/question-add-dialog/question-add-dialog.component.html"),
-            styles: [__webpack_require__(/*! ./question-add-dialog.component.css */ "./src/app/shared/question-add-dialog/question-add-dialog.component.css")]
+            selector: 'app-invoice-dialog',
+            template: __webpack_require__(/*! raw-loader!./invoice-dialog.component.html */ "./node_modules/raw-loader/index.js!./src/app/shared/invoice-dialog/invoice-dialog.component.html"),
+            styles: [__webpack_require__(/*! ./invoice-dialog.component.css */ "./src/app/shared/invoice-dialog/invoice-dialog.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
-    ], QuestionAddDialogComponent);
-    return QuestionAddDialogComponent;
+    ], InvoiceDialogComponent);
+    return InvoiceDialogComponent;
 }());
 
 
@@ -1842,6 +2965,174 @@ var QuestionEditDialogComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/shared/role-delete-dialog/role-delete-dialog.component.css":
+/*!****************************************************************************!*\
+  !*** ./src/app/shared/role-delete-dialog/role-delete-dialog.component.css ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9yb2xlLWRlbGV0ZS1kaWFsb2cvcm9sZS1kZWxldGUtZGlhbG9nLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/shared/role-delete-dialog/role-delete-dialog.component.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/shared/role-delete-dialog/role-delete-dialog.component.ts ***!
+  \***************************************************************************/
+/*! exports provided: RoleDeleteDialogComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleDeleteDialogComponent", function() { return RoleDeleteDialogComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/*
+; =======================================================
+; Title:  role-delete-dialog.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Lea Trueworthy
+; Date:   06 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+
+
+var RoleDeleteDialogComponent = /** @class */ (function () {
+    function RoleDeleteDialogComponent(dialogRef, data, router) {
+        this.dialogRef = dialogRef;
+        this.router = router;
+        this.roleTitle = data.roleTitle;
+    }
+    RoleDeleteDialogComponent.prototype.ngOnInit = function () {
+    };
+    RoleDeleteDialogComponent.ctorParameters = function () { return [
+        { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }
+    ]; };
+    RoleDeleteDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-role-delete-dialog',
+            template: __webpack_require__(/*! raw-loader!./role-delete-dialog.component.html */ "./node_modules/raw-loader/index.js!./src/app/shared/role-delete-dialog/role-delete-dialog.component.html"),
+            styles: [__webpack_require__(/*! ./role-delete-dialog.component.css */ "./src/app/shared/role-delete-dialog/role-delete-dialog.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
+    ], RoleDeleteDialogComponent);
+    return RoleDeleteDialogComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/route-interceptors/error.interceptor.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/shared/route-interceptors/error.interceptor.ts ***!
+  \****************************************************************/
+/*! exports provided: ErrorInterceptor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ErrorInterceptor", function() { return ErrorInterceptor; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.es5.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/*
+; =======================================================
+; Title:  error.interceptor.ts (Week 7)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date:   02 Nov 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
+
+
+
+
+
+var ErrorInterceptor = /** @class */ (function () {
+    function ErrorInterceptor(cookieService, router) {
+        this.cookieService = cookieService;
+        this.router = router;
+    }
+    ErrorInterceptor.prototype.intercept = function (req, next) {
+        var _this = this;
+        return next.handle(req).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(function (err) {
+            if ([404].indexOf(err.status) !== -1) {
+                _this.router.navigate(['/session/404']);
+            }
+            if ([500].indexOf(err.status) !== -1) {
+                _this.router.navigate(['/session/500']);
+            }
+            var error = err.error.message || err.statusText;
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["throwError"])(error);
+        }));
+    };
+    ErrorInterceptor.ctorParameters = function () { return [
+        { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_2__["CookieService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }
+    ]; };
+    ErrorInterceptor = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Injectable"])()
+    ], ErrorInterceptor);
+    return ErrorInterceptor;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/services/bcrs-services.service.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/shared/services/bcrs-services.service.ts ***!
+  \**********************************************************/
+/*! exports provided: BcrsServicesService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BcrsServicesService", function() { return BcrsServicesService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var BcrsServicesService = /** @class */ (function () {
+    function BcrsServicesService(http) {
+        this.http = http;
+    }
+    BcrsServicesService.prototype.get = function () {
+        var apiURL = "/api/services";
+        return this.http.get(apiURL);
+    };
+    BcrsServicesService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+    ]; };
+    BcrsServicesService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], BcrsServicesService);
+    return BcrsServicesService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/services/security-question.service.ts":
 /*!**************************************************************!*\
   !*** ./src/app/shared/services/security-question.service.ts ***!
@@ -1901,7 +3192,7 @@ var SecurityQuestionService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*\n; =======================================================\n; Title: session-layout.component.css (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/\n\n.menu {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 2;\n  color: white;\n  background-color: #333333;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL3Nlc3Npb24tbGF5b3V0L3Nlc3Npb24tbGF5b3V0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7O0NBUUM7O0FBRUQ7RUFDRSxlQUFlO0VBQ2YsTUFBTTtFQUNOLE9BQU87RUFDUCxRQUFRO0VBQ1IsVUFBVTtFQUNWLFlBQVk7RUFDWix5QkFBeUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvc2Vzc2lvbi1sYXlvdXQvc2Vzc2lvbi1sYXlvdXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG47ID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbjsgVGl0bGU6IHNlc3Npb24tbGF5b3V0LmNvbXBvbmVudC5jc3MgKFdlZWsgNilcbjsgQXV0aG9yczogW1R5bGVyIEFybXN0cm9uZ10sIERhdmlkIFRhcnZpbiwgQWFyb24gV2lsc29uXG47IERhdGU6IDIzIE9jdCAyMDE5XG47IERlc2NyaXB0aW9uOiBCb2IncyBDb21wdXRlciBSZXBhaXIgU2hvcFxuOyBMZWdlbmQ6IFtdIC0+IFRlYW0gbWVtYmVyIHJlc3BvbnNpYmxlIGZvciBwYWdlLlxuOyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG4qL1xuXG4ubWVudSB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgdG9wOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgei1pbmRleDogMjtcbiAgY29sb3I6IHdoaXRlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzMzMzMzO1xufVxuIl19 */"
+module.exports = "/*\n; =======================================================\n; Title: session-layout.component.css (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL3Nlc3Npb24tbGF5b3V0L3Nlc3Npb24tbGF5b3V0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7O0NBUUMiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvc2Vzc2lvbi1sYXlvdXQvc2Vzc2lvbi1sYXlvdXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG47ID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbjsgVGl0bGU6IHNlc3Npb24tbGF5b3V0LmNvbXBvbmVudC5jc3MgKFdlZWsgNilcbjsgQXV0aG9yczogW1R5bGVyIEFybXN0cm9uZ10sIERhdmlkIFRhcnZpbiwgQWFyb24gV2lsc29uXG47IERhdGU6IDIzIE9jdCAyMDE5XG47IERlc2NyaXB0aW9uOiBCb2IncyBDb21wdXRlciBSZXBhaXIgU2hvcFxuOyBMZWdlbmQ6IFtdIC0+IFRlYW0gbWVtYmVyIHJlc3BvbnNpYmxlIGZvciBwYWdlLlxuOyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG4qLyJdfQ== */"
 
 /***/ }),
 
@@ -2055,6 +3346,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/*
+; =======================================================
+; Title:  verify-security-questions.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date:   29 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
 
 
 
@@ -2165,6 +3465,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/*
+; =======================================================
+; Title:  verify-username-form.component.ts (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date:   29 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
 
 
 
@@ -2295,7 +3604,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/davidtarvin/web450-group3-bobs-repair/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/leatrueworthy/Desktop/web450-group3-bobs-repair/src/main.ts */"./src/main.ts");
 
 
 /***/ })

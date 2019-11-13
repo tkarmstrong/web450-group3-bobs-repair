@@ -12,13 +12,10 @@
   <!-- Page header -->
   <header>
     <!-- Toolbar -->
-    <mat-toolbar class="menu" role="header" color="primary">
-      <mat-toolbar-row>
-        <button mat-button class="toolbar__icon-button mat-button">
-          <mat-icon>menu</mat-icon>
-        </button>
+    <mat-toolbar class="menu" role="header" style="color: black; background-color: white">
+        <mat-toolbar-row>
         <button [routerLink]="['/']" mat-button class="toolbar__icon-button mat-button">
-          <span style="margin-left: 5px !important">Bob's</span>
+          <span style="margin-left: 5px !important">BCRS</span>
         </button>
         <button [routerLink]="['/contact']" mat-button class="toolbar__icon-button mat-button">
           <span style="margin-left: 5px !important">Contact Us</span>
@@ -29,31 +26,36 @@
         <button *ngIf="validated == false" mat-button class="toolbar__icon-button mat-button" [routerLink]="['/login']">
           <span style="margin-left: 5px !important">Login</span>
         </button>
-        <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button" [routerLink]="['/session/security-questions']">
-          <span style="margin-left: 5px !important" >Security Questions</span>
+        <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button"
+          [routerLink]="['/session/security-questions']">
+          <span style="margin-left: 5px !important">Security Questions</span>
         </button>
-        <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button" [routerLink]="['/session/user-management']">
-          <span style="margin-left: 5px !important" >User Management</span>
+        <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button"
+          [routerLink]="['/session/user-management']">
+          <span style="margin-left: 5px !important">User Management</span>
+        </button>
+        <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button"
+          [routerLink]="['/session/role-configuration']">
+          <span style="margin-left: 5px !important">Role Configuration</span>
         </button>
 
         <div fxFlex></div>
 
         <button mat-icon-button class="toolbar__icon-button" [matMenuTriggerFor]="menu">
-          <mat-icon>account_circle</mat-icon>
+          <mat-icon>exit_to_app</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item (click)="userLogout()">
-            <mat-icon>exit_to_app</mat-icon>
             <span>Logout</span>
           </button>
         </mat-menu>
+
       </mat-toolbar-row>
     </mat-toolbar>
   </header>
-  </div>
+</div>
 
-  <!-- Main page content -->
-  <main>
-    <router-outlet></router-outlet>
-  </main>
-
+<!-- Main page content -->
+<main>
+  <router-outlet></router-outlet>
+</main>

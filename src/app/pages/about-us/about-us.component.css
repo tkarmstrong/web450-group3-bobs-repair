@@ -1,11 +1,22 @@
-.container {
+.img-wrapper {
   margin-top: 150px;
 }
 
-.story-wrapper {
-  text-align: center;
+.container{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.team-wrapper {
-  padding: 50px;
+p {
+  font-size: 25px;
+}
+
+.team-member{
+  display: block;
+}
+
+.team-member img{
+  margin-left: auto;
+  margin-right: auto;
 }

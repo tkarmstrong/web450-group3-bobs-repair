@@ -12,7 +12,9 @@ const mongoose = require('mongoose');
 
 const serviceSchema = mongoose.Schema({
   serviceText: { type: String },
-  cost: { type: Number }
+  cost: { type: Number },
+  control: String,
+  icon: String
 },
 {
   collection: 'services',

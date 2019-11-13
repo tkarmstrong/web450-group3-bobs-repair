@@ -23,24 +23,34 @@ export class UserDetailsComponent implements OnInit {
   user: any;
   userId: string;
   form: FormGroup;
+  roles: any;
+  SelectedRole: string = '';
+  selected: string
 
   constructor(private route: ActivatedRoute, private http: HttpClient, private fb: FormBuilder, private router: Router) {
     this.userId = this.route.snapshot.paramMap.get('id');
-    console.log('userId is ' + this.userId);
 
     this.http.get('/api/users/' + this.userId).subscribe(res => {
-      console.log('The userId in the GET request is ' + this.userId);
       this.user = res;
-      console.log('This user is ' + JSON.stringify(this.user));
+      this.selected = this.SelectedRole = res['role'];
+
     }, err => {
       console.log(err);
     }, () => {
-      this.form.controls['firstName'].setValue(this.user.firstName);
-      this.form.controls['lastName'].setValue(this.user.lastName);
-      this.form.controls['phoneNumber'].setValue(this.user.phoneNumber);
-      this.form.controls['address'].setValue(this.user.address);
-      this.form.controls['email'].setValue(this.user.email);
-    })
+      this.form.controls.firstName.setValue(this.user.firstName);
+      this.form.controls.lastName.setValue(this.user.lastName);
+      this.form.controls.phoneNumber.setValue(this.user.phoneNumber);
+      this.form.controls.address.setValue(this.user.address);
+      this.form.controls.email.setValue(this.user.email);
+      this.form.controls.role.setValue(this.user.role);
+
+      this.http.get('api/roles').subscribe(res => {
+        this.roles = res;
+        console.log(this.roles);
+      }, err => {
+        console.log(err);
+      })
+    });
   }
 
   ngOnInit() {
@@ -49,19 +59,26 @@ export class UserDetailsComponent implements OnInit {
       lastName: [null, Validators.compose([Validators.required])],
       phoneNumber: [null, Validators.compose([Validators.required])],
       address: [null, Validators.compose([Validators.required])],
-      email: [null, Validators.compose([Validators.required])]
+      email: [null, Validators.compose([Validators.required])],
+      role: [null, Validators.compose([Validators.required])]
     })
   }
 
   saveUser() {
-    this.http.put('/api/users/update/' + this.userId, {
+    console.log("clicked submit button");
+    console.log(this.selected);
+
+    this.http.put('/api/users/' + this.userId, {
       firstName: this.form.controls['firstName'].value,
       lastName: this.form.controls['lastName'].value,
       phoneNumber: this.form.controls['phoneNumber'].value,
       address: this.form.controls['address'].value,
-      email: this.form.controls['email'].value
+      email: this.form.controls['email'].value,
+      role: this.form.controls['role'].value
     }).subscribe(res => {
       this.router.navigate(['/session/user-management'])
+      console.log(this.user);
+
     })
   }
 

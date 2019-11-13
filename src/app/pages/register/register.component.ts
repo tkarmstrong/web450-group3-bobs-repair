@@ -97,7 +97,6 @@ export class RegisterComponent implements OnInit {
         { questionId: securityQuestion3, answerText: answer3 }
       ]
     };
-    console.log(newUser);
 
     // 3. Post new user to db
     const apiBaseURL = '/api/users';

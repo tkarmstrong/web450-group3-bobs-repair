@@ -1,0 +1,20 @@
+<div mat-dialog-content fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+  <div class="invoice-header">
+    <h1 mat-dialog-title>Invoice Summary</h1>
+    <h3>{{data.dateCreated}}</h3>
+  </div>
+  <section class="invoice-info" fxFlex="70%">
+    <h3>Services</h3>
+    <ng-container *ngFor="let service of data.services">
+      <p><span class="primary-text-color">  {{service.serviceText}}: </span>{{service.cost | currency}}</p>
+    </ng-container>
+    <mat-divider></mat-divider>
+    <p><span class="primary-text-color">  Labor: </span>{{data.laborHrs | currency}}</p>
+    <p><span class="primary-text-color">  Parts: </span>{{data.partsCost | currency}}</p>
+    <mat-divider></mat-divider>
+    <h1 class="primary-text-color">Total: {{data.totalCost | currency}}</h1>
+    <div style="float: right;" mat-dialog-actions>
+      <button mat-raised-button color="primary" [mat-dialog-close]="data">CLOSE</button>
+    </div>
+  </section>
+</div>

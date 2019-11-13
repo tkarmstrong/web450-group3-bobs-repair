@@ -30,7 +30,7 @@ export class ErrorInterceptor implements HttpInterceptor {
       }
 
       if ([500].indexOf(err.status) !== -1) {
-        this.router.navigate(['/session/500']);
+        this.router.navigate(['/server-error']);
       }
 
       const error = err.error.message || err.statusText;

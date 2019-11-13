@@ -1,27 +1,32 @@
 /*
 ; =======================================================
-; Title:  question-add-dialog.component.ts (Week 6)
+; Title: invoice dialog
 ; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
-; Date:   29 Oct 2019
+; Date: 5 Nov 19
 ; Description: Bob's Computer Repair Shop
 ; Legend: [] -> Team member responsible for page.
 ; =======================================================
 */
+
 
 import { Component, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
 import { Inject } from '@angular/core';
 
 @Component({
-  selector: 'app-question-add-dialog',
-  templateUrl: './question-add-dialog.component.html',
-  styleUrls: ['./question-add-dialog.component.css']
+  selector: 'app-invoice-dialog',
+  templateUrl: './invoice-dialog.component.html',
+  styleUrls: ['./invoice-dialog.component.css']
 })
-export class QuestionAddDialogComponent implements OnInit {
+export class InvoiceDialogComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) { }
 
   ngOnInit() {
+    console.log('Data below:');
+    console.log(this.data);
   }
 
 }

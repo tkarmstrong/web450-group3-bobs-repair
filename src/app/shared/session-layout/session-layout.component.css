@@ -7,13 +7,3 @@
 ; Legend: [] -> Team member responsible for page.
 ; =======================================================
 */
-
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  color: white;
-  background-color: #333333;
-}

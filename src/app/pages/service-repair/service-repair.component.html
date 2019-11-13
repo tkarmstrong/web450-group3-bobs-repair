@@ -1,0 +1,61 @@
+  <form *ngIf="data" [formGroup]='serviceForm' (ngSubmit)="onSubmit(serviceForm.value)">
+
+    <mat-card class="main-card" fxFlex="80%">
+      <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+        <section class="services-section" fxFlex="50%">
+          <h1>Services</h1>
+          <mat-card class="services">
+            <mat-card-header *ngFor="let service of data">
+              <div mat-card-avatar class="header-image"><mat-icon>{{service.icon}}</mat-icon></div>
+              <mat-card-title>{{service.serviceText}}</mat-card-title>
+              <mat-card-subtitle>{{service.cost | currency}}</mat-card-subtitle>
+              <div fxFlex></div>
+              <mat-checkbox formControlName="{{service.control}}"></mat-checkbox>
+            </mat-card-header>
+          </mat-card>
+        </section>
+
+        <section class="fees-section" fxFlex="50%">
+          <h1>Fees</h1>
+          <mat-form-field class="full-width">
+            <input
+              name="parts"
+              type="number"
+              step="0.01"
+              matInput
+              placeholder="Parts (Enter Value)"
+              formControlName="parts"
+              required
+            >
+            <mat-error
+              class="warn mb-20"
+              *ngIf="serviceForm.controls['parts'].hasError('required') && serviceForm.controls['parts'].touched">
+              Please enter cost for parts.
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <input formControlName="labor" matInput required placeholder="Labor (Enter Hours) @$50.00/hr">
+            <mat-error
+              class="warn"
+              *ngIf="serviceForm.controls['labor'].hasError('required') && serviceForm.controls['labor'].touched">
+              Please enter hours for labor.
+            </mat-error>
+            <mat-error
+              class="warn"
+              *ngIf="serviceForm.controls['labor'].hasError('pattern') && serviceForm.controls['labor'].touched">
+              Must be a number.
+            </mat-error>
+          </mat-form-field>
+
+          <br>
+          <button
+            color="primary"
+            mat-raised-button class="full-width mt-20"
+            type="submit"
+            [disabled]="serviceForm.invalid"
+            >Calculate</button>
+        </section>
+      </mat-card-content>
+    </mat-card>
+  </form>
