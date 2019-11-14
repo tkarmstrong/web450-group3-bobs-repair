@@ -36,7 +36,8 @@
             <button mat-raised-button color="accent">Submit</button>
           </div>
         </mat-card-content>
-      </form><h3 *ngIf='wrongAnswer' style="color: red">One or more of your answers was incorrect.</h3>
+      </form>
     </mat-card>
+    <h3 *ngIf='wrongAnswer === true' style="color: red">One or more of your answers was incorrect.</h3>
   </div>
 </div>
