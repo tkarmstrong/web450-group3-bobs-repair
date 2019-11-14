@@ -371,7 +371,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>summary works!</p>\n"
+module.exports = "<div class=\"chart\">\n  <p-chart type=\"pie\" [data]=\"data\" [options]=\"options\"></p-chart>\n</div>\n"
 
 /***/ }),
 
@@ -558,7 +558,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- /*\n; =======================================================\n; Title: session-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n<div>\n  <!-- Page header -->\n  <header>\n    <!-- Toolbar -->\n    <mat-toolbar class=\"menu\" role=\"header\" style=\"color: black; background-color: white\">\n      <mat-toolbar-row>\n        <button [routerLink]=\"['/']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">BCRS</span>\n        </button>\n        <button [routerLink]=\"['/contact']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">Contact Us</span>\n        </button>\n        <button [routerLink]=\"['/about-us']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">About Us</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/security-questions']\">\n          <span style=\"margin-left: 5px !important\">Security Questions</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/user-management']\">\n          <span style=\"margin-left: 5px !important\">User Management</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/role-configuration']\">\n          <span style=\"margin-left: 5px !important\">Role Configuration</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/service-repair']\">\n          <span style=\"margin-left: 5px !important\">Role Configuration</span>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n          <mat-icon>exit_to_app</mat-icon>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <button mat-menu-item (click)=\"userLogout()\">\n            <span>Logout</span>\n          </button>\n        </mat-menu>\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </header>\n</div>\n\n<!-- Main page content -->\n<main>\n  <router-outlet></router-outlet>\n</main>\n"
+module.exports = "<!-- /*\n; =======================================================\n; Title: session-layout.component.html (Week 6)\n; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson\n; Date: 23 Oct 2019\n; Description: Bob's Computer Repair Shop\n; Legend: [] -> Team member responsible for page.\n; =======================================================\n*/ -->\n<div>\n  <!-- Page header -->\n  <header>\n    <!-- Toolbar -->\n    <mat-toolbar class=\"menu\" role=\"header\" style=\"color: black; background-color: white\">\n      <mat-toolbar-row>\n        <button [routerLink]=\"['/']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">BCRS</span>\n        </button>\n        <button [routerLink]=\"['/contact']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">Contact Us</span>\n        </button>\n        <button [routerLink]=\"['/about-us']\" mat-button class=\"toolbar__icon-button mat-button\">\n          <span style=\"margin-left: 5px !important\">About Us</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/security-questions']\">\n          <span style=\"margin-left: 5px !important\">Security Questions</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/user-management']\">\n          <span style=\"margin-left: 5px !important\">User Management</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/role-configuration']\">\n          <span style=\"margin-left: 5px !important\">Role Configuration</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/service-repair']\">\n          <span style=\"margin-left: 5px !important\">Services</span>\n        </button>\n        <button *ngIf=\"validated\" mat-button class=\"toolbar__icon-button mat-button\"\n          [routerLink]=\"['/session/purchase-by-service']\">\n          <span style=\"margin-left: 5px !important\">Purchase Summary</span>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-icon-button class=\"toolbar__icon-button\" [matMenuTriggerFor]=\"menu\">\n          <mat-icon>exit_to_app</mat-icon>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <button mat-menu-item (click)=\"userLogout()\">\n            <span>Logout</span>\n          </button>\n        </mat-menu>\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </header>\n</div>\n\n<!-- Main page content -->\n<main>\n  <router-outlet></router-outlet>\n</main>\n"
 
 /***/ }),
 
@@ -580,7 +580,7 @@ module.exports = "<!-- /*\n; ===================================================
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  <div fxFlex.gt-sm=\"55\" fxFlex=\"100\">\n    <mat-card style=\"width: 80%;\" class=\"pa-0\">\n      <mat-card-title style=\"text-align: center; font-size: 48px; font-weight: lighter;\" class=\"mat-headline\">\n        Verify Security Questions\n      </mat-card-title>\n      <br><br>\n      <form *ngIf=\"user\" [formGroup]=\"form\" (ngSubmit)=\"verifySecurityQuestions()\" #usernameForm>\n        <mat-card-content fxLayout=\"column\">\n\n          <mat-list>\n            <mat-list-item>\n              {{question1}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion1']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n\n            <mat-list-item>\n              {{question2}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion2']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n\n            <mat-list-item>\n             {{question3}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion3']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n          </mat-list>\n          <br><br>\n          <h3 *ngIf='wrongAnswer' style=\"color: red\">One or more of your answers was incorrect.</h3>\n          <div fxFlex fxLayoutAlign=\"end\">\n            <button mat-raised-button color=\"accent\">Submit</button>\n          </div>\n        </mat-card-content>\n      </form>\n    </mat-card>\n  </div>\n</div>\n"
+module.exports = "<div fxLayout=\"row wrap\" fxLayoutAlign=\"center start\">\n  <div fxFlex.gt-sm=\"55\" fxFlex=\"100\">\n    <mat-card style=\"width: 80%;\" class=\"pa-0\">\n      <mat-card-title style=\"text-align: center; font-size: 48px; font-weight: lighter;\" class=\"mat-headline\">\n        Verify Security Questions\n      </mat-card-title>\n      <br><br>\n      <form [formGroup]=\"form\" (ngSubmit)=\"verifySecurityQuestions()\" #usernameForm>\n        <mat-card-content fxLayout=\"column\">\n\n          <mat-list>\n            <mat-list-item>\n              {{question1}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion1']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n\n            <mat-list-item>\n              {{question2}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion2']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n\n            <mat-list-item>\n             {{question3}} &nbsp; &nbsp;\n              <mat-form-field fxFlex>\n                <input matInput [formControl]=\"form.controls['answerToSecurityQuestion3']\" placeholder=\"Answer 1\">\n              </mat-form-field>\n            </mat-list-item>\n          </mat-list>\n          <br><br>\n\n          <div fxFlex fxLayoutAlign=\"end\">\n            <button mat-raised-button color=\"accent\">Submit</button>\n          </div>\n        </mat-card-content>\n      </form><h3 *ngIf='wrongAnswer' style=\"color: red\">One or more of your answers was incorrect.</h3>\n    </mat-card>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -701,6 +701,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
 /* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! primeng/carousel */ "./node_modules/primeng/carousel.js");
 /* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_54___default = /*#__PURE__*/__webpack_require__.n(primeng_carousel__WEBPACK_IMPORTED_MODULE_54__);
+/* harmony import */ var primeng_chart__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! primeng/chart */ "./node_modules/primeng/chart.js");
+/* harmony import */ var primeng_chart__WEBPACK_IMPORTED_MODULE_55___default = /*#__PURE__*/__webpack_require__.n(primeng_chart__WEBPACK_IMPORTED_MODULE_55__);
 /*
 ; =======================================================
 ; Title: app.module.ts (Week 6)
@@ -770,6 +772,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // PrimeNg
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -826,7 +829,8 @@ var AppModule = /** @class */ (function () {
                 _angular_material_table__WEBPACK_IMPORTED_MODULE_50__["MatTableModule"],
                 _angular_material_select__WEBPACK_IMPORTED_MODULE_51__["MatSelectModule"],
                 _angular_material_list__WEBPACK_IMPORTED_MODULE_52__["MatListModule"],
-                primeng_carousel__WEBPACK_IMPORTED_MODULE_54__["CarouselModule"]
+                primeng_carousel__WEBPACK_IMPORTED_MODULE_54__["CarouselModule"],
+                primeng_chart__WEBPACK_IMPORTED_MODULE_55__["ChartModule"]
             ],
             providers: [
                 ngx_cookie_service__WEBPACK_IMPORTED_MODULE_8__["CookieService"],
@@ -881,6 +885,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
 /* harmony import */ var _reset_password_form_reset_password_form_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./reset-password-form/reset-password-form.component */ "./src/app/reset-password-form/reset-password-form.component.ts");
 /* harmony import */ var _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/service-repair/service-repair.component */ "./src/app/pages/service-repair/service-repair.component.ts");
+/* harmony import */ var _pages_purchase_by_service_purchase_by_service_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/purchase-by-service/purchase-by-service.component */ "./src/app/pages/purchase-by-service/purchase-by-service.component.ts");
+/*
+; =======================================================
+; Title: app.routing.ts (Week 6)
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
 
 
 
@@ -931,7 +946,8 @@ var AppRoutes = [
             { path: 'role-add', component: _pages_role_add_role_add_component__WEBPACK_IMPORTED_MODULE_1__["RoleAddComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
             { path: 'question-add', component: _pages_question_add_question_add_component__WEBPACK_IMPORTED_MODULE_0__["QuestionAddComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
             { path: '404', component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_7__["NotFoundComponent"] },
-            { path: 'service-repair', component: _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_19__["ServiceRepairComponent"] }
+            { path: 'service-repair', component: _pages_service_repair_service_repair_component__WEBPACK_IMPORTED_MODULE_19__["ServiceRepairComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] },
+            { path: 'purchase-by-service', component: _pages_purchase_by_service_purchase_by_service_component__WEBPACK_IMPORTED_MODULE_20__["PurchaseByServiceComponent"], canActivate: [_shared_guards_auth_guard_service__WEBPACK_IMPORTED_MODULE_12__["AuthGuardService"]] }
         ]
     },
     { path: '**', redirectTo: 'session/404' }
@@ -1291,7 +1307,7 @@ var NotFoundComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3B1cmNoYXNlLWJ5LXNlcnZpY2UvcHVyY2hhc2UtYnktc2VydmljZS5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".chart {\n  margin-top: 25px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvcHVyY2hhc2UtYnktc2VydmljZS9wdXJjaGFzZS1ieS1zZXJ2aWNlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9wdXJjaGFzZS1ieS1zZXJ2aWNlL3B1cmNoYXNlLWJ5LXNlcnZpY2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jaGFydCB7XG4gIG1hcmdpbi10b3A6IDI1cHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -1307,13 +1323,140 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PurchaseByServiceComponent", function() { return PurchaseByServiceComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/*
+; =======================================================
+; Title: purchase by service (Week 6)
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
+
 
 
 var PurchaseByServiceComponent = /** @class */ (function () {
-    function PurchaseByServiceComponent() {
+    function PurchaseByServiceComponent(http) {
+        var _this = this;
+        this.http = http;
+        this.passwordReset = 0;
+        this.spywareRemoval = 0;
+        this.ramUpgrade = 0;
+        this.tuneup = 0;
+        this.keyboardCleaning = 0;
+        this.softwareInstallation = 0;
+        this.discCleanup = 0;
+        this.http.get('/api/invoices').subscribe(function (res) {
+            var e_1, _a, e_2, _b;
+            _this.invoices = res;
+            // 1. Get labels for chart
+            var labelsUnfiltered = [];
+            var pieData = {};
+            try {
+                for (var _c = tslib__WEBPACK_IMPORTED_MODULE_0__["__values"](_this.invoices), _d = _c.next(); !_d.done; _d = _c.next()) {
+                    var item = _d.value;
+                    item.services.forEach(function (element) {
+                        labelsUnfiltered.push(element.serviceText);
+                    });
+                }
+            }
+            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+            finally {
+                try {
+                    if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
+                }
+                finally { if (e_1) throw e_1.error; }
+            }
+            _this.labels = labelsUnfiltered.filter(function (item, index) {
+                return labelsUnfiltered.indexOf(item) === index;
+            });
+            try {
+                // 2. Get data for chart
+                for (var _e = tslib__WEBPACK_IMPORTED_MODULE_0__["__values"](_this.invoices), _f = _e.next(); !_f.done; _f = _e.next()) {
+                    var item = _f.value;
+                    item.services.forEach(function (service) {
+                        // console.log(service);
+                        if (service.serviceText === 'Password Reset') {
+                            _this.passwordReset += service.cost;
+                        }
+                        if (service.serviceText === 'Spyware Removal') {
+                            _this.spywareRemoval += service.cost;
+                        }
+                        if (service.serviceText === 'Ram Upgrade') {
+                            _this.ramUpgrade += service.cost;
+                        }
+                        if (service.serviceText === 'Tuneup') {
+                            _this.tuneup += service.cost;
+                        }
+                        if (service.serviceText === 'Keyboard Cleaning') {
+                            _this.keyboardCleaning += service.cost;
+                        }
+                        if (service.serviceText === 'Software Installation') {
+                            _this.softwareInstallation += service.cost;
+                        }
+                        if (service.serviceText === 'Disc Cleanup') {
+                            _this.discCleanup += service.cost;
+                        }
+                    });
+                }
+            }
+            catch (e_2_1) { e_2 = { error: e_2_1 }; }
+            finally {
+                try {
+                    if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
+                }
+                finally { if (e_2) throw e_2.error; }
+            }
+            // 3. Build object literal for data used in chart
+            _this.data = {
+                labels: _this.labels,
+                datasets: [{
+                        data: [
+                            _this.passwordReset.toFixed(2),
+                            _this.spywareRemoval.toFixed(2),
+                            _this.ramUpgrade.toFixed(2),
+                            _this.tuneup.toFixed(2),
+                            _this.keyboardCleaning.toFixed(2),
+                            _this.softwareInstallation.toFixed(2),
+                            _this.discCleanup.toFixed(2)
+                        ],
+                        backgroundColor: [
+                            '#1E3D1E',
+                            '#8AE58A',
+                            '#FEF5ED',
+                            '#8F478F',
+                            '#478F47',
+                            '#FBD1A9',
+                            '#E37209'
+                        ],
+                        hoverBackgroundColor: [
+                            '#1E3D1E',
+                            '#8AE58A',
+                            '#FEF5ED',
+                            '#8F478F',
+                            '#478F47',
+                            '#FBD1A9',
+                            '#E37209'
+                        ]
+                    }]
+            };
+            _this.options = {
+                title: {
+                    display: true,
+                    text: 'Purchases By Service In Dollars',
+                    fontSize: 22
+                }
+            };
+        }, function (err) {
+            console.log(err);
+        });
     }
     PurchaseByServiceComponent.prototype.ngOnInit = function () {
     };
+    PurchaseByServiceComponent.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+    ]; };
     PurchaseByServiceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-purchase-by-service',
@@ -2673,6 +2816,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.es5.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/*
+; =======================================================
+; Title: role guard (Week 6)
+; Authors: Tyler Armstrong, [David Tarvin], Aaron Wilson
+; Date: 23 Oct 2019
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
 
 
 
@@ -2689,7 +2841,9 @@ var RoleGuard = /** @class */ (function () {
         var _this = this;
         return this.getRole().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (res) {
             console.log(res);
-            if (res === 'admin') {
+            _this.user = res;
+            if (_this.user.role === 'admin') {
+                _this.router.navigate(['/session/purchase-by-service']);
                 return true;
             }
             else {
@@ -3074,7 +3228,7 @@ var ErrorInterceptor = /** @class */ (function () {
                 _this.router.navigate(['/session/404']);
             }
             if ([500].indexOf(err.status) !== -1) {
-                _this.router.navigate(['/session/500']);
+                _this.router.navigate(['/server-error']);
             }
             var error = err.error.message || err.statusText;
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["throwError"])(error);
@@ -3107,6 +3261,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/*
+; =======================================================
+; Title: services repair
+; Authors: [Tyler Armstrong], David Tarvin, Aaron Wilson
+; Date: 10 Nov 19
+; Description: Bob's Computer Repair Shop
+; Legend: [] -> Team member responsible for page.
+; =======================================================
+*/
 
 
 
@@ -3370,23 +3533,34 @@ var VerifySecurityQuestionsFormComponent = /** @class */ (function () {
         this.wrongAnswer = false;
         this.username = this.route.snapshot.queryParamMap.get('username');
         console.log(this.username);
-        this.http.get('/api/verify/users/' + this.username + '/security-questions').subscribe(function (res) {
-            _this.user = (res);
-            console.log('this.selectedSecurityQuestions is ' + _this.user.selectedSecurityQuestions[0].answerText);
-            _this.question1 = _this.user.selectedSecurityQuestions[0].questionText;
-            console.log('This.question1 is ' + _this.question1);
-            _this.answer1 = _this.user.selectedSecurityQuestions[0].answerText;
-            console.log('The answer to question1 is ' + _this.answer1);
-            _this.question2 = _this.user.selectedSecurityQuestions[1].questionText;
-            console.log('This.question2 is ' + _this.question2);
-            _this.answer2 = _this.user.selectedSecurityQuestions[1].answerText;
-            console.log('The answer to question2 is ' + _this.answer2);
-            _this.question3 = _this.user.selectedSecurityQuestions[2].questionText;
-            console.log('This.question3 is ' + _this.question3);
-            _this.answer3 = _this.user.selectedSecurityQuestions[2].answerText;
-            console.log('The answer to question3 is ' + _this.answer3);
+        this.http.get('/api/users/' + this.username + '/security-questions').subscribe(function (res) {
+            _this.selectedSecurityQuestions = res;
+            console.log('this.selectedSecurityQuestions is ' + _this.selectedSecurityQuestions);
+            // this.question1 = this.selectedSecurityQuestions[0].questionText;
+            // console.log('This.question1 is ' + this.question1);
+            // this.answer1 = this.selectedSecurityQuestions[0].answerText;
+            // console.log('The answer to question1 is ' + this.answer1);
+            // this.question2 = this.selectedSecurityQuestions[1].questionText;
+            // console.log('This.question2 is ' + this.question2);
+            // this.answer2 = this.selectedSecurityQuestions[1].answerText;
+            // console.log('The answer to question2 is ' + this.answer2);
+            // this.question3 = this.user.selectedSecurityQuestions[2].questionText;
+            // console.log('This.question3 is ' + this.question3);
+            // this.answer3 = this.user.selectedSecurityQuestions[2].answerText;
+            // console.log('The answer to question3 is ' + this.answer3);
         }, function (err) {
             console.log(err);
+        }, function () {
+            console.log('Going into POST find-by-ids');
+            _this.http.post('/api/security-questions/find-by-ids', {
+                question1: _this.selectedSecurityQuestions[0].questionId,
+                question2: _this.selectedSecurityQuestions[1].questionId,
+                question3: _this.selectedSecurityQuestions[2].questionId,
+            }).subscribe(function (res) {
+                _this.question1 = res[0].questionText;
+                _this.question2 = res[1].questionText;
+                _this.question3 = res[2].questionText;
+            });
         });
     }
     VerifySecurityQuestionsFormComponent.prototype.ngOnInit = function () {
@@ -3397,27 +3571,30 @@ var VerifySecurityQuestionsFormComponent = /** @class */ (function () {
         });
     };
     VerifySecurityQuestionsFormComponent.prototype.verifySecurityQuestions = function () {
+        var _this = this;
         var answerToSecurityQuestion1 = this.form.controls['answerToSecurityQuestion1'].value;
         var answerToSecurityQuestion2 = this.form.controls['answerToSecurityQuestion2'].value;
         var answerToSecurityQuestion3 = this.form.controls['answerToSecurityQuestion3'].value;
-        if (answerToSecurityQuestion1 == this.answer1 && answerToSecurityQuestion2 == this.answer2 && answerToSecurityQuestion3 == this.answer3) {
-            this.router.navigate(['/reset-password'], { queryParams: { isAuthenticated: 'true', username: this.username }, skipLocationChange: true });
-        }
-        else {
-            this.wrongAnswer = true;
-            console.log('Unable to verify security question answers');
-        }
-        // this.http.post('/api/verify/users/' + this.username + '/security-questions', {
-        //   answerToSecurityQuestion1: answerToSecurityQuestion1,
-        //   answerToSecurityQuestion2: answerToSecurityQuestion2,
-        //   answerToSecurityQuestion3: answerToSecurityQuestion3
-        // }).subscribe(res => {
-        //   if (res['auth']) {
-        //     this.router.navigate(['/reset-password'], {queryParams: {isAuthenticated: 'true', username: this.username}, skipLocationChange: true});
-        //   } else {
-        //     console.log('Unable to verify security question answers');
-        //   }
-        // });
+        // if (answerToSecurityQuestion1 == this.answer1 && answerToSecurityQuestion2 == this.answer2 && answerToSecurityQuestion3 == this.answer3) {
+        //   this.router.navigate(['/reset-password'], {queryParams: {isAuthenticated: 'true', username: this.username}, skipLocationChange: true});
+        // } else {
+        //   this.wrongAnswer = true;
+        //   console.log('Unable to verify security question answers');
+        // }
+        console.log('Going into POST verify answers');
+        this.http.post('/api/verify/users/' + this.username + '/security-questions', {
+            answerToSecurityQuestion1: answerToSecurityQuestion1,
+            answerToSecurityQuestion2: answerToSecurityQuestion2,
+            answerToSecurityQuestion3: answerToSecurityQuestion3
+        }).subscribe(function (res) {
+            if (res['auth']) {
+                _this.router.navigate(['/reset-password'], { queryParams: { isAuthenticated: 'true', username: _this.username }, skipLocationChange: true });
+            }
+            else {
+                _this.wrongAnswer = true;
+                console.log('Unable to verify security question answers');
+            }
+        });
     };
     VerifySecurityQuestionsFormComponent.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
@@ -3604,7 +3781,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/leatrueworthy/Desktop/web450-group3-bobs-repair/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/davidtarvin/web450-group3-bobs-repair/src/main.ts */"./src/main.ts");
 
 
 /***/ })
