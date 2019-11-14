@@ -306,7 +306,7 @@ app.get('/api/users/:username/role', function (req, res, next) {
       return next(err)
     } else {
       console.log(user);
-      res.json(user);
+      res.json(user.role);
     }
   })
 })
