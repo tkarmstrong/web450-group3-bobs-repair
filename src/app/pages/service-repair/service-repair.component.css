@@ -1,6 +1,9 @@
 .full-width {
   width: 100%;
 }
+mat-card {
+  border: 2px dashed #0a19cf;
+}
 
 .mt-20 {
   margin-top: 20px;
