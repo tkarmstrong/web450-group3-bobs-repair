@@ -245,17 +245,17 @@ app.get('/api/verify/users/:username', function (req, res, next) {
 })
 
 // Verify security questions
-app.get('/api/verify/users/:username/security-questions', function (req, res, next) {
+app.get('/api/users/:username/security-questions', function (req, res, next) {
   User.findOne({ 'username': req.params.username }, function (err, user) {
     if (err) {
       console.log(err);
       return next(err)
     } else {
       console.log(user);
-      res.json(user);
+      res.json(user.selectedSecurityQuestions);
     }
   })
-})
+});
 
 app.post('/api/verify/users/:username/security-questions', function (req, res, next) {
   const answerToSecurityQuestion1 = req.body.answerToSecurityQuestion1;
@@ -274,13 +274,13 @@ app.post('/api/verify/users/:username/security-questions', function (req, res, n
     } else {
       console.log(user);
 
-      let answer1IsValid = answerToSecurityQuestion1 === user.securityQuestions[0].answer;
+      let answer1IsValid = answerToSecurityQuestion1 === user.selectedSecurityQuestions[0].answerText;
       console.log('answer1IsValid = ' + answer1IsValid);
 
-      let answer2IsValid = answerToSecurityQuestion2 === user.securityQuestions[1].answer;
+      let answer2IsValid = answerToSecurityQuestion2 === user.selectedSecurityQuestions[1].answerText;
       console.log('answer2IsValid = ' + answer2IsValid);
 
-      let answer3IsValid = answerToSecurityQuestion3 === user.securityQuestions[2].answer;
+      let answer3IsValid = answerToSecurityQuestion3 === user.selectedSecurityQuestions[2].answerText;
       console.log('answer3IsValid = ' + answer3IsValid);
 
       if (answer1IsValid && answer2IsValid && answer3IsValid) {
@@ -306,7 +306,7 @@ app.get('/api/users/:username/role', function (req, res, next) {
       return next(err)
     } else {
       console.log(user);
-      res.json(user);
+      res.json(user.role);
     }
   })
 })

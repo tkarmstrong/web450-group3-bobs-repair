@@ -18,8 +18,6 @@ import { Injectable } from '@angular/core';
 @Injectable({providedIn: 'root'})
 export class RoleGuard implements CanActivate {
 
-  user: any;
-
   constructor(
     private router: Router,
     private http: HttpClient,
@@ -27,11 +25,9 @@ export class RoleGuard implements CanActivate {
   ) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+
     return this.getRole().pipe(map(res => {
-      console.log(res);
-      this.user = res;
-      if (this.user.role === 'admin') {
-        this.router.navigate(['/session/purchase-by-service']);
+      if (res === 'admin') {
         return true;
       } else {
         this.router.navigate(['/']);
@@ -41,6 +37,18 @@ export class RoleGuard implements CanActivate {
   }
 
   getRole() {
-    return this.http.get('/api/users/' + this.cookieService.get('username') + '/role');
+
+    let user = '';
+
+    const cookies = this.cookieService.getAll();
+
+    for (const key in cookies) {
+      if (cookies.hasOwnProperty(key)) {
+        if (key !== 'isAuthenticated') {
+          user = key;
+        }
+      }
+    }
+    return this.http.get('/api/users/' + user + '/role');
   }
 }

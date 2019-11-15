@@ -23,7 +23,7 @@
         <button [routerLink]="['/about-us']" mat-button class="toolbar__icon-button mat-button">
           <span style="margin-left: 5px !important">About Us</span>
         </button>
-        <button *ngIf="validated == false" mat-button class="toolbar__icon-button mat-button" [routerLink]="['/login']">
+        <button *ngIf="validated === false" mat-button class="toolbar__icon-button mat-button" [routerLink]="['/login']">
           <span style="margin-left: 5px !important">Login</span>
         </button>
         <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button"
@@ -37,6 +37,14 @@
         <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button"
           [routerLink]="['/session/role-configuration']">
           <span style="margin-left: 5px !important">Role Configuration</span>
+        </button>
+        <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button"
+          [routerLink]="['/session/service-repair']">
+          <span style="margin-left: 5px !important">Services</span>
+        </button>
+        <button *ngIf="validated" mat-button class="toolbar__icon-button mat-button"
+          [routerLink]="['/session/purchase-by-service']">
+          <span style="margin-left: 5px !important">Purchase Summary</span>
         </button>
 
         <div fxFlex></div>
