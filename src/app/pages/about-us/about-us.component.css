@@ -6,17 +6,11 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-}
 
+}
+.example-card {
+  border: 2px dashed #0a19cf;
+}
 p {
   font-size: 25px;
-}
-
-.team-member{
-  display: block;
-}
-
-.team-member img{
-  margin-left: auto;
-  margin-right: auto;
 }
