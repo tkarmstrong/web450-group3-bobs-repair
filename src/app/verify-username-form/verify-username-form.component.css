@@ -8,3 +8,7 @@
 .return-link:hover {
   text-decoration: underline;
 }
+
+mat-card {
+  border: 2px dashed #0a19cf;
+}

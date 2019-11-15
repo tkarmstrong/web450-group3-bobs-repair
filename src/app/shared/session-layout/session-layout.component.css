@@ -7,3 +7,7 @@
 ; Legend: [] -> Team member responsible for page.
 ; =======================================================
 */
+
+mat-toolbar{
+    border: 2px dashed #0a19cf;
+}

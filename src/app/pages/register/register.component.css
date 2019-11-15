@@ -20,6 +20,7 @@
 
 .mat-card {
   text-align: center;
+  border: 2px dashed #0a19cf;
 }
 
 .mat-form-field {

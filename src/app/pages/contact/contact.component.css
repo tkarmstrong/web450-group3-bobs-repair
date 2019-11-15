@@ -4,6 +4,7 @@
 
 .card-wrapper {
   margin-top: -50px;
+  border: 2px dashed #0a19cf;
 }
 
 /* .mat-card {
