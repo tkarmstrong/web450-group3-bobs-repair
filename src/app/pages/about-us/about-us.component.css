@@ -10,7 +10,8 @@
 }
 .example-card {
   border: 2px dashed #0a19cf;
+  padding: 10px;
 }
 p {
-  font-size: 25px;
+  font-size: 20px;
 }
